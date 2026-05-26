@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": 4,
-    "note": "Segments-first plan. Each day's workout details live in *_segments arrays.",
+    "version": 5,
+    "note": "Segments-first plan with detailed W12-W15 race prep.",
     "last_updated": "2026-05-26"
   },
   "weeks": [
@@ -16,9 +16,98 @@
     {"wk":9,"dates":"May 8-10","phase":"Build","fri":"Int 7","fri_type":"Interval","sat":"Easy 8","sat_type":"Easy","sun":"Long 16","sun_type":"Long","planned_km":31,"actual_km":31.3,"note":""},
     {"wk":10,"dates":"May 15-17","phase":"Build","fri":"Int 8","fri_type":"Interval","sat":"Easy 8","sat_type":"Easy","sun":"Long 18","sun_type":"Long","planned_km":34,"actual_km":23.5,"note":"cutback (Long short)"},
     {"wk":11,"dates":"May 22-24","phase":"Peak","fri":"Tempo 8","fri_type":"Tempo","sat":"Easy 8","sat_type":"Easy","sun":"Long 19","sun_type":"Long","planned_km":35,"actual_km":28.6,"note":"⭐ Long Run 21.85km PR!"},
-    {"wk":12,"dates":"May 29-31","phase":"Peak","fri":"Progression","fri_type":"Progression","sat":"Easy","sat_type":"Easy","sun":"Long","sun_type":"Long","planned_km":30,"actual_km":null,"note":"Race kit test! Bring gel"},
-    {"wk":13,"dates":"Jun 5-7","phase":"Taper 1","fri":"Tempo","fri_type":"Tempo","sat":"Easy","sat_type":"Easy","sun":"Long","sun_type":"Long","planned_km":23,"actual_km":null,"note":"Last hard workouts"},
-    {"wk":14,"dates":"Jun 12-14","phase":"Taper 2","fri":"Strides","fri_type":"Strides","sat":"Rest","sat_type":"Rest","sun":"Fun Run 5K","sun_type":"Race","planned_km":9,"actual_km":null,"note":"Company fun run, EZ pace"},
-    {"wk":15,"dates":"Jun 15-21","phase":"RACE","fri":"Rest","fri_type":"Rest","sat":"Easy","sat_type":"Easy","sun":"RACE 21.1","sun_type":"Race","planned_km":24,"actual_km":null,"note":"🏁 Korat 21 HM"}
+
+    {
+      "wk":12,"dates":"May 29-31","phase":"Peak",
+      "fri":"Progression Run","fri_type":"Progression",
+      "fri_segments":[
+        {"group":"Warm-up","kind":"run","dist_km":1.5,"pace_max":"8:30","note":"conversational, easy"},
+        {"group":"Progression","kind":"run","dist_km":1,"pace":"8:00","note":"feel comfortable"},
+        {"group":"Progression","kind":"run","dist_km":1,"pace":"7:30"},
+        {"group":"Progression","kind":"run","dist_km":1,"pace":"7:00"},
+        {"group":"Progression","kind":"run","dist_km":1,"pace":"6:30","note":"hard but controlled"},
+        {"group":"Progression","kind":"run","dist_km":1,"pace":"6:15","note":"strong finish"},
+        {"group":"Cool down","kind":"run","dist_km":0.5,"pace_max":"8:30","note":"easy jog"}
+      ],
+      "sat":"Easy Run","sat_type":"Easy",
+      "sat_segments":[
+        {"group":"Session","kind":"run","dist_km":7,"pace_max":"8:30","note":"Z1-Z2 only · HR ≤145 · keep cadence ~165"}
+      ],
+      "sun":"Long Run — Race Rehearsal","sun_type":"Long",
+      "sun_segments":[
+        {"group":"Warm-up","kind":"run","dist_km":5,"pace":"8:30","note":"easy start · cadence focus 165 spm"},
+        {"group":"Cruise (goal pace)","kind":"run","dist_km":10,"pace":"8:00","pace_range":"7:50-8:10","note":"🍯 GEL #1 at km 7 (test stomach)"},
+        {"group":"Finish","kind":"run","dist_km":1.5,"pace":"7:45","note":"strong finish if feeling good"}
+      ],
+      "planned_km":30,"actual_km":null,
+      "note":"⚠️ Race kit test! gel, electrolyte, shoes, socks — try everything"
+    },
+
+    {
+      "wk":13,"dates":"Jun 5-7","phase":"Taper 1",
+      "fri":"Tempo Intervals","fri_type":"Tempo",
+      "fri_segments":[
+        {"group":"Warm-up","kind":"run","dist_km":1,"pace_max":"8:30","note":"easy jog + 4 strides at end"},
+        {"group":"Repeat x3","kind":"run","dist_km":1,"pace":"7:30","pace_range":"7:20-7:40","note":"controlled threshold"},
+        {"group":"Repeat x3","kind":"rest","duration_sec":90,"note":"easy jog or walk"},
+        {"group":"Cool down","kind":"run","dist_km":1,"pace_max":"8:30"}
+      ],
+      "sat":"Easy Run","sat_type":"Easy",
+      "sat_segments":[
+        {"group":"Session","kind":"run","dist_km":5,"pace_max":"8:30","note":"recovery pace · HR ≤145"}
+      ],
+      "sun":"Long with Race Pace","sun_type":"Long",
+      "sun_segments":[
+        {"group":"Easy start","kind":"run","dist_km":7,"pace":"8:30","note":"warm into it"},
+        {"group":"Race pace finish","kind":"run","dist_km":5,"pace":"8:00","pace_range":"7:50-8:10","note":"dress rehearsal for race pace"},
+        {"group":"Cool down","kind":"run","dist_km":1,"pace_max":"9:00","note":"easy"}
+      ],
+      "planned_km":21,"actual_km":null,
+      "note":"Last week with hard workouts. Volume -20%."
+    },
+
+    {
+      "wk":14,"dates":"Jun 12-14","phase":"Taper 2",
+      "fri":"Strides Workout","fri_type":"Strides",
+      "fri_segments":[
+        {"group":"Warm-up","kind":"run","dist_km":2,"pace_max":"8:30","note":"easy"},
+        {"group":"Strides x6","kind":"run","dist_km":0.1,"pace":"5:30","note":"~20 sec @ 90% effort, smooth form"},
+        {"group":"Strides x6","kind":"rest","duration_sec":60,"note":"walk recovery, full breath"},
+        {"group":"Cool down","kind":"run","dist_km":1,"pace_max":"8:30"}
+      ],
+      "sat":"Rest","sat_type":"Rest",
+      "sun":"Company Fun Run 5K","sun_type":"Race",
+      "sun_segments":[
+        {"group":"Warm-up","kind":"run","dist_km":1,"pace_max":"8:30","note":"easy jog before start"},
+        {"group":"Fun Run","kind":"run","dist_km":5,"pace":"7:30","pace_range":"7:20-7:45","note":"⚠️ NOT race effort · 80% feel · HR ≤155"},
+        {"group":"Cool down","kind":"run","dist_km":1,"pace_max":"9:00","note":"jog or walk"}
+      ],
+      "planned_km":11,"actual_km":null,
+      "note":"⚠️ Fun run = active workout, NOT race. Save legs for Sunday next week!"
+    },
+
+    {
+      "wk":15,"dates":"Jun 15-21","phase":"RACE",
+      "fri":"Rest","fri_type":"Rest",
+      "sat":"Shake-out","sat_type":"Easy",
+      "sat_segments":[
+        {"group":"Session","kind":"run","dist_km":2,"pace_max":"8:30","note":"super easy shake-out · keep HR ≤140"},
+        {"group":"Strides","kind":"run","dist_km":0.05,"pace":"6:00","note":"4× 50m strides at end · feel snappy"},
+        {"group":"Strides","kind":"rest","duration_sec":60,"note":"walk recovery"}
+      ],
+      "sun":"🏁 KORAT 21 HM","sun_type":"Race",
+      "sun_segments":[
+        {"group":"Warm-up phase","kind":"run","dist_km":5,"pace":"8:15","pace_range":"8:10-8:30","note":"🚫 NO walking · cadence 160+ · HR ≤155 · resist others"},
+        {"group":"Cruise","kind":"run","dist_km":2,"pace":"7:50","note":"settle into goal pace · HR ≤160"},
+        {"group":"Cruise","kind":"run","dist_km":1,"pace":"7:50","note":"🍯 GEL #1 at km 7 + sip water"},
+        {"group":"Cruise","kind":"run","dist_km":3,"pace":"7:50","note":"⭐ HALFWAY at km 10 · check time ~1:20"},
+        {"group":"Cruise","kind":"run","dist_km":3,"pace":"7:50","note":"keep relaxed · sip aid stations"},
+        {"group":"Cruise","kind":"run","dist_km":1,"pace":"7:50","note":"🍯 GEL #2 at km 14"},
+        {"group":"Finish","kind":"run","dist_km":6,"pace":"7:35","pace_range":"7:20-7:45","note":"🔥 progressive pickup · HR ≤168"},
+        {"group":"Kick","kind":"run","dist_km":0.1,"pace":"7:20","note":"🏆 EMPTY THE TANK"}
+      ],
+      "planned_km":23,"actual_km":null,
+      "note":"🏁 RACE DAY — target 2:45:49 (negative split, no walking)"
+    }
   ]
 }
