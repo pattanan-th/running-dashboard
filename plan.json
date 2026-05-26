@@ -16,29 +16,7 @@
     {"wk":9,"dates":"May 8-10","phase":"Build","fri":"Int 7","fri_type":"Interval","sat":"Easy 8","sat_type":"Easy","sun":"Long 16","sun_type":"Long","planned_km":31,"actual_km":31.3,"note":""},
     {"wk":10,"dates":"May 15-17","phase":"Build","fri":"Int 8","fri_type":"Interval","sat":"Easy 8","sat_type":"Easy","sun":"Long 18","sun_type":"Long","planned_km":34,"actual_km":23.5,"note":"cutback (Long short)"},
     {"wk":11,"dates":"May 22-24","phase":"Peak","fri":"Tempo 8","fri_type":"Tempo","sat":"Easy 8","sat_type":"Easy","sun":"Long 19","sun_type":"Long","planned_km":35,"actual_km":28.6,"note":"⭐ Long Run 21.85km PR!"},
-    {
-      "wk":12,"dates":"May 29-31","phase":"Peak",
-      "fri":"Mile Repeats","fri_type":"Interval","fri_pace":"6:15","fri_hr":170,
-      "fri_segments":[
-        {"group":"Warm-up","kind":"run","dist_km":2,"pace_max":"7:15","note":"conversational"},
-        {"group":"Warm-up","kind":"rest","duration_sec":90,"note":"walking"},
-        {"group":"Repeat x2","kind":"run","dist_km":1.6,"pace":"6:15","pace_range":"6:00-6:30"},
-        {"group":"Repeat x2","kind":"rest","duration_sec":120,"note":"walking"},
-        {"group":"Cool down","kind":"run","dist_km":1.8,"pace_max":"7:15","note":"or slower"}
-      ],
-      "sat":"11km Easy Run","sat_type":"Easy","sat_pace":"7:15","sat_hr":145,
-      "sat_segments":[
-        {"group":"Session","kind":"run","dist_km":11,"pace_max":"7:15","note":"conversational — limit not target"}
-      ],
-      "sun":"18km Progressive Long","sun_type":"Progression","sun_pace":"6:50","sun_hr":162,
-      "sun_segments":[
-        {"group":"Progressive","kind":"run","dist_km":6,"pace_max":"7:15","note":"conversational"},
-        {"group":"Progressive","kind":"run","dist_km":4,"pace":"7:00"},
-        {"group":"Progressive","kind":"run","dist_km":4,"pace":"6:50"},
-        {"group":"Progressive","kind":"run","dist_km":4,"pace":"6:40"}
-      ],
-      "planned_km":36,"actual_km":null,"note":"Race kit test! Bring gel"
-    },
+    {"wk":12,"dates":"May 29-31","phase":"Peak","fri":"Progression 7","fri_type":"Progression","fri_pace":"7:30","fri_hr":160,"sat":"Easy 7","sat_type":"Easy","sat_pace":"8:30","sat_hr":145,"sun":"Long 16","sun_type":"Long","sun_pace":"8:00","sun_hr":160,"planned_km":30,"actual_km":null,"note":"Race kit test! Bring gel"},
     {"wk":13,"dates":"Jun 5-7","phase":"Taper 1","fri":"Tempo 5","fri_type":"Tempo","fri_pace":"7:30","fri_hr":162,"sat":"Easy 5","sat_type":"Easy","sat_pace":"8:30","sat_hr":145,"sun":"Long 13","sun_type":"Long","sun_pace":"8:00","sun_hr":160,"planned_km":23,"actual_km":null,"note":"Last hard workouts"},
     {"wk":14,"dates":"Jun 12-14","phase":"Taper 2","fri":"Strides 4","fri_type":"Strides","sat":"Rest","sat_type":"Rest","sun":"Fun Run 5K","sun_type":"Race","sun_pace":"7:30","sun_hr":155,"planned_km":9,"actual_km":null,"note":"Company fun run, EZ pace"},
     {"wk":15,"dates":"Jun 15-21","phase":"RACE","fri":"Rest","fri_type":"Rest","sat":"Easy 2","sat_type":"Easy","sun":"RACE 21.1","sun_type":"Race","sun_pace":"7:50","sun_hr":162,"planned_km":24,"actual_km":null,"note":"🏁 Korat 21 HM"}
