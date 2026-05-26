@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "version": 1,
+    "note": "Race day pack list + morning timeline. Editable in dashboard.",
+    "last_updated": "2026-05-26"
+  },
+  "pack_list": [
+    {"id":1,"category":"Apparel","item":"เสื้อ race","detail":"tested already","priority":"high"},
+    {"id":2,"category":"Apparel","item":"กางเกง running short","detail":"","priority":"high"},
+    {"id":3,"category":"Footwear","item":"ASICS Novablast 5","detail":"long run shoe (149km used)","priority":"high"},
+    {"id":4,"category":"Footwear","item":"Running socks","detail":"ไม่ใหม่!","priority":"high"},
+    {"id":5,"category":"Race","item":"Race BIB + safety pins","detail":"จากจุดลงทะเบียน","priority":"high"},
+    {"id":6,"category":"Tech","item":"Garmin watch + ที่ชาร์จ","detail":"","priority":"high"},
+    {"id":7,"category":"Skincare","item":"Anti-chafe (Bodyglide/Vaseline)","detail":"ทาขาหนีบ/รักแร้/หัวนม","priority":"high"},
+    {"id":8,"category":"Skincare","item":"Sunscreen","detail":"กันแดด SPF 50+","priority":"medium"},
+    {"id":9,"category":"Accessory","item":"หมวก + แว่นกันแดด","detail":"","priority":"medium"},
+    {"id":10,"category":"Nutrition","item":"Gels × 2-3","detail":"Maurten/SiS — ทดสอบใน W12 ก่อน","priority":"high"},
+    {"id":11,"category":"Nutrition","item":"Soft flask 250ml + electrolyte powder","detail":"300mg sodium / 250ml","priority":"high"},
+    {"id":12,"category":"Nutrition","item":"กล้วย 1 ลูก (pre-race)","detail":"กิน T-30min","priority":"medium"},
+    {"id":13,"category":"Apparel","item":"Warm-up jacket","detail":"drop bag — กันหนาว pre-race","priority":"low"},
+    {"id":14,"category":"Other","item":"โทรศัพท์ + เงินสด","detail":"","priority":"medium"},
+    {"id":15,"category":"Other","item":"ที่ฝากกระเป๋า","detail":"ใช้ตอน drop bag","priority":"low"}
+  ],
+  "race_morning": [
+    {"id":1,"time":"02:00","action":"ตื่นนอน","done":false},
+    {"id":2,"time":"02:15","action":"🍚 Breakfast: ข้าวต้ม + กล้วย + น้ำผึ้ง (100g carb)","done":false},
+    {"id":3,"time":"02:30","action":"☕ Coffee (ถ้าปกติดื่ม)","done":false},
+    {"id":4,"time":"02:45","action":"🚻 Bathroom #1","done":false},
+    {"id":5,"time":"03:00","action":"👕 ใส่ชุด: kit + anti-chafe + sunscreen","done":false},
+    {"id":6,"time":"03:30","action":"🚗 ออกเดินทางไปจุดสตาร์ท","done":false},
+    {"id":7,"time":"04:00","action":"🎯 ถึง venue, รับ bib (ถ้าจำเป็น)","done":false},
+    {"id":8,"time":"04:15","action":"🚻 Bathroom #2","done":false},
+    {"id":9,"time":"04:30","action":"🏃 Warm-up: 5min walk + 5min jog + 4 strides","done":false},
+    {"id":10,"time":"04:45","action":"🍯 ½ gel + sip electrolyte","done":false},
+    {"id":11,"time":"04:50","action":"🏁 ไป start line, focus หายใจ","done":false},
+    {"id":12,"time":"05:00","action":"🚀 GO! Cadence 160+, NO walking","done":false}
+  ]
+}
