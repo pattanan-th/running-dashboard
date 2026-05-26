@@ -1,0 +1,24 @@
+{
+  "meta": {
+    "version": 1,
+    "note": "Editable training plan. Can be modified in dashboard and exported back to this file.",
+    "last_updated": "2026-05-26"
+  },
+  "weeks": [
+    {"wk":1,"dates":"Mar 14-15","phase":"Build","fri":"-","sat":"Long 10","sun":"Easy 5","planned_km":15,"actual_km":16.0,"note":"Start of block"},
+    {"wk":2,"dates":"Mar 20-21","phase":"Build","fri":"Easy 4","sat":"Easy 12","sun":"-","planned_km":16,"actual_km":16.7,"note":"swap pattern"},
+    {"wk":3,"dates":"Mar 27-29","phase":"Build","fri":"Easy 7","sat":"-","sun":"Long 10","planned_km":17,"actual_km":18.4,"note":""},
+    {"wk":4,"dates":"Apr 3-5","phase":"Build","fri":"Tempo 6","sat":"Easy 7","sun":"Long 10","planned_km":23,"actual_km":24.4,"note":"⚠️ all too hard"},
+    {"wk":5,"dates":"Apr 10-13","phase":"Build","fri":"Tempo 9","sat":"Easy 7","sun":"Long 13","planned_km":29,"actual_km":30.3,"note":"Nakhon Ratchasima (cool!)"},
+    {"wk":6,"dates":"Apr 17","phase":"Recovery","fri":"Int 5","sat":"-","sun":"-","planned_km":5,"actual_km":5.9,"note":"⚠️ only 1 run - fatigue"},
+    {"wk":7,"dates":"Apr 24-26","phase":"Build","fri":"Tempo 7","sat":"Easy 8","sun":"Long 13","planned_km":28,"actual_km":29.1,"note":""},
+    {"wk":8,"dates":"May 1-3","phase":"Build","fri":"Tempo 6","sat":"Easy 7","sun":"Long 15","planned_km":28,"actual_km":30.7,"note":"shift to aerobic"},
+    {"wk":9,"dates":"May 8-10","phase":"Build","fri":"Tempo 7","sat":"Easy 8","sun":"Long 16","planned_km":31,"actual_km":31.3,"note":""},
+    {"wk":10,"dates":"May 15-17","phase":"Build","fri":"Int 8","sat":"Easy 8","sun":"Long 18","planned_km":34,"actual_km":23.5,"note":"cutback (Long short)"},
+    {"wk":11,"dates":"May 22-24","phase":"Peak","fri":"Tempo 8","sat":"Easy 8","sun":"Long 19","planned_km":35,"actual_km":28.6,"note":"⭐ Long Run 21.85km PR!"},
+    {"wk":12,"dates":"May 29-31","phase":"Peak","fri":"Progression 7","sat":"Easy 7","sun":"Long 16","planned_km":30,"actual_km":null,"note":"Race kit test! Bring gel"},
+    {"wk":13,"dates":"Jun 5-7","phase":"Taper 1","fri":"Tempo 5","sat":"Easy 5","sun":"Long 13","planned_km":23,"actual_km":null,"note":"Last hard workouts"},
+    {"wk":14,"dates":"Jun 12-14","phase":"Taper 2","fri":"Strides 4","sat":"Rest","sun":"Fun Run 5K","planned_km":9,"actual_km":null,"note":"Company fun run, EZ pace"},
+    {"wk":15,"dates":"Jun 15-21","phase":"RACE","fri":"Rest","sat":"Easy 2","sun":"RACE 21.1","planned_km":24,"actual_km":null,"note":"🏁 Korat 21 HM"}
+  ]
+}

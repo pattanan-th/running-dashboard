@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#1F4E78">
+<title>Korat 21 — Training Dashboard</title>
+<link rel="manifest" href="data:application/json;charset=utf-8,{&quot;name&quot;:&quot;Korat 21&quot;,&quot;short_name&quot;:&quot;Korat21&quot;,&quot;start_url&quot;:&quot;.&quot;,&quot;display&quot;:&quot;standalone&quot;,&quot;background_color&quot;:&quot;%231F4E78&quot;,&quot;theme_color&quot;:&quot;%231F4E78&quot;,&quot;icons&quot;:[{&quot;src&quot;:&quot;data:image/svg%2Bxml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 100 100%27%3E%3Crect fill=%27%231F4E78%27 width=%27100%27 height=%27100%27/%3E%3Ctext x=%2750%27 y=%2768%27 font-size=%2760%27 text-anchor=%27middle%27 fill=%27white%27%3E🏃%3C/text%3E%3C/svg%3E&quot;,&quot;sizes&quot;:&quot;192x192&quot;,&quot;type&quot;:&quot;image/svg+xml&quot;}]}">
+<script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+<style>
+:root {
+  --primary: #1F4E78;
+  --primary-light: #4A90B8;
+  --success: #28a745;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --bg: #f5f7fa;
+  --card-bg: #ffffff;
+  --text: #2c3e50;
+  --text-muted: #6c757d;
+  --border: #e1e4e8;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  font-size: 15px;
+  line-height: 1.5;
+  padding-bottom: 70px;
+  -webkit-font-smoothing: antialiased;
+}
+header {
+  background: linear-gradient(135deg, var(--primary), var(--primary-light));
+  color: white;
+  padding: 16px;
+  padding-top: max(16px, env(safe-area-inset-top));
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+header h1 { font-size: 18px; font-weight: 700; }
+header .countdown {
+  margin-top: 4px;
+  font-size: 14px;
+  opacity: 0.95;
+}
+header .countdown strong { font-size: 18px; }
+.tabs {
+  display: flex;
+  background: var(--card-bg);
+  border-bottom: 1px solid var(--border);
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  position: sticky;
+  top: 70px;
+  z-index: 99;
+}
+.tabs::-webkit-scrollbar { display: none; }
+.tab {
+  padding: 12px 16px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-muted);
+  border: none;
+  background: none;
+  cursor: pointer;
+  white-space: nowrap;
+  border-bottom: 3px solid transparent;
+  transition: all 0.2s;
+}
+.tab.active {
+  color: var(--primary);
+  border-bottom-color: var(--primary);
+  font-weight: 700;
+}
+main { padding: 12px; }
+.page { display: none; }
+.page.active { display: block; }
+.card {
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+}
+.card h2 {
+  font-size: 16px;
+  margin-bottom: 12px;
+  color: var(--primary);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.card h3 {
+  font-size: 14px;
+  margin: 12px 0 8px;
+  color: var(--text);
+}
+.stat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+.stat-grid.three { grid-template-columns: repeat(3, 1fr); }
+.stat {
+  background: var(--bg);
+  border-radius: 8px;
+  padding: 10px;
+  text-align: center;
+}
+.stat-label { font-size: 11px; color: var(--text-muted); text-transform: uppercase; }
+.stat-value { font-size: 20px; font-weight: 700; color: var(--primary); margin-top: 2px; }
+.stat-sub { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+.badge {
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+  font-weight: 600;
+}
+.badge.green { background: #d4edda; color: #155724; }
+.badge.yellow { background: #fff3cd; color: #856404; }
+.badge.red { background: #f8d7da; color: #721c24; }
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 13px;
+}
+th, td {
+  text-align: left;
+  padding: 8px 6px;
+  border-bottom: 1px solid var(--border);
+}
+th {
+  background: var(--bg);
+  font-weight: 600;
+  color: var(--text-muted);
+  font-size: 11px;
+  text-transform: uppercase;
+}
+td.numeric, th.numeric { text-align: right; }
+.chart-container {
+  position: relative;
+  height: 260px;
+  margin: 12px 0;
+}
+.section-title {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin: 16px 0 8px;
+  padding: 0 4px;
+}
+.checklist-item {
+  display: flex;
+  align-items: start;
+  gap: 10px;
+  padding: 10px;
+  border-bottom: 1px solid var(--border);
+}
+.checklist-item:last-child { border-bottom: none; }
+.check-box {
+  width: 20px; height: 20px;
+  border: 2px solid var(--border);
+  border-radius: 4px;
+  flex-shrink: 0;
+  margin-top: 1px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.check-box.checked {
+  background: var(--success);
+  border-color: var(--success);
+  color: white;
+}
+.checklist-item.done .text { text-decoration: line-through; color: var(--text-muted); }
+.pace-row {
+  display: grid;
+  grid-template-columns: 30px 80px 1fr;
+  gap: 8px;
+  padding: 8px;
+  border-bottom: 1px solid var(--border);
+  align-items: center;
+  font-size: 13px;
+}
+.pace-row.warmup { background: #fff8e1; }
+.pace-row.cruise { background: #e8f5e9; }
+.pace-row.finish { background: #ffebee; }
+.pace-km { font-weight: 700; color: var(--primary); }
+.pace-time { font-family: 'SF Mono', Monaco, monospace; font-size: 12px; }
+.cue { color: var(--text-muted); font-size: 12px; }
+.alert-box {
+  background: linear-gradient(135deg, #fff3cd, #ffe69c);
+  border-left: 4px solid var(--warning);
+  padding: 12px;
+  border-radius: 6px;
+  margin: 8px 0;
+  font-size: 13px;
+}
+.alert-box.danger {
+  background: linear-gradient(135deg, #f8d7da, #f1aeb5);
+  border-left-color: var(--danger);
+}
+.alert-box.success {
+  background: linear-gradient(135deg, #d4edda, #a3d8b0);
+  border-left-color: var(--success);
+}
+footer {
+  text-align: center;
+  padding: 16px;
+  font-size: 11px;
+  color: var(--text-muted);
+}
+.btn {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  color: var(--text);
+}
+.btn:active { transform: scale(0.97); }
+.btn.primary { background: var(--primary); color: white; border-color: var(--primary); }
+.btn.danger { background: white; color: var(--danger); border-color: var(--danger); }
+.plan-row {
+  display: grid;
+  grid-template-columns: 36px 1fr 60px 28px;
+  gap: 6px;
+  padding: 8px;
+  border-bottom: 1px solid var(--border);
+  align-items: center;
+  font-size: 13px;
+  cursor: pointer;
+}
+.plan-row:hover { background: var(--bg); }
+.plan-row.current { background: #fff3cd; }
+.plan-row.race { background: #d4edda; font-weight: 600; }
+.plan-wk { font-weight: 700; color: var(--primary); text-align: center; }
+.plan-detail { font-size: 11px; color: var(--text-muted); margin-top: 2px; }
+.plan-km {
+  font-family: monospace;
+  text-align: right;
+  font-size: 11px;
+}
+.plan-km strong { font-size: 13px; color: var(--text); display: block; }
+.plan-edit-icon { color: var(--text-muted); text-align: center; font-size: 14px; }
+.modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 1000;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+}
+.modal-overlay.active { display: flex; }
+.modal {
+  background: white;
+  border-radius: 12px;
+  padding: 20px;
+  width: 100%;
+  max-width: 400px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.modal h3 { color: var(--primary); margin-bottom: 12px; }
+.modal-field { margin-bottom: 10px; }
+.modal-field label {
+  display: block;
+  font-size: 11px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  margin-bottom: 4px;
+  font-weight: 600;
+}
+.modal-field input, .modal-field select {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 14px;
+  font-family: inherit;
+}
+.run-card {
+  border-left: 3px solid var(--primary);
+  padding: 8px 12px;
+  margin: 6px 0;
+  background: var(--bg);
+  border-radius: 4px;
+  font-size: 13px;
+}
+.run-card .meta { display: flex; justify-content: space-between; color: var(--text-muted); font-size: 11px; margin-top: 4px; }
+.zone-bar {
+  display: flex;
+  height: 14px;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 6px;
+  background: #eee;
+}
+.zone-bar > div { display: flex; align-items: center; justify-content: center; color: white; font-size: 9px; font-weight: 600; }
+.z1 { background: #95a5a6; }
+.z2 { background: #3498db; }
+.z3 { background: #27ae60; }
+.z4 { background: #f39c12; }
+.z5 { background: #e74c3c; }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>🏃 Korat 21 — HM Training</h1>
+  <div class="countdown" id="countdown">Loading…</div>
+</header>
+
+<div class="tabs">
+  <button class="tab active" data-page="status">📊 Status</button>
+  <button class="tab" data-page="runs">🏃 Runs</button>
+  <button class="tab" data-page="sleep">💤 Sleep</button>
+  <button class="tab" data-page="plan">📅 Plan</button>
+  <button class="tab" data-page="race">🏁 Race</button>
+  <button class="tab" data-page="checklist">✅ Checklist</button>
+</div>
+
+<main>
+
+<!-- ============= STATUS PAGE ============= -->
+<section class="page active" id="page-status">
+  <div class="card">
+    <h2>🎯 Today's Readiness</h2>
+    <div id="readiness-content"></div>
+  </div>
+  <div class="card">
+    <h2>📈 Last Night's Sleep</h2>
+    <div id="last-sleep"></div>
+  </div>
+  <div class="card">
+    <h2>🏆 Personal Records</h2>
+    <div id="pr-content"></div>
+  </div>
+  <div class="card">
+    <h2>👟 Shoes</h2>
+    <div id="shoes-content"></div>
+  </div>
+</section>
+
+<!-- ============= RUNS PAGE ============= -->
+<section class="page" id="page-runs">
+  <div class="card">
+    <h2>🏃 Long Runs Progression</h2>
+    <div class="chart-container"><canvas id="long-runs-chart"></canvas></div>
+  </div>
+  <div class="card">
+    <h2>🎯 True Running Cadence</h2>
+    <div class="alert-box">
+      <strong>💡 Insight:</strong> Garmin's display average includes walking breaks.
+      True running cadence (laps ≥150 spm) is consistently <strong>160-164 spm</strong>.
+    </div>
+    <div class="chart-container"><canvas id="cadence-chart"></canvas></div>
+  </div>
+  <div class="card">
+    <h2>📋 All Long Runs Detail</h2>
+    <div id="runs-list"></div>
+  </div>
+</section>
+
+<!-- ============= SLEEP PAGE ============= -->
+<section class="page" id="page-sleep">
+  <div class="card">
+    <h2>💤 Sleep Duration Trend (Last 30 nights)</h2>
+    <div class="chart-container"><canvas id="sleep-chart"></canvas></div>
+  </div>
+  <div class="card">
+    <h2>❤️ RHR Trend (Last 30 nights)</h2>
+    <div class="alert-box">
+      Baseline 52 (recovered) • 55 (normal) • 56-57 (fatigued) • ≥60 alert
+    </div>
+    <div class="chart-container"><canvas id="rhr-chart"></canvas></div>
+  </div>
+  <div class="card">
+    <h2>🔋 Body Battery Recovery</h2>
+    <div class="chart-container"><canvas id="bb-chart"></canvas></div>
+  </div>
+</section>
+
+<!-- ============= TRAINING PLAN PAGE ============= -->
+<section class="page" id="page-plan">
+  <div class="card">
+    <h2>📅 15-Week Training Plan</h2>
+    <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px">
+      <button class="btn" onclick="addWeek()">+ Add Week</button>
+      <button class="btn" onclick="exportPlan()">⬇️ Export</button>
+      <button class="btn" onclick="document.getElementById('import-file').click()">⬆️ Import</button>
+      <button class="btn danger" onclick="resetPlan()">↺ Reset</button>
+      <input type="file" id="import-file" accept=".json" style="display:none" onchange="importPlan(event)">
+    </div>
+    <div class="alert-box" id="plan-summary"></div>
+    <div id="plan-table"></div>
+  </div>
+  <div class="card">
+    <h2>📊 Planned vs Actual</h2>
+    <div class="chart-container"><canvas id="plan-chart"></canvas></div>
+  </div>
+</section>
+
+<!-- Edit modal -->
+<div class="modal-overlay" id="edit-modal" onclick="if(event.target===this)closeEdit()">
+  <div class="modal">
+    <h3 id="edit-title">Edit Week</h3>
+    <div id="edit-fields"></div>
+    <div style="display:flex;gap:8px;margin-top:12px;justify-content:flex-end">
+      <button class="btn" onclick="closeEdit()">Cancel</button>
+      <button class="btn primary" onclick="saveEdit()">Save</button>
+    </div>
+  </div>
+</div>
+
+<!-- ============= RACE PLAN PAGE ============= -->
+<section class="page" id="page-race">
+  <div class="card">
+    <h2>🎯 Goal: 2:45:49</h2>
+    <div class="alert-box success">
+      <strong>Strategy:</strong> Continuous run + Negative split. NO walking except aid stations (max 30 sec).
+    </div>
+    <div class="stat-grid three">
+      <div class="stat">
+        <div class="stat-label">Halfway</div>
+        <div class="stat-value">1:20</div>
+        <div class="stat-sub">10.55 km</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">Avg Pace</div>
+        <div class="stat-value">7:50</div>
+        <div class="stat-sub">/km</div>
+      </div>
+      <div class="stat">
+        <div class="stat-label">Cadence</div>
+        <div class="stat-value">165+</div>
+        <div class="stat-sub">spm</div>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <h2>📋 KM-by-KM Plan</h2>
+    <div id="pace-plan"></div>
+  </div>
+  <div class="card">
+    <h2>🍯 Fueling Plan</h2>
+    <table>
+      <thead><tr><th>When</th><th>What</th><th class="numeric">Carb</th></tr></thead>
+      <tbody>
+        <tr><td>T-3h</td><td>ข้าวต้ม+กล้วย+น้ำผึ้ง</td><td class="numeric">100g</td></tr>
+        <tr><td>T-30m</td><td>½ gel + electrolyte</td><td class="numeric">15g</td></tr>
+        <tr><td>km 7</td><td>🍯 GEL #1</td><td class="numeric">25g</td></tr>
+        <tr><td>km 14</td><td>🍯 GEL #2</td><td class="numeric">25g</td></tr>
+        <tr><td>Aid stations</td><td>Water + electrolyte (jog-thru)</td><td class="numeric">—</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="card">
+    <h2>⚠️ Decision Tree</h2>
+    <table>
+      <thead><tr><th>If</th><th>Then</th></tr></thead>
+      <tbody>
+        <tr><td>RHR ≥65 / sick</td><td>Consider DNS</td></tr>
+        <tr><td>RHR 60-64</td><td>Safe pace 8:15/km</td></tr>
+        <tr><td>Temp >33°C start</td><td>Drop time goal</td></tr>
+        <tr><td>Cramp</td><td>Walk 30s + electrolyte</td></tr>
+        <tr><td>Walk urge km 8-12</td><td>🚫 RESIST</td></tr>
+        <tr><td>Stomach upset</td><td>Stop gels, water only</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- ============= CHECKLIST PAGE ============= -->
+<section class="page" id="page-checklist">
+  <div class="card">
+    <h2>📅 Current Week</h2>
+    <p id="current-week-info" style="font-size:13px;color:var(--text-muted)"></p>
+  </div>
+  <div class="card">
+    <h2>🌅 Race Morning Timeline</h2>
+    <div id="race-morning"></div>
+  </div>
+  <div class="card">
+    <h2>🎒 Race Day Pack List</h2>
+    <div id="pack-list"></div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div>Built from Garmin Connect data • Generated <span id="gen-date"></span></div>
+  <div style="margin-top:8px">📱 Add to Home Screen for app-like experience</div>
+</footer>
+
+<script>
+const DATA = {"activities": {"meta": {"user": "ITon", "device": "Garmin Instinct Esports", "shoes": {"ASICS Novablast 5": "149.6/650 km (12 act, since Mar 14) - Long Runs primarily", "Saucony Kinvara 14": "423.1/644 km (75 act, since Mar 22 2025) - Tempo/Treadmill", "ASICS Dynablast 5": "28.4/800 km (5 act, since Apr 20) - Easy Runs"}, "race": "Korat 21 Half Marathon", "race_date": "2026-06-21", "collected_on": "2026-05-24", "note_zone_changes": "HR zones recalibrated mid-block. Early: Z5>181 Z4 167-180. Mid: Z5>169 Z4 157-168. Current: Z5>178 Z4 165-177.", "cadence_note": "cad = Garmin displayed avg (includes walking breaks, often misleadingly low). run_cad = computed running-only cadence from laps ≥150 spm. walk_pct = % of km laps in walking range. True running cadence is consistently 160-164 spm even when display shows 143-150."}, "long_runs": [{"wk": 1, "date": "2026-03-14", "name": "Bang Lamung W1 Sat", "dist": 10.52, "time": "1:16:46", "pace": "7:18", "hr_avg": 154, "cad": 150, "run_cad": 160, "walk_pct": 42, "stride": 0.91, "temp": 28.6, "ascent": 131, "Z1": 16, "Z2": 8, "Z3": 42, "Z4": 26, "Z5": 0, "shoe": "Novablast"}, {"wk": 3, "date": "2026-03-29", "name": "Si Racha W3 Sun", "dist": 10.81, "time": "1:22:40", "pace": "7:39", "hr_avg": 158, "cad": 159, "run_cad": 160, "walk_pct": 8, "stride": 0.82, "temp": 31.9, "ascent": 196, "Z1": 0, "Z2": 3, "Z3": 35, "Z4": 48, "Z5": 11}, {"wk": 4, "date": "2026-04-05", "name": "Si Racha W4 Sun", "dist": 10.36, "time": "1:16:31", "pace": "7:23", "hr_avg": 162, "cad": 156, "run_cad": 160, "walk_pct": 18, "stride": 0.87, "temp": 32.9, "ascent": 79, "Z1": 2, "Z2": 20, "Z3": 23, "Z4": 48, "Z5": 4}, {"wk": 5, "date": "2026-04-13", "name": "Nakhon Ratchasima W5 Mon", "dist": 12.99, "time": "1:36:16", "pace": "7:25", "hr_avg": 152, "cad": 158, "run_cad": 160, "walk_pct": 7, "stride": 0.85, "temp": 29.0, "ascent": 241, "Z1": 1, "Z2": 37, "Z3": 53, "Z4": 7, "Z5": 0, "shoe": "Novablast"}, {"wk": 7, "date": "2026-04-26", "name": "Bang Lamung W7 Sun", "dist": 13.34, "time": "1:54:31", "pace": "8:35", "hr_avg": 145, "cad": 146, "run_cad": 164, "walk_pct": 50, "stride": 0.8, "temp": 32.2, "ascent": 427, "Z1": 34, "Z2": 25, "Z3": 24, "Z4": 12, "Z5": 0}, {"wk": 8, "date": "2026-05-03", "name": "Bang Lamung W8 Sun", "dist": 15.54, "time": "2:16:32", "pace": "8:47", "hr_avg": 141, "cad": 147, "run_cad": 162, "walk_pct": 65, "stride": 0.77, "temp": 32.8, "ascent": 453, "Z1": 33, "Z2": 48, "Z3": 16, "Z4": 0, "Z5": 0, "note": "high walk% but smooth aerobic"}, {"wk": 9, "date": "2026-05-10", "name": "Si Racha W9 Sun", "dist": 17.86, "time": "2:31:15", "pace": "8:28", "hr_avg": 151, "cad": 151, "run_cad": 161, "walk_pct": 30, "stride": 0.79, "temp": 32.2, "ascent": 775, "Z1": 5, "Z2": 46, "Z3": 32, "Z4": 13, "Z5": 0}, {"wk": 10, "date": "2026-05-17", "name": "Si Racha W10 Sun", "dist": 10.86, "time": "1:31:13", "pace": "8:24", "hr_avg": 149, "hr_max": 165, "cad": 163, "run_cad": 164, "walk_pct": 0, "stride": 0.73, "temp": 32.6, "ascent": 326, "Z1": 2, "Z2": 58, "Z3": 38, "Z4": 0, "Z5": 0, "note": "cutback - NO walking, best display match"}, {"wk": 11, "date": "2026-05-24", "name": "Si Racha W11 Sun", "dist": 21.85, "time": "3:35:49", "pace": "9:53", "hr_avg": 145, "hr_max": 171, "cad": 143, "run_cad": 161, "walk_pct": 48, "stride": 0.72, "temp": 33.2, "ascent": 1071, "calories": 1589, "Z1": 28, "Z2": 36, "Z3": 33, "Z4": 1, "Z5": 0, "note": "PEAK 22km - heavy walking 2nd half due to heat fade"}], "tempos_intervals": [{"wk": 4, "date": "2026-04-03", "name": "Si Racha W4 Fri Tempo T", "dist": 6.72, "time": "49:55", "pace": "7:25", "hr_avg": 155, "hr_max": 172, "cad": 155, "stride": 0.86, "temp": 32.8, "Z1": 7, "Z2": 20, "Z3": 44, "Z4": 24, "Z5": 0, "shoe": "Kinvara"}, {"wk": 5, "date": "2026-04-10", "name": "Nakhon Ratchasima W5 Fri Tempo O", "dist": 9.6, "time": "1:20:45", "pace": "8:25", "hr_avg": 149, "hr_max": 177, "cad": 143, "stride": 0.82, "temp": 34.2, "Z1": 11, "Z2": 7, "Z3": 19, "Z4": 39, "Z5": 0, "shoe": "Kinvara"}, {"wk": 6, "date": "2026-04-17", "name": "Si Racha W6 Fri Intervals", "dist": 5.91, "time": "43:28", "pace": "7:22", "hr_avg": 154, "hr_max": 178, "cad": 152, "stride": 0.89, "temp": 32.4, "Z1": 7, "Z2": 15, "Z3": 29, "Z4": 37, "Z5": 0, "shoe": "Kinvara"}, {"wk": 7, "date": "2026-04-24", "name": "Si Racha W7 Fri Tempo R", "dist": 7.58, "time": "59:38", "pace": "7:52", "hr_avg": 154, "hr_max": 175, "cad": 156, "stride": 0.81, "temp": 33.0, "Z1": 4, "Z2": 33, "Z3": 27, "Z4": 30, "Z5": 0, "shoe": "Kinvara"}, {"wk": 8, "date": "2026-05-01", "name": "Si Racha W8 Fri Tempo O", "dist": 8.12, "time": "1:04:42", "pace": "7:58", "hr_avg": 145, "hr_max": 177, "cad": 153, "stride": 0.82, "temp": 32.2, "Z1": 23, "Z2": 18, "Z3": 26, "Z4": 15, "Z5": 0, "shoe": "Kinvara"}, {"wk": 9, "date": "2026-05-08", "name": "W9 Fri Intervals", "type": "treadmill", "dist": 9.66, "time": "1:20:18", "pace": "8:19", "pace_moving": "7:49", "best_pace": "4:20", "hr_avg": 149, "hr_max": 182, "cad": 150, "stride": 0.79, "temp": 29.8, "workout_intervals": {"run_time": "32:46", "run_dist": 4.34, "run_pace": "7:33"}, "badge": "Treadmill 5K", "shoe": "Kinvara"}, {"wk": 10, "date": "2026-05-15", "name": "W10 Fri Tempo", "type": "treadmill", "dist": 5.39, "time": "43:11", "pace": "8:01", "pace_moving": "7:31", "best_pace": "4:37", "hr_avg": 152, "hr_max": 185, "cad": 154, "stride": 0.8, "temp": 30.2, "workout_intervals": {"run_time": "17:37", "run_dist": 2.44, "run_pace": "7:13"}, "shoe": "Kinvara"}, {"wk": 11, "date": "2026-05-22", "name": "W11 Fri Tempo", "type": "treadmill", "dist": 4.54, "time": "41:50", "pace": "9:13", "pace_moving": "8:05", "best_pace": "5:25", "hr_avg": 144, "hr_max": 173, "cad": 145, "stride": 0.71, "temp": 30.6, "shoe": "Kinvara"}], "easy_runs": [{"wk": 1, "date": "2026-03-15", "name": "Si Racha W1 Sun Easy", "dist": 5.51, "time": "46:05", "pace": "8:22", "hr_avg": 144, "hr_max": 155, "cad": 146, "stride": 0.82, "temp": 33.2, "Z1": 8, "Z2": 62, "Z3": 14, "Z4": 0, "Z5": 0, "shoe": "Novablast"}, {"wk": 2, "date": "2026-03-20", "name": "Si Racha W2 Fri Easy", "dist": 4.53, "time": "37:05", "pace": "8:11", "hr_avg": 147, "hr_max": 161, "cad": 160, "stride": 0.76, "temp": 32.8, "Z1": 6, "Z2": 79, "Z3": 12, "Z4": 0, "Z5": 0, "shoe": "Kinvara"}, {"wk": 2, "date": "2026-03-21", "name": "Si Racha W2 Sat Easy", "dist": 12.19, "time": "1:39:33", "pace": "8:10", "hr_avg": 141, "hr_max": 154, "cad": 148, "stride": 0.83, "temp": 31.9, "ascent": 444, "Z1": 10, "Z2": 48, "Z3": 40, "Z4": 0, "Z5": 0, "shoe": "Novablast", "note": "unusually long for easy"}, {"wk": 3, "date": "2026-03-27", "name": "Si Racha W3 Fri Easy", "dist": 7.62, "time": "1:08:00", "pace": "8:55", "hr_avg": 146, "hr_max": 157, "cad": 157, "stride": 0.71, "temp": 32.9, "Z1": 2, "Z2": 15, "Z3": 80, "Z4": 0, "Z5": 0, "shoe": "Kinvara"}, {"wk": 4, "date": "2026-04-04", "name": "Si Racha W4 Sat Easy", "dist": 7.35, "time": "59:05", "pace": "8:02", "hr_avg": 152, "hr_max": 165, "cad": 158, "stride": 0.79, "temp": 32.0, "ascent": 126, "Z1": 4, "Z2": 29, "Z3": 66, "Z4": 0, "Z5": 0, "shoe": "Kinvara", "note": "too hard for easy"}, {"wk": 5, "date": "2026-04-11", "name": "Nakhon Ratchasima W5 Sat Easy", "dist": 7.73, "time": "59:52", "pace": "7:44", "hr_avg": 147, "hr_max": 173, "cad": 154, "stride": 0.84, "temp": 32.9, "ascent": 47, "Z1": 5, "Z2": 54, "Z3": 29, "Z4": 4, "Z5": 0, "shoe": "Novablast"}, {"wk": 7, "date": "2026-04-25", "name": "Si Racha W7 Sat Easy", "dist": 8.15, "time": "1:09:28", "pace": "8:32", "hr_avg": 156, "hr_max": 175, "cad": 155, "stride": 0.76, "temp": 33.1, "ascent": 83, "Z1": 1, "Z2": 15, "Z3": 75, "Z4": 7, "Z5": 0, "shoe": "Dynablast", "note": "too hard for easy"}, {"wk": 8, "date": "2026-05-02", "name": "Si Racha W8 Sat Easy", "dist": 7.03, "time": "58:39", "pace": "8:21", "hr_avg": 142, "hr_max": 160, "cad": 144, "stride": 0.83, "temp": 33.6, "ascent": 157, "Z1": 27, "Z2": 48, "Z3": 20, "Z4": 0, "Z5": 0, "shoe": "Dynablast"}, {"wk": 9, "date": "2026-05-09", "name": "Si Racha W9 Sat Easy", "dist": 3.77, "time": "33:48", "pace": "8:58", "hr_avg": 140, "hr_max": 155, "cad": 152, "stride": 0.74, "temp": 31.7, "ascent": 81, "Z1": 16, "Z2": 69, "Z3": 4, "Z4": 0, "Z5": 0, "shoe": "Dynablast"}, {"wk": 10, "date": "2026-05-16", "name": "Si Racha W10 Sat Easy", "dist": 7.23, "time": "1:02:42", "pace": "8:41", "hr_avg": 146, "hr_max": 163, "cad": 151, "stride": 0.77, "temp": 32.5, "ascent": 215, "Z1": 11, "Z2": 46, "Z3": 36, "Z4": 0, "Z5": 0, "shoe": "Dynablast"}, {"wk": 11, "date": "2026-05-23", "name": "Si Racha W11 Sat Easy", "dist": 2.24, "time": "19:56", "pace": "8:53", "hr_avg": 133, "hr_max": 147, "cad": 157, "stride": 0.72, "temp": 33.5, "ascent": 2, "Z1": 43, "Z2": 35, "Z3": 0, "Z4": 0, "Z5": 0, "shoe": "Dynablast", "note": "short shake-out"}], "missing_sessions": {"W6_Sat_Easy": "no run", "W6_Sun_Long": "no run - reduced week"}}, "sleep": {"meta": {"user": "ITon", "device": "Garmin Instinct Esports", "date_range": "2026-03-14 to 2026-05-26", "nights_collected": 73, "missing": ["2026-04-07"], "note": "Each entry = night ENDING on that date. d=date, t=total, dp=deep, li=light, rm=REM, aw=awake, bd=bed, wk=wake, r=RHR, bb=body battery change. RHR baseline: 52 recovered, 55 normal, 56-57 fatigued."}, "nights": [{"d": "2026-03-14", "t": "5h 28m", "dp": "1h 29m", "li": "3h 52m", "rm": "7m", "aw": "3m", "bd": "12:08 AM", "wk": "5:39 AM", "r": 53, "bb": 34, "ctx": "W1 Sat Long Run morning"}, {"d": "2026-03-15", "t": "9h 56m", "dp": "1h 27m", "li": "6h 49m", "rm": "1h 40m", "aw": "37m", "bd": "9:42 PM", "wk": "8:15 AM", "r": 56, "bb": 23, "ctx": "W1 Sun Easy morning"}, {"d": "2026-03-16", "t": "7h 55m", "dp": "1h 16m", "li": "4h 59m", "rm": "1h 40m", "aw": "1m", "bd": "10:16 PM", "wk": "6:12 AM", "r": 56, "bb": 20}, {"d": "2026-03-17", "t": "7h 57m", "dp": "1h 5m", "li": "5h 34m", "rm": "1h 18m", "aw": "7m", "bd": "10:13 PM", "wk": "6:17 AM", "r": 60, "bb": 12}, {"d": "2026-03-18", "t": "6h 9m", "dp": "36m", "li": "3h 50m", "rm": "1h 43m", "aw": "10m", "bd": "11:00 PM", "wk": "5:57 AM", "r": 57, "bb": 25}, {"d": "2026-03-19", "t": "7h 49m", "dp": "1h 2m", "li": "5h 48m", "rm": "59m", "aw": "5m", "bd": "10:10 PM", "wk": "6:04 AM", "r": 55, "bb": 13}, {"d": "2026-03-20", "t": "9h 48m", "dp": "59m", "li": "6h 14m", "rm": "2h 35m", "aw": "24m", "bd": "8:45 PM", "wk": "6:57 AM", "r": 53, "bb": 58, "ctx": "W2 Fri Easy morning"}, {"d": "2026-03-21", "t": "6h 32m", "dp": "34m", "li": "4h 47m", "rm": "1h 11m", "aw": "6m", "bd": "11:20 PM", "wk": "5:58 AM", "r": 60, "bb": 10, "ctx": "W2 Sat Easy 12km morning"}, {"d": "2026-03-22", "t": "6h 19m", "dp": "1h 26m", "li": "4h 18m", "rm": "35m", "aw": "9m", "bd": "12:19 AM", "wk": "6:47 AM", "r": 59, "bb": 10}, {"d": "2026-03-23", "t": "6h 23m", "dp": "33m", "li": "5h 14m", "rm": "36m", "aw": "5m", "bd": "11:40 PM", "wk": "6:08 AM", "r": 53, "bb": 51}, {"d": "2026-03-24", "t": "6h 13m", "dp": "1h 37m", "li": "3h 52m", "rm": "44m", "aw": "2m", "bd": "12:04 AM", "wk": "6:19 AM", "r": 59, "bb": 6}, {"d": "2026-03-25", "t": "6h 12m", "dp": "1h 39m", "li": "3h 48m", "rm": "45m", "aw": "3m", "bd": "11:47 PM", "wk": "6:02 AM", "r": 58, "bb": 9}, {"d": "2026-03-26", "t": "7h 16m", "dp": "1h 29m", "li": "4h 18m", "rm": "1h 29m", "aw": "3m", "bd": "10:50 PM", "wk": "6:09 AM", "r": 61, "bb": 8}, {"d": "2026-03-27", "t": "7h 55m", "dp": "1h 17m", "li": "4h 43m", "rm": "1h 55m", "aw": "5m", "bd": "10:13 PM", "wk": "6:13 AM", "r": 55, "bb": 45, "ctx": "W3 Fri Easy morning"}, {"d": "2026-03-28", "t": "6h 46m", "dp": "47m", "li": "4h 48m", "rm": "1h 11m", "aw": "7m", "bd": "11:52 PM", "wk": "6:45 AM", "r": 59, "bb": 15}, {"d": "2026-03-29", "t": "6h 3m", "dp": "41m", "li": "4h 44m", "rm": "38m", "aw": "20m", "bd": "12:41 AM", "wk": "7:04 AM", "r": 58, "bb": 32, "ctx": "W3 Sun Long Run morning"}, {"d": "2026-03-30", "t": "7h 57m", "dp": "3h 49m", "li": "4h 8m", "rm": "--", "aw": "8m", "bd": "10:00 PM", "wk": "6:05 AM", "r": 60, "bb": 44}, {"d": "2026-03-31", "t": "7h 5m", "dp": "1h 5m", "li": "4h 8m", "rm": "1h 52m", "aw": "10m", "bd": "10:45 PM", "wk": "6:00 AM", "r": 56, "bb": 38}, {"d": "2026-04-01", "t": "7h 1m", "dp": "1h 1m", "li": "4h 42m", "rm": "1h 18m", "aw": "23m", "bd": "10:51 PM", "wk": "6:15 AM", "r": 57, "bb": 25}, {"d": "2026-04-02", "t": "5h 21m", "dp": "1h 24m", "li": "3h 39m", "rm": "18m", "aw": "7m", "bd": "12:42 AM", "wk": "6:10 AM", "r": 56, "bb": 27}, {"d": "2026-04-03", "t": "8h 14m", "dp": "1h 6m", "li": "5h 5m", "rm": "2h 3m", "aw": "11m", "bd": "10:53 PM", "wk": "7:18 AM", "r": 55, "bb": 57, "ctx": "W4 Fri Tempo morning"}, {"d": "2026-04-04", "t": "7h 56m", "dp": "1h 22m", "li": "5h 29m", "rm": "1h 5m", "aw": "6m", "bd": "12:57 AM", "wk": "8:59 AM", "r": 56, "bb": 33, "ctx": "W4 Sat Easy morning"}, {"d": "2026-04-05", "t": "7h 26m", "dp": "41m", "li": "5h 14m", "rm": "1h 31m", "aw": "4m", "bd": "1:12 AM", "wk": "8:42 AM", "r": 56, "bb": 44, "ctx": "W4 Sun Long Run morning"}, {"d": "2026-04-06", "t": "6h 42m", "dp": "--", "li": "4h 22m", "rm": "2h 20m", "aw": "7m", "bd": "11:35 PM", "wk": "6:24 AM", "r": 58, "bb": 29}, {"d": "2026-04-07", "t": null, "note": "no sleep data"}, {"d": "2026-04-08", "t": "7h 12m", "dp": "58m", "li": "4h 27m", "rm": "1h 47m", "aw": "11m", "bd": "10:33 PM", "wk": "5:56 AM", "r": 54, "bb": 56}, {"d": "2026-04-09", "t": "7h 6m", "dp": "1h 12m", "li": "4h 35m", "rm": "1h 19m", "aw": "3m", "bd": "11:18 PM", "wk": "6:27 AM", "r": 55, "bb": 35}, {"d": "2026-04-10", "t": "6h 43m", "dp": "1h 7m", "li": "4h 25m", "rm": "1h 11m", "aw": "6m", "bd": "11:48 PM", "wk": "6:37 AM", "r": 55, "bb": 44, "ctx": "W5 Fri Tempo morning Nakhon Ratchasima"}, {"d": "2026-04-11", "t": "10h 2m", "dp": "1h 2m", "li": "6h 7m", "rm": "2h 53m", "aw": "15m", "bd": "10:55 PM", "wk": "9:12 AM", "r": 57, "bb": 49, "ctx": "W5 Sat Easy morning"}, {"d": "2026-04-12", "t": "8h 52m", "dp": "20m", "li": "6h 15m", "rm": "2h 17m", "aw": "12m", "bd": "10:21 PM", "wk": "7:25 AM", "r": 58, "bb": 35}, {"d": "2026-04-13", "t": "5h 11m", "dp": "2h 9m", "li": "3h 2m", "rm": "--", "aw": "8m", "bd": "11:10 PM", "wk": "4:29 AM", "r": 57, "bb": 31, "ctx": "W5 Mon Long Run morning"}, {"d": "2026-04-14", "t": "7h 40m", "dp": "44m", "li": "5h 55m", "rm": "1h 1m", "aw": "19m", "bd": "10:05 PM", "wk": "6:18 AM", "r": 62, "bb": 7, "ctx": "after Long Run"}, {"d": "2026-04-15", "t": "7h 37m", "dp": "1h 45m", "li": "4h 39m", "rm": "1h 13m", "aw": "40m", "bd": "11:53 PM", "wk": "8:10 AM", "r": 55, "bb": 37}, {"d": "2026-04-16", "t": "8h 53m", "dp": "1h 19m", "li": "6h 16m", "rm": "1h 18m", "aw": "5m", "bd": "11:56 PM", "wk": "8:54 AM", "r": 55, "bb": 53}, {"d": "2026-04-17", "t": "9h 32m", "dp": "1h 7m", "li": "7h 30m", "rm": "55m", "aw": "15m", "bd": "11:22 PM", "wk": "9:09 AM", "r": 61, "bb": 14, "ctx": "W6 Fri Intervals morning"}, {"d": "2026-04-18", "t": "7h 56m", "dp": "40m", "li": "5h 53m", "rm": "1h 23m", "aw": "13m", "bd": "12:46 AM", "wk": "8:55 AM", "r": 58, "bb": 29}, {"d": "2026-04-19", "t": "7h 8m", "dp": "38m", "li": "6h 7m", "rm": "23m", "aw": "28m", "bd": "1:19 AM", "wk": "8:55 AM", "r": 68, "bb": 0, "ctx": "⚠️ ALERT - RHR spike, possible illness/severe fatigue"}, {"d": "2026-04-20", "t": "6h 21m", "dp": "13m", "li": "4h 59m", "rm": "1h 8m", "aw": "7m", "bd": "11:27 PM", "wk": "5:55 AM", "r": 61, "bb": 3, "ctx": "⚠️ still recovering"}, {"d": "2026-04-21", "t": "7h 17m", "dp": "1h 36m", "li": "4h 16m", "rm": "1h 25m", "aw": "6m", "bd": "11:56 PM", "wk": "7:19 AM", "r": 55, "bb": 47, "ctx": "recovery"}, {"d": "2026-04-22", "t": "6h 10m", "dp": "48m", "li": "4h 10m", "rm": "1h 12m", "aw": "10m", "bd": "11:58 PM", "wk": "6:18 AM", "r": 56, "bb": 32}, {"d": "2026-04-23", "t": "6h 33m", "dp": "45m", "li": "4h 10m", "rm": "1h 38m", "aw": "2m", "bd": "11:46 PM", "wk": "6:21 AM", "r": 53, "bb": 39}, {"d": "2026-04-24", "t": "6h 16m", "dp": "50m", "li": "4h 1m", "rm": "1h 25m", "aw": "4m", "bd": "1:05 AM", "wk": "7:25 AM", "r": 52, "bb": 50, "ctx": "W7 Fri Tempo morning - RECOVERED!"}, {"d": "2026-04-25", "t": "8h 28m", "dp": "57m", "li": "5h 5m", "rm": "2h 26m", "aw": "3m", "bd": "12:24 AM", "wk": "8:55 AM", "r": 56, "bb": 30, "ctx": "W7 Sat Easy morning"}, {"d": "2026-04-26", "t": "6h 39m", "dp": "27m", "li": "4h 12m", "rm": "2h 0m", "aw": "8m", "bd": "10:55 PM", "wk": "5:42 AM", "r": 56, "bb": 33, "ctx": "W7 Sun Long Run morning"}, {"d": "2026-04-27", "t": "7h 58m", "dp": "50m", "li": "4h 53m", "rm": "2h 15m", "aw": "8m", "bd": "10:04 PM", "wk": "6:10 AM", "r": 56, "bb": 36}, {"d": "2026-04-28", "t": "5h 51m", "dp": "1h 9m", "li": "3h 38m", "rm": "1h 4m", "aw": "3m", "bd": "12:28 AM", "wk": "6:22 AM", "r": 57, "bb": 28}, {"d": "2026-04-29", "t": "6h 4m", "dp": "13m", "li": "4h 41m", "rm": "1h 10m", "aw": "1m", "bd": "12:11 AM", "wk": "6:16 AM", "r": 56, "bb": 39}, {"d": "2026-04-30", "t": "6h 50m", "dp": "1h 16m", "li": "4h 17m", "rm": "1h 17m", "aw": "4m", "bd": "11:20 PM", "wk": "6:14 AM", "r": 55, "bb": 39}, {"d": "2026-05-01", "t": "6h 23m", "dp": "30m", "li": "4h 9m", "rm": "1h 44m", "aw": "3m", "bd": "11:50 PM", "wk": "6:16 AM", "r": 53, "bb": 48, "ctx": "W8 Fri Tempo morning"}, {"d": "2026-05-02", "t": "8h 14m", "dp": "35m", "li": "6h 18m", "rm": "1h 21m", "aw": "29m", "bd": "10:13 PM", "wk": "6:56 AM", "r": 52, "bb": 58, "ctx": "W8 Sat Easy morning - BEST recovery!"}, {"d": "2026-05-03", "t": "4h 47m", "dp": "2m", "li": "3h 40m", "rm": "1h 5m", "aw": "8m", "bd": "12:06 AM", "wk": "5:01 AM", "r": 59, "bb": 10, "ctx": "⚠️ W8 Sun Long Run morning - SLEPT POORLY before 15km!"}, {"d": "2026-05-04", "t": "6h 49m", "dp": "48m", "li": "4h 9m", "rm": "1h 52m", "aw": "11m", "bd": "11:33 PM", "wk": "6:33 AM", "r": 57, "bb": 25}, {"d": "2026-05-05", "t": "7h 34m", "dp": "1h 29m", "li": "5h 1m", "rm": "1h 4m", "aw": "2m", "bd": "10:35 PM", "wk": "6:11 AM", "r": 56, "bb": 27}, {"d": "2026-05-06", "t": "6h 50m", "dp": "3h 13m", "li": "3h 37m", "rm": "--", "aw": "4m", "bd": "11:36 PM", "wk": "6:30 AM", "r": 53, "bb": 46}, {"d": "2026-05-07", "t": "5h 59m", "dp": "1h 2m", "li": "3h 58m", "rm": "59m", "aw": "8m", "bd": "12:06 AM", "wk": "6:13 AM", "r": 54, "bb": 30}, {"d": "2026-05-08", "t": "7h 27m", "dp": "1h 16m", "li": "4h 58m", "rm": "1h 13m", "aw": "2m", "bd": "10:04 PM", "wk": "5:33 AM", "r": 56, "bb": 34, "ctx": "W9 Fri Intervals morning"}, {"d": "2026-05-09", "t": "7h 56m", "dp": "1h 57m", "li": "4h 17m", "rm": "1h 42m", "aw": "7m", "bd": "10:27 PM", "wk": "6:30 AM", "r": 54, "bb": 32, "ctx": "W9 Sat Easy morning - good sleep"}, {"d": "2026-05-10", "t": "5h 30m", "dp": "52m", "li": "4h 28m", "rm": "10m", "aw": "12m", "bd": "11:11 PM", "wk": "4:53 AM", "r": 57, "bb": 16, "ctx": "⚠️ W9 Sun Long Run morning - SHORT SLEEP before 17.9km!"}, {"d": "2026-05-11", "t": "6h 57m", "dp": "14m", "li": "5h 0m", "rm": "1h 43m", "aw": "10m", "bd": "11:19 PM", "wk": "6:26 AM", "r": 59, "bb": 11}, {"d": "2026-05-12", "t": "6h 20m", "dp": "1h 11m", "li": "4h 35m", "rm": "34m", "aw": "2m", "bd": "11:45 PM", "wk": "6:07 AM", "r": 58, "bb": 19}, {"d": "2026-05-13", "t": "6h 29m", "dp": "1h 43m", "li": "4h 6m", "rm": "40m", "aw": "11m", "bd": "11:16 PM", "wk": "5:56 AM", "r": 57, "bb": 32}, {"d": "2026-05-14", "t": "6h 9m", "dp": "1h 9m", "li": "4h 6m", "rm": "54m", "aw": "9m", "bd": "11:18 PM", "wk": "6:03 AM", "r": 56, "bb": 22}, {"d": "2026-05-15", "t": "6h 22m", "dp": "56m", "li": "4h 3m", "rm": "1h 23m", "aw": "7m", "bd": "11:11 PM", "wk": "5:40 AM", "r": 56, "bb": 31, "ctx": "W10 Fri Tempo morning"}, {"d": "2026-05-16", "t": "7h 16m", "dp": "51m", "li": "4h 47m", "rm": "1h 38m", "aw": "30m", "bd": "10:14 PM", "wk": "6:00 AM", "r": 58, "bb": 25, "ctx": "W10 Sat Easy morning"}, {"d": "2026-05-17", "t": "6h 19m", "dp": "1h 3m", "li": "3h 44m", "rm": "1h 32m", "aw": "5m", "bd": "11:18 PM", "wk": "5:42 AM", "r": 61, "bb": 11, "ctx": "⚠️ W10 Sun Long Run morning - HIGH RHR"}, {"d": "2026-05-18", "t": "4h 47m", "dp": "48m", "li": "2h 30m", "rm": "1h 29m", "aw": "10m", "bd": "1:56 AM", "wk": "6:53 AM", "r": 61, "bb": 4, "ctx": "⚠️ VERY poor recovery"}, {"d": "2026-05-19", "t": "6h 41m", "dp": "46m", "li": "4h 49m", "rm": "1h 6m", "aw": "2m", "bd": "11:16 PM", "wk": "5:59 AM", "r": 58, "bb": 39}, {"d": "2026-05-20", "t": "5h 28m", "dp": "1h 19m", "li": "3h 12m", "rm": "57m", "aw": "4m", "bd": "12:33 AM", "wk": "6:05 AM", "r": 60, "bb": 16, "ctx": "⚠️"}, {"d": "2026-05-21", "t": "6h 29m", "dp": "--", "li": "4h 9m", "rm": "2h 20m", "aw": "1m", "bd": "11:35 PM", "wk": "6:05 AM", "r": 54, "bb": 53, "ctx": "recovery"}, {"d": "2026-05-22", "t": "5h 16m", "dp": "47m", "li": "2h 57m", "rm": "1h 32m", "aw": "--", "bd": "12:10 AM", "wk": "5:26 AM", "r": 56, "bb": 29, "ctx": "⚠️ W11 Fri Tempo morning - SHORT SLEEP"}, {"d": "2026-05-23", "t": "5h 52m", "dp": "1h 18m", "li": "4h 15m", "rm": "19m", "aw": "6m", "bd": "11:29 PM", "wk": "6:25 AM", "r": 57, "bb": 40, "ctx": "W11 Sat Easy morning"}, {"d": "2026-05-24", "t": "7h 45m", "dp": "38m", "li": "4h 38m", "rm": "2h 29m", "aw": "7m", "bd": "9:32 PM", "wk": "5:24 AM", "r": 56, "bb": 53, "ctx": "W11 Sun Long Run morning 21.85km"}, {"d": "2026-05-25", "t": "7h 26m", "dp": "33m", "li": "3h 47m", "rm": "3h 6m", "aw": "20m", "bd": "11:17 PM", "wk": "7:03 AM", "r": 59, "bb": 21, "ctx": "Mon - day after 22km peak Long Run. High REM=body needs recovery"}, {"d": "2026-05-26", "t": "8h 3m", "dp": "1h 3m", "li": "4h 51m", "rm": "2h 9m", "aw": "3m", "bd": "9:46 PM", "wk": "5:52 AM", "r": 55, "bb": 58, "ctx": "Tue - GOOD recovery! Bed 9:46PM (early!), 8h sleep, RHR back to 55"}]}, "wellness": {"meta": {"user": "ITon", "device": "Garmin Instinct Esports", "note": "Daily wellness metrics + Personal Records", "collected": "2026-05-26"}, "personal_records": {"1_km": {"time": "5:10.9", "pace": "5:11/km", "date": "2024-02-24", "activity": "Pluak Daeng Running"}, "1_mile": {"time": "9:01.1", "pace": "5:36/km", "date": "2026-02-01", "activity": "Si Racha W1 Sun Easy"}, "5K": {"time": "32:44", "pace": "6:33/km", "date": "2026-02-23", "activity": "Si Racha W5 Mon Tempo T"}, "10K": {"time": "1:11:18", "pace": "7:08/km", "date": "2026-03-14", "activity": "W1 Sat Long Run", "note": "set at start of HM block"}, "half_marathon": {"time": "3:26:39", "pace": "9:48/km", "date": "2026-05-24", "activity": "W11 Sun Long Run", "note": "★ checkpoint within 21.85km run - REAL current HM time on hot hilly route"}, "marathon": null, "longest_run": {"distance_km": 21.85, "date": "2026-05-24", "activity": "W11 Sun Long Run"}, "most_steps_day": {"count": 38144, "date": "2026-05-24", "note": "race day energy expenditure"}, "most_steps_week": {"count": 74259, "period": "2026-02-23 to 2026-03-01"}, "most_steps_month": {"count": 265014, "period": "Jul 2025"}}, "daily_snapshots": [{"date": "2026-05-26", "sleep": {"total": "8h 3m", "deep": "1h 3m", "rem": "2h 9m", "bed": "21:46", "wake": "05:52"}, "rhr": {"current": 55, "7day_avg": 57}, "stress": {"score": 14, "rest_min": 338, "low_min": 15, "medium_min": 4, "high_min": 1, "note": "very low stress = recovery day"}, "body_battery": {"current": 69, "charged": 50, "drained": 3, "sleep_charge": 58}, "steps": {"count": 371, "goal": 7980, "distance_km": 0.3, "calories": 591, "note": "morning snapshot only"}, "activity_today": null}], "device_notes": {"no_data_features": ["VO2max running", "Training Status", "Training Load", "Race Predictor", "Recovery Time", "HRV"], "limitations": "Instinct Esports is basic — no advanced training metrics. Compensate with manual analysis of activity + sleep + stress data.", "weight_tracking": "not used (user weighs 75kg per training plan doc)", "intensity_minutes": "not tracked", "no_garmin_connect_plus": "Reports/Performance Dashboard require subscription"}}, "plan": {"meta": {"version": 1, "note": "Editable training plan. Can be modified in dashboard and exported back to this file.", "last_updated": "2026-05-26"}, "weeks": [{"wk": 1, "dates": "Mar 14-15", "phase": "Build", "fri": "-", "sat": "Long 10", "sun": "Easy 5", "planned_km": 15, "actual_km": 16.0, "note": "Start of block"}, {"wk": 2, "dates": "Mar 20-21", "phase": "Build", "fri": "Easy 4", "sat": "Easy 12", "sun": "-", "planned_km": 16, "actual_km": 16.7, "note": "swap pattern"}, {"wk": 3, "dates": "Mar 27-29", "phase": "Build", "fri": "Easy 7", "sat": "-", "sun": "Long 10", "planned_km": 17, "actual_km": 18.4, "note": ""}, {"wk": 4, "dates": "Apr 3-5", "phase": "Build", "fri": "Tempo 6", "sat": "Easy 7", "sun": "Long 10", "planned_km": 23, "actual_km": 24.4, "note": "⚠️ all too hard"}, {"wk": 5, "dates": "Apr 10-13", "phase": "Build", "fri": "Tempo 9", "sat": "Easy 7", "sun": "Long 13", "planned_km": 29, "actual_km": 30.3, "note": "Nakhon Ratchasima (cool!)"}, {"wk": 6, "dates": "Apr 17", "phase": "Recovery", "fri": "Int 5", "sat": "-", "sun": "-", "planned_km": 5, "actual_km": 5.9, "note": "⚠️ only 1 run - fatigue"}, {"wk": 7, "dates": "Apr 24-26", "phase": "Build", "fri": "Tempo 7", "sat": "Easy 8", "sun": "Long 13", "planned_km": 28, "actual_km": 29.1, "note": ""}, {"wk": 8, "dates": "May 1-3", "phase": "Build", "fri": "Tempo 6", "sat": "Easy 7", "sun": "Long 15", "planned_km": 28, "actual_km": 30.7, "note": "shift to aerobic"}, {"wk": 9, "dates": "May 8-10", "phase": "Build", "fri": "Tempo 7", "sat": "Easy 8", "sun": "Long 16", "planned_km": 31, "actual_km": 31.3, "note": ""}, {"wk": 10, "dates": "May 15-17", "phase": "Build", "fri": "Int 8", "sat": "Easy 8", "sun": "Long 18", "planned_km": 34, "actual_km": 23.5, "note": "cutback (Long short)"}, {"wk": 11, "dates": "May 22-24", "phase": "Peak", "fri": "Tempo 8", "sat": "Easy 8", "sun": "Long 19", "planned_km": 35, "actual_km": 28.6, "note": "⭐ Long Run 21.85km PR!"}, {"wk": 12, "dates": "May 29-31", "phase": "Peak", "fri": "Progression 7", "sat": "Easy 7", "sun": "Long 16", "planned_km": 30, "actual_km": null, "note": "Race kit test! Bring gel"}, {"wk": 13, "dates": "Jun 5-7", "phase": "Taper 1", "fri": "Tempo 5", "sat": "Easy 5", "sun": "Long 13", "planned_km": 23, "actual_km": null, "note": "Last hard workouts"}, {"wk": 14, "dates": "Jun 12-14", "phase": "Taper 2", "fri": "Strides 4", "sat": "Rest", "sun": "Fun Run 5K", "planned_km": 9, "actual_km": null, "note": "Company fun run, EZ pace"}, {"wk": 15, "dates": "Jun 15-21", "phase": "RACE", "fri": "Rest", "sat": "Easy 2", "sun": "RACE 21.1", "planned_km": 24, "actual_km": null, "note": "🏁 Korat 21 HM"}]}, "race_date": "2026-06-21", "generated": "2026-05-26"};
+
+// ===== Helpers =====
+const $ = s => document.querySelector(s);
+const $$ = s => document.querySelectorAll(s);
+
+function parseTimeToSec(t) {
+  if (!t || t === '--') return null;
+  const parts = t.split(/[hms: ]+/).filter(Boolean);
+  if (t.includes('h')) {
+    return (+parts[0])*3600 + (+parts[1])*60;
+  }
+  if (parts.length === 3) return (+parts[0])*3600 + (+parts[1])*60 + (+parts[2]);
+  if (parts.length === 2) return (+parts[0])*60 + (+parts[1]);
+  return null;
+}
+
+function daysUntil(dateStr) {
+  const target = new Date(dateStr + 'T00:00:00');
+  const now = new Date();
+  return Math.ceil((target - now) / (1000*60*60*24));
+}
+
+// ===== Countdown =====
+const daysLeft = daysUntil(DATA.race_date);
+$('#countdown').innerHTML = `Race Day: <strong>${DATA.race_date}</strong> • <strong>${daysLeft}</strong> days left`;
+$('#gen-date').textContent = DATA.generated;
+
+// ===== Tab switching =====
+$$('.tab').forEach(tab => {
+  tab.addEventListener('click', () => {
+    $$('.tab').forEach(t => t.classList.remove('active'));
+    $$('.page').forEach(p => p.classList.remove('active'));
+    tab.classList.add('active');
+    $('#page-' + tab.dataset.page).classList.add('active');
+    window.scrollTo({top: 0, behavior: 'smooth'});
+  });
+});
+
+// ===== STATUS PAGE =====
+function renderStatus() {
+  const lastSleep = DATA.sleep.nights[DATA.sleep.nights.length - 1];
+  const totalSec = parseTimeToSec(lastSleep.t);
+  const totalH = totalSec ? (totalSec/3600).toFixed(1) : '?';
+
+  // Readiness logic
+  let readyScore = 3, readyClass = 'green', readyText = 'GREEN — Full workout';
+  let flags = [];
+  if (lastSleep.r >= 60) { readyScore = 0; flags.push(`RHR ${lastSleep.r} ≥60 = high`); }
+  else if (lastSleep.r >= 56) { readyScore = Math.min(readyScore, 1); flags.push(`RHR ${lastSleep.r} = mild fatigue`); }
+  if (totalSec < 6*3600) { readyScore = 0; flags.push(`Sleep ${totalH}h <6h`); }
+  else if (totalSec < 7*3600) { readyScore = Math.min(readyScore, 1); flags.push(`Sleep ${totalH}h <7h`); }
+
+  if (readyScore === 0) { readyClass = 'red'; readyText = '🔴 RED — Rest day recommended'; }
+  else if (readyScore === 1) { readyClass = 'yellow'; readyText = '🟡 YELLOW — Easy workout only'; }
+
+  $('#readiness-content').innerHTML = `
+    <div class="alert-box ${readyClass === 'red' ? 'danger' : readyClass === 'green' ? 'success' : ''}">
+      <strong>${readyText}</strong>
+      ${flags.length ? '<ul style="margin-top:6px;padding-left:20px">' + flags.map(f => '<li>'+f+'</li>').join('') + '</ul>' : '<div style="margin-top:4px;font-size:12px">All metrics good</div>'}
+    </div>
+    <div class="stat-grid three" style="margin-top:8px">
+      <div class="stat"><div class="stat-label">RHR</div><div class="stat-value">${lastSleep.r||'-'}</div><div class="stat-sub">baseline 52</div></div>
+      <div class="stat"><div class="stat-label">Sleep</div><div class="stat-value">${totalH}h</div><div class="stat-sub">goal 8h</div></div>
+      <div class="stat"><div class="stat-label">BB charge</div><div class="stat-value">+${lastSleep.bb||0}</div><div class="stat-sub">overnight</div></div>
+    </div>
+  `;
+
+  $('#last-sleep').innerHTML = `
+    <table>
+      <tr><td>Total</td><td><strong>${lastSleep.t}</strong></td><td>Bed</td><td>${lastSleep.bd||'-'}</td></tr>
+      <tr><td>Deep</td><td>${lastSleep.dp||'-'}</td><td>Wake</td><td>${lastSleep.wk||'-'}</td></tr>
+      <tr><td>REM</td><td>${lastSleep.rm||'-'}</td><td>Awake</td><td>${lastSleep.aw||'-'}</td></tr>
+    </table>
+    ${lastSleep.ctx ? `<div style="margin-top:8px;font-size:12px;color:var(--text-muted);font-style:italic">${lastSleep.ctx}</div>` : ''}
+  `;
+
+  const pr = DATA.wellness.personal_records;
+  $('#pr-content').innerHTML = `
+    <table>
+      <thead><tr><th>Distance</th><th>Time</th><th>Pace</th></tr></thead>
+      <tbody>
+        ${Object.entries({'5K':pr['5K'],'10K':pr['10K'],'Half Marathon':pr.half_marathon}).map(([k,v]) =>
+          v ? `<tr><td><strong>${k}</strong></td><td>${v.time}</td><td>${v.pace}</td></tr>` : ''
+        ).join('')}
+      </tbody>
+    </table>
+  `;
+
+  const shoes = DATA.activities.meta.shoes;
+  $('#shoes-content').innerHTML = Object.entries(shoes).map(([name, info]) =>
+    `<div class="run-card"><strong>${name}</strong><div style="font-size:11px;color:var(--text-muted);margin-top:2px">${info}</div></div>`
+  ).join('');
+}
+
+// ===== RUNS PAGE =====
+function renderRuns() {
+  const longs = DATA.activities.long_runs;
+
+  // Long Runs chart: distance + HR
+  const ctx1 = $('#long-runs-chart');
+  new Chart(ctx1, {
+    type: 'bar',
+    data: {
+      labels: longs.map(r => 'W'+r.wk),
+      datasets: [
+        {label: 'Distance (km)', data: longs.map(r => r.dist), backgroundColor: '#3498db', yAxisID: 'y'},
+        {label: 'Avg HR', data: longs.map(r => r.hr_avg), type: 'line', borderColor: '#e74c3c', backgroundColor: '#e74c3c', yAxisID: 'y1', tension: 0.3}
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: {position: 'bottom', labels: {boxWidth: 12, font: {size: 11}}} },
+      scales: {
+        y: {position: 'left', title: {display: true, text: 'km', font: {size: 10}}, beginAtZero: true},
+        y1: {position: 'right', title: {display: true, text: 'bpm', font: {size: 10}}, grid: {display: false}, min: 130, max: 170}
+      }
+    }
+  });
+
+  // Cadence chart
+  const ctx2 = $('#cadence-chart');
+  new Chart(ctx2, {
+    type: 'bar',
+    data: {
+      labels: longs.map(r => 'W'+r.wk),
+      datasets: [
+        {label: 'Display Cadence', data: longs.map(r => r.cad), backgroundColor: '#95a5a6'},
+        {label: 'TRUE Running Cadence', data: longs.map(r => r.run_cad || r.cad), backgroundColor: '#27ae60'},
+        {label: 'Walking %', data: longs.map(r => r.walk_pct || 0), type: 'line', borderColor: '#e74c3c', backgroundColor: '#e74c3c', yAxisID: 'y1', tension: 0.3}
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: {position: 'bottom', labels: {boxWidth: 12, font: {size: 10}}} },
+      scales: {
+        y: {position: 'left', title: {display: true, text: 'spm', font: {size: 10}}, min: 130, max: 175},
+        y1: {position: 'right', title: {display: true, text: 'walk %', font: {size: 10}}, grid: {display: false}, min: 0, max: 100}
+      }
+    }
+  });
+
+  // Runs list
+  $('#runs-list').innerHTML = longs.slice().reverse().map(r => {
+    const totalZones = (r.Z1||0) + (r.Z2||0) + (r.Z3||0) + (r.Z4||0) + (r.Z5||0);
+    const zoneBar = totalZones > 0 ? `
+      <div class="zone-bar">
+        ${r.Z1 ? `<div class="z1" style="width:${r.Z1}%">${r.Z1}%</div>` : ''}
+        ${r.Z2 ? `<div class="z2" style="width:${r.Z2}%">${r.Z2}%</div>` : ''}
+        ${r.Z3 ? `<div class="z3" style="width:${r.Z3}%">${r.Z3}%</div>` : ''}
+        ${r.Z4 ? `<div class="z4" style="width:${r.Z4}%">${r.Z4}%</div>` : ''}
+        ${r.Z5 ? `<div class="z5" style="width:${r.Z5}%">${r.Z5}%</div>` : ''}
+      </div>` : '';
+    return `
+      <div class="run-card">
+        <div><strong>W${r.wk}</strong> • ${r.date} • ${r.dist} km @ ${r.pace}</div>
+        <div class="meta">
+          <span>HR ${r.hr_avg} • Cad ${r.run_cad || r.cad} (true) • ${r.walk_pct ? r.walk_pct+'% walked' : ''}</span>
+          <span>${r.time}</span>
+        </div>
+        ${zoneBar}
+        ${r.note ? `<div style="font-size:11px;color:var(--text-muted);margin-top:6px;font-style:italic">${r.note}</div>` : ''}
+      </div>`;
+  }).join('');
+}
+
+// ===== SLEEP PAGE =====
+function renderSleep() {
+  const recent = DATA.sleep.nights.filter(n => n.t).slice(-30);
+  const labels = recent.map(n => n.d.slice(5));
+
+  new Chart($('#sleep-chart'), {
+    type: 'bar',
+    data: {
+      labels,
+      datasets: [{
+        label: 'Sleep hours',
+        data: recent.map(n => {
+          const sec = parseTimeToSec(n.t);
+          return sec ? (sec/3600).toFixed(2) : null;
+        }),
+        backgroundColor: recent.map(n => {
+          const sec = parseTimeToSec(n.t);
+          return sec >= 7*3600 ? '#27ae60' : sec >= 6*3600 ? '#f39c12' : '#e74c3c';
+        })
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: {display: false} },
+      scales: {
+        y: {beginAtZero: true, max: 10, title: {display: true, text: 'hours', font: {size: 10}}},
+        x: {ticks: {font: {size: 9}, maxRotation: 60}}
+      }
+    }
+  });
+
+  new Chart($('#rhr-chart'), {
+    type: 'line',
+    data: {
+      labels,
+      datasets: [{
+        label: 'RHR',
+        data: recent.map(n => n.r),
+        borderColor: '#e74c3c',
+        backgroundColor: 'rgba(231,76,60,0.1)',
+        tension: 0.3,
+        fill: true,
+        pointBackgroundColor: recent.map(n => n.r >= 60 ? '#e74c3c' : n.r >= 56 ? '#f39c12' : '#27ae60'),
+        pointRadius: 4
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: {display: false} },
+      scales: {
+        y: {min: 48, max: 70, title: {display: true, text: 'bpm', font: {size: 10}}},
+        x: {ticks: {font: {size: 9}, maxRotation: 60}}
+      }
+    }
+  });
+
+  new Chart($('#bb-chart'), {
+    type: 'bar',
+    data: {
+      labels,
+      datasets: [{
+        label: 'BB Charge (+)',
+        data: recent.map(n => n.bb),
+        backgroundColor: recent.map(n => n.bb >= 50 ? '#27ae60' : n.bb >= 25 ? '#f39c12' : '#e74c3c')
+      }]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: {display: false} },
+      scales: {
+        y: {beginAtZero: true, max: 80, title: {display: true, text: '+points', font: {size: 10}}},
+        x: {ticks: {font: {size: 9}, maxRotation: 60}}
+      }
+    }
+  });
+}
+
+// ===== RACE PAGE =====
+function renderRace() {
+  const plan = [
+    {km: 1, phase: 'warmup', pace: '8:15', cum: '8:15', hr: 155, cue: '🚫 NO WALKING. Cadence 160+'},
+    {km: 2, phase: 'warmup', pace: '8:15', cum: '16:30', hr: 155, cue: 'Lock cadence. Run-by-feel'},
+    {km: 3, phase: 'warmup', pace: '8:15', cum: '24:45', hr: 155, cue: 'Check HR — if >155 SLOW DOWN'},
+    {km: 4, phase: 'warmup', pace: '8:15', cum: '33:00', hr: 155, cue: 'Breathing 3:3'},
+    {km: 5, phase: 'warmup', pace: '8:15', cum: '41:15', hr: 155, cue: 'Aid 150ml. End warm-up'},
+    {km: 6, phase: 'cruise', pace: '7:50', cum: '49:05', hr: 160, cue: 'Gear shift to cruise'},
+    {km: 7, phase: 'cruise', pace: '7:50', cum: '56:55', hr: 160, cue: '🍯 GEL #1 (25g)'},
+    {km: 8, phase: 'cruise', pace: '7:50', cum: '1:04:45', hr: 160, cue: 'Halfway to halfway'},
+    {km: 9, phase: 'cruise', pace: '7:50', cum: '1:12:35', hr: 160, cue: 'Positive self-talk'},
+    {km: 10, phase: 'cruise', pace: '7:50', cum: '1:20:25', hr: 160, cue: '⭐ HALFWAY ~1:20'},
+    {km: 11, phase: 'cruise', pace: '7:50', cum: '1:28:15', hr: 160, cue: 'Relax shoulders'},
+    {km: 12, phase: 'cruise', pace: '7:50', cum: '1:36:05', hr: 160, cue: 'Cruise'},
+    {km: 13, phase: 'cruise', pace: '7:50', cum: '1:43:55', hr: 160, cue: 'Past psych hard point'},
+    {km: 14, phase: 'cruise', pace: '7:50', cum: '1:51:45', hr: 160, cue: '🍯 GEL #2 (25g)'},
+    {km: 15, phase: 'cruise', pace: '7:50', cum: '1:59:35', hr: 160, cue: 'End cruise. Push if good'},
+    {km: 16, phase: 'finish', pace: '7:35', cum: '2:07:10', hr: 168, cue: 'Pickup. NO walking'},
+    {km: 17, phase: 'finish', pace: '7:35', cum: '2:14:45', hr: 168, cue: '🔥 5km to glory'},
+    {km: 18, phase: 'finish', pace: '7:35', cum: '2:22:20', hr: 168, cue: 'HR can climb'},
+    {km: 19, phase: 'finish', pace: '7:35', cum: '2:29:55', hr: 168, cue: 'Easy 2km left'},
+    {km: 20, phase: 'finish', pace: '7:35', cum: '2:37:30', hr: 168, cue: '⚡ PUSH controlled'},
+    {km: 21, phase: 'finish', pace: '7:35', cum: '2:45:05', hr: 168, cue: '🏁 FINAL KM'},
+    {km: '21.1', phase: 'finish', pace: '7:20', cum: '2:45:49', hr: 175, cue: '🏆 EMPTY TANK'},
+  ];
+
+  $('#pace-plan').innerHTML = plan.map(p => `
+    <div class="pace-row ${p.phase}">
+      <div class="pace-km">${p.km}</div>
+      <div>
+        <div><strong>${p.pace}</strong>/km</div>
+        <div class="pace-time">${p.cum} • HR ≤${p.hr}</div>
+      </div>
+      <div class="cue">${p.cue}</div>
+    </div>
+  `).join('');
+}
+
+// ===== CHECKLIST PAGE =====
+function renderChecklist() {
+  const daysLeft = daysUntil(DATA.race_date);
+  let weekInfo = '';
+  if (daysLeft > 21) weekInfo = `W12 Peak — ${daysLeft} days to race. Focus: peak volume + race kit testing.`;
+  else if (daysLeft > 14) weekInfo = `W13 Taper 1 (-20%) — ${daysLeft} days. Sharpen tempo, reduce volume.`;
+  else if (daysLeft > 7) weekInfo = `W14 Taper 2 (-40%) — ${daysLeft} days. Fun run 5K, start carb-load.`;
+  else if (daysLeft > 0) weekInfo = `W15 RACE WEEK — ${daysLeft} days. Heavy carb-load, sleep, prepare!`;
+  else weekInfo = `Race day passed (${-daysLeft} days ago). Recovery phase.`;
+  $('#current-week-info').textContent = weekInfo;
+
+  const morning = [
+    ['02:00', 'Wake up'],
+    ['02:15', '🍚 Breakfast: ข้าวต้ม + กล้วย + น้ำผึ้ง (100g carb)'],
+    ['02:30', '☕ Coffee (if usual)'],
+    ['02:45', '🚻 Bathroom #1'],
+    ['03:00', '👕 Get dressed: kit + anti-chafe + sunscreen'],
+    ['03:30', '🚗 Leave for venue'],
+    ['04:00', '🎯 Arrive, pick up bib'],
+    ['04:15', '🚻 Bathroom #2'],
+    ['04:30', '🏃 Warm-up: 5min walk + 5min jog + 4 strides'],
+    ['04:45', '🍯 ½ gel + sip electrolyte'],
+    ['04:50', '🏁 To start line, breathing focus'],
+    ['05:00', '🚀 GO! Cadence 160+, NO walking'],
+  ];
+  $('#race-morning').innerHTML = '<table>' + morning.map(([t, a]) =>
+    `<tr><td style="font-family:monospace;font-weight:600;width:60px">${t}</td><td>${a}</td></tr>`
+  ).join('') + '</table>';
+
+  const pack = [
+    ['👕 Race kit', 'เสื้อ + กางเกง — tested already'],
+    ['👟 ASICS Novablast 5', 'Long run shoe (149km used)'],
+    ['🧦 Running socks', 'ไม่ใหม่!'],
+    ['🎽 Race BIB + safety pins', ''],
+    ['⌚ Garmin watch + charger', ''],
+    ['🧴 Anti-chafe (Bodyglide/Vaseline)', ''],
+    ['🧴 Sunscreen', ''],
+    ['🧢 Hat + sunglasses', ''],
+    ['🍯 Gels × 2-3', 'Maurten/SiS (tested!)'],
+    ['💧 Soft flask + electrolyte powder', '300mg sodium/250ml'],
+    ['🧥 Warm-up jacket', 'Drop bag'],
+    ['📱 Phone + cash', ''],
+  ];
+  $('#pack-list').innerHTML = pack.map((item, i) => `
+    <div class="checklist-item" onclick="this.classList.toggle('done'); this.querySelector('.check-box').classList.toggle('checked')">
+      <div class="check-box"></div>
+      <div class="text"><strong>${item[0]}</strong>${item[1] ? `<div style="font-size:11px;color:var(--text-muted);margin-top:2px">${item[1]}</div>` : ''}</div>
+    </div>
+  `).join('');
+}
+
+// ===== PLAN PAGE =====
+const PLAN_KEY = 'korat21_plan_v1';
+
+function getPlan() {
+  const saved = localStorage.getItem(PLAN_KEY);
+  if (saved) {
+    try { return JSON.parse(saved); } catch(e) {}
+  }
+  return JSON.parse(JSON.stringify(DATA.plan));
+}
+
+function savePlan(plan) {
+  plan.meta.last_updated = new Date().toISOString().slice(0,10);
+  localStorage.setItem(PLAN_KEY, JSON.stringify(plan));
+}
+
+function getCurrentWeek() {
+  const today = new Date();
+  const raceDate = new Date(DATA.race_date + 'T00:00:00');
+  const daysToRace = Math.ceil((raceDate - today) / (1000*60*60*24));
+  // W15 is race week. Each prior week is 7 days back.
+  const wk = 15 - Math.floor(daysToRace / 7);
+  return Math.max(1, Math.min(15, wk));
+}
+
+function renderPlan() {
+  const plan = getPlan();
+  const currentWk = getCurrentWeek();
+  const totalPlanned = plan.weeks.reduce((s,w) => s + (w.planned_km||0), 0);
+  const totalActual = plan.weeks.reduce((s,w) => s + (w.actual_km||0), 0);
+  const completedWk = plan.weeks.filter(w => w.actual_km != null).length;
+
+  $('#plan-summary').innerHTML = `
+    <div style="display:flex;justify-content:space-around;font-size:12px">
+      <div><strong>${completedWk}/${plan.weeks.length}</strong><br/>Weeks done</div>
+      <div><strong>${totalActual.toFixed(0)} km</strong><br/>Actual</div>
+      <div><strong>${totalPlanned} km</strong><br/>Planned</div>
+      <div><strong>W${currentWk}</strong><br/>Current</div>
+    </div>
+  `;
+
+  $('#plan-table').innerHTML = plan.weeks.map((w, i) => {
+    const isCurrent = w.wk === currentWk;
+    const isRace = w.phase === 'RACE';
+    const cls = isRace ? 'race' : isCurrent ? 'current' : '';
+    const actualBadge = w.actual_km != null ? `<strong>${w.actual_km}</strong>` : '<span style="color:#bbb">—</span>';
+    const diff = w.actual_km != null ? (w.actual_km - w.planned_km) : null;
+    const diffStr = diff != null ? ` <span style="color:${diff>=0?'#27ae60':'#e74c3c'};font-size:10px">(${diff>=0?'+':''}${diff.toFixed(1)})</span>` : '';
+    return `
+      <div class="plan-row ${cls}" onclick="editWeek(${i})">
+        <div class="plan-wk">W${w.wk}</div>
+        <div>
+          <div><strong>${w.phase}</strong> · ${w.dates}</div>
+          <div class="plan-detail">F: ${w.fri} • S: ${w.sat} • Su: ${w.sun}${w.note ? ' · ' + w.note : ''}</div>
+        </div>
+        <div class="plan-km">
+          ${actualBadge}${diffStr}<br/>
+          <span style="color:#aaa">/${w.planned_km}</span>
+        </div>
+        <div class="plan-edit-icon">✏️</div>
+      </div>
+    `;
+  }).join('');
+
+  // Chart
+  if (window._planChart) window._planChart.destroy();
+  const ctx = $('#plan-chart');
+  window._planChart = new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: plan.weeks.map(w => 'W'+w.wk),
+      datasets: [
+        {label: 'Planned', data: plan.weeks.map(w => w.planned_km), backgroundColor: '#95a5a6'},
+        {label: 'Actual', data: plan.weeks.map(w => w.actual_km), backgroundColor: '#27ae60'},
+      ]
+    },
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: { legend: {position: 'bottom', labels: {boxWidth: 12, font: {size: 11}}} },
+      scales: { y: {beginAtZero: true, title: {display: true, text: 'km', font: {size: 10}}} }
+    }
+  });
+}
+
+let editingIndex = null;
+
+function editWeek(i) {
+  const plan = getPlan();
+  const w = plan.weeks[i];
+  editingIndex = i;
+  $('#edit-title').textContent = `Edit Week ${w.wk}`;
+  $('#edit-fields').innerHTML = `
+    <div class="modal-field"><label>Week #</label><input id="f-wk" type="number" value="${w.wk}"/></div>
+    <div class="modal-field"><label>Dates</label><input id="f-dates" value="${w.dates||''}"/></div>
+    <div class="modal-field"><label>Phase</label>
+      <select id="f-phase">
+        ${['Build','Peak','Recovery','Taper 1','Taper 2','RACE'].map(p => `<option ${p===w.phase?'selected':''}>${p}</option>`).join('')}
+      </select>
+    </div>
+    <div class="modal-field"><label>Friday workout</label><input id="f-fri" value="${w.fri||''}"/></div>
+    <div class="modal-field"><label>Saturday workout</label><input id="f-sat" value="${w.sat||''}"/></div>
+    <div class="modal-field"><label>Sunday workout</label><input id="f-sun" value="${w.sun||''}"/></div>
+    <div class="modal-field"><label>Planned total (km)</label><input id="f-planned" type="number" step="0.1" value="${w.planned_km||0}"/></div>
+    <div class="modal-field"><label>Actual total (km) — leave blank if not done</label><input id="f-actual" type="number" step="0.1" value="${w.actual_km!=null?w.actual_km:''}"/></div>
+    <div class="modal-field"><label>Note</label><input id="f-note" value="${w.note||''}"/></div>
+    <div style="margin-top:12px"><button class="btn danger" onclick="deleteWeek()">🗑️ Delete this week</button></div>
+  `;
+  $('#edit-modal').classList.add('active');
+}
+
+function closeEdit() {
+  $('#edit-modal').classList.remove('active');
+  editingIndex = null;
+}
+
+function saveEdit() {
+  const plan = getPlan();
+  const actualVal = $('#f-actual').value;
+  plan.weeks[editingIndex] = {
+    wk: +$('#f-wk').value,
+    dates: $('#f-dates').value,
+    phase: $('#f-phase').value,
+    fri: $('#f-fri').value,
+    sat: $('#f-sat').value,
+    sun: $('#f-sun').value,
+    planned_km: +$('#f-planned').value,
+    actual_km: actualVal === '' ? null : +actualVal,
+    note: $('#f-note').value,
+  };
+  savePlan(plan);
+  closeEdit();
+  renderPlan();
+}
+
+function deleteWeek() {
+  if (!confirm('Delete this week?')) return;
+  const plan = getPlan();
+  plan.weeks.splice(editingIndex, 1);
+  savePlan(plan);
+  closeEdit();
+  renderPlan();
+}
+
+function addWeek() {
+  const plan = getPlan();
+  const lastWk = plan.weeks[plan.weeks.length-1];
+  plan.weeks.push({
+    wk: (lastWk?lastWk.wk:0)+1, dates:'', phase:'Build',
+    fri:'-', sat:'-', sun:'-', planned_km:0, actual_km:null, note:''
+  });
+  savePlan(plan);
+  renderPlan();
+}
+
+function resetPlan() {
+  if (!confirm('Reset to default plan? This will discard your edits.')) return;
+  localStorage.removeItem(PLAN_KEY);
+  renderPlan();
+}
+
+function exportPlan() {
+  const plan = getPlan();
+  const blob = new Blob([JSON.stringify(plan, null, 2)], {type:'application/json'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = 'plan.json';
+  a.click();
+  URL.revokeObjectURL(url);
+}
+
+function importPlan(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  const reader = new FileReader();
+  reader.onload = e => {
+    try {
+      const plan = JSON.parse(e.target.result);
+      if (!plan.weeks || !Array.isArray(plan.weeks)) throw new Error('Invalid plan format');
+      savePlan(plan);
+      renderPlan();
+      alert('Plan imported successfully!');
+    } catch(err) { alert('Error importing: ' + err.message); }
+  };
+  reader.readAsText(file);
+  event.target.value = '';
+}
+
+// Init
+renderStatus();
+renderRuns();
+renderSleep();
+renderPlan();
+renderRace();
+renderChecklist();
+</script>
+</body>
+</html>

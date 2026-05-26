@@ -1,0 +1,22 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Build scripts (keep on disk, don't deploy)
+build_dashboard.py
+make_pacing.py
+
+# Local-only data (don't expose raw data; only dashboard.html ships)
+# Comment these out if you WANT to commit raw JSON too
+# activities.json
+# sleep.json
+# wellness.json
+# plan.json
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Excel temp files
+~$*.xlsx

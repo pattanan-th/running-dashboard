@@ -1,0 +1,38 @@
+{
+  "meta": {
+    "user": "ITon",
+    "device": "Garmin Instinct Esports",
+    "note": "Daily wellness metrics + Personal Records",
+    "collected": "2026-05-26"
+  },
+  "personal_records": {
+    "1_km": {"time": "5:10.9", "pace": "5:11/km", "date": "2024-02-24", "activity": "Pluak Daeng Running"},
+    "1_mile": {"time": "9:01.1", "pace": "5:36/km", "date": "2026-02-01", "activity": "Si Racha W1 Sun Easy"},
+    "5K": {"time": "32:44", "pace": "6:33/km", "date": "2026-02-23", "activity": "Si Racha W5 Mon Tempo T"},
+    "10K": {"time": "1:11:18", "pace": "7:08/km", "date": "2026-03-14", "activity": "W1 Sat Long Run", "note": "set at start of HM block"},
+    "half_marathon": {"time": "3:26:39", "pace": "9:48/km", "date": "2026-05-24", "activity": "W11 Sun Long Run", "note": "★ checkpoint within 21.85km run - REAL current HM time on hot hilly route"},
+    "marathon": null,
+    "longest_run": {"distance_km": 21.85, "date": "2026-05-24", "activity": "W11 Sun Long Run"},
+    "most_steps_day": {"count": 38144, "date": "2026-05-24", "note": "race day energy expenditure"},
+    "most_steps_week": {"count": 74259, "period": "2026-02-23 to 2026-03-01"},
+    "most_steps_month": {"count": 265014, "period": "Jul 2025"}
+  },
+  "daily_snapshots": [
+    {
+      "date": "2026-05-26",
+      "sleep": {"total": "8h 3m", "deep": "1h 3m", "rem": "2h 9m", "bed": "21:46", "wake": "05:52"},
+      "rhr": {"current": 55, "7day_avg": 57},
+      "stress": {"score": 14, "rest_min": 338, "low_min": 15, "medium_min": 4, "high_min": 1, "note": "very low stress = recovery day"},
+      "body_battery": {"current": 69, "charged": 50, "drained": 3, "sleep_charge": 58},
+      "steps": {"count": 371, "goal": 7980, "distance_km": 0.3, "calories": 591, "note": "morning snapshot only"},
+      "activity_today": null
+    }
+  ],
+  "device_notes": {
+    "no_data_features": ["VO2max running", "Training Status", "Training Load", "Race Predictor", "Recovery Time", "HRV"],
+    "limitations": "Instinct Esports is basic — no advanced training metrics. Compensate with manual analysis of activity + sleep + stress data.",
+    "weight_tracking": "not used (user weighs 75kg per training plan doc)",
+    "intensity_minutes": "not tracked",
+    "no_garmin_connect_plus": "Reports/Performance Dashboard require subscription"
+  }
+}

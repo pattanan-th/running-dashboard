@@ -1,0 +1,54 @@
+{
+  "meta": {
+    "user": "ITon",
+    "device": "Garmin Instinct Esports",
+    "shoes": {
+      "ASICS Novablast 5": "149.6/650 km (12 act, since Mar 14) - Long Runs primarily",
+      "Saucony Kinvara 14": "423.1/644 km (75 act, since Mar 22 2025) - Tempo/Treadmill",
+      "ASICS Dynablast 5": "28.4/800 km (5 act, since Apr 20) - Easy Runs"
+    },
+    "race": "Korat 21 Half Marathon",
+    "race_date": "2026-06-21",
+    "collected_on": "2026-05-24",
+    "note_zone_changes": "HR zones recalibrated mid-block. Early: Z5>181 Z4 167-180. Mid: Z5>169 Z4 157-168. Current: Z5>178 Z4 165-177.",
+    "cadence_note": "cad = Garmin displayed avg (includes walking breaks, often misleadingly low). run_cad = computed running-only cadence from laps ≥150 spm. walk_pct = % of km laps in walking range. True running cadence is consistently 160-164 spm even when display shows 143-150."
+  },
+  "long_runs": [
+    {"wk":1,"date":"2026-03-14","name":"Bang Lamung W1 Sat","dist":10.52,"time":"1:16:46","pace":"7:18","hr_avg":154,"cad":150,"run_cad":160,"walk_pct":42,"stride":0.91,"temp":28.6,"ascent":131,"Z1":16,"Z2":8,"Z3":42,"Z4":26,"Z5":0,"shoe":"Novablast"},
+    {"wk":3,"date":"2026-03-29","name":"Si Racha W3 Sun","dist":10.81,"time":"1:22:40","pace":"7:39","hr_avg":158,"cad":159,"run_cad":160,"walk_pct":8,"stride":0.82,"temp":31.9,"ascent":196,"Z1":0,"Z2":3,"Z3":35,"Z4":48,"Z5":11},
+    {"wk":4,"date":"2026-04-05","name":"Si Racha W4 Sun","dist":10.36,"time":"1:16:31","pace":"7:23","hr_avg":162,"cad":156,"run_cad":160,"walk_pct":18,"stride":0.87,"temp":32.9,"ascent":79,"Z1":2,"Z2":20,"Z3":23,"Z4":48,"Z5":4},
+    {"wk":5,"date":"2026-04-13","name":"Nakhon Ratchasima W5 Mon","dist":12.99,"time":"1:36:16","pace":"7:25","hr_avg":152,"cad":158,"run_cad":160,"walk_pct":7,"stride":0.85,"temp":29.0,"ascent":241,"Z1":1,"Z2":37,"Z3":53,"Z4":7,"Z5":0,"shoe":"Novablast"},
+    {"wk":7,"date":"2026-04-26","name":"Bang Lamung W7 Sun","dist":13.34,"time":"1:54:31","pace":"8:35","hr_avg":145,"cad":146,"run_cad":164,"walk_pct":50,"stride":0.80,"temp":32.2,"ascent":427,"Z1":34,"Z2":25,"Z3":24,"Z4":12,"Z5":0},
+    {"wk":8,"date":"2026-05-03","name":"Bang Lamung W8 Sun","dist":15.54,"time":"2:16:32","pace":"8:47","hr_avg":141,"cad":147,"run_cad":162,"walk_pct":65,"stride":0.77,"temp":32.8,"ascent":453,"Z1":33,"Z2":48,"Z3":16,"Z4":0,"Z5":0,"note":"high walk% but smooth aerobic"},
+    {"wk":9,"date":"2026-05-10","name":"Si Racha W9 Sun","dist":17.86,"time":"2:31:15","pace":"8:28","hr_avg":151,"cad":151,"run_cad":161,"walk_pct":30,"stride":0.79,"temp":32.2,"ascent":775,"Z1":5,"Z2":46,"Z3":32,"Z4":13,"Z5":0},
+    {"wk":10,"date":"2026-05-17","name":"Si Racha W10 Sun","dist":10.86,"time":"1:31:13","pace":"8:24","hr_avg":149,"hr_max":165,"cad":163,"run_cad":164,"walk_pct":0,"stride":0.73,"temp":32.6,"ascent":326,"Z1":2,"Z2":58,"Z3":38,"Z4":0,"Z5":0,"note":"cutback - NO walking, best display match"},
+    {"wk":11,"date":"2026-05-24","name":"Si Racha W11 Sun","dist":21.85,"time":"3:35:49","pace":"9:53","hr_avg":145,"hr_max":171,"cad":143,"run_cad":161,"walk_pct":48,"stride":0.72,"temp":33.2,"ascent":1071,"calories":1589,"Z1":28,"Z2":36,"Z3":33,"Z4":1,"Z5":0,"note":"PEAK 22km - heavy walking 2nd half due to heat fade"}
+  ],
+  "tempos_intervals": [
+    {"wk":4,"date":"2026-04-03","name":"Si Racha W4 Fri Tempo T","dist":6.72,"time":"49:55","pace":"7:25","hr_avg":155,"hr_max":172,"cad":155,"stride":0.86,"temp":32.8,"Z1":7,"Z2":20,"Z3":44,"Z4":24,"Z5":0,"shoe":"Kinvara"},
+    {"wk":5,"date":"2026-04-10","name":"Nakhon Ratchasima W5 Fri Tempo O","dist":9.60,"time":"1:20:45","pace":"8:25","hr_avg":149,"hr_max":177,"cad":143,"stride":0.82,"temp":34.2,"Z1":11,"Z2":7,"Z3":19,"Z4":39,"Z5":0,"shoe":"Kinvara"},
+    {"wk":6,"date":"2026-04-17","name":"Si Racha W6 Fri Intervals","dist":5.91,"time":"43:28","pace":"7:22","hr_avg":154,"hr_max":178,"cad":152,"stride":0.89,"temp":32.4,"Z1":7,"Z2":15,"Z3":29,"Z4":37,"Z5":0,"shoe":"Kinvara"},
+    {"wk":7,"date":"2026-04-24","name":"Si Racha W7 Fri Tempo R","dist":7.58,"time":"59:38","pace":"7:52","hr_avg":154,"hr_max":175,"cad":156,"stride":0.81,"temp":33.0,"Z1":4,"Z2":33,"Z3":27,"Z4":30,"Z5":0,"shoe":"Kinvara"},
+    {"wk":8,"date":"2026-05-01","name":"Si Racha W8 Fri Tempo O","dist":8.12,"time":"1:04:42","pace":"7:58","hr_avg":145,"hr_max":177,"cad":153,"stride":0.82,"temp":32.2,"Z1":23,"Z2":18,"Z3":26,"Z4":15,"Z5":0,"shoe":"Kinvara"},
+    {"wk":9,"date":"2026-05-08","name":"W9 Fri Intervals","type":"treadmill","dist":9.66,"time":"1:20:18","pace":"8:19","pace_moving":"7:49","best_pace":"4:20","hr_avg":149,"hr_max":182,"cad":150,"stride":0.79,"temp":29.8,"workout_intervals":{"run_time":"32:46","run_dist":4.34,"run_pace":"7:33"},"badge":"Treadmill 5K","shoe":"Kinvara"},
+    {"wk":10,"date":"2026-05-15","name":"W10 Fri Tempo","type":"treadmill","dist":5.39,"time":"43:11","pace":"8:01","pace_moving":"7:31","best_pace":"4:37","hr_avg":152,"hr_max":185,"cad":154,"stride":0.80,"temp":30.2,"workout_intervals":{"run_time":"17:37","run_dist":2.44,"run_pace":"7:13"},"shoe":"Kinvara"},
+    {"wk":11,"date":"2026-05-22","name":"W11 Fri Tempo","type":"treadmill","dist":4.54,"time":"41:50","pace":"9:13","pace_moving":"8:05","best_pace":"5:25","hr_avg":144,"hr_max":173,"cad":145,"stride":0.71,"temp":30.6,"shoe":"Kinvara"}
+  ],
+  "easy_runs": [
+    {"wk":1,"date":"2026-03-15","name":"Si Racha W1 Sun Easy","dist":5.51,"time":"46:05","pace":"8:22","hr_avg":144,"hr_max":155,"cad":146,"stride":0.82,"temp":33.2,"Z1":8,"Z2":62,"Z3":14,"Z4":0,"Z5":0,"shoe":"Novablast"},
+    {"wk":2,"date":"2026-03-20","name":"Si Racha W2 Fri Easy","dist":4.53,"time":"37:05","pace":"8:11","hr_avg":147,"hr_max":161,"cad":160,"stride":0.76,"temp":32.8,"Z1":6,"Z2":79,"Z3":12,"Z4":0,"Z5":0,"shoe":"Kinvara"},
+    {"wk":2,"date":"2026-03-21","name":"Si Racha W2 Sat Easy","dist":12.19,"time":"1:39:33","pace":"8:10","hr_avg":141,"hr_max":154,"cad":148,"stride":0.83,"temp":31.9,"ascent":444,"Z1":10,"Z2":48,"Z3":40,"Z4":0,"Z5":0,"shoe":"Novablast","note":"unusually long for easy"},
+    {"wk":3,"date":"2026-03-27","name":"Si Racha W3 Fri Easy","dist":7.62,"time":"1:08:00","pace":"8:55","hr_avg":146,"hr_max":157,"cad":157,"stride":0.71,"temp":32.9,"Z1":2,"Z2":15,"Z3":80,"Z4":0,"Z5":0,"shoe":"Kinvara"},
+    {"wk":4,"date":"2026-04-04","name":"Si Racha W4 Sat Easy","dist":7.35,"time":"59:05","pace":"8:02","hr_avg":152,"hr_max":165,"cad":158,"stride":0.79,"temp":32.0,"ascent":126,"Z1":4,"Z2":29,"Z3":66,"Z4":0,"Z5":0,"shoe":"Kinvara","note":"too hard for easy"},
+    {"wk":5,"date":"2026-04-11","name":"Nakhon Ratchasima W5 Sat Easy","dist":7.73,"time":"59:52","pace":"7:44","hr_avg":147,"hr_max":173,"cad":154,"stride":0.84,"temp":32.9,"ascent":47,"Z1":5,"Z2":54,"Z3":29,"Z4":4,"Z5":0,"shoe":"Novablast"},
+    {"wk":7,"date":"2026-04-25","name":"Si Racha W7 Sat Easy","dist":8.15,"time":"1:09:28","pace":"8:32","hr_avg":156,"hr_max":175,"cad":155,"stride":0.76,"temp":33.1,"ascent":83,"Z1":1,"Z2":15,"Z3":75,"Z4":7,"Z5":0,"shoe":"Dynablast","note":"too hard for easy"},
+    {"wk":8,"date":"2026-05-02","name":"Si Racha W8 Sat Easy","dist":7.03,"time":"58:39","pace":"8:21","hr_avg":142,"hr_max":160,"cad":144,"stride":0.83,"temp":33.6,"ascent":157,"Z1":27,"Z2":48,"Z3":20,"Z4":0,"Z5":0,"shoe":"Dynablast"},
+    {"wk":9,"date":"2026-05-09","name":"Si Racha W9 Sat Easy","dist":3.77,"time":"33:48","pace":"8:58","hr_avg":140,"hr_max":155,"cad":152,"stride":0.74,"temp":31.7,"ascent":81,"Z1":16,"Z2":69,"Z3":4,"Z4":0,"Z5":0,"shoe":"Dynablast"},
+    {"wk":10,"date":"2026-05-16","name":"Si Racha W10 Sat Easy","dist":7.23,"time":"1:02:42","pace":"8:41","hr_avg":146,"hr_max":163,"cad":151,"stride":0.77,"temp":32.5,"ascent":215,"Z1":11,"Z2":46,"Z3":36,"Z4":0,"Z5":0,"shoe":"Dynablast"},
+    {"wk":11,"date":"2026-05-23","name":"Si Racha W11 Sat Easy","dist":2.24,"time":"19:56","pace":"8:53","hr_avg":133,"hr_max":147,"cad":157,"stride":0.72,"temp":33.5,"ascent":2,"Z1":43,"Z2":35,"Z3":0,"Z4":0,"Z5":0,"shoe":"Dynablast","note":"short shake-out"}
+  ],
+  "missing_sessions": {
+    "W6_Sat_Easy": "no run",
+    "W6_Sun_Long": "no run - reduced week"
+  }
+}
