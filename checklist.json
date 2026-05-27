@@ -21,6 +21,10 @@
     {"id":14,"category":"Other","item":"โทรศัพท์ + เงินสด","detail":"","priority":"medium"},
     {"id":15,"category":"Other","item":"ที่ฝากกระเป๋า","detail":"ใช้ตอน drop bag","priority":"low"}
   ],
+  "gel_stock": [
+    {"id":1,"brand":"Maurten","product":"Gel 100","carb":25,"caffeine":0,"sodium":0,"qty":0,"expiry":"","note":"go-to neutral · hydrogel, easy on stomach"},
+    {"id":2,"brand":"SiS","product":"Go Isotonic","carb":22,"caffeine":0,"sodium":200,"qty":0,"expiry":"","note":"isotonic — no water needed"}
+  ],
   "race_morning": [
     {"id":1,"time":"02:00","action":"ตื่นนอน","done":false},
     {"id":2,"time":"02:15","action":"🍚 Breakfast: ข้าวต้ม + กล้วย + น้ำผึ้ง (100g carb)","done":false},
