@@ -76,14 +76,18 @@
         {"group":"Cool down","kind":"run","dist_km":1,"pace_max":"8:30"}
       ],
       "sat":"Rest","sat_type":"Rest",
-      "sun":"Company Fun Run 5K","sun_type":"Race",
+      "sun":"Company Fun Run 5K (Option B)","sun_type":"Race",
       "sun_segments":[
-        {"group":"Warm-up","kind":"run","dist_km":1,"pace_max":"8:30","note":"easy jog before start"},
-        {"group":"Fun Run","kind":"run","dist_km":5,"pace":"7:30","pace_range":"7:20-7:45","note":"⚠️ NOT race effort · 80% feel · HR ≤155"},
-        {"group":"Cool down","kind":"run","dist_km":1,"pace_max":"9:00","note":"jog or walk"}
+        {"group":"Warm-up","kind":"run","dist_km":1,"pace_max":"8:30","note":"easy jog 10min + dynamic stretches before start"},
+        {"group":"Fun Run","kind":"run","dist_km":2,"pace":"7:50","pace_range":"7:45-8:00","note":"km 1-2: HM goal pace · HR ≤160 · settle in"},
+        {"group":"Fun Run","kind":"run","dist_km":2,"pace":"7:30","pace_range":"7:25-7:40","note":"km 3-4: slightly faster (-20s) · HR ≤165 · controlled threshold"},
+        {"group":"Fun Run","kind":"run","dist_km":1,"pace":"7:50","note":"km 4-5: back to HM pace · finish strong but smooth"},
+        {"group":"Strides x4","kind":"run","dist_km":0.1,"pace":"5:30","note":"100m strides · 80% effort · smooth form (NOT all-out sprint)"},
+        {"group":"Strides x4","kind":"rest","duration_sec":90,"note":"walk recovery"},
+        {"group":"Cool down","kind":"run","dist_km":1,"pace_max":"9:00","note":"easy jog + static stretches"}
       ],
-      "planned_km":11,"actual_km":null,
-      "note":"⚠️ Fun run = active workout, NOT race. Save legs for Sunday next week!"
+      "planned_km":12,"actual_km":null,
+      "note":"⚠️ Option B: 2km HM pace → 2km @7:30 → 1km HM pace → 4x100m strides. NO max sprint. Safer for race in 7 days."
     },
 
     {
