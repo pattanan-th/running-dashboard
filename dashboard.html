@@ -36,16 +36,21 @@ body {
   padding-bottom: 70px;
   -webkit-font-smoothing: antialiased;
 }
-header {
-  background: var(--card-bg);
-  border-bottom: 1px solid var(--border);
-  color: var(--text-bright);
-  padding: 14px 16px;
-  padding-top: max(14px, env(safe-area-inset-top));
-  text-align: center;
+/* Sticky wrapper for header + tabs */
+.app-bar {
   position: sticky;
   top: 0;
   z-index: 100;
+  background: rgba(13, 17, 23, 0.85);
+  backdrop-filter: saturate(180%) blur(10px);
+  -webkit-backdrop-filter: saturate(180%) blur(10px);
+  border-bottom: 1px solid var(--border);
+}
+header {
+  color: var(--text-bright);
+  padding: 12px 16px 10px;
+  padding-top: max(12px, env(safe-area-inset-top));
+  text-align: center;
 }
 header h1 {
   font-family: var(--mono);
@@ -56,7 +61,7 @@ header h1 {
 }
 header h1::before { content: '$ '; color: var(--text-muted); }
 header .countdown {
-  margin-top: 6px;
+  margin-top: 4px;
   font-size: 12px;
   font-family: var(--mono);
   color: var(--text-muted);
@@ -67,14 +72,11 @@ header .countdown strong {
 }
 .tabs {
   display: flex;
-  background: var(--bg);
-  border-bottom: 1px solid var(--border);
+  background: transparent;
+  border-top: 1px solid var(--border);
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   scrollbar-width: none;
-  position: sticky;
-  top: 60px;
-  z-index: 99;
 }
 .tabs::-webkit-scrollbar { display: none; }
 .tab {
@@ -485,18 +487,19 @@ canvas { background: transparent; }
 </head>
 <body>
 
-<header>
-  <h1>🏃 Korat 21 — HM Training</h1>
-  <div class="countdown" id="countdown">Loading…</div>
-</header>
-
-<div class="tabs">
-  <button class="tab active" data-page="status">📊 Status</button>
-  <button class="tab" data-page="runs">🏃 Runs</button>
-  <button class="tab" data-page="sleep">💤 Sleep</button>
-  <button class="tab" data-page="plan">📅 Plan</button>
-  <button class="tab" data-page="race">🏁 Race</button>
-  <button class="tab" data-page="checklist">✅ Checklist</button>
+<div class="app-bar">
+  <header>
+    <h1>🏃 Korat 21 — HM Training</h1>
+    <div class="countdown" id="countdown">Loading…</div>
+  </header>
+  <div class="tabs">
+    <button class="tab active" data-page="status">📊 Status</button>
+    <button class="tab" data-page="runs">🏃 Runs</button>
+    <button class="tab" data-page="sleep">💤 Sleep</button>
+    <button class="tab" data-page="plan">📅 Plan</button>
+    <button class="tab" data-page="race">🏁 Race</button>
+    <button class="tab" data-page="checklist">✅ Checklist</button>
+  </div>
 </div>
 
 <main>
