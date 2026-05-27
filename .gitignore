@@ -3,6 +3,11 @@ __pycache__/
 *.pyc
 .venv/
 
+# Credentials — NEVER commit
+.env
+garmin_tokens/
+*.session
+
 # Build scripts (keep on disk, don't deploy)
 build_dashboard.py
 make_pacing.py
