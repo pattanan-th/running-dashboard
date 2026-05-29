@@ -2,8 +2,8 @@
   "meta": {
     "user": "ITon",
     "device": "Garmin Instinct Esports",
-    "date_range": "2026-03-14 to 2026-05-28",
-    "nights_collected": 75,
+    "date_range": "2026-03-14 to 2026-05-29",
+    "nights_collected": 76,
     "missing": ["2026-04-07"],
     "note": "Each entry = night ENDING on that date. d=date, t=total, dp=deep, li=light, rm=REM, aw=awake, bd=bed, wk=wake, r=RHR, bb=body battery change. RHR baseline: 52 recovered, 55 normal, 56-57 fatigued."
   },
@@ -83,6 +83,7 @@
     {"d":"2026-05-25","t":"7h 26m","dp":"33m","li":"3h 47m","rm":"3h 6m","aw":"20m","bd":"11:17 PM","wk":"7:03 AM","r":59,"bb":21,"ctx":"Mon - day after 22km peak Long Run. High REM=body needs recovery"},
     {"d":"2026-05-26","t":"8h 3m","dp":"1h 3m","li":"4h 51m","rm":"2h 9m","aw":"3m","bd":"9:46 PM","wk":"5:52 AM","r":55,"bb":58,"ctx":"Tue - GOOD recovery! Bed 9:46PM (early!), 8h sleep, RHR back to 55"},
     {"d":"2026-05-27","t":"6h 47m","dp":"1h 19m","li":"4h 33m","rm":"55m","aw":"9m","bd":"10:47 PM","wk":"6:02 AM","r":59,"bb":25,"ctx":"Wed - ⚠️ RHR back up to 59, BB only +25. Bed 1hr later. Watch for fatigue accumulation"},
-    {"d":"2026-05-28","t":"7h 45m","dp":"1h 0m","li":"5h 12m","rm":"1h 33m","aw":"7m","bd":"9:39 PM","wk":"5:31 AM","r":54,"bb":48,"ctx":"Thu - ✅ FULL RECOVERY! Early bed 9:39PM, RHR 54 (best in 2 weeks), BB +48. Ready for W12!"}
+    {"d":"2026-05-28","t":"7h 45m","dp":"1h 0m","li":"5h 12m","rm":"1h 33m","aw":"7m","bd":"9:39 PM","wk":"5:31 AM","r":54,"bb":48,"ctx":"Thu - ✅ FULL RECOVERY! Early bed 9:39PM, RHR 54 (best in 2 weeks), BB +48. Ready for W12!"},
+    {"d":"2026-05-29","t":"7h 12m","dp":"1h 3m","li":"5h 1m","rm":"1h 8m","aw":"12m","bd":"9:17 PM","wk":"4:41 AM","r":53,"bb":50,"ctx":"Fri - ✅ Even earlier bed 9:17PM, woke 4:41 for AM workout. RHR 53 (best!), BB +50. Pre-W12 Interval ready"}
   ]
 }

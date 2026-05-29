@@ -20,6 +20,7 @@
     {
       "wk":12,"dates":"May 29-31","phase":"Peak",
       "fri":"Progression Run","fri_type":"Progression",
+      "fri_actual":{"dist":4.23,"time":"40:38","pace":"8:25","hr_avg":142,"hr_max":182,"cad":145,"notes":"treadmill - did Interval instead of Progression. Max HR 182 = Z4-Z5"},
       "fri_segments":[
         {"group":"Warm-up","kind":"run","dist_km":1.5,"pace_max":"8:30","note":"conversational, easy"},
         {"group":"Progression","kind":"run","dist_km":1,"pace":"8:00","note":"feel comfortable"},
