@@ -1305,13 +1305,18 @@ function editActual(day) {
   $('#actual-edit-fields').innerHTML = `
     <div class="modal-field">
       <label>📷 Workout screenshot</label>
-      <input type="file" id="ae-image" accept="image/*" capture="environment" style="width:100%;padding:8px;background:var(--card-bg-alt);color:var(--text);border:1px solid var(--border);border-radius:6px;font-size:13px"/>
+      <div style="display:flex;gap:6px;margin-bottom:6px">
+        <button class="btn primary" onclick="document.getElementById('ae-image-gallery').click()" style="flex:1">🖼️ From Gallery</button>
+        <button class="btn" onclick="document.getElementById('ae-image-camera').click()" style="flex:1">📸 Camera</button>
+      </div>
+      <input type="file" id="ae-image-gallery" accept="image/*" style="display:none"/>
+      <input type="file" id="ae-image-camera" accept="image/*" capture="environment" style="display:none"/>
       ${img ? `
         <div style="margin-top:8px">
           <img src="${img}" style="max-width:100%;border-radius:6px;cursor:pointer" onclick="showImage('${img.replace(/'/g,"\'")}')"/>
           <button class="btn danger" style="padding:2px 8px;font-size:11px;margin-top:4px" onclick="removeActualImage()">🗑️ Remove image</button>
         </div>
-      ` : '<div style="font-size:10px;color:var(--text-muted);margin-top:4px">Upload screenshot from Garmin Connect / Strava / etc.</div>'}
+      ` : '<div style="font-size:10px;color:var(--text-muted);margin-top:4px">Upload screenshot from Garmin Connect / Strava / Photos / etc.</div>'}
     </div>
     <div style="border-top:1px solid var(--border);margin:10px 0;padding-top:8px"><strong style="font-size:11px;color:var(--text-muted)">ACTUAL STATS</strong></div>
     <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
@@ -1333,24 +1338,25 @@ function editActual(day) {
     <div class="modal-field"><label>Notes / Feel</label><input id="ae-notes" value="${stats.notes||''}" placeholder="legs felt strong, HR drifted late"/></div>
   `;
 
-  // Handle image upload
+  // Handle image upload (both gallery + camera inputs)
   setTimeout(() => {
-    const fileInput = $('#ae-image');
-    if (fileInput) {
-      fileInput.addEventListener('change', async (e) => {
-        const file = e.target.files[0];
-        if (!file) return;
-        try {
-          const dataUrl = await resizeImage(file, 1000, 0.75);
-          const plan = getPlan();
-          plan.weeks[editingIndex][actualEditDay+'_image'] = dataUrl;
-          savePlan(plan);
-          editActual(actualEditDay); // re-render
-        } catch(err) {
-          alert('Error processing image: ' + err.message);
-        }
-      });
-    }
+    const handleFile = async (e) => {
+      const file = e.target.files[0];
+      if (!file) return;
+      try {
+        const dataUrl = await resizeImage(file, 1000, 0.75);
+        const plan = getPlan();
+        plan.weeks[editingIndex][actualEditDay+'_image'] = dataUrl;
+        savePlan(plan);
+        editActual(actualEditDay);
+      } catch(err) {
+        alert('Error processing image: ' + err.message);
+      }
+    };
+    const galleryInput = $('#ae-image-gallery');
+    const cameraInput = $('#ae-image-camera');
+    if (galleryInput) galleryInput.addEventListener('change', handleFile);
+    if (cameraInput) cameraInput.addEventListener('change', handleFile);
   }, 50);
 
   $('#actual-modal').classList.add('active');
