@@ -605,6 +605,7 @@ canvas { background: transparent; }
     <button class="tab" data-page="plan">📅 Plan</button>
     <button class="tab" data-page="race">🏁 Race</button>
     <button class="tab" data-page="gels">🍯 Gels</button>
+    <button class="tab" data-page="nutrition">🍚 Nutrition</button>
     <button class="tab" data-page="checklist">✅ Checklist</button>
   </div>
 </div>
@@ -799,6 +800,88 @@ canvas { background: transparent; }
         <tr><td>Stomach upset</td><td>Stop gels, water only</td></tr>
       </tbody>
     </table>
+  </div>
+</section>
+
+<!-- ============= NUTRITION PAGE ============= -->
+<section class="page" id="page-nutrition">
+  <div class="card">
+    <h2>🍚 Daily Nutrition Principles (75 kg)</h2>
+    <div class="alert-box success">
+      <strong>Base targets:</strong> Carb 5-7 g/kg = 375-525g · Protein 1.6-1.8 g/kg = 120-135g · Fat 1 g/kg = 75g · Water 3-4 L/day
+    </div>
+    <table>
+      <tr><th>Macro</th><th>Per day</th><th>Why</th></tr>
+      <tr><td>🍚 Carbs</td><td>375-525g</td><td>fuel for runs + glycogen</td></tr>
+      <tr><td>🍗 Protein</td><td>120-135g</td><td>muscle repair</td></tr>
+      <tr><td>🥑 Fat</td><td>~75g</td><td>hormones, recovery</td></tr>
+      <tr><td>💧 Water</td><td>3-4 L</td><td>hilly hot training</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>📅 By Workout Type</h2>
+    <div id="nutrition-by-day"></div>
+  </div>
+
+  <div class="card">
+    <h2>⏰ Meal Timing (training day)</h2>
+    <table>
+      <tr><th>When</th><th>Eat</th><th>Goal</th></tr>
+      <tr><td>คืนก่อนซ้อมหนัก</td><td>ข้าว/พาสต้า + protein + ผัก (carb หนัก)</td><td>top up glycogen</td></tr>
+      <tr><td>เช้าก่อนวิ่ง 2-3h</td><td>ข้าวต้ม/ขนมปัง+น้ำผึ้ง+กล้วย (75-150g carb)</td><td>fuel ready</td></tr>
+      <tr><td>30 min ก่อนวิ่ง</td><td>กล้วย 1 ลูก / 1 ซองน้ำผึ้ง</td><td>quick energy</td></tr>
+      <tr><td>ระหว่างวิ่ง >75 min</td><td>30-60g carb/hr (gel/กล้วยตาก)</td><td>maintain pace</td></tr>
+      <tr><td>หลังวิ่ง 0-30 min</td><td>carb + protein 3:1 (กล้วย+นม/chocolate milk)</td><td>⭐ recovery window</td></tr>
+      <tr><td>หลังวิ่ง 2h</td><td>มื้อใหญ่: ข้าว + protein + ผัก</td><td>full recovery</td></tr>
+    </table>
+  </div>
+
+  <div class="card">
+    <h2>🇹🇭 Thai Meal Ideas</h2>
+    <div id="nutrition-thai"></div>
+  </div>
+
+  <div class="card">
+    <h2>🍝 Race Week Carb Loading</h2>
+    <div class="alert-box">
+      <strong>T-3 to T-1 days:</strong> ramp carb to 7-10 g/kg = 525-750g/day. Reduce fiber + fat. Hydrate heavily.
+    </div>
+    <table>
+      <tr><th>Day</th><th>Carb target</th><th>Focus</th></tr>
+      <tr><td>T-3 (พฤ)</td><td>5-6 g/kg (450g)</td><td>เริ่มเพิ่ม carb, ลด fiber</td></tr>
+      <tr><td>T-2 (ศ)</td><td>7-8 g/kg (550g)</td><td>high carb, low residue</td></tr>
+      <tr><td>T-1 (ส)</td><td>8-10 g/kg (650g)</td><td>max load, dinner เช้าหน่อย</td></tr>
+      <tr><td>Race (อา)</td><td>breakfast 100g</td><td>3h before start</td></tr>
+    </table>
+    <h3>✅ Carb-load foods</h3>
+    <ul style="font-size:13px;color:var(--text);padding-left:18px;line-height:1.7">
+      <li>ข้าวขาว (ย่อยง่ายกว่าข้าวกล้องช่วง load)</li>
+      <li>พาสต้า, ก๋วยเตี๋ยว, ขนมปังขาว</li>
+      <li>กล้วย, น้ำผึ้ง, น้ำผลไม้</li>
+      <li>มันฝรั่ง, มันหวาน (ปอกเปลือก)</li>
+    </ul>
+    <h3>❌ หลีกเลี่ยงช่วง T-2/T-1</h3>
+    <ul style="font-size:13px;color:var(--text);padding-left:18px;line-height:1.7">
+      <li>ผักดิบ/fiber สูง (ท้องอืด)</li>
+      <li>ของมัน/ทอด (ย่อยช้า)</li>
+      <li>เผ็ดจัด, แอลกอฮอล์</li>
+      <li>อาหารใหม่ที่ไม่เคยกิน</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h2>💧 Hydration & Electrolytes</h2>
+    <table>
+      <tr><th>Time</th><th>Amount</th></tr>
+      <tr><td>ทั้งวัน</td><td>3-4 L น้ำเปล่า</td></tr>
+      <tr><td>2h ก่อนวิ่ง</td><td>500ml + เกลือแร่</td></tr>
+      <tr><td>ระหว่างวิ่ง</td><td>150ml ทุก 15-20 min</td></tr>
+      <tr><td>หลังวิ่ง</td><td>1.5x ของน้ำหนักที่เสีย</td></tr>
+    </table>
+    <div class="alert-box" style="margin-top:8px">
+      🧂 <strong>Sodium:</strong> อากาศร้อนเสียเหงื่อเยอะ → 400-700mg/hr ระหว่างวิ่ง · เติมเกลือในอาหาร · เกลือแร่หลังซ้อม
+    </div>
   </div>
 </section>
 
@@ -1856,6 +1939,47 @@ function closeSegEdit() {
   renderPlan();
 }
 
+// ===== NUTRITION =====
+function renderNutrition() {
+  const byType = [
+    {type:'🟢 Easy Run / Recovery', color:'var(--success)', pre:'เบาๆ พอ — กล้วย 1 ลูก หรือไม่กินก็ได้ (ถ้าวิ่งเช้า fasted ได้)', during:'ไม่จำเป็น (< 75 min)', post:'มื้อปกติ balanced · ไม่ต้อง carb หนัก', note:'fat-burning zone — ไม่ต้อง fuel มาก'},
+    {type:'💨 Tempo / Threshold', color:'var(--warning)', pre:'2-3h ก่อน: ข้าว/ขนมปัง + กล้วย (75-100g carb)', during:'ถ้า >60 min: 1 gel หรือกล้วยตาก', post:'⭐ carb+protein 3:1 ภายใน 30 min · มื้อใหญ่ใน 2h', note:'glycogen-heavy — ต้อง fuel ดี'},
+    {type:'⚡ Interval / Speed', color:'var(--danger)', pre:'2-3h ก่อน: carb ปานกลาง 60-80g · ไม่อิ่มเกิน', during:'น้ำ + sip เกลือแร่', post:'⭐ recovery สำคัญมาก: carb 60g + protein 20g ทันที', note:'high intensity — recovery window critical'},
+    {type:'📏 Long Run', color:'var(--primary)', pre:'2-3h ก่อน: carb หนัก 100-150g (ข้าวต้ม+น้ำผึ้ง+กล้วย)', during:'30-60g carb/hr (gel km 7,14 / กล้วยตาก) + เกลือแร่', post:'⭐ carb+protein + เกลือแร่ + น้ำเยอะ (เสียเหงื่อมาก)', note:'longest fuel demand — practice race fueling here'},
+    {type:'🏁 Race', color:'var(--danger)', pre:'carb-load 3 วัน · เช้า 100g carb 3h ก่อน · ½ gel T-30min', during:'gel km 7,14 + น้ำทุก aid + เกลือแร่', post:'rehydrate + carb+protein + มื้อใหญ่', note:'execute what you practiced — no new food'},
+    {type:'😴 Rest Day', color:'var(--text-muted)', pre:'—', during:'—', post:'มื้อปกติ · protein สูงหน่อยช่วย repair · ลด carb ลงนิด', note:'recovery + muscle repair focus'},
+  ];
+
+  $('#nutrition-by-day').innerHTML = byType.map(t => `
+    <div class="run-card" style="border-left-color:${t.color};font-family:inherit;margin-bottom:8px">
+      <div style="font-weight:600;color:var(--text-bright);margin-bottom:6px">${t.type}</div>
+      <div style="font-size:12px;line-height:1.8">
+        <div><span style="color:var(--text-muted)">ก่อน:</span> ${t.pre}</div>
+        <div><span style="color:var(--text-muted)">ระหว่าง:</span> ${t.during}</div>
+        <div><span style="color:var(--text-muted)">หลัง:</span> ${t.post}</div>
+        <div style="margin-top:4px;font-style:italic;color:var(--text-muted);font-size:11px">💡 ${t.note}</div>
+      </div>
+    </div>
+  `).join('');
+
+  const thaiMeals = [
+    {cat:'🍳 มื้อเช้าก่อนวิ่ง', items:['ข้าวต้ม + ไข่ + กล้วย', 'ขนมปังโฮลวีท + น้ำผึ้ง + กล้วย', 'โจ๊ก + ไข่ลวก', 'ข้าวเหนียว + กล้วย (เบาๆ)']},
+    {cat:'🍚 มื้อกลางวัน/เย็น (ซ้อมหนัก)', items:['ข้าว + อกไก่ย่าง + ผักนึ่ง', 'ก๋วยเตี๋ยวน้ำใส + ลูกชิ้น/เนื้อ + ไข่', 'ข้าวผัดไก่ใส่ไข่ (น้ำมันน้อย)', 'สปาเก็ตตี้ซอสมะเขือเทศ + ไก่', 'ข้าวกล้อง + ปลานึ่ง + ผัก']},
+    {cat:'🥤 Recovery หลังวิ่ง (0-30 min)', items:['กล้วย + นมช็อกโกแลต', 'นมถั่วเหลือง + ขนมปัง', 'โยเกิร์ต + ผลไม้ + กราโนล่า', 'น้ำเต้าหู้ + ปาท่องโก๋ (carb+protein)']},
+    {cat:'🍌 Snack ระหว่างวัน', items:['กล้วยตาก', 'ผลไม้สด (ส้ม, แอปเปิ้ล)', 'ถั่วต้ม', 'นมกล่อง']},
+    {cat:'❌ เลี่ยงก่อนวิ่ง', items:['ส้มตำเผ็ด / ของเผ็ดจัด', 'ข้าวขาหมู / ของมันทอด', 'ผักดิบเยอะๆ (สลัด)', 'กาแฟเย็นหวานจัด']},
+  ];
+
+  $('#nutrition-thai').innerHTML = thaiMeals.map(m => `
+    <div style="margin-bottom:10px">
+      <div style="font-weight:600;color:var(--accent);font-size:13px;margin-bottom:4px">${m.cat}</div>
+      <ul style="font-size:13px;color:var(--text);padding-left:18px;line-height:1.7;margin:0">
+        ${m.items.map(i => `<li>${i}</li>`).join('')}
+      </ul>
+    </div>
+  `).join('');
+}
+
 // ===== GEL STOCK =====
 function renderGels() {
   const c = getChecklist();
@@ -2606,6 +2730,7 @@ renderSleep();
 renderPlan();
 renderRace();
 renderGels();
+renderNutrition();
 renderChecklist();
 </script>
 </body>
