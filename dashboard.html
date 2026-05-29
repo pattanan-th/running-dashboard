@@ -638,15 +638,21 @@ canvas { background: transparent; }
     <div class="chart-container"><canvas id="long-runs-chart"></canvas></div>
   </div>
   <div class="card">
-    <h2>🎯 True Running Cadence</h2>
+    <h2>🎯 True Running Cadence (vs Display)</h2>
     <div class="alert-box">
       <strong>💡 Insight:</strong> Garmin's display average includes walking breaks.
-      True running cadence (laps ≥150 spm) is consistently <strong>160-164 spm</strong>.
+      True running cadence (laps ≥150 spm) is consistently <strong>160-170 spm</strong>.
     </div>
     <div class="chart-container"><canvas id="cadence-chart"></canvas></div>
   </div>
   <div class="card">
-    <h2>📋 All Long Runs Detail</h2>
+    <h2>📋 All Runs by Week</h2>
+    <div style="display:flex;gap:6px;margin-bottom:10px;flex-wrap:wrap">
+      <button class="btn primary" onclick="filterRuns('all')" id="ft-all">All</button>
+      <button class="btn" onclick="filterRuns('long')" id="ft-long">📏 Long</button>
+      <button class="btn" onclick="filterRuns('tempo')" id="ft-tempo">💨 Tempo/Int</button>
+      <button class="btn" onclick="filterRuns('easy')" id="ft-easy">🟢 Easy</button>
+    </div>
     <div id="runs-list"></div>
   </div>
 </section>
@@ -1120,28 +1126,102 @@ function renderRuns() {
     }
   });
 
-  // Runs list
-  $('#runs-list').innerHTML = longs.slice().reverse().map(r => {
-    const totalZones = (r.Z1||0) + (r.Z2||0) + (r.Z3||0) + (r.Z4||0) + (r.Z5||0);
-    const zoneBar = totalZones > 0 ? `
-      <div class="zone-bar">
-        ${r.Z1 ? `<div class="z1" style="width:${r.Z1}%">${r.Z1}%</div>` : ''}
-        ${r.Z2 ? `<div class="z2" style="width:${r.Z2}%">${r.Z2}%</div>` : ''}
-        ${r.Z3 ? `<div class="z3" style="width:${r.Z3}%">${r.Z3}%</div>` : ''}
-        ${r.Z4 ? `<div class="z4" style="width:${r.Z4}%">${r.Z4}%</div>` : ''}
-        ${r.Z5 ? `<div class="z5" style="width:${r.Z5}%">${r.Z5}%</div>` : ''}
-      </div>` : '';
+  renderRunsList();
+}
+
+let _runsFilter = 'all';
+function filterRuns(f) {
+  _runsFilter = f;
+  ['all','long','tempo','easy'].forEach(k => {
+    const b = document.getElementById('ft-'+k);
+    if (b) b.classList.toggle('primary', k === f);
+  });
+  renderRunsList();
+}
+
+function renderRunsList() {
+  const all = [
+    ...(DATA.activities.long_runs || []).map(r => ({...r, bucket:'long'})),
+    ...(DATA.activities.tempos_intervals || []).map(r => ({...r, bucket:'tempo'})),
+    ...(DATA.activities.easy_runs || []).map(r => ({...r, bucket:'easy'})),
+  ];
+  const filtered = _runsFilter === 'all' ? all : all.filter(r => r.bucket === _runsFilter);
+  // Group by week
+  const byWk = {};
+  filtered.forEach(r => {
+    const w = r.wk || 0;
+    if (!byWk[w]) byWk[w] = [];
+    byWk[w].push(r);
+  });
+  const weeks = Object.keys(byWk).map(Number).sort((a,b) => b - a);
+
+  if (!weeks.length) {
+    $('#runs-list').innerHTML = '<div style="text-align:center;color:var(--text-muted);padding:20px">No runs in this filter</div>';
+    return;
+  }
+
+  const bucketEmoji = {long:'📏', tempo:'💨', easy:'🟢'};
+  const bucketLabel = {long:'LONG', tempo:'TEMPO/INT', easy:'EASY'};
+
+  $('#runs-list').innerHTML = weeks.map(wk => {
+    const runs = byWk[wk].sort((a,b) => (b.date||'').localeCompare(a.date||''));
+    const wkTotal = runs.reduce((s,r) => s + (r.dist||0), 0);
     return `
-      <div class="run-card">
-        <div><strong>W${r.wk}</strong> • ${r.date} • ${r.dist} km @ ${r.pace}</div>
-        <div class="meta">
-          <span>HR ${r.hr_avg} • Cad ${r.run_cad || r.cad} (true) • ${r.walk_pct ? r.walk_pct+'% walked' : ''}</span>
-          <span>${r.time}</span>
-        </div>
-        ${zoneBar}
-        ${r.note ? `<div style="font-size:11px;color:var(--text-muted);margin-top:6px;font-style:italic">${r.note}</div>` : ''}
-      </div>`;
+      <div style="margin-top:14px">
+        <div class="section-title">W${wk} · ${wkTotal.toFixed(1)} km · ${runs.length} run${runs.length>1?'s':''}</div>
+        ${runs.map(r => renderRunDetailCard(r, bucketEmoji[r.bucket], bucketLabel[r.bucket])).join('')}
+      </div>
+    `;
   }).join('');
+}
+
+function renderRunDetailCard(r, emoji, bucketLabel) {
+  const totalZones = (r.Z1||0) + (r.Z2||0) + (r.Z3||0) + (r.Z4||0) + (r.Z5||0);
+  const zoneBar = totalZones > 0 ? `
+    <div class="zone-bar">
+      ${r.Z1 ? `<div class="z1" style="width:${r.Z1}%">${r.Z1>=5?r.Z1+'%':''}</div>` : ''}
+      ${r.Z2 ? `<div class="z2" style="width:${r.Z2}%">${r.Z2>=5?r.Z2+'%':''}</div>` : ''}
+      ${r.Z3 ? `<div class="z3" style="width:${r.Z3}%">${r.Z3>=5?r.Z3+'%':''}</div>` : ''}
+      ${r.Z4 ? `<div class="z4" style="width:${r.Z4}%">${r.Z4>=5?r.Z4+'%':''}</div>` : ''}
+      ${r.Z5 ? `<div class="z5" style="width:${r.Z5}%">${r.Z5>=5?r.Z5+'%':''}</div>` : ''}
+    </div>` : '';
+
+  // Stats grid
+  const statLines = [];
+  if (r.dist) statLines.push(['Distance', r.dist.toFixed(2) + ' km']);
+  if (r.time) statLines.push(['Time', r.time]);
+  if (r.pace) statLines.push(['Avg pace', r.pace + '/km']);
+  if (r.hr_avg) statLines.push(['Avg HR', r.hr_avg + ' bpm' + (r.hr_max ? ' / max '+r.hr_max : '')]);
+
+  // Cadence: highlight running-only vs display
+  const cadLine = [];
+  if (r.run_cad && r.cad && r.run_cad !== r.cad) {
+    cadLine.push(['Cadence', `<span style="color:var(--accent)">${r.run_cad}</span> running <span style="color:var(--text-muted)">(${r.cad} display)</span>`]);
+  } else if (r.cad || r.run_cad) {
+    cadLine.push(['Cadence', (r.run_cad || r.cad) + ' spm']);
+  }
+  if (r.stride) cadLine.push(['Stride', r.stride + ' m']);
+  if (r.walk_pct != null && r.walk_pct > 0) cadLine.push(['Walk %', `<span style="color:${r.walk_pct>30?'var(--danger)':r.walk_pct>10?'var(--warning)':'var(--text)'}">${r.walk_pct}%</span>`]);
+  if (r.temp) cadLine.push(['Temp', r.temp + '°C']);
+
+  return `
+    <div class="run-card" style="border-left-color:${r.bucket==='long'?'var(--primary)':r.bucket==='tempo'?'var(--warning)':'var(--accent)'};font-family:inherit;margin-bottom:8px;padding:10px 12px">
+      <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:6px">
+        <div>
+          <div style="font-size:10px;color:var(--text-muted);font-family:var(--mono)">${r.date||''} · ${emoji} ${bucketLabel}</div>
+          <div style="font-weight:600;color:var(--text-bright);font-size:13px;margin-top:2px">${r.name||'-'}</div>
+        </div>
+        <div style="text-align:right;font-family:var(--mono);font-size:14px;color:var(--accent);font-weight:700">${r.dist?r.dist.toFixed(1)+'km':''}</div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2px 10px;font-family:var(--mono);font-size:11px">
+        ${statLines.map(([k,v]) => `<div style="display:flex;justify-content:space-between"><span style="color:var(--text-muted)">${k}</span><span style="color:var(--text)">${v}</span></div>`).join('')}
+        ${cadLine.map(([k,v]) => `<div style="display:flex;justify-content:space-between"><span style="color:var(--text-muted)">${k}</span><span>${v}</span></div>`).join('')}
+      </div>
+      ${zoneBar}
+      ${r.workout_intervals ? `<div style="margin-top:6px;font-size:10px;color:var(--text-muted);font-family:var(--mono);background:var(--card-bg);padding:4px 6px;border-radius:4px">⚡ Intervals: ${r.workout_intervals.run_time} · ${r.workout_intervals.run_dist}km · ${r.workout_intervals.run_pace}/km</div>`:''}
+      ${r.laps_summary ? `<div style="margin-top:4px;font-size:10px;color:var(--text-muted);font-style:italic">${r.laps_summary}</div>`:''}
+      ${r.note ? `<div style="margin-top:4px;font-size:11px;color:var(--text);background:var(--card-bg);padding:6px 8px;border-radius:4px;border-left:2px solid var(--accent)">💬 ${r.note}</div>` : ''}
+    </div>`;
 }
 
 // ===== SLEEP PAGE =====
