@@ -806,16 +806,24 @@ canvas { background: transparent; }
 <!-- ============= NUTRITION PAGE ============= -->
 <section class="page" id="page-nutrition">
   <div class="card">
-    <h2>🍚 Daily Nutrition Principles (75 kg)</h2>
-    <div class="alert-box success">
-      <strong>Base targets:</strong> Carb 5-7 g/kg = 375-525g · Protein 1.6-1.8 g/kg = 120-135g · Fat 1 g/kg = 75g · Water 3-4 L/day
+    <h2>⚖️ Your Weight</h2>
+    <div style="display:flex;gap:8px;align-items:center;margin-bottom:8px">
+      <input type="number" id="weight-input" step="0.1" style="flex:1;padding:10px;background:var(--card-bg-alt);color:var(--text-bright);border:1px solid var(--border);border-radius:6px;font-size:18px;font-family:var(--mono);text-align:center"/>
+      <span style="color:var(--text-muted);font-family:var(--mono)">kg</span>
+      <button class="btn primary" onclick="saveWeight()">Save</button>
     </div>
+    <div id="weight-history" style="font-size:11px;color:var(--text-muted);font-family:var(--mono)"></div>
+  </div>
+
+  <div class="card">
+    <h2>🍚 Daily Nutrition (auto-calc)</h2>
+    <div class="alert-box success" id="nutrition-summary"></div>
     <table>
       <tr><th>Macro</th><th>Per day</th><th>Why</th></tr>
-      <tr><td>🍚 Carbs</td><td>375-525g</td><td>fuel for runs + glycogen</td></tr>
-      <tr><td>🍗 Protein</td><td>120-135g</td><td>muscle repair</td></tr>
-      <tr><td>🥑 Fat</td><td>~75g</td><td>hormones, recovery</td></tr>
-      <tr><td>💧 Water</td><td>3-4 L</td><td>hilly hot training</td></tr>
+      <tr><td>🍚 Carbs</td><td id="macro-carb"></td><td>fuel + glycogen</td></tr>
+      <tr><td>🍗 Protein</td><td id="macro-protein"></td><td>muscle repair</td></tr>
+      <tr><td>🥑 Fat</td><td id="macro-fat"></td><td>hormones, recovery</td></tr>
+      <tr><td>💧 Water</td><td id="macro-water"></td><td>hilly hot training</td></tr>
     </table>
   </div>
 
@@ -844,15 +852,15 @@ canvas { background: transparent; }
 
   <div class="card">
     <h2>🍝 Race Week Carb Loading</h2>
-    <div class="alert-box">
-      <strong>T-3 to T-1 days:</strong> ramp carb to 7-10 g/kg = 525-750g/day. Reduce fiber + fat. Hydrate heavily.
+    <div class="alert-box" id="carb-load-note">
+      <strong>T-3 to T-1 days:</strong> ramp carb to 7-10 g/kg. Reduce fiber + fat. Hydrate heavily.
     </div>
     <table>
       <tr><th>Day</th><th>Carb target</th><th>Focus</th></tr>
-      <tr><td>T-3 (พฤ)</td><td>5-6 g/kg (450g)</td><td>เริ่มเพิ่ม carb, ลด fiber</td></tr>
-      <tr><td>T-2 (ศ)</td><td>7-8 g/kg (550g)</td><td>high carb, low residue</td></tr>
-      <tr><td>T-1 (ส)</td><td>8-10 g/kg (650g)</td><td>max load, dinner เช้าหน่อย</td></tr>
-      <tr><td>Race (อา)</td><td>breakfast 100g</td><td>3h before start</td></tr>
+      <tr><td>T-3 (พฤ)</td><td id="cl-t3"></td><td>เริ่มเพิ่ม carb, ลด fiber</td></tr>
+      <tr><td>T-2 (ศ)</td><td id="cl-t2"></td><td>high carb, low residue</td></tr>
+      <tr><td>T-1 (ส)</td><td id="cl-t1"></td><td>max load, dinner เช้าหน่อย</td></tr>
+      <tr><td>Race (อา)</td><td id="cl-race"></td><td>3h before start</td></tr>
     </table>
     <h3>✅ Carb-load foods</h3>
     <ul style="font-size:13px;color:var(--text);padding-left:18px;line-height:1.7">
@@ -1939,14 +1947,71 @@ function closeSegEdit() {
   renderPlan();
 }
 
-// ===== NUTRITION =====
+// ===== WEIGHT + NUTRITION =====
+const WEIGHT_KEY = 'korat21_weight';
+const WEIGHT_HIST_KEY = 'korat21_weight_hist';
+function getWeight() { return +(localStorage.getItem(WEIGHT_KEY) || 75); }
+function saveWeight() {
+  const v = +$('#weight-input').value;
+  if (!v || v < 30 || v > 200) { alert('Enter valid weight (30-200 kg)'); return; }
+  localStorage.setItem(WEIGHT_KEY, v);
+  // Log history
+  let hist = [];
+  try { hist = JSON.parse(localStorage.getItem(WEIGHT_HIST_KEY) || '[]'); } catch(e){}
+  const today = new Date().toISOString().slice(0,10);
+  hist = hist.filter(h => h.d !== today);
+  hist.push({d: today, w: v});
+  hist.sort((a,b) => a.d.localeCompare(b.d));
+  hist = hist.slice(-30);
+  localStorage.setItem(WEIGHT_HIST_KEY, JSON.stringify(hist));
+  renderNutrition();
+}
+
 function renderNutrition() {
+  const w = getWeight();
+  $('#weight-input').value = w;
+
+  // Weight history + trend
+  let hist = [];
+  try { hist = JSON.parse(localStorage.getItem(WEIGHT_HIST_KEY) || '[]'); } catch(e){}
+  if (hist.length >= 2) {
+    const first = hist[0], last = hist[hist.length-1];
+    const delta = (last.w - first.w).toFixed(1);
+    const arrow = delta > 0 ? '↑' : delta < 0 ? '↓' : '→';
+    const col = delta > 0 ? 'var(--warning)' : delta < 0 ? 'var(--primary)' : 'var(--text-muted)';
+    $('#weight-history').innerHTML = `Logged ${hist.length}× · ${first.d}: ${first.w}kg → ${last.d}: ${last.w}kg <span style="color:${col}">(${arrow}${Math.abs(delta)}kg)</span>`;
+  } else {
+    $('#weight-history').innerHTML = hist.length ? `Logged ${hist[0].d}: ${hist[0].w}kg` : 'Tip: log weight weekly to track trend';
+  }
+
+  // Dynamic macros
+  const carbLo = Math.round(w * 5), carbHi = Math.round(w * 7);
+  const protLo = Math.round(w * 1.6), protHi = Math.round(w * 1.8);
+  const fat = Math.round(w * 1);
+  $('#nutrition-summary').innerHTML = `<strong>Targets for ${w} kg:</strong> Carb ${carbLo}-${carbHi}g · Protein ${protLo}-${protHi}g · Fat ~${fat}g · Water 3-4 L/day`;
+  $('#macro-carb').textContent = `${carbLo}-${carbHi}g (5-7 g/kg)`;
+  $('#macro-protein').textContent = `${protLo}-${protHi}g (1.6-1.8 g/kg)`;
+  $('#macro-fat').textContent = `~${fat}g (1 g/kg)`;
+  $('#macro-water').textContent = `3-4 L`;
+
+  // Carb loading (race week)
+  $('#cl-t3').textContent = `5-6 g/kg (${Math.round(w*5)}-${Math.round(w*6)}g)`;
+  $('#cl-t2').textContent = `7-8 g/kg (${Math.round(w*7)}-${Math.round(w*8)}g)`;
+  $('#cl-t1').textContent = `8-10 g/kg (${Math.round(w*8)}-${Math.round(w*10)}g)`;
+  $('#cl-race').textContent = `breakfast ${Math.round(w*1.3)}g (3h before)`;
+
+  renderNutritionGuides();
+}
+
+function renderNutritionGuides() {
+  const w = getWeight();
+  const g = (perKg) => Math.round(w * perKg);
   const byType = [
     {type:'🟢 Easy Run / Recovery', color:'var(--success)', pre:'เบาๆ พอ — กล้วย 1 ลูก หรือไม่กินก็ได้ (ถ้าวิ่งเช้า fasted ได้)', during:'ไม่จำเป็น (< 75 min)', post:'มื้อปกติ balanced · ไม่ต้อง carb หนัก', note:'fat-burning zone — ไม่ต้อง fuel มาก'},
-    {type:'💨 Tempo / Threshold', color:'var(--warning)', pre:'2-3h ก่อน: ข้าว/ขนมปัง + กล้วย (75-100g carb)', during:'ถ้า >60 min: 1 gel หรือกล้วยตาก', post:'⭐ carb+protein 3:1 ภายใน 30 min · มื้อใหญ่ใน 2h', note:'glycogen-heavy — ต้อง fuel ดี'},
-    {type:'⚡ Interval / Speed', color:'var(--danger)', pre:'2-3h ก่อน: carb ปานกลาง 60-80g · ไม่อิ่มเกิน', during:'น้ำ + sip เกลือแร่', post:'⭐ recovery สำคัญมาก: carb 60g + protein 20g ทันที', note:'high intensity — recovery window critical'},
-    {type:'📏 Long Run', color:'var(--primary)', pre:'2-3h ก่อน: carb หนัก 100-150g (ข้าวต้ม+น้ำผึ้ง+กล้วย)', during:'30-60g carb/hr (gel km 7,14 / กล้วยตาก) + เกลือแร่', post:'⭐ carb+protein + เกลือแร่ + น้ำเยอะ (เสียเหงื่อมาก)', note:'longest fuel demand — practice race fueling here'},
-    {type:'🏁 Race', color:'var(--danger)', pre:'carb-load 3 วัน · เช้า 100g carb 3h ก่อน · ½ gel T-30min', during:'gel km 7,14 + น้ำทุก aid + เกลือแร่', post:'rehydrate + carb+protein + มื้อใหญ่', note:'execute what you practiced — no new food'},
+    {type:'💨 Tempo / Threshold', color:'var(--warning)', pre:`2-3h ก่อน: ข้าว/ขนมปัง + กล้วย (${g(1)}-${g(1.3)}g carb)`, during:'ถ้า >60 min: 1 gel หรือกล้วยตาก', post:`⭐ carb+protein 3:1 ภายใน 30 min · มื้อใหญ่ใน 2h`, note:'glycogen-heavy — ต้อง fuel ดี'},
+    {type:'⚡ Interval / Speed', color:'var(--danger)', pre:`2-3h ก่อน: carb ปานกลาง ${g(0.8)}-${g(1)}g · ไม่อิ่มเกิน`, during:'น้ำ + sip เกลือแร่', post:`⭐ recovery สำคัญมาก: carb ${g(0.8)}g + protein ${g(0.3)}g ทันที`, note:'high intensity — recovery window critical'},
+    {type:'📏 Long Run', color:'var(--primary)', pre:`2-3h ก่อน: carb หนัก ${g(1.3)}-${g(2)}g (ข้าวต้ม+น้ำผึ้ง+กล้วย)`, during:'30-60g carb/hr (gel km 7,14 / กล้วยตาก) + เกลือแร่', post:'⭐ carb+protein + เกลือแร่ + น้ำเยอะ (เสียเหงื่อมาก)', note:'longest fuel demand — practice race fueling here'},
+    {type:'🏁 Race', color:'var(--danger)', pre:`carb-load 3 วัน · เช้า ${g(1.3)}g carb 3h ก่อน · ½ gel T-30min`, during:'gel km 7,14 + น้ำทุก aid + เกลือแร่', post:'rehydrate + carb+protein + มื้อใหญ่', note:'execute what you practiced — no new food'},
     {type:'😴 Rest Day', color:'var(--text-muted)', pre:'—', during:'—', post:'มื้อปกติ · protein สูงหน่อยช่วย repair · ลด carb ลงนิด', note:'recovery + muscle repair focus'},
   ];
 
