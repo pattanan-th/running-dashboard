@@ -615,6 +615,14 @@ canvas { background: transparent; }
 <!-- ============= STATUS PAGE ============= -->
 <section class="page active" id="page-status">
   <div class="card">
+    <h2>📥 Quick Log Today</h2>
+    <div style="display:flex;gap:6px;margin-bottom:8px">
+      <button class="btn primary" onclick="openQuickLog()" style="flex:1">📥 Log Sleep/RHR</button>
+      <a class="btn" href="https://connect.garmin.com/app/sleep" target="_blank" style="flex:1;text-align:center;text-decoration:none">🔗 Open Garmin</a>
+    </div>
+    <div id="quicklog-status" style="font-size:11px;color:var(--text-muted);font-family:var(--mono)"></div>
+  </div>
+  <div class="card">
     <h2>🎯 Today's Readiness</h2>
     <div id="readiness-content"></div>
   </div>
@@ -697,6 +705,18 @@ canvas { background: transparent; }
     <div class="chart-container"><canvas id="plan-chart"></canvas></div>
   </div>
 </section>
+
+<!-- Quick log modal -->
+<div class="modal-overlay" id="quicklog-modal" onclick="if(event.target===this)closeQuickLog()">
+  <div class="modal">
+    <h3>Quick Log Today's Data</h3>
+    <div id="quicklog-fields"></div>
+    <div style="display:flex;gap:8px;margin-top:12px;justify-content:flex-end">
+      <button class="btn" onclick="closeQuickLog()">Cancel</button>
+      <button class="btn primary" onclick="saveQuickLog()">Save</button>
+    </div>
+  </div>
+</div>
 
 <!-- Fullscreen image viewer -->
 <div class="image-fullscreen" id="img-viewer" onclick="closeImageViewer()">
@@ -1129,9 +1149,66 @@ $$('.tab').forEach(tab => {
   });
 });
 
+// ===== QUICK LOG =====
+const QUICKLOG_KEY = 'korat21_quicklog';
+function getQuickLogs() {
+  try { return JSON.parse(localStorage.getItem(QUICKLOG_KEY) || '[]'); } catch(e) { return []; }
+}
+function todayStr() { return new Date().toISOString().slice(0,10); }
+
+function openQuickLog() {
+  const logs = getQuickLogs();
+  const today = todayStr();
+  const existing = logs.find(l => l.d === today) || {};
+  $('#quicklog-fields').innerHTML = `
+    <div style="font-size:11px;color:var(--text-muted);margin-bottom:8px;font-family:var(--mono)">Date: ${today} · อ่านจาก Garmin app แล้วกรอก</div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+      <div class="modal-field"><label>Sleep total (e.g. 7h 30m)</label><input id="ql-sleep" value="${existing.t||''}" placeholder="7h 30m"/></div>
+      <div class="modal-field"><label>RHR (bpm)</label><input id="ql-rhr" type="number" value="${existing.r||''}" placeholder="55"/></div>
+    </div>
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:8px">
+      <div class="modal-field"><label>Body Battery charge</label><input id="ql-bb" type="number" value="${existing.bb||''}" placeholder="50"/></div>
+      <div class="modal-field"><label>Deep sleep (opt)</label><input id="ql-deep" value="${existing.dp||''}" placeholder="1h 0m"/></div>
+    </div>
+    <div class="modal-field"><label>Note (opt)</label><input id="ql-note" value="${existing.ctx||''}" placeholder="feel good / sore legs"/></div>
+  `;
+  $('#quicklog-modal').classList.add('active');
+}
+function closeQuickLog() { $('#quicklog-modal').classList.remove('active'); }
+
+function saveQuickLog() {
+  const logs = getQuickLogs();
+  const today = todayStr();
+  const v = id => { const e = $(id); return e ? e.value : ''; };
+  const entry = {d: today, t: v('#ql-sleep'), r: +v('#ql-rhr')||null, bb: +v('#ql-bb')||null, dp: v('#ql-deep'), ctx: v('#ql-note'), manual: true};
+  const filtered = logs.filter(l => l.d !== today);
+  filtered.push(entry);
+  filtered.sort((a,b) => a.d.localeCompare(b.d));
+  localStorage.setItem(QUICKLOG_KEY, JSON.stringify(filtered));
+  closeQuickLog();
+  renderStatus();
+}
+
+// Returns latest sleep — prefers manual quick-log if newer than embedded data
+function getLatestSleep() {
+  const embedded = DATA.sleep.nights.filter(n => n.t);
+  const lastEmb = embedded[embedded.length - 1];
+  const logs = getQuickLogs().filter(l => l.t);
+  const lastLog = logs[logs.length - 1];
+  if (lastLog && (!lastEmb || lastLog.d > lastEmb.d)) return lastLog;
+  return lastEmb;
+}
+
 // ===== STATUS PAGE =====
 function renderStatus() {
-  const lastSleep = DATA.sleep.nights[DATA.sleep.nights.length - 1];
+  const logs = getQuickLogs();
+  const lastLog = logs[logs.length-1];
+  if (lastLog) {
+    $('#quicklog-status').innerHTML = `Last log: ${lastLog.d} · ${lastLog.t||'?'} · RHR ${lastLog.r||'?'}${lastLog.manual?' (manual)':''}`;
+  } else {
+    $('#quicklog-status').innerHTML = 'No manual logs yet · tap above to add today';
+  }
+  const lastSleep = getLatestSleep();
   const totalSec = parseTimeToSec(lastSleep.t);
   const totalH = totalSec ? (totalSec/3600).toFixed(1) : '?';
 
