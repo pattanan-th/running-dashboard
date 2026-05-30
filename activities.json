@@ -36,6 +36,7 @@
     {"wk":11,"date":"2026-05-22","name":"W11 Fri Tempo","type":"treadmill","dist":4.54,"time":"41:50","pace":"9:13","pace_moving":"8:05","best_pace":"5:25","hr_avg":144,"hr_max":173,"cad":145,"run_cad":165,"walk_pct":4,"stride":0.71,"temp":30.6,"shoe":"Kinvara"}
   ],
   "easy_runs": [
+    {"wk":12,"date":"2026-05-30","name":"Si Racha W12 Sat Easy","id":"23066241770","dist":5.48,"time":"47:20","pace":"8:38","hr_avg":149,"hr_max":164,"cad":158,"run_cad":161,"cad_max":190,"walk_pct":8,"stride":0.73,"temp":32.2,"ascent":214,"Z1":3,"Z2":53,"Z3":40,"Z4":0,"Z5":0,"shoe":"Novablast","note":"cut from 11 to ~5.5km (save legs for Sun Long Run). Max cad 190 from dodging dogs/cars 🐕🚗. HR good Z2-Z3"},
     {"wk":1,"date":"2026-03-15","name":"Si Racha W1 Sun Easy","dist":5.51,"time":"46:05","pace":"8:22","hr_avg":144,"hr_max":155,"cad":146,"run_cad":153,"walk_pct":9,"stride":0.82,"temp":33.2,"Z1":8,"Z2":62,"Z3":14,"Z4":0,"Z5":0,"shoe":"Novablast"},
     {"wk":2,"date":"2026-03-20","name":"Si Racha W2 Fri Easy","dist":4.53,"time":"37:05","pace":"8:11","hr_avg":147,"hr_max":161,"cad":160,"run_cad":160,"walk_pct":0,"stride":0.76,"temp":32.8,"Z1":6,"Z2":79,"Z3":12,"Z4":0,"Z5":0,"shoe":"Kinvara"},
     {"wk":2,"date":"2026-03-21","name":"Si Racha W2 Sat Easy","dist":12.19,"time":"1:39:33","pace":"8:10","hr_avg":141,"hr_max":154,"cad":148,"run_cad":153,"walk_pct":9,"stride":0.83,"temp":31.9,"ascent":444,"Z1":10,"Z2":48,"Z3":40,"Z4":0,"Z5":0,"shoe":"Novablast","note":"unusually long for easy"},

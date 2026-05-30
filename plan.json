@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": 7,
-    "note": "Segments-first plan with W12 Fri actual + running-only cadence analysis.",
+    "version": 8,
+    "note": "W12 Fri+Sat actuals filled in.",
     "last_updated": "2026-05-26"
   },
   "weeks": [
@@ -31,6 +31,7 @@
         {"group":"Cool down","kind":"run","dist_km":0.5,"pace_max":"8:30","note":"easy jog"}
       ],
       "sat":"Easy Run","sat_type":"Easy",
+      "sat_actual":{"dist":5.48,"time":"47:20","pace":"8:38","hr_avg":149,"hr_max":164,"cad":161,"effort":4,"walk_pct":8,"notes":"cut 11→5.5km to save legs for Sun Long Run. Max cad 190 dodging dogs/cars. Z2 53% Z3 40%"},
       "sat_segments":[
         {"group":"Session","kind":"run","dist_km":7,"pace_max":"8:30","note":"Z1-Z2 only · HR ≤145 · keep cadence ~165"}
       ],
