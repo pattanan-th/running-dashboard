@@ -14,7 +14,6 @@
     "cadence_note": "cad = Garmin displayed avg (includes walking breaks, often misleadingly low). run_cad = computed running-only cadence from laps ≥150 spm. walk_pct = % of km laps in walking range. True running cadence is consistently 160-164 spm even when display shows 143-150."
   },
   "long_runs": [
-    {"wk":12,"date":"2026-05-31","name":"Si Racha W12 Sun Long","id":"23083122544","dist":17.55,"time":"2:18:42","pace":"7:54","hr_avg":152,"hr_max":178,"cad":156,"run_cad":157,"cad_max":192,"walk_pct":3,"stride":0.78,"temp":30.1,"ascent":561,"calories":1145,"Z1":4,"Z2":41,"Z3":50,"Z4":5,"Z5":0,"shoe":"Novablast","note":"⭐ RACE REHEARSAL — near-continuous run (only 3% walk vs W11 48%!). Negative-ish start 7:16, heat fade to 8:57 late. Cadence steady 152-160. Best Long Run discipline yet"},
     {"wk":1,"date":"2026-03-14","name":"Bang Lamung W1 Sat","dist":10.52,"time":"1:16:46","pace":"7:18","hr_avg":154,"cad":150,"run_cad":160,"walk_pct":42,"stride":0.91,"temp":28.6,"ascent":131,"Z1":16,"Z2":8,"Z3":42,"Z4":26,"Z5":0,"shoe":"Novablast"},
     {"wk":3,"date":"2026-03-29","name":"Si Racha W3 Sun","dist":10.81,"time":"1:22:40","pace":"7:39","hr_avg":158,"cad":159,"run_cad":160,"walk_pct":8,"stride":0.82,"temp":31.9,"ascent":196,"Z1":0,"Z2":3,"Z3":35,"Z4":48,"Z5":11},
     {"wk":4,"date":"2026-04-05","name":"Si Racha W4 Sun","dist":10.36,"time":"1:16:31","pace":"7:23","hr_avg":162,"cad":156,"run_cad":160,"walk_pct":18,"stride":0.87,"temp":32.9,"ascent":79,"Z1":2,"Z2":20,"Z3":23,"Z4":48,"Z5":4},

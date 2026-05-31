@@ -36,7 +36,6 @@
         {"group":"Session","kind":"run","dist_km":7,"pace_max":"8:30","note":"Z1-Z2 only · HR ≤145 · keep cadence ~165"}
       ],
       "sun":"Long Run — Race Rehearsal","sun_type":"Long",
-      "sun_actual":{"dist":17.55,"time":"2:18:42","pace":"7:54","hr_avg":152,"hr_max":178,"cad":157,"effort":7,"walk_pct":3,"notes":"⭐ RACE REHEARSAL done! Near-continuous (3% walk vs W11 48%). Started 7:16 → heat fade 8:57 late. Cadence steady 152-160. Z3 50% Z2 41%. Best long run discipline yet"},
       "sun_segments":[
         {"group":"Warm-up","kind":"run","dist_km":5,"pace":"8:30","note":"easy start · cadence focus 165 spm"},
         {"group":"Cruise (goal pace)","kind":"run","dist_km":10,"pace":"8:00","pace_range":"7:50-8:10","note":"🍯 GEL #1 at km 7 (test stomach)"},
