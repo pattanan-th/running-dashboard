@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": 9,
-    "note": "W12 complete — Fri+Sat+Sun actuals filled in.",
+    "version": 10,
+    "note": "W12 Long Run moved Sun→Wed (under-recovery). Sun rest, Mon easy, Tue rest.",
     "last_updated": "2026-05-26"
   },
   "weeks": [
@@ -35,14 +35,14 @@
       "sat_segments":[
         {"group":"Session","kind":"run","dist_km":7,"pace_max":"8:30","note":"Z1-Z2 only · HR ≤145 · keep cadence ~165"}
       ],
-      "sun":"Long Run — Race Rehearsal","sun_type":"Long",
+      "sun":"WED Long Run 16-18km (moved)","sun_type":"Long",
       "sun_segments":[
         {"group":"Warm-up","kind":"run","dist_km":5,"pace":"8:30","note":"easy start · cadence focus 165 spm"},
         {"group":"Cruise (goal pace)","kind":"run","dist_km":10,"pace":"8:00","pace_range":"7:50-8:10","note":"🍯 GEL #1 at km 7 (test stomach)"},
-        {"group":"Finish","kind":"run","dist_km":1.5,"pace":"7:45","note":"strong finish if feeling good"}
+        {"group":"Finish","kind":"run","dist_km":2,"pace":"7:45","note":"strong finish if feeling good"}
       ],
       "planned_km":30,"actual_km":null,
-      "note":"⚠️ Race kit test! gel, electrolyte, shoes, socks — try everything"
+      "note":"📅 Sun=REST (RHR 60, slept 5h41m). Mon=Easy 5-6km if RHR≤56. Tue=Rest/shake 3km. WED=Long Run 16-18km + race kit test (gel/shoes)"
     },
 
     {
