@@ -1,7 +1,7 @@
 {
   "meta": {
-    "version": 11,
-    "note": "W12 complete — Wed Long Run 14.5km done with locked cadence + zero walking.",
+    "version": 12,
+    "note": "W13 Fri Tempo done (cut short 2km, RHR elevated).",
     "last_updated": "2026-05-26"
   },
   "weeks": [
@@ -49,6 +49,7 @@
     {
       "wk":13,"dates":"Jun 5-7","phase":"Taper 1",
       "fri":"Tempo Intervals","fri_type":"Tempo",
+      "fri_actual":{"dist":2.04,"time":"18:47","pace":"9:12","hr_avg":147,"hr_max":170,"cad":155,"effort":5,"walk_pct":10,"notes":"⚠️ cut short 2km (planned 5km). Smart — RHR elevated 6 days. 1 tempo rep then stopped. Taper = listen to body"},
       "fri_segments":[
         {"group":"Warm-up","kind":"run","dist_km":1,"pace_max":"8:30","note":"easy jog + 4 strides at end"},
         {"group":"Repeat x3","kind":"run","dist_km":1,"pace":"7:30","pace_range":"7:20-7:40","note":"controlled threshold"},
