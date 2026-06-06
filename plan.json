@@ -48,39 +48,43 @@
 
     {
       "wk":13,"dates":"Jun 5-7","phase":"Taper 1",
-      "fri":"Tempo Intervals","fri_type":"Tempo",
-      "fri_actual":{"dist":2.04,"time":"18:47","pace":"9:12","hr_avg":147,"hr_max":170,"cad":155,"effort":5,"walk_pct":10,"notes":"⚠️ cut short 2km (planned 5km). Smart — RHR elevated 6 days. 1 tempo rep then stopped. Taper = listen to body"},
+      "fri":"Progressive Run 6km","fri_type":"Progression",
+      "fri_actual":{"dist":2.04,"time":"18:47","pace":"9:12","hr_avg":147,"hr_max":170,"cad":155,"effort":5,"walk_pct":10,"notes":"⚠️ cut short 2km (Garmin plan 6km progressive). Smart — RHR elevated 6 days. Taper = listen to body"},
       "fri_segments":[
-        {"group":"Warm-up","kind":"run","dist_km":1,"pace_max":"8:30","note":"easy jog + 4 strides at end"},
-        {"group":"Repeat x3","kind":"run","dist_km":1,"pace":"7:30","pace_range":"7:20-7:40","note":"controlled threshold"},
-        {"group":"Repeat x3","kind":"rest","duration_sec":90,"note":"easy jog or walk"},
-        {"group":"Cool down","kind":"run","dist_km":1,"pace_max":"8:30"}
+        {"group":"Warm-up","kind":"run","dist_km":1.5,"pace_max":"8:30","note":"easy start"},
+        {"group":"Progression","kind":"run","dist_km":1,"pace":"8:00"},
+        {"group":"Progression","kind":"run","dist_km":1,"pace":"7:30"},
+        {"group":"Progression","kind":"run","dist_km":1,"pace":"7:00"},
+        {"group":"Progression","kind":"run","dist_km":1,"pace":"6:40","note":"strong finish"},
+        {"group":"Cool down","kind":"run","dist_km":0.5,"pace_max":"8:30"}
       ],
-      "sat":"Easy Run","sat_type":"Easy",
+      "sat":"Easy Run 9km","sat_type":"Easy",
       "sat_segments":[
-        {"group":"Session","kind":"run","dist_km":5,"pace_max":"8:30","note":"recovery pace · HR ≤145"}
+        {"group":"Session","kind":"run","dist_km":9,"pace_max":"8:30","note":"recovery pace · HR ≤145 (Garmin plan: 9km)"}
       ],
-      "sun":"Long with Race Pace","sun_type":"Long",
+      "sun":"Long Run 15km","sun_type":"Long",
       "sun_segments":[
-        {"group":"Easy start","kind":"run","dist_km":7,"pace":"8:30","note":"warm into it"},
-        {"group":"Race pace finish","kind":"run","dist_km":5,"pace":"8:00","pace_range":"7:50-8:10","note":"dress rehearsal for race pace"},
+        {"group":"Easy start","kind":"run","dist_km":8,"pace":"8:30","note":"warm into it"},
+        {"group":"Race pace finish","kind":"run","dist_km":6,"pace":"8:00","pace_range":"7:50-8:10","note":"dress rehearsal for race pace"},
         {"group":"Cool down","kind":"run","dist_km":1,"pace_max":"9:00","note":"easy"}
       ],
-      "planned_km":21,"actual_km":null,
-      "note":"Last week with hard workouts. Volume -20%."
+      "planned_km":30,"actual_km":null,
+      "note":"📅 Garmin plan: Fri Progressive 6km, Sat Easy 9km, Sun Long 15km"
     },
 
     {
       "wk":14,"dates":"Jun 12-14","phase":"Taper 2",
-      "fri":"Strides Workout","fri_type":"Strides",
+      "fri":"Race Practice Long 11km","fri_type":"Long",
       "fri_segments":[
-        {"group":"Warm-up","kind":"run","dist_km":2,"pace_max":"8:30","note":"easy"},
-        {"group":"Strides x6","kind":"run","dist_km":0.1,"pace":"5:30","note":"~20 sec @ 90% effort, smooth form"},
-        {"group":"Strides x6","kind":"rest","duration_sec":60,"note":"walk recovery, full breath"},
-        {"group":"Cool down","kind":"run","dist_km":1,"pace_max":"8:30"}
+        {"group":"Warm-up","kind":"run","dist_km":3,"pace":"8:30","note":"easy start"},
+        {"group":"Race pace","kind":"run","dist_km":6,"pace":"7:50","pace_range":"7:45-8:00","note":"goal pace practice · test race kit/gel"},
+        {"group":"Cool down","kind":"run","dist_km":2,"pace_max":"9:00","note":"easy"}
       ],
-      "sat":"Rest","sat_type":"Rest",
-      "sun":"Company Fun Run 5K (Option B)","sun_type":"Race",
+      "sat":"Easy Run 8km","sat_type":"Easy",
+      "sat_segments":[
+        {"group":"Session","kind":"run","dist_km":8,"pace_max":"8:30","note":"easy · HR ≤145 (Garmin plan)"}
+      ],
+      "sun":"Company event 5km (V-Twin walk & run)","sun_type":"Race",
       "sun_segments":[
         {"group":"Warm-up","kind":"run","dist_km":1,"pace_max":"8:30","note":"easy jog 10min + dynamic stretches before start"},
         {"group":"Fun Run","kind":"run","dist_km":2,"pace":"7:50","pace_range":"7:45-8:00","note":"km 1-2: HM goal pace · HR ≤160 · settle in"},
@@ -90,8 +94,8 @@
         {"group":"Strides x4","kind":"rest","duration_sec":90,"note":"walk recovery"},
         {"group":"Cool down","kind":"run","dist_km":1,"pace_max":"9:00","note":"easy jog + static stretches"}
       ],
-      "planned_km":12,"actual_km":null,
-      "note":"⚠️ Option B: 2km HM pace → 2km @7:30 → 1km HM pace → 4x100m strides. NO max sprint. Safer for race in 7 days."
+      "planned_km":24,"actual_km":null,
+      "note":"📅 Garmin plan: Fri Race Practice Long 11km, Sat Easy 8km, Sun Company event 5km (V-Twin power walk & run). ⚠️ Sun = keep EASY 7:30, save legs for race in 7 days"
     },
 
     {
