@@ -1,6 +1,6 @@
 {
   "meta": {
-    "version": 13,
+    "version": 14,
     "note": "W13 Fri Tempo done (cut short 2km, RHR elevated).",
     "last_updated": "2026-05-26"
   },
@@ -63,14 +63,15 @@
       "sat_segments":[
         {"group":"Session","kind":"run","dist_km":9,"pace_max":"8:30","note":"recovery pace · HR ≤145 (Garmin plan: 9km)"}
       ],
-      "sun":"Long Run 15km","sun_type":"Long",
+      "sun":"MON Long Run 15km (moved)","sun_type":"Long",
+      "sun_actual":{"notes":"Sun rest — woke up groggy/dizzy, RHR 59 (9 nights elevated). Moved Long Run to Mon Jun 8. Listening to body = right call during taper"},
       "sun_segments":[
         {"group":"Easy start","kind":"run","dist_km":8,"pace":"8:30","note":"warm into it"},
-        {"group":"Race pace finish","kind":"run","dist_km":6,"pace":"8:00","pace_range":"7:50-8:10","note":"dress rehearsal for race pace"},
+        {"group":"Race pace finish","kind":"run","dist_km":6,"pace":"8:00","pace_range":"7:50-8:10","note":"dress rehearsal for race pace · try new route!"},
         {"group":"Cool down","kind":"run","dist_km":1,"pace_max":"9:00","note":"easy"}
       ],
       "planned_km":30,"actual_km":null,
-      "note":"📅 Garmin plan: Fri Progressive 6km, Sat Easy 9km, Sun Long 15km"
+      "note":"📅 Fri Progressive 6km✓, Sat Easy 9km✓. Sun=REST (groggy). MON=Long Run 15km (moved) + new route"
     },
 
     {
