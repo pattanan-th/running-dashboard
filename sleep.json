@@ -94,6 +94,7 @@
     {"d":"2026-06-05","t":"6h 41m","dp":"1h 36m","li":"3h 27m","rm":"1h 38m","aw":"2m","bd":"11:04 PM","wk":"5:47 AM","r":60,"bb":35,"ctx":"Fri - 6h41m, excellent Deep 1h36m + REM 1h38m, awake only 2m (great quality). RHR 60 still elevated (6th night) but BB recovering +35. Deep sleep finally up = body repairing"},
     {"d":"2026-06-06","t":"6h 50m","dp":"35m","li":"3h 59m","rm":"2h 16m","aw":"2m","bd":"10:13 PM","wk":"5:05 AM","r":59,"bb":38,"ctx":"Sat - ✅ bed 10:13PM (earlier!), REM huge 2h16m, awake 2m. RHR 59 (slowly trending down 61→60→59). BB +38. Recovery progressing"},
     {"d":"2026-06-07","t":"7h 35m","dp":"44m","li":"4h 33m","rm":"2h 18m","aw":"4m","bd":"10:19 PM","wk":"5:58 AM","r":59,"bb":44,"ctx":"Sun - ✅ best total in a while 7h35m, REM 2h18m, awake 4m. RHR 59 (holding, 9th night elevated but quality improving). BB +44. Good base for Long Run"},
-    {"d":"2026-06-08","t":"7h 36m","dp":"52m","li":"4h 40m","rm":"2h 4m","aw":"3m","bd":"10:47 PM","wk":"6:26 AM","r":55,"bb":67,"ctx":"Mon - 🎉 RHR FINALLY DOWN to 55! (from 9 nights at 58-61). 7h36m + BB +67 (huge). Recovery complete. GREEN light for Long Run today"}
+    {"d":"2026-06-08","t":"7h 36m","dp":"52m","li":"4h 40m","rm":"2h 4m","aw":"3m","bd":"10:47 PM","wk":"6:26 AM","r":55,"bb":67,"ctx":"Mon - 🎉 RHR FINALLY DOWN to 55! (from 9 nights at 58-61). 7h36m + BB +67 (huge). Recovery complete. GREEN light for Long Run today"},
+    {"d":"2026-06-09","t":"6h 36m","dp":"1h 44m","li":"4h 25m","rm":"27m","aw":"36m","bd":"10:49 PM","wk":"6:01 AM","r":57,"bb":45,"ctx":"Tue - Deep huge 1h44m (best!), but REM low 27m + awake 36m (restless). RHR 57 (ticked up from 55). BB +45. Decent but interrupted"}
   ]
 }
