@@ -1,6 +1,6 @@
 {
   "meta": {
-    "version": 14,
+    "version": 15,
     "note": "W13 Fri Tempo done (cut short 2km, RHR elevated).",
     "last_updated": "2026-05-26"
   },
@@ -75,8 +75,8 @@
     },
 
     {
-      "wk":14,"dates":"Jun 12-14","phase":"Taper 2",
-      "fri":"Race Practice Long 11km","fri_type":"Long",
+      "wk":14,"dates":"Jun 9-14","phase":"Taper 2",
+      "fri":"THU Race Practice Long 11km","fri_type":"Long",
       "fri_segments":[
         {"group":"Warm-up","kind":"run","dist_km":3,"pace":"8:30","note":"easy start"},
         {"group":"Race pace","kind":"run","dist_km":6,"pace":"7:50","pace_range":"7:45-8:00","note":"goal pace practice · test race kit/gel"},
@@ -96,14 +96,20 @@
         {"group":"Strides x4","kind":"rest","duration_sec":90,"note":"walk recovery"},
         {"group":"Cool down","kind":"run","dist_km":1,"pace_max":"9:00","note":"easy jog + static stretches"}
       ],
-      "planned_km":24,"actual_km":null,
-      "note":"📅 Garmin plan: Fri Race Practice Long 11km, Sat Easy 8km, Sun Company event 5km (V-Twin power walk & run). ⚠️ Sun = keep EASY 7:30, save legs for race in 7 days"
+      "planned_km":42,"actual_km":null,
+      "note":"📅 Garmin re-plan: Tue Easy 9km, Wed Easy 9km, Thu Race Practice Long 11km, Sat Easy 8km, Sun Company 5km (V-Twin). ⚠️ Sun keep EASY 7:30 save legs"
     },
 
     {
       "wk":15,"dates":"Jun 15-21","phase":"RACE",
-      "fri":"Rest","fri_type":"Rest",
-      "sat":"Shake-out","sat_type":"Easy",
+      "fri":"WED Intervals 7 / FRI Easy 6.5km","fri_type":"Tempo",
+      "fri_segments":[
+        {"group":"Wed Taper Intervals","kind":"run","dist_km":2,"pace_max":"8:30","note":"warm-up"},
+        {"group":"Wed Taper Intervals","kind":"run","dist_km":3,"pace":"7:50","pace_range":"7:40-8:00","note":"race pace K's — sharpen"},
+        {"group":"Wed Taper Intervals","kind":"run","dist_km":2,"pace_max":"8:30","note":"cool down"},
+        {"group":"Fri Easy (separate day)","kind":"run","dist_km":6.5,"pace_max":"8:30","note":"easy shakeout · HR ≤145"}
+      ],
+      "sat":"Shake-out (Sat)","sat_type":"Easy",
       "sat_segments":[
         {"group":"Session","kind":"run","dist_km":2,"pace_max":"8:30","note":"super easy shake-out · keep HR ≤140"},
         {"group":"Strides","kind":"run","dist_km":0.05,"pace":"6:00","note":"4× 50m strides at end · feel snappy"},
@@ -120,8 +126,8 @@
         {"group":"Finish","kind":"run","dist_km":6,"pace":"7:35","pace_range":"7:20-7:45","note":"🔥 progressive pickup · HR ≤168"},
         {"group":"Kick","kind":"run","dist_km":0.1,"pace":"7:20","note":"🏆 EMPTY THE TANK"}
       ],
-      "planned_km":23,"actual_km":null,
-      "note":"🏁 RACE DAY — target 2:45:49 (negative split, no walking)"
+      "planned_km":35,"actual_km":null,
+      "note":"📅 Garmin: Wed Taper Intervals 7km, Fri Easy 6.5km, Sun RACE 21.1km. Target 2:45:49 (negative split, no walking)"
     }
   ]
 }
