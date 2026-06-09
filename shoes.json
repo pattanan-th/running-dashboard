@@ -1,11 +1,11 @@
 {
   "meta": {
-    "version": 1,
+    "version": 2,
     "note": "Shoe rotation tracker. Editable in dashboard.",
     "last_updated": "2026-06-09"
   },
   "shoes": [
-    {"id":1,"name":"ASICS Novablast 5","nick":"Novablast","km":170,"max_km":650,"first_use":"2026-03-14","role":"Long Run + Race","color":"#58a6ff","note":"⭐ RACE DAY shoe — cushion + tested on all long runs"},
+    {"id":1,"name":"ASICS Novablast 5","nick":"Novablast","km":175,"max_km":650,"first_use":"2026-03-14","role":"Long Run + Race","color":"#58a6ff","note":"⭐ RACE DAY shoe — cushion + tested on all long runs"},
     {"id":2,"name":"Saucony Kinvara 14","nick":"Kinvara","km":427,"max_km":644,"first_use":"2025-03-22","role":"Tempo/Speed","color":"#e3b341","note":"⚠️ 66% worn — limit to short tempo, watch midsole"},
     {"id":3,"name":"ASICS Dynablast 5","nick":"Dynablast","km":28,"max_km":800,"first_use":"2026-04-20","role":"Easy/Recovery","color":"#7ee787","note":"newest — daily easy runs, save the others"}
   ]
