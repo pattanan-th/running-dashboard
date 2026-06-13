@@ -93,8 +93,20 @@ def scrape_sleep(api: Garmin, day: date) -> dict | None:
 
     bed_ts = s.get('sleepStartTimestampLocal')
     wake_ts = s.get('sleepEndTimestampLocal')
-    bed = datetime.fromtimestamp(bed_ts / 1000).strftime('%I:%M %p').lstrip('0') if bed_ts else None
-    wake = datetime.fromtimestamp(wake_ts / 1000).strftime('%I:%M %p').lstrip('0') if wake_ts else None
+    # *Local timestamps are epoch-ms encoding local wall time → read as UTC,
+    # else the system tz offset (e.g. +7) gets double-counted.
+    bed = datetime.utcfromtimestamp(bed_ts / 1000).strftime('%I:%M %p').lstrip('0') if bed_ts else None
+    wake = datetime.utcfromtimestamp(wake_ts / 1000).strftime('%I:%M %p').lstrip('0') if wake_ts else None
+
+    # RHR/BB are not always in dailySleepDTO — fall back to the wellness HR endpoint.
+    rhr = s.get('restingHeartRate')
+    if rhr is None:
+        try:
+            hr = api.get_heart_rates(day.isoformat())
+            if isinstance(hr, dict):
+                rhr = hr.get('restingHeartRate')
+        except Exception:
+            pass
 
     entry = {
         'd': day.isoformat(),
@@ -105,7 +117,7 @@ def scrape_sleep(api: Garmin, day: date) -> dict | None:
         'aw': fmt_duration(awake) if awake else '--',
         'bd': bed,
         'wk': wake,
-        'r': s.get('restingHeartRate'),
+        'r': rhr,
         'bb': s.get('bodyBatteryChange'),
     }
     return entry
