@@ -699,7 +699,7 @@ canvas { background: transparent; }
   </div>
   <div class="card">
     <h2>⚡ Pace ↔ Cadence</h2>
-    <div class="alert-box">Each km lap plotted. Faster pace → higher cadence. At 6:00/km you hit ~182 spm.</div>
+    <div class="alert-box">แต่ละจุด = 1 รัน (avg pace vs avg cadence). วิ่งเร็วขึ้น → cadence สูงขึ้น. 🔵 Long · 🔴 Tempo/Race · 🟢 Easy</div>
     <div class="chart-container"><canvas id="pace-cad-chart"></canvas></div>
   </div>
   <div class="card">
@@ -1388,6 +1388,35 @@ function renderRuns() {
       scales: {
         y: {position: 'left', title: {display: true, text: 'spm', font: {size: 10}}, min: 130, max: 175},
         y1: {position: 'right', title: {display: true, text: 'walk %', font: {size: 10}}, grid: {display: false}, min: 0, max: 100}
+      }
+    }
+  });
+
+  // Pace <-> Cadence scatter (one point per run, colored by run type)
+  const paceToSec = p => { const a = String(p||'').split(':'); return a.length===2 ? (+a[0])*60+(+a[1]) : null; };
+  const fmtPace = s => `${Math.floor(s/60)}:${String(Math.round(s%60)).padStart(2,'0')}`;
+  const colorFor = n => /long/i.test(n) ? '#3498db' : /(tempo|interval|race|fartlek|progress)/i.test(n) ? '#e74c3c' : '#27ae60';
+  const allRuns = [...DATA.activities.long_runs, ...DATA.activities.tempos_intervals, ...DATA.activities.easy_runs];
+  const pcPts = allRuns
+    .filter(r => paceToSec(r.pace) && r.cad)
+    .map(r => ({ x: paceToSec(r.pace), y: Math.round(r.cad), _n: r.name || '', _d: r.date || '' }));
+  new Chart($('#pace-cad-chart'), {
+    type: 'scatter',
+    data: { datasets: [{
+      label: 'Run',
+      data: pcPts,
+      pointBackgroundColor: pcPts.map(p => colorFor(p._n)),
+      pointRadius: 5, pointHoverRadius: 7
+    }]},
+    options: {
+      responsive: true, maintainAspectRatio: false,
+      plugins: {
+        legend: { display: false },
+        tooltip: { callbacks: { label: c => `${c.raw._d}: ${fmtPace(c.raw.x)}/km · ${c.raw.y} spm` } }
+      },
+      scales: {
+        x: { reverse: true, title: {display: true, text: 'pace /km  (← ช้า   เร็ว →)', font: {size: 10}}, ticks: { callback: v => fmtPace(v), font: {size: 10} } },
+        y: { title: {display: true, text: 'cadence spm', font: {size: 10}} }
       }
     }
   });
