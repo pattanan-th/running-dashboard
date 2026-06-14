@@ -134,13 +134,13 @@
     {
       "date": "2026-06-14",
       "stress": {
-        "score": 5
+        "score": 16
       },
       "rhr": {
         "current": 53
       },
       "steps": {
-        "count": 0
+        "count": 8524
       }
     }
   ],

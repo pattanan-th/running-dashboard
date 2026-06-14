@@ -252,6 +252,24 @@
   ],
   "tempos_intervals": [
     {
+      "wk": 14,
+      "date": "2026-06-14",
+      "name": "V-Twin Company 5km (Khao Kheow)",
+      "id": "23240141539",
+      "dist": 5.45,
+      "time": "37:23",
+      "pace": "6:51",
+      "hr_avg": 167.0,
+      "hr_max": 188.0,
+      "cad": 171.234375,
+      "cad_max": 196.0,
+      "stride": 0.85,
+      "temp": null,
+      "ascent": 427.0,
+      "shoe": "Novablast",
+      "note": "Company race, Khao Kheow zoo - 427m ascent (~78m/km!). Ran whole way NO WALKING (goal achieved). HR Z4 avg 167/Z5 max 188 = raced hard. Pace 6:51 vs race-practice 7:58 = big step up, fresh legs paid off. Predicted 37-39min, hit 37:23."
+    },
+    {
       "wk": 13,
       "date": "2026-06-06",
       "name": "W13 Fri Tempo",
