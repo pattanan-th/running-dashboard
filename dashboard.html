@@ -143,6 +143,20 @@ header .countdown strong {
 main { padding: 12px; }
 .page { display: none; }
 .page.active { display: block; }
+/* ===== Desktop / wide-screen layout ===== */
+@media (min-width: 768px) {
+  main { max-width: 1200px; margin: 0 auto; padding: 22px 24px; }
+  .app-bar header, .app-bar .tabs { max-width: 1200px; margin-left: auto; margin-right: auto; }
+}
+@media (min-width: 1000px) {
+  /* Masonry-style multi-column card layout so wide screens aren't empty */
+  .page.active { column-count: 2; column-gap: 18px; }
+  .card { break-inside: avoid; -webkit-column-break-inside: avoid; margin-bottom: 18px; }
+}
+@media (min-width: 1500px) {
+  main { max-width: 1500px; }
+  .page.active { column-count: 3; }
+}
 .card {
   background: var(--card-bg);
   border: 1px solid var(--border);
