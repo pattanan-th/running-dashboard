@@ -609,7 +609,7 @@ canvas { background: transparent; }
 <div class="app-bar">
   <header>
     <button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Switch theme">🌙</button>
-    <h1>🏃 Korat 21 — HM Training</h1>
+    <h1>K21</h1>
     <div class="countdown" id="countdown">Loading…</div>
   </header>
   <div class="tabs">
@@ -641,7 +641,7 @@ canvas { background: transparent; }
     <h2>🎯 Today's Readiness</h2>
     <div id="readiness-content"></div>
   </div>
-  <div class="card">
+  <div class="card" id="coach-analysis-card">
     <h2>🧠 Coach's Analysis · 15 Jun <span style="font-size:12px;color:var(--text-muted);font-weight:400">(W15 recovery · 6 days to Korat21)</span></h2>
     <table>
       <thead><tr><th>Metric</th><th>ค่า</th><th>สถานะ</th></tr></thead>
@@ -728,6 +728,7 @@ canvas { background: transparent; }
 
 <!-- ============= SLEEP PAGE ============= -->
 <section class="page" id="page-sleep">
+  <div id="coach-analysis-sleep-mirror"></div>
   <div class="card">
     <h2>💤 Sleep Duration Trend (Last 30 nights)</h2>
     <div class="chart-container"><canvas id="sleep-chart"></canvas></div>
@@ -3092,6 +3093,17 @@ renderGels();
 renderNutrition();
 renderShoes();
 renderChecklist();
+
+// Mirror the Coach's Analysis card into the Sleep tab (edit once, show in both)
+(function mirrorCoachCard() {
+  const src = document.getElementById('coach-analysis-card');
+  const dst = document.getElementById('coach-analysis-sleep-mirror');
+  if (src && dst) {
+    const clone = src.cloneNode(true);
+    clone.removeAttribute('id');  // avoid duplicate id in DOM
+    dst.appendChild(clone);
+  }
+})();
 </script>
 </body>
 </html>
