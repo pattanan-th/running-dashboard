@@ -166,6 +166,18 @@
       "steps": {
         "count": 15
       }
+    },
+    {
+      "date": "2026-06-17",
+      "stress": {
+        "score": 14
+      },
+      "rhr": {
+        "current": 56
+      },
+      "steps": {
+        "count": 47
+      }
     }
   ],
   "device_notes": {
