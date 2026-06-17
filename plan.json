@@ -5,129 +5,620 @@
     "last_updated": "2026-05-26"
   },
   "weeks": [
-    {"wk":1,"dates":"Mar 14-15","phase":"Build","fri":"-","fri_type":"Rest","sat":"Long 10","sat_type":"Long","sun":"Easy 5","sun_type":"Easy","planned_km":15,"actual_km":16.0,"note":"Start of block"},
-    {"wk":2,"dates":"Mar 20-21","phase":"Build","fri":"Easy 4","fri_type":"Easy","sat":"Easy 12","sat_type":"Easy","sun":"-","sun_type":"Rest","planned_km":16,"actual_km":16.7,"note":"swap pattern"},
-    {"wk":3,"dates":"Mar 27-29","phase":"Build","fri":"Easy 7","fri_type":"Easy","sat":"-","sat_type":"Rest","sun":"Long 10","sun_type":"Long","planned_km":17,"actual_km":18.4,"note":""},
-    {"wk":4,"dates":"Apr 3-5","phase":"Build","fri":"Tempo 6","fri_type":"Tempo","sat":"Easy 7","sat_type":"Easy","sun":"Long 10","sun_type":"Long","planned_km":23,"actual_km":24.4,"note":"⚠️ all too hard"},
-    {"wk":5,"dates":"Apr 10-13","phase":"Build","fri":"Tempo 9","fri_type":"Tempo","sat":"Easy 7","sat_type":"Easy","sun":"Long 13","sun_type":"Long","planned_km":29,"actual_km":30.3,"note":"Nakhon Ratchasima (cool!)"},
-    {"wk":6,"dates":"Apr 17","phase":"Recovery","fri":"Int 5","fri_type":"Interval","sat":"-","sat_type":"Rest","sun":"-","sun_type":"Rest","planned_km":5,"actual_km":5.9,"note":"⚠️ only 1 run - fatigue"},
-    {"wk":7,"dates":"Apr 24-26","phase":"Build","fri":"Tempo 7","fri_type":"Tempo","sat":"Easy 8","sat_type":"Easy","sun":"Long 13","sun_type":"Long","planned_km":28,"actual_km":29.1,"note":""},
-    {"wk":8,"dates":"May 1-3","phase":"Build","fri":"Tempo 6","fri_type":"Tempo","sat":"Easy 7","sat_type":"Easy","sun":"Long 15","sun_type":"Long","planned_km":28,"actual_km":30.7,"note":"shift to aerobic"},
-    {"wk":9,"dates":"May 8-10","phase":"Build","fri":"Int 7","fri_type":"Interval","sat":"Easy 8","sat_type":"Easy","sun":"Long 16","sun_type":"Long","planned_km":31,"actual_km":31.3,"note":""},
-    {"wk":10,"dates":"May 15-17","phase":"Build","fri":"Int 8","fri_type":"Interval","sat":"Easy 8","sat_type":"Easy","sun":"Long 18","sun_type":"Long","planned_km":34,"actual_km":23.5,"note":"cutback (Long short)"},
-    {"wk":11,"dates":"May 22-24","phase":"Peak","fri":"Tempo 8","fri_type":"Tempo","sat":"Easy 8","sat_type":"Easy","sun":"Long 19","sun_type":"Long","planned_km":35,"actual_km":28.6,"note":"⭐ Long Run 21.85km PR!"},
-
     {
-      "wk":12,"dates":"May 29-31","phase":"Peak",
-      "fri":"Progression Run","fri_type":"Progression",
-      "fri_actual":{"dist":4.23,"time":"40:38","pace":"8:25","hr_avg":142,"hr_max":182,"cad":170,"cad_display":145,"effort":7,"walk_pct":15,"notes":"📊 Treadmill interval (changed from Progression). ⭐ RUNNING-only cadence 170 spm (Garmin display 145 includes walk/rest). Intervals @ 183 spm! WU 2km@9:07→Interval 1.6km@6:18 (max HR 182, hit Z5!)→CD walk. Zones: Z1 10%/Z2 50%/Z3 17%/Z4 5%/Z5 1%. Best lap 1km@6:08 cadence 183."},
-      "fri_segments":[
-        {"group":"Warm-up","kind":"run","dist_km":1.5,"pace_max":"8:30","note":"conversational, easy"},
-        {"group":"Progression","kind":"run","dist_km":1,"pace":"8:00","note":"feel comfortable"},
-        {"group":"Progression","kind":"run","dist_km":1,"pace":"7:30"},
-        {"group":"Progression","kind":"run","dist_km":1,"pace":"7:00"},
-        {"group":"Progression","kind":"run","dist_km":1,"pace":"6:30","note":"hard but controlled"},
-        {"group":"Progression","kind":"run","dist_km":1,"pace":"6:15","note":"strong finish"},
-        {"group":"Cool down","kind":"run","dist_km":0.5,"pace_max":"8:30","note":"easy jog"}
-      ],
-      "sat":"Easy Run","sat_type":"Easy",
-      "sat_actual":{"dist":5.48,"time":"47:20","pace":"8:38","hr_avg":149,"hr_max":164,"cad":161,"effort":4,"walk_pct":8,"notes":"cut 11→5.5km to save legs for Sun Long Run. Max cad 190 dodging dogs/cars. Z2 53% Z3 40%"},
-      "sat_segments":[
-        {"group":"Session","kind":"run","dist_km":7,"pace_max":"8:30","note":"Z1-Z2 only · HR ≤145 · keep cadence ~165"}
-      ],
-      "sun":"WED Long Run (done 14.5km)","sun_type":"Long",
-      "sun_actual":{"dist":14.50,"time":"2:09:05","pace":"8:54","hr_avg":152,"hr_max":166,"cad":166,"effort":7,"walk_pct":0,"notes":"⭐⭐ Cadence LOCKED 165-168 every km! ZERO walking (2 stops: tape+earphone). Gel@7, salt@10, water+elec every 2km. Stopped 14.5 (sun strong). Best discipline yet"},
-      "sun_segments":[
-        {"group":"Warm-up","kind":"run","dist_km":5,"pace":"8:30","note":"easy start · cadence focus 165 spm"},
-        {"group":"Cruise (goal pace)","kind":"run","dist_km":10,"pace":"8:00","pace_range":"7:50-8:10","note":"🍯 GEL #1 at km 7 (test stomach)"},
-        {"group":"Finish","kind":"run","dist_km":2,"pace":"7:45","note":"strong finish if feeling good"}
-      ],
-      "planned_km":30,"actual_km":null,
-      "note":"📅 Sun=REST (RHR 60, slept 5h41m). Mon=Easy 5-6km if RHR≤56. Tue=Rest/shake 3km. WED=Long Run 16-18km + race kit test (gel/shoes)"
+      "wk": 1,
+      "dates": "Mar 14-15",
+      "phase": "Build",
+      "fri": "-",
+      "fri_type": "Rest",
+      "sat": "Long 10",
+      "sat_type": "Long",
+      "sun": "Easy 5",
+      "sun_type": "Easy",
+      "planned_km": 15,
+      "actual_km": 16.0,
+      "note": "Start of block"
     },
-
     {
-      "wk":13,"dates":"Jun 5-7","phase":"Taper 1",
-      "fri":"Progressive Run 6km","fri_type":"Progression",
-      "fri_actual":{"dist":2.04,"time":"18:47","pace":"9:12","hr_avg":147,"hr_max":170,"cad":155,"effort":5,"walk_pct":10,"notes":"⚠️ cut short 2km (Garmin plan 6km progressive). Smart — RHR elevated 6 days. Taper = listen to body"},
-      "fri_segments":[
-        {"group":"Warm-up","kind":"run","dist_km":1.5,"pace_max":"8:30","note":"easy start"},
-        {"group":"Progression","kind":"run","dist_km":1,"pace":"8:00"},
-        {"group":"Progression","kind":"run","dist_km":1,"pace":"7:30"},
-        {"group":"Progression","kind":"run","dist_km":1,"pace":"7:00"},
-        {"group":"Progression","kind":"run","dist_km":1,"pace":"6:40","note":"strong finish"},
-        {"group":"Cool down","kind":"run","dist_km":0.5,"pace_max":"8:30"}
-      ],
-      "sat":"Easy Run 9km","sat_type":"Easy",
-      "sat_actual":{"dist":5.63,"time":"46:25","pace":"8:14","hr_avg":139,"hr_max":154,"cad":167,"effort":4,"walk_pct":11,"notes":"✅ HR 139 (Z2 59%), cadence 168 locked. Cut 9→5.6km (bored of loop, felt flat). Need new route!"},
-      "sat_segments":[
-        {"group":"Session","kind":"run","dist_km":9,"pace_max":"8:30","note":"recovery pace · HR ≤145 (Garmin plan: 9km)"}
-      ],
-      "sun":"MON Long Run 15km (moved)","sun_type":"Long",
-      "sun_actual":{"notes":"Sun rest — woke up groggy/dizzy, RHR 59 (9 nights elevated). Moved Long Run to Mon Jun 8. Listening to body = right call during taper"},
-      "sun_segments":[
-        {"group":"Easy start","kind":"run","dist_km":8,"pace":"8:30","note":"warm into it"},
-        {"group":"Race pace finish","kind":"run","dist_km":6,"pace":"8:00","pace_range":"7:50-8:10","note":"dress rehearsal for race pace · try new route!"},
-        {"group":"Cool down","kind":"run","dist_km":1,"pace_max":"9:00","note":"easy"}
-      ],
-      "planned_km":30,"actual_km":null,
-      "note":"📅 Fri Progressive 6km✓, Sat Easy 9km✓. Sun=REST (groggy). MON=Long Run 15km (moved) + new route"
+      "wk": 2,
+      "dates": "Mar 20-21",
+      "phase": "Build",
+      "fri": "Easy 4",
+      "fri_type": "Easy",
+      "sat": "Easy 12",
+      "sat_type": "Easy",
+      "sun": "-",
+      "sun_type": "Rest",
+      "planned_km": 16,
+      "actual_km": 16.7,
+      "note": "swap pattern"
     },
-
     {
-      "wk":14,"dates":"Jun 9-14","phase":"Taper 2",
-      "fri":"THU Race Practice Long 11km","fri_type":"Long",
-      "fri_segments":[
-        {"group":"Warm-up","kind":"run","dist_km":3,"pace":"8:30","note":"easy start"},
-        {"group":"Race pace","kind":"run","dist_km":6,"pace":"7:50","pace_range":"7:45-8:00","note":"goal pace practice · test race kit/gel"},
-        {"group":"Cool down","kind":"run","dist_km":2,"pace_max":"9:00","note":"easy"}
-      ],
-      "sat":"Easy Run 8km","sat_type":"Easy",
-      "sat_segments":[
-        {"group":"Session","kind":"run","dist_km":8,"pace_max":"8:30","note":"easy · HR ≤145 (Garmin plan)"}
-      ],
-      "sun":"Company event 5km (V-Twin walk & run)","sun_type":"Race",
-      "sun_segments":[
-        {"group":"Warm-up","kind":"run","dist_km":1,"pace_max":"8:30","note":"easy jog 10min + dynamic stretches before start"},
-        {"group":"Fun Run","kind":"run","dist_km":2,"pace":"7:50","pace_range":"7:45-8:00","note":"km 1-2: HM goal pace · HR ≤160 · settle in"},
-        {"group":"Fun Run","kind":"run","dist_km":2,"pace":"7:30","pace_range":"7:25-7:40","note":"km 3-4: slightly faster (-20s) · HR ≤165 · controlled threshold"},
-        {"group":"Fun Run","kind":"run","dist_km":1,"pace":"7:50","note":"km 4-5: back to HM pace · finish strong but smooth"},
-        {"group":"Strides x4","kind":"run","dist_km":0.1,"pace":"5:30","note":"100m strides · 80% effort · smooth form (NOT all-out sprint)"},
-        {"group":"Strides x4","kind":"rest","duration_sec":90,"note":"walk recovery"},
-        {"group":"Cool down","kind":"run","dist_km":1,"pace_max":"9:00","note":"easy jog + static stretches"}
-      ],
-      "planned_km":42,"actual_km":null,
-      "note":"📅 Garmin re-plan: Tue Easy 9km, Wed Easy 9km, Thu Race Practice Long 11km, Sat Easy 8km, Sun Company 5km (V-Twin). ⚠️ Sun keep EASY 7:30 save legs"
+      "wk": 3,
+      "dates": "Mar 27-29",
+      "phase": "Build",
+      "fri": "Easy 7",
+      "fri_type": "Easy",
+      "sat": "-",
+      "sat_type": "Rest",
+      "sun": "Long 10",
+      "sun_type": "Long",
+      "planned_km": 17,
+      "actual_km": 18.4,
+      "note": ""
     },
-
     {
-      "wk":15,"dates":"Jun 15-21","phase":"RACE",
-      "fri":"WED Intervals 7 / FRI Easy 6.5km","fri_type":"Tempo",
-      "fri_segments":[
-        {"group":"Wed Taper Intervals","kind":"run","dist_km":2,"pace_max":"8:30","note":"warm-up"},
-        {"group":"Wed Taper Intervals","kind":"run","dist_km":3,"pace":"7:50","pace_range":"7:40-8:00","note":"race pace K's — sharpen"},
-        {"group":"Wed Taper Intervals","kind":"run","dist_km":2,"pace_max":"8:30","note":"cool down"},
-        {"group":"Fri Easy (separate day)","kind":"run","dist_km":6.5,"pace_max":"8:30","note":"easy shakeout · HR ≤145"}
+      "wk": 4,
+      "dates": "Apr 3-5",
+      "phase": "Build",
+      "fri": "Tempo 6",
+      "fri_type": "Tempo",
+      "sat": "Easy 7",
+      "sat_type": "Easy",
+      "sun": "Long 10",
+      "sun_type": "Long",
+      "planned_km": 23,
+      "actual_km": 24.4,
+      "note": "⚠️ all too hard"
+    },
+    {
+      "wk": 5,
+      "dates": "Apr 10-13",
+      "phase": "Build",
+      "fri": "Tempo 9",
+      "fri_type": "Tempo",
+      "sat": "Easy 7",
+      "sat_type": "Easy",
+      "sun": "Long 13",
+      "sun_type": "Long",
+      "planned_km": 29,
+      "actual_km": 30.3,
+      "note": "Nakhon Ratchasima (cool!)"
+    },
+    {
+      "wk": 6,
+      "dates": "Apr 17",
+      "phase": "Recovery",
+      "fri": "Int 5",
+      "fri_type": "Interval",
+      "sat": "-",
+      "sat_type": "Rest",
+      "sun": "-",
+      "sun_type": "Rest",
+      "planned_km": 5,
+      "actual_km": 5.9,
+      "note": "⚠️ only 1 run - fatigue"
+    },
+    {
+      "wk": 7,
+      "dates": "Apr 24-26",
+      "phase": "Build",
+      "fri": "Tempo 7",
+      "fri_type": "Tempo",
+      "sat": "Easy 8",
+      "sat_type": "Easy",
+      "sun": "Long 13",
+      "sun_type": "Long",
+      "planned_km": 28,
+      "actual_km": 29.1,
+      "note": ""
+    },
+    {
+      "wk": 8,
+      "dates": "May 1-3",
+      "phase": "Build",
+      "fri": "Tempo 6",
+      "fri_type": "Tempo",
+      "sat": "Easy 7",
+      "sat_type": "Easy",
+      "sun": "Long 15",
+      "sun_type": "Long",
+      "planned_km": 28,
+      "actual_km": 30.7,
+      "note": "shift to aerobic"
+    },
+    {
+      "wk": 9,
+      "dates": "May 8-10",
+      "phase": "Build",
+      "fri": "Int 7",
+      "fri_type": "Interval",
+      "sat": "Easy 8",
+      "sat_type": "Easy",
+      "sun": "Long 16",
+      "sun_type": "Long",
+      "planned_km": 31,
+      "actual_km": 31.3,
+      "note": ""
+    },
+    {
+      "wk": 10,
+      "dates": "May 15-17",
+      "phase": "Build",
+      "fri": "Int 8",
+      "fri_type": "Interval",
+      "sat": "Easy 8",
+      "sat_type": "Easy",
+      "sun": "Long 18",
+      "sun_type": "Long",
+      "planned_km": 34,
+      "actual_km": 23.5,
+      "note": "cutback (Long short)"
+    },
+    {
+      "wk": 11,
+      "dates": "May 22-24",
+      "phase": "Peak",
+      "fri": "Tempo 8",
+      "fri_type": "Tempo",
+      "sat": "Easy 8",
+      "sat_type": "Easy",
+      "sun": "Long 19",
+      "sun_type": "Long",
+      "planned_km": 35,
+      "actual_km": 28.6,
+      "note": "⭐ Long Run 21.85km PR!"
+    },
+    {
+      "wk": 12,
+      "dates": "May 29-31",
+      "phase": "Peak",
+      "fri": "Progression Run",
+      "fri_type": "Progression",
+      "fri_actual": {
+        "dist": 4.23,
+        "time": "40:38",
+        "pace": "8:25",
+        "hr_avg": 142,
+        "hr_max": 182,
+        "cad": 170,
+        "cad_display": 145,
+        "effort": 7,
+        "walk_pct": 15,
+        "notes": "📊 Treadmill interval (changed from Progression). ⭐ RUNNING-only cadence 170 spm (Garmin display 145 includes walk/rest). Intervals @ 183 spm! WU 2km@9:07→Interval 1.6km@6:18 (max HR 182, hit Z5!)→CD walk. Zones: Z1 10%/Z2 50%/Z3 17%/Z4 5%/Z5 1%. Best lap 1km@6:08 cadence 183."
+      },
+      "fri_segments": [
+        {
+          "group": "Warm-up",
+          "kind": "run",
+          "dist_km": 1.5,
+          "pace_max": "8:30",
+          "note": "conversational, easy"
+        },
+        {
+          "group": "Progression",
+          "kind": "run",
+          "dist_km": 1,
+          "pace": "8:00",
+          "note": "feel comfortable"
+        },
+        {
+          "group": "Progression",
+          "kind": "run",
+          "dist_km": 1,
+          "pace": "7:30"
+        },
+        {
+          "group": "Progression",
+          "kind": "run",
+          "dist_km": 1,
+          "pace": "7:00"
+        },
+        {
+          "group": "Progression",
+          "kind": "run",
+          "dist_km": 1,
+          "pace": "6:30",
+          "note": "hard but controlled"
+        },
+        {
+          "group": "Progression",
+          "kind": "run",
+          "dist_km": 1,
+          "pace": "6:15",
+          "note": "strong finish"
+        },
+        {
+          "group": "Cool down",
+          "kind": "run",
+          "dist_km": 0.5,
+          "pace_max": "8:30",
+          "note": "easy jog"
+        }
       ],
-      "sat":"Shake-out (Sat)","sat_type":"Easy",
-      "sat_segments":[
-        {"group":"Session","kind":"run","dist_km":2,"pace_max":"8:30","note":"super easy shake-out · keep HR ≤140"},
-        {"group":"Strides","kind":"run","dist_km":0.05,"pace":"6:00","note":"4× 50m strides at end · feel snappy"},
-        {"group":"Strides","kind":"rest","duration_sec":60,"note":"walk recovery"}
+      "sat": "Easy Run",
+      "sat_type": "Easy",
+      "sat_actual": {
+        "dist": 5.48,
+        "time": "47:20",
+        "pace": "8:38",
+        "hr_avg": 149,
+        "hr_max": 164,
+        "cad": 161,
+        "effort": 4,
+        "walk_pct": 8,
+        "notes": "cut 11→5.5km to save legs for Sun Long Run. Max cad 190 dodging dogs/cars. Z2 53% Z3 40%"
+      },
+      "sat_segments": [
+        {
+          "group": "Session",
+          "kind": "run",
+          "dist_km": 7,
+          "pace_max": "8:30",
+          "note": "Z1-Z2 only · HR ≤145 · keep cadence ~165"
+        }
       ],
-      "sun":"🏁 KORAT 21 HM","sun_type":"Race",
-      "sun_segments":[
-        {"group":"Warm-up phase","kind":"run","dist_km":5,"pace":"8:15","pace_range":"8:10-8:30","note":"🚫 NO walking · cadence 160+ · HR ≤155 · resist others"},
-        {"group":"Cruise","kind":"run","dist_km":2,"pace":"7:50","note":"settle into goal pace · HR ≤160"},
-        {"group":"Cruise","kind":"run","dist_km":1,"pace":"7:50","note":"🍯 GEL #1 at km 7 + sip water"},
-        {"group":"Cruise","kind":"run","dist_km":3,"pace":"7:50","note":"⭐ HALFWAY at km 10 · check time ~1:20"},
-        {"group":"Cruise","kind":"run","dist_km":3,"pace":"7:50","note":"keep relaxed · sip aid stations"},
-        {"group":"Cruise","kind":"run","dist_km":1,"pace":"7:50","note":"🍯 GEL #2 at km 14"},
-        {"group":"Finish","kind":"run","dist_km":6,"pace":"7:35","pace_range":"7:20-7:45","note":"🔥 progressive pickup · HR ≤168"},
-        {"group":"Kick","kind":"run","dist_km":0.1,"pace":"7:20","note":"🏆 EMPTY THE TANK"}
+      "sun": "WED Long Run (done 14.5km)",
+      "sun_type": "Long",
+      "sun_actual": {
+        "dist": 14.5,
+        "time": "2:09:05",
+        "pace": "8:54",
+        "hr_avg": 152,
+        "hr_max": 166,
+        "cad": 166,
+        "effort": 7,
+        "walk_pct": 0,
+        "notes": "⭐⭐ Cadence LOCKED 165-168 every km! ZERO walking (2 stops: tape+earphone). Gel@7, salt@10, water+elec every 2km. Stopped 14.5 (sun strong). Best discipline yet"
+      },
+      "sun_segments": [
+        {
+          "group": "Warm-up",
+          "kind": "run",
+          "dist_km": 5,
+          "pace": "8:30",
+          "note": "easy start · cadence focus 165 spm"
+        },
+        {
+          "group": "Cruise (goal pace)",
+          "kind": "run",
+          "dist_km": 10,
+          "pace": "8:00",
+          "pace_range": "7:50-8:10",
+          "note": "🍯 GEL #1 at km 7 (test stomach)"
+        },
+        {
+          "group": "Finish",
+          "kind": "run",
+          "dist_km": 2,
+          "pace": "7:45",
+          "note": "strong finish if feeling good"
+        }
       ],
-      "planned_km":35,"actual_km":null,
-      "note":"📅 Garmin: Wed Taper Intervals 7km, Fri Easy 6.5km, Sun RACE 21.1km. Target 2:45:49 (negative split, no walking)"
+      "planned_km": 30,
+      "actual_km": null,
+      "note": "📅 Sun=REST (RHR 60, slept 5h41m). Mon=Easy 5-6km if RHR≤56. Tue=Rest/shake 3km. WED=Long Run 16-18km + race kit test (gel/shoes)"
+    },
+    {
+      "wk": 13,
+      "dates": "Jun 5-7",
+      "phase": "Taper 1",
+      "fri": "Progressive Run 6km",
+      "fri_type": "Progression",
+      "fri_actual": {
+        "dist": 2.04,
+        "time": "18:47",
+        "pace": "9:12",
+        "hr_avg": 147,
+        "hr_max": 170,
+        "cad": 155,
+        "effort": 5,
+        "walk_pct": 10,
+        "notes": "⚠️ cut short 2km (Garmin plan 6km progressive). Smart — RHR elevated 6 days. Taper = listen to body"
+      },
+      "fri_segments": [
+        {
+          "group": "Warm-up",
+          "kind": "run",
+          "dist_km": 1.5,
+          "pace_max": "8:30",
+          "note": "easy start"
+        },
+        {
+          "group": "Progression",
+          "kind": "run",
+          "dist_km": 1,
+          "pace": "8:00"
+        },
+        {
+          "group": "Progression",
+          "kind": "run",
+          "dist_km": 1,
+          "pace": "7:30"
+        },
+        {
+          "group": "Progression",
+          "kind": "run",
+          "dist_km": 1,
+          "pace": "7:00"
+        },
+        {
+          "group": "Progression",
+          "kind": "run",
+          "dist_km": 1,
+          "pace": "6:40",
+          "note": "strong finish"
+        },
+        {
+          "group": "Cool down",
+          "kind": "run",
+          "dist_km": 0.5,
+          "pace_max": "8:30"
+        }
+      ],
+      "sat": "Easy Run 9km",
+      "sat_type": "Easy",
+      "sat_actual": {
+        "dist": 5.63,
+        "time": "46:25",
+        "pace": "8:14",
+        "hr_avg": 139,
+        "hr_max": 154,
+        "cad": 167,
+        "effort": 4,
+        "walk_pct": 11,
+        "notes": "✅ HR 139 (Z2 59%), cadence 168 locked. Cut 9→5.6km (bored of loop, felt flat). Need new route!"
+      },
+      "sat_segments": [
+        {
+          "group": "Session",
+          "kind": "run",
+          "dist_km": 9,
+          "pace_max": "8:30",
+          "note": "recovery pace · HR ≤145 (Garmin plan: 9km)"
+        }
+      ],
+      "sun": "MON Long Run 15km (moved)",
+      "sun_type": "Long",
+      "sun_actual": {
+        "notes": "Sun rest — woke up groggy/dizzy, RHR 59 (9 nights elevated). Moved Long Run to Mon Jun 8. Listening to body = right call during taper"
+      },
+      "sun_segments": [
+        {
+          "group": "Easy start",
+          "kind": "run",
+          "dist_km": 8,
+          "pace": "8:30",
+          "note": "warm into it"
+        },
+        {
+          "group": "Race pace finish",
+          "kind": "run",
+          "dist_km": 6,
+          "pace": "8:00",
+          "pace_range": "7:50-8:10",
+          "note": "dress rehearsal for race pace · try new route!"
+        },
+        {
+          "group": "Cool down",
+          "kind": "run",
+          "dist_km": 1,
+          "pace_max": "9:00",
+          "note": "easy"
+        }
+      ],
+      "planned_km": 30,
+      "actual_km": null,
+      "note": "📅 Fri Progressive 6km✓, Sat Easy 9km✓. Sun=REST (groggy). MON=Long Run 15km (moved) + new route"
+    },
+    {
+      "wk": 14,
+      "dates": "Jun 9-14",
+      "phase": "Taper 2",
+      "fri": "THU Race Practice Long 11km",
+      "fri_type": "Long",
+      "fri_segments": [
+        {
+          "group": "Warm-up",
+          "kind": "run",
+          "dist_km": 3,
+          "pace": "8:30",
+          "note": "easy start"
+        },
+        {
+          "group": "Race pace",
+          "kind": "run",
+          "dist_km": 6,
+          "pace": "7:50",
+          "pace_range": "7:45-8:00",
+          "note": "goal pace practice · test race kit/gel"
+        },
+        {
+          "group": "Cool down",
+          "kind": "run",
+          "dist_km": 2,
+          "pace_max": "9:00",
+          "note": "easy"
+        }
+      ],
+      "sat": "Easy Run 8km",
+      "sat_type": "Easy",
+      "sat_segments": [
+        {
+          "group": "Session",
+          "kind": "run",
+          "dist_km": 8,
+          "pace_max": "8:30",
+          "note": "easy · HR ≤145 (Garmin plan)"
+        }
+      ],
+      "sun": "Company event 5km (V-Twin walk & run)",
+      "sun_type": "Race",
+      "sun_segments": [
+        {
+          "group": "Warm-up",
+          "kind": "run",
+          "dist_km": 1,
+          "pace_max": "8:30",
+          "note": "easy jog 10min + dynamic stretches before start"
+        },
+        {
+          "group": "Fun Run",
+          "kind": "run",
+          "dist_km": 2,
+          "pace": "7:50",
+          "pace_range": "7:45-8:00",
+          "note": "km 1-2: HM goal pace · HR ≤160 · settle in"
+        },
+        {
+          "group": "Fun Run",
+          "kind": "run",
+          "dist_km": 2,
+          "pace": "7:30",
+          "pace_range": "7:25-7:40",
+          "note": "km 3-4: slightly faster (-20s) · HR ≤165 · controlled threshold"
+        },
+        {
+          "group": "Fun Run",
+          "kind": "run",
+          "dist_km": 1,
+          "pace": "7:50",
+          "note": "km 4-5: back to HM pace · finish strong but smooth"
+        },
+        {
+          "group": "Strides x4",
+          "kind": "run",
+          "dist_km": 0.1,
+          "pace": "5:30",
+          "note": "100m strides · 80% effort · smooth form (NOT all-out sprint)"
+        },
+        {
+          "group": "Strides x4",
+          "kind": "rest",
+          "duration_sec": 90,
+          "note": "walk recovery"
+        },
+        {
+          "group": "Cool down",
+          "kind": "run",
+          "dist_km": 1,
+          "pace_max": "9:00",
+          "note": "easy jog + static stretches"
+        }
+      ],
+      "planned_km": 42,
+      "actual_km": null,
+      "note": "📅 Garmin re-plan: Tue Easy 9km, Wed Easy 9km, Thu Race Practice Long 11km, Sat Easy 8km, Sun Company 5km (V-Twin). ⚠️ Sun keep EASY 7:30 save legs"
+    },
+    {
+      "wk": 15,
+      "dates": "Jun 15-21",
+      "phase": "RACE",
+      "fri": "FRI Taper Intervals 7km (moved from Wed)",
+      "fri_type": "Tempo",
+      "fri_segments": [
+        {
+          "group": "Fri Taper Intervals",
+          "kind": "run",
+          "dist_km": 2,
+          "pace_max": "8:30",
+          "note": "2km warm-up"
+        },
+        {
+          "group": "Fri Taper Intervals",
+          "kind": "run",
+          "dist_km": 4,
+          "pace": "7:50",
+          "pace_range": "7:40-8:00",
+          "note": "4×1km @ race pace · 90s walk between · sharpen primer (Runna sets 6:40 = too fast, use ~7:50)"
+        },
+        {
+          "group": "Fri Taper Intervals",
+          "kind": "run",
+          "dist_km": 1,
+          "pace_max": "8:30",
+          "note": "1km cool down"
+        }
+      ],
+      "sat": "Shake-out (Sat)",
+      "sat_type": "Easy",
+      "sat_segments": [
+        {
+          "group": "Session",
+          "kind": "run",
+          "dist_km": 2,
+          "pace_max": "8:30",
+          "note": "super easy shake-out · keep HR ≤140"
+        },
+        {
+          "group": "Strides",
+          "kind": "run",
+          "dist_km": 0.05,
+          "pace": "6:00",
+          "note": "4× 50m strides at end · feel snappy"
+        },
+        {
+          "group": "Strides",
+          "kind": "rest",
+          "duration_sec": 60,
+          "note": "walk recovery"
+        }
+      ],
+      "sun": "🏁 KORAT 21 HM",
+      "sun_type": "Race",
+      "sun_segments": [
+        {
+          "group": "Warm-up phase",
+          "kind": "run",
+          "dist_km": 5,
+          "pace": "8:15",
+          "pace_range": "8:10-8:30",
+          "note": "🚫 NO walking · cadence 160+ · HR ≤155 · resist others"
+        },
+        {
+          "group": "Cruise",
+          "kind": "run",
+          "dist_km": 2,
+          "pace": "7:50",
+          "note": "settle into goal pace · HR ≤160"
+        },
+        {
+          "group": "Cruise",
+          "kind": "run",
+          "dist_km": 1,
+          "pace": "7:50",
+          "note": "🍯 GEL #1 at km 7 + sip water"
+        },
+        {
+          "group": "Cruise",
+          "kind": "run",
+          "dist_km": 3,
+          "pace": "7:50",
+          "note": "⭐ HALFWAY at km 10 · check time ~1:20"
+        },
+        {
+          "group": "Cruise",
+          "kind": "run",
+          "dist_km": 3,
+          "pace": "7:50",
+          "note": "keep relaxed · sip aid stations"
+        },
+        {
+          "group": "Cruise",
+          "kind": "run",
+          "dist_km": 1,
+          "pace": "7:50",
+          "note": "🍯 GEL #2 at km 14"
+        },
+        {
+          "group": "Finish",
+          "kind": "run",
+          "dist_km": 6,
+          "pace": "7:35",
+          "pace_range": "7:20-7:45",
+          "note": "🔥 progressive pickup · HR ≤168"
+        },
+        {
+          "group": "Kick",
+          "kind": "run",
+          "dist_km": 0.1,
+          "pace": "7:20",
+          "note": "🏆 EMPTY THE TANK"
+        }
+      ],
+      "planned_km": 35,
+      "actual_km": null,
+      "note": "📅 Garmin (updated): Wed/Thu REST, Fri Taper Intervals 7km (2km WU + 4×1km + 1km CD, moved from Wed), Sun RACE 21.1km. Target 2:45:49 (negative split, no walking)."
     }
   ]
 }
