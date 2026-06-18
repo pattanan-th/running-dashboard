@@ -19,6 +19,9 @@ make_pacing.py
 # wellness.json
 # plan.json
 
+# Session handoff / backup notes (local only)
+SESSION_HANDOFF*.md
+
 # OS
 .DS_Store
 Thumbs.db
