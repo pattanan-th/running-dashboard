@@ -252,6 +252,23 @@
   ],
   "tempos_intervals": [
     {
+      "wk": 15,
+      "date": "2026-06-19",
+      "name": "W15 Fri Taper Intervals (primer)",
+      "id": "23300597520",
+      "dist": 8.37,
+      "time": "1:02:41",
+      "pace": "7:29",
+      "hr_avg": 150.0,
+      "hr_max": 172.0,
+      "cad": 162.890625,
+      "cad_max": 180.0,
+      "stride": 0.83,
+      "temp": null,
+      "ascent": 578.0,
+      "note": "Race-week primer, FUN (first outdoor speed work in a while). 8.37km incl 4x1km reps. HR avg 150/max 172 Z4, cadence to 180 = snappy turnover. 578m ascent (hilly route again). Felt good - sharpening done."
+    },
+    {
       "wk": 14,
       "date": "2026-06-14",
       "name": "V-Twin Company 5km (Khao Kheow)",
