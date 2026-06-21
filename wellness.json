@@ -32,17 +32,16 @@
       "note": "set at start of HM block"
     },
     "half_marathon": {
-      "time": "3:26:39",
-      "pace": "9:48/km",
-      "date": "2026-05-24",
-      "activity": "W11 Sun Long Run",
-      "note": "★ checkpoint within 21.85km run - REAL current HM time on hot hilly route"
+      "time": "2:39:24",
+      "pace": "7:17",
+      "date": "2026-06-21",
+      "note": "Korat21 HM (official goal race) — 47min PR"
     },
     "marathon": null,
     "longest_run": {
-      "distance_km": 21.85,
-      "date": "2026-05-24",
-      "activity": "W11 Sun Long Run"
+      "distance_km": 21.87,
+      "date": "2026-06-21",
+      "activity": "Korat21 HM (race)"
     },
     "most_steps_day": {
       "count": 38144,
@@ -218,13 +217,13 @@
     {
       "date": "2026-06-21",
       "stress": {
-        "score": 12
+        "score": 24
       },
       "rhr": {
         "current": 54
       },
       "steps": {
-        "count": 143
+        "count": 30762
       }
     }
   ],

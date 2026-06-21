@@ -15,6 +15,24 @@
   },
   "long_runs": [
     {
+      "wk": 15,
+      "date": "2026-06-21",
+      "name": "🏁 Korat21 HM — RACE",
+      "id": "23322768957",
+      "dist": 21.87,
+      "time": "2:39:24",
+      "pace": "7:17",
+      "hr_avg": 165.0,
+      "hr_max": 193.0,
+      "cad": 169.359375,
+      "cad_max": 248.0,
+      "stride": 0.81,
+      "temp": null,
+      "ascent": null,
+      "shoe": "Novablast",
+      "note": "🏆 GOAL RACE. 21.87km/2:39:24/7:17. HR avg 165 Z4/max 193. Raced aggressive (above conservative HR plan) and HELD it. ~47min PR vs old HM 3:26:39, beat 2:45 plan by 6min. Prev 21km was 9:53 + 48% walk - today night-and-day. (Garmin ascent glitch 2372m ignored - course flat.)"
+    },
+    {
       "wk": 14,
       "date": "2026-06-11",
       "name": "Si Racha W14 Thu Race Practice",
