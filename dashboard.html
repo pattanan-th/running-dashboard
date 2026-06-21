@@ -615,7 +615,8 @@ canvas { background: transparent; }
     <div class="countdown" id="countdown">Loading…</div>
   </header>
   <div class="tabs">
-    <button class="tab active" data-page="status">📊 Status</button>
+    <button class="tab active" data-page="summary">🏆 Summary</button>
+    <button class="tab" data-page="status">📊 Status</button>
     <button class="tab" data-page="runs">🏃 Runs</button>
     <button class="tab" data-page="sleep">💤 Sleep</button>
     <button class="tab" data-page="plan">📅 Plan</button>
@@ -629,8 +630,76 @@ canvas { background: transparent; }
 
 <main>
 
+<!-- ============= SUMMARY / RACE REPORT (front page) ============= -->
+<section class="page active" id="page-summary">
+  <div class="card" style="text-align:center">
+    <div style="font-size:11px;color:var(--text-muted);font-family:var(--mono);letter-spacing:1px">🏁 KORAT 21 HALF MARATHON · 21 มิ.ย. 2026</div>
+    <div style="font-size:46px;font-weight:800;color:var(--accent);font-family:var(--mono);margin:6px 0;line-height:1">2:39:24</div>
+    <div style="font-size:13px;color:var(--success,#27ae60);font-weight:600">🏆 PR −47 นาที · จบไม่เดิน · 21.87km @ 7:17/km</div>
+  </div>
+
+  <div class="card">
+    <h2>📊 สรุปผล</h2>
+    <div class="stat-grid">
+      <div class="stat"><div class="stat-label">เวลา</div><div class="stat-value">2:39:24</div><div class="stat-sub">21.87 km</div></div>
+      <div class="stat"><div class="stat-label">Pace</div><div class="stat-value">7:17</div><div class="stat-sub">/km</div></div>
+      <div class="stat"><div class="stat-label">HR เฉลี่ย</div><div class="stat-value">165</div><div class="stat-sub">max 193 · Z4</div></div>
+      <div class="stat"><div class="stat-label">Cadence</div><div class="stat-value">169</div><div class="stat-sub">spm</div></div>
+    </div>
+    <div class="alert-box success" style="margin-top:10px"><strong>vs HM PR เดิม 3:26:39 → เร็วขึ้น 47 นาที</strong> · เทียบ 21km เดิม (9:53 เดิน 48%) = คนละคน · วิ่งใน 30°C</div>
+  </div>
+
+  <div class="card">
+    <h2>📈 Pace ↔ HR ต่อ กม.</h2>
+    <div class="alert-box">เร็วสุด km9-13 (~6:50) → fade km14-19 ขณะ HR พุ่ง (endurance คือเพดาน) → kick ปิดท้าย</div>
+    <div class="chart-container"><canvas id="summary-race-chart"></canvas></div>
+  </div>
+
+  <div class="card">
+    <h2>❤️ เวลาในแต่ละ HR Zone</h2>
+    <div style="display:flex;flex-direction:column;gap:8px;font-size:12px;font-family:var(--mono)">
+      <div><div style="display:flex;justify-content:space-between"><span>Z3 151-164</span><span>1:20:28 · 50%</span></div><div style="height:9px;background:#3498db;width:50%;border-radius:4px;margin-top:2px"></div></div>
+      <div><div style="display:flex;justify-content:space-between"><span>Z4 165-177</span><span>51:47 · 33%</span></div><div style="height:9px;background:#e67e22;width:33%;border-radius:4px;margin-top:2px"></div></div>
+      <div><div style="display:flex;justify-content:space-between"><span>Z5 &gt;178 🔥</span><span>21:18 · 13%</span></div><div style="height:9px;background:#e74c3c;width:13%;border-radius:4px;margin-top:2px"></div></div>
+      <div><div style="display:flex;justify-content:space-between"><span>Z1-Z2 &lt;150</span><span>5:49 · 4%</span></div><div style="height:9px;background:#95a5a6;width:4%;border-radius:4px;margin-top:2px"></div></div>
+    </div>
+    <div class="alert-box" style="margin-top:10px;font-size:12px">avg 165 = วิ่งที่ threshold ทั้งเรซ + 21 นาทีใน Z5 = เรซที่กล้าและเจ็บมาก</div>
+  </div>
+
+  <div class="card">
+    <h2>🔍 อ่านเกม — ข้อดี / จุดพัฒนา</h2>
+    <div style="font-size:13px;line-height:1.6">
+      <strong style="color:var(--success,#27ae60)">✅ ข้อดี</strong>
+      <ul style="margin:4px 0 10px;padding-left:20px">
+        <li>Pacing ครึ่งแรกฉลาด — ออกช้า เร่งกลาง (negative-split intent)</li>
+        <li>ใจสู้: 21 นาที Z5 + ไม่เดินตอน fade + kick แรงปิดท้าย (HR 193)</li>
+        <li>Cadence นิ่ง 165-173 เกือบทั้งเรซ · ทนร้อน 30°C</li>
+        <li>Race เหนือ pace ซ้อม (long run เคย 8:30-9:53 → วันจริงถือ 7:17)</li>
+      </ul>
+      <strong style="color:var(--warning,#e67e22)">⚠️ จุดพัฒนา</strong>
+      <ul style="margin:4px 0 0;padding-left:20px">
+        <li><strong>Fade ครึ่งหลัง (km14-19)</strong> pace ตก ~45วิ/กม. ขณะ HR ขึ้น = aerobic base คือเพดาน (จุดพัฒนาเบอร์ 1)</li>
+        <li>HR สูงตลอด (avg Z4, แทบไม่มี Z2) → pace นี้ "แพง" เกินไป ไม่มี buffer ครึ่งหลัง</li>
+        <li>Cadence หล่นช่วงล้า (157) — ฟอร์มแตกเมื่อเหนื่อย</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>🎯 ก้าวต่อไป (เป้า sub-2:30)</h2>
+    <div style="font-size:13px;line-height:1.6">
+      <ul style="margin:0;padding-left:20px">
+        <li>เพิ่ม <strong>aerobic base</strong> — easy/long run ที่ Z2 จริง (HR ≤150) เยอะๆ ให้ pace เดิมใช้ HR ต่ำลง</li>
+        <li><strong>Long run ยาว+ต่อเนื่อง</strong> (ลดเดิน) สร้าง durability แก้ fade km14-19</li>
+        <li>เรซหน้า คุม HR ครึ่งแรกต่ำลง 5-8 bpm เผื่อ buffer</li>
+      </ul>
+      <div style="text-align:center;margin-top:12px;font-size:12px;color:var(--text-muted);font-family:var(--mono)">14 สัปดาห์ · 100 คืน · 38 รัน → 🏆 2:39:24<br>ขอบคุณที่ทุ่มเทเต็มที่ 💪</div>
+    </div>
+  </div>
+</section>
+
 <!-- ============= STATUS PAGE ============= -->
-<section class="page active" id="page-status">
+<section class="page" id="page-status">
   <div class="card">
     <h2>📥 Quick Log Today</h2>
     <div style="display:flex;gap:6px;margin-bottom:8px">
@@ -3086,7 +3155,30 @@ function importPlan(event) {
   event.target.value = '';
 }
 
+// ===== SUMMARY / RACE REPORT =====
+function renderSummary() {
+  const el = $('#summary-race-chart');
+  if (!el) return;
+  const pace=[459,469,427,466,423,428,431,422,415,418,413,408,421,453,440,473,458,444,449,408,404];
+  const hr=[149,156,158,157,156,159,161,164,166,159,160,165,177,166,167,170,172,170,177,173,182];
+  const labels=pace.map((_,i)=>'km'+(i+1));
+  new Chart(el, {
+    data:{labels,datasets:[
+      {type:'line',label:'pace',data:pace,yAxisID:'y',borderColor:'#3498db',backgroundColor:'#3498db',tension:0.3,pointRadius:2,borderWidth:2},
+      {type:'line',label:'HR',data:hr,yAxisID:'y1',borderColor:'#e74c3c',backgroundColor:'#e74c3c',borderDash:[5,4],tension:0.3,pointRadius:2,borderWidth:2}
+    ]},
+    options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
+      plugins:{legend:{position:'bottom',labels:{boxWidth:12,font:{size:10}}},
+        tooltip:{callbacks:{label:c=>c.dataset.label==='pace'?('pace '+Math.floor(c.raw/60)+':'+String(c.raw%60).padStart(2,'0')):('HR '+c.raw)}}},
+      scales:{
+        y:{reverse:true,position:'left',title:{display:true,text:'pace /km',font:{size:10}},min:400,max:480,ticks:{stepSize:20,font:{size:10},callback:v=>Math.floor(v/60)+':'+String(Math.round(v%60)).padStart(2,'0')}},
+        y1:{position:'right',title:{display:true,text:'HR',font:{size:10}},min:145,max:195,grid:{display:false}}
+      }}
+  });
+}
+
 // Init
+renderSummary();
 renderStatus();
 renderRuns();
 renderSleep();
