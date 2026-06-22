@@ -229,13 +229,13 @@
     {
       "date": "2026-06-22",
       "stress": {
-        "score": 36
+        "score": 47
       },
       "rhr": {
         "current": 59
       },
       "steps": {
-        "count": 2120
+        "count": 9858
       }
     }
   ],

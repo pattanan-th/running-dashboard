@@ -558,6 +558,23 @@
   ],
   "easy_runs": [
     {
+      "wk": null,
+      "date": "2026-06-22",
+      "name": "Si Racha Running",
+      "id": "23338549468",
+      "dist": 4.23,
+      "time": "37:57",
+      "pace": "8:58",
+      "hr_avg": 140.0,
+      "hr_max": 154.0,
+      "cad": 161.0,
+      "cad_max": 232.0,
+      "stride": 0.69,
+      "temp": null,
+      "ascent": 189.0,
+      "note": "Recovery jog D+1 post-Korat21. 4.23km @8:58, HR avg 140 (Z1) - proper easy active recovery. Quad DOMS both sides (eccentric from race downhills) = normal."
+    },
+    {
       "wk": 14,
       "date": "2026-06-11",
       "name": "Si Racha W14 Wed Easy",
