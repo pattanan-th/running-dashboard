@@ -270,6 +270,23 @@
   ],
   "tempos_intervals": [
     {
+      "wk": 1,
+      "date": "2026-06-26",
+      "name": "Si Racha - W1 Fri Tempo - R",
+      "id": "23384767284",
+      "dist": 8.1,
+      "time": "1:03:58",
+      "pace": "7:53",
+      "hr_avg": 150.0,
+      "hr_max": 175.0,
+      "cad": 164.515625,
+      "cad_max": 182.0,
+      "stride": 0.77,
+      "temp": null,
+      "ascent": 919.0,
+      "note": "W1 Fri Tempo (Rolling 300s) - first session back after race+rest. 8.1km/7:53, HR avg 150/max 175 (Z4, eased in ~80-85% as planned, no Z5). Cadence 164. Hilly route. Controlled re-entry, good."
+    },
+    {
       "wk": 15,
       "date": "2026-06-19",
       "name": "W15 Fri Taper Intervals (primer)",
