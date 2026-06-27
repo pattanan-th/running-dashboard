@@ -575,6 +575,24 @@
   ],
   "easy_runs": [
     {
+      "wk": 1,
+      "date": "2026-06-27",
+      "name": "Si Racha - W1 Sat Easy Run",
+      "id": "23390926482",
+      "dist": 7.08,
+      "time": "54:32",
+      "pace": "7:41",
+      "hr_avg": 147.0,
+      "hr_max": 156.0,
+      "cad": 166.203125,
+      "cad_max": 177.0,
+      "stride": 0.78,
+      "temp": null,
+      "ascent": 788.0,
+      "shoe": "Dynablast 5",
+      "note": "W1 Sat Easy. 7.08km/7:41, HR avg 147 (Z2)/max 156 - proper easy, well controlled despite elevated RHR. Cadence 166. Hilly."
+    },
+    {
       "wk": null,
       "date": "2026-06-22",
       "name": "Si Racha Running",
