@@ -15,6 +15,23 @@
   },
   "long_runs": [
     {
+      "wk": 1,
+      "date": "2026-06-28",
+      "name": "Bang Lamung - W1 Sun Long Run",
+      "id": "23401587239",
+      "dist": 12.96,
+      "time": "1:35:49",
+      "pace": "7:23",
+      "hr_avg": 151.0,
+      "hr_max": 169.0,
+      "cad": 169.625,
+      "cad_max": 182.0,
+      "stride": 0.8,
+      "temp": null,
+      "ascent": 1720.0,
+      "note": "W1 Sun Long (Progressive). 12.96km/7:23, HR avg 151 (Z2-Z3)/max 169 - controlled, did not force progressive (RHR borderline). Cadence 169. Garmin ascent 1720m = barometric glitch (Bang Lamung not a mountain). Ran with a friend on Watchfit 4 - different GPS distance (normal device variance)."
+    },
+    {
       "wk": 15,
       "date": "2026-06-21",
       "name": "🏁 Korat21 HM — RACE",
