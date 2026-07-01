@@ -325,13 +325,13 @@
     {
       "date": "2026-07-01",
       "stress": {
-        "score": 22
+        "score": 32
       },
       "rhr": {
-        "current": 60
+        "current": 58
       },
       "steps": {
-        "count": 42
+        "count": 1214
       }
     }
   ],
