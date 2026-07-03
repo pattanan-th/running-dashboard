@@ -349,13 +349,13 @@
     {
       "date": "2026-07-03",
       "stress": {
-        "score": 13
+        "score": 31
       },
       "rhr": {
         "current": 56
       },
       "steps": {
-        "count": 7
+        "count": 12316
       }
     }
   ],

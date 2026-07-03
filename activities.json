@@ -287,6 +287,23 @@
   ],
   "tempos_intervals": [
     {
+      "wk": 2,
+      "date": "2026-07-03",
+      "name": "Si Racha - W2 Fri Intervals",
+      "id": "23463524696",
+      "dist": 9.3,
+      "time": "1:10:08",
+      "pace": "7:32",
+      "hr_avg": 147.0,
+      "hr_max": 175.0,
+      "cad": 155.90625,
+      "cad_max": 188.0,
+      "stride": 0.85,
+      "temp": null,
+      "ascent": 90.0,
+      "note": "W2 Fri Intervals - 10x400m. Rep paces 5:04/5:02/5:21/5:28/5:23/6:12/5:47/5:55/6:04/5:35. Cadence LOCKED 174-181 every rep (hit 175+ target). HR max 175 Z4, NO Z5 (controlled, followed 90-95% advice). Went out too fast (rep1-2 @5:02) then faded mid, recovered rep10. Room: even out rep pacing."
+    },
+    {
       "wk": 1,
       "date": "2026-06-26",
       "name": "Si Racha - W1 Fri Tempo - R",
