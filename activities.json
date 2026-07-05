@@ -15,6 +15,23 @@
   },
   "long_runs": [
     {
+      "wk": 2,
+      "date": "2026-07-05",
+      "name": "Bang Lamung - W2 Sun Long Run",
+      "id": "23482051434",
+      "dist": 11.38,
+      "time": "1:52:06",
+      "pace": "9:51",
+      "hr_avg": 137.0,
+      "hr_max": 172.0,
+      "cad": 159.59375,
+      "cad_max": 178.0,
+      "stride": 0.64,
+      "temp": null,
+      "ascent": 352.0,
+      "note": "W2 Sun Long. 11.38km/9:51, HR avg 137 (Z1 super easy)/max 172. Kept VERY easy on tired legs (only 3h25m sleep, bed 1AM). Smart controlled call - slow pace = deliberate easy not blowup. Stride 0.64 short (fatigue). Sleep is the block bottleneck."
+    },
+    {
       "wk": 1,
       "date": "2026-06-28",
       "name": "Bang Lamung - W1 Sun Long Run",
