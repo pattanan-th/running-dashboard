@@ -29,7 +29,8 @@
       "stride": 0.64,
       "temp": null,
       "ascent": 352.0,
-      "note": "W2 Sun Long. 11.38km/9:51, HR avg 137 (Z1 super easy)/max 172. Kept VERY easy on tired legs (only 3h25m sleep, bed 1AM). Smart controlled call - slow pace = deliberate easy not blowup. Stride 0.64 short (fatigue). Sleep is the block bottleneck."
+      "note": "W2 Sun Long. 11.38km/9:51, HR avg 137 (Z1 super easy)/max 172. Kept VERY easy on tired legs (only 3h25m sleep, bed 1AM). Smart controlled call - slow pace = deliberate easy not blowup. Stride 0.64 short (fatigue). Sleep is the block bottleneck.",
+      "walk_pct": 6
     },
     {
       "wk": 1,
@@ -46,7 +47,8 @@
       "stride": 0.8,
       "temp": null,
       "ascent": 1720.0,
-      "note": "W1 Sun Long (Progressive). 12.96km/7:23, HR avg 151 (Z2-Z3)/max 169 - controlled, did not force progressive (RHR borderline). Cadence 169. Garmin ascent 1720m = barometric glitch (Bang Lamung not a mountain). Ran with a friend on Watchfit 4 - different GPS distance (normal device variance)."
+      "note": "W1 Sun Long (Progressive). 12.96km/7:23, HR avg 151 (Z2-Z3)/max 169 - controlled, did not force progressive (RHR borderline). Cadence 169. Garmin ascent 1720m = barometric glitch (Bang Lamung not a mountain). Ran with a friend on Watchfit 4 - different GPS distance (normal device variance).",
+      "walk_pct": 1
     },
     {
       "wk": 15,
@@ -318,7 +320,8 @@
       "stride": 0.85,
       "temp": null,
       "ascent": 90.0,
-      "note": "W2 Fri Intervals - 10x400m. Rep paces 5:04/5:02/5:21/5:28/5:23/6:12/5:47/5:55/6:04/5:35. Cadence LOCKED 174-181 every rep (hit 175+ target). HR max 175 Z4, NO Z5 (controlled, followed 90-95% advice). Went out too fast (rep1-2 @5:02) then faded mid, recovered rep10. Room: even out rep pacing."
+      "note": "W2 Fri Intervals - 10x400m. Rep paces 5:04/5:02/5:21/5:28/5:23/6:12/5:47/5:55/6:04/5:35. Cadence LOCKED 174-181 every rep (hit 175+ target). HR max 175 Z4, NO Z5 (controlled, followed 90-95% advice). Went out too fast (rep1-2 @5:02) then faded mid, recovered rep10. Room: even out rep pacing.",
+      "walk_pct": 26
     },
     {
       "wk": 1,
@@ -335,7 +338,8 @@
       "stride": 0.77,
       "temp": null,
       "ascent": 919.0,
-      "note": "W1 Fri Tempo (Rolling 300s) - first session back after race+rest. 8.1km/7:53, HR avg 150/max 175 (Z4, eased in ~80-85% as planned, no Z5). Cadence 164. Hilly route. Controlled re-entry, good."
+      "note": "W1 Fri Tempo (Rolling 300s) - first session back after race+rest. 8.1km/7:53, HR avg 150/max 175 (Z4, eased in ~80-85% as planned, no Z5). Cadence 164. Hilly route. Controlled re-entry, good.",
+      "walk_pct": 5
     },
     {
       "wk": 15,
@@ -641,7 +645,8 @@
       "temp": null,
       "ascent": 788.0,
       "shoe": "Dynablast 5",
-      "note": "W1 Sat Easy. 7.08km/7:41, HR avg 147 (Z2)/max 156 - proper easy, well controlled despite elevated RHR. Cadence 166. Hilly."
+      "note": "W1 Sat Easy. 7.08km/7:41, HR avg 147 (Z2)/max 156 - proper easy, well controlled despite elevated RHR. Cadence 166. Hilly.",
+      "walk_pct": 1
     },
     {
       "wk": null,
