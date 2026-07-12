@@ -15,6 +15,24 @@
   },
   "long_runs": [
     {
+      "wk": 3,
+      "date": "2026-07-12",
+      "name": "Si Racha - W3 Sun Long Run",
+      "id": "23564891247",
+      "dist": 2.52,
+      "time": "16:32",
+      "pace": "6:33",
+      "hr_avg": 153.0,
+      "hr_max": 162.0,
+      "cad": 168.609375,
+      "cad_max": 178.0,
+      "stride": 0.9,
+      "temp": null,
+      "ascent": 60.0,
+      "walk_pct": 0,
+      "note": "W3 Sun Long - rain cut it short after just 2.52km. HR avg 153/max 162 (Zone 3, pushed a bit faster than easy pace 6:33 before the rain hit), 0% walk. No Fri/Sat runs this week either (rain)."
+    },
+    {
       "wk": 2,
       "date": "2026-07-05",
       "name": "Bang Lamung - W2 Sun Long Run",
