@@ -145,6 +145,38 @@
         "name": "Si Racha - W11 Sun Long Run",
         "pace": "9:47"
       }
+    ],
+    "Longest": [
+      {
+        "time": "21.9 km",
+        "pace": "7:17",
+        "date": "2026-06-21",
+        "name": "Nakhon Ratchasima - Korat21 HR-L"
+      },
+      {
+        "time": "21.8 km",
+        "pace": "9:52",
+        "date": "2026-05-24",
+        "name": "Si Racha - W11 Sun Long Run"
+      },
+      {
+        "time": "17.9 km",
+        "pace": "8:28",
+        "date": "2026-05-10",
+        "name": "Si Racha - W9 Sun Long Run"
+      },
+      {
+        "time": "15.5 km",
+        "pace": "8:47",
+        "date": "2026-05-03",
+        "name": "Bang Lamung - W8 Sun Long Run"
+      },
+      {
+        "time": "14.5 km",
+        "pace": "8:53",
+        "date": "2026-06-03",
+        "name": "Si Racha - W12 Wed Long Run"
+      }
     ]
   },
   "lifetime": {
