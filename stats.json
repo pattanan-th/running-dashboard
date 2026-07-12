@@ -3,6 +3,150 @@
     "generated": "2026-07-12",
     "source": "Garmin (all running activities)"
   },
+  "rankings": {
+    "1 km": [
+      {
+        "time": "4:53",
+        "date": "2026-06-14",
+        "name": "Si Racha Running",
+        "pace": "4:53"
+      },
+      {
+        "time": "5:23",
+        "date": "2026-07-12",
+        "name": "Si Racha - W3 Sun Long Run",
+        "pace": "5:23"
+      },
+      {
+        "time": "5:32",
+        "date": "2026-02-01",
+        "name": "Si Racha - W1 Sun Easy Run",
+        "pace": "5:32"
+      },
+      {
+        "time": "5:41",
+        "date": "2026-02-07",
+        "name": "Si Racha - W2 Sat Long Run",
+        "pace": "5:41"
+      },
+      {
+        "time": "5:56",
+        "date": "2026-02-18",
+        "name": "Si Racha Running",
+        "pace": "5:56"
+      }
+    ],
+    "1 mile": [
+      {
+        "time": "8:56",
+        "date": "2026-06-14",
+        "name": "Si Racha Running",
+        "pace": "5:33"
+      },
+      {
+        "time": "9:01",
+        "date": "2026-02-01",
+        "name": "Si Racha - W1 Sun Easy Run",
+        "pace": "5:36"
+      },
+      {
+        "time": "9:51",
+        "date": "2026-02-18",
+        "name": "Si Racha Running",
+        "pace": "6:07"
+      },
+      {
+        "time": "9:53",
+        "date": "2026-07-12",
+        "name": "Si Racha - W3 Sun Long Run",
+        "pace": "6:08"
+      },
+      {
+        "time": "9:56",
+        "date": "2026-07-03",
+        "name": "Si Racha - W2 Fri Intervals",
+        "pace": "6:10"
+      }
+    ],
+    "5 km": [
+      {
+        "time": "32:44",
+        "date": "2026-02-23",
+        "name": "Si Racha - W5 Mon Tempo - T",
+        "pace": "6:32"
+      },
+      {
+        "time": "32:44",
+        "date": "2026-03-14",
+        "name": "Bang Lamung - W1 Sat Long Run",
+        "pace": "6:32"
+      },
+      {
+        "time": "33:30",
+        "date": "2026-06-28",
+        "name": "Bang Lamung - W1 Sun Long Run",
+        "pace": "6:42"
+      },
+      {
+        "time": "34:10",
+        "date": "2026-06-14",
+        "name": "Si Racha Running",
+        "pace": "6:50"
+      },
+      {
+        "time": "34:15",
+        "date": "2026-02-24",
+        "name": "Si Racha - Pyramid Set",
+        "pace": "6:51"
+      }
+    ],
+    "10 km": [
+      {
+        "time": "1:10:29",
+        "date": "2026-06-21",
+        "name": "Nakhon Ratchasima - Korat21 HR-L",
+        "pace": "7:02"
+      },
+      {
+        "time": "1:11:17",
+        "date": "2026-03-14",
+        "name": "Bang Lamung - W1 Sat Long Run",
+        "pace": "7:07"
+      },
+      {
+        "time": "1:11:43",
+        "date": "2026-06-28",
+        "name": "Bang Lamung - W1 Sun Long Run",
+        "pace": "7:10"
+      },
+      {
+        "time": "1:12:46",
+        "date": "2026-04-13",
+        "name": "Nakhon Ratchasima - W5 Mon Long ",
+        "pace": "7:16"
+      },
+      {
+        "time": "1:12:57",
+        "date": "2026-04-05",
+        "name": "Si Racha - W4 Sun Long Run",
+        "pace": "7:17"
+      }
+    ],
+    "Half": [
+      {
+        "time": "2:32:43",
+        "date": "2026-06-21",
+        "name": "Nakhon Ratchasima - Korat21 HR-L",
+        "pace": "7:14"
+      },
+      {
+        "time": "3:26:38",
+        "date": "2026-05-24",
+        "name": "Si Racha - W11 Sun Long Run",
+        "pace": "9:47"
+      }
+    ]
+  },
   "lifetime": {
     "runs": 139,
     "km": 906,
