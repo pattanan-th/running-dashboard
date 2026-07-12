@@ -10,6 +10,7 @@ garmin_tokens/
 
 # Build scripts (keep on disk, don't deploy)
 build_dashboard.py
+build_stats.py
 make_pacing.py
 
 # Local-only data (don't expose raw data; only dashboard.html ships)
