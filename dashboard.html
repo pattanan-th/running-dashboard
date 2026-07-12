@@ -709,7 +709,6 @@ canvas { background: transparent; }
     <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:12px">
       <label>จาก <input type="date" id="stats-from" style="font-size:12px"></label>
       <label>ถึง <input type="date" id="stats-to" style="font-size:12px"></label>
-      <button class="btn" onclick="applyStatsRange()">ดู</button>
     </div>
     <div id="stats-filter-result" style="margin-top:12px"></div>
   </div>
@@ -3418,6 +3417,11 @@ function renderStats() {
       b.classList.add('primary');
       statsQuickRange(b.dataset.range);
     }));
+    // custom date inputs -> update live on change
+    ['#stats-from','#stats-to'].forEach(id => {
+      const el = $(id);
+      if (el) { el.addEventListener('change', () => applyStatsRange()); el.addEventListener('input', () => applyStatsRange()); }
+    });
     statsQuickRange('week');
   }
   const lt = s.lifetime;
