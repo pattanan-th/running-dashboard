@@ -648,6 +648,24 @@
   ],
   "easy_runs": [
     {
+      "wk": 3,
+      "date": "2026-07-15",
+      "name": "Si Racha Running",
+      "id": "23606327657",
+      "dist": 9.31,
+      "time": "1:14:57",
+      "pace": "8:03",
+      "hr_avg": 145.0,
+      "hr_max": 172.0,
+      "cad": 165.65625,
+      "cad_max": 178.0,
+      "stride": 0.75,
+      "temp": null,
+      "ascent": 102.0,
+      "walk_pct": 1,
+      "note": "Easy return run after 10 days off. 9.31km/8:03, HR avg 145 (Zone 2, controlled well despite RHR 60), walk 1%. Tried strides at end - accelerated to ~5:54-6:07 pace then eased off (correct idea), but reps too long (~30-60s vs ideal 15-20s) and cadence only 170-174 (strides want 178-185+). More like surges/pickups = fine, basically light fartlek."
+    },
+    {
       "wk": 1,
       "date": "2026-06-27",
       "name": "Si Racha - W1 Sat Easy Run",

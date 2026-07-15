@@ -433,13 +433,13 @@
     {
       "date": "2026-07-15",
       "stress": {
-        "score": 36
+        "score": 58
       },
       "rhr": {
         "current": 60
       },
       "steps": {
-        "count": 894
+        "count": 18299
       }
     }
   ],
