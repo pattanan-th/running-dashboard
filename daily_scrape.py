@@ -4,16 +4,21 @@ Daily Garmin Connect scraper — Level 2 automation.
 Pulls yesterday's sleep + any new activities, merges into sleep.json/activities.json.
 Idempotent: won't duplicate entries that already exist.
 
+Refreshes stats.json (via build_stats.py) whenever a new activity lands, so the
+Stats tab can't fall behind the Runs tab.
+
 Usage:
     python daily_scrape.py              # pull missing days up to yesterday
     python daily_scrape.py --days 7     # pull last 7 days
     python daily_scrape.py --date 2026-05-26
+    python daily_scrape.py --stats      # force a stats.json refresh
 """
 from __future__ import annotations
 
 import argparse
 import json
 import os
+import subprocess
 import sys
 from datetime import date, datetime, timedelta
 from pathlib import Path
@@ -212,6 +217,36 @@ def activity_to_entry(act: dict) -> dict:
     }
 
 
+def compute_walk_pct(api: Garmin, activity_id) -> int | None:
+    """Walk % from per-second cadence (Garmin has no direct field).
+    directRunCadence is stored per-leg → ×2 for steps/min. cadence <140 spm = walking.
+    Skips paused/stopped samples (speed < 0.5 m/s)."""
+    try:
+        d = api.get_activity_details(str(activity_id), 2000, 4000)
+    except Exception as e:
+        print(f'[walk% {activity_id}] error: {e}')
+        return None
+    desc = {m['key']: m['metricsIndex'] for m in d.get('metricDescriptors', [])}
+    ci = desc.get('directRunCadence')
+    si = desc.get('directSpeed')
+    if ci is None:
+        return None
+    spm = []
+    for r in d.get('activityDetailMetrics', []):
+        c = r['metrics'][ci]
+        if c is None:
+            continue
+        if si is not None:
+            s = r['metrics'][si]
+            if s is not None and s < 0.5:
+                continue
+        spm.append(c * 2)
+    if not spm:
+        return None
+    walk = sum(1 for v in spm if v < 140)
+    return round(walk / len(spm) * 100)
+
+
 def update_activities(api: Garmin, since_days: int = 14) -> int:
     """Pull recent activities. Append new ones (idempotent by activity id)."""
     activities_file = load_json('activities.json')
@@ -236,6 +271,9 @@ def update_activities(api: Garmin, since_days: int = 14) -> int:
         if aid in existing_ids:
             continue
         entry = activity_to_entry(act)
+        wp = compute_walk_pct(api, aid)
+        if wp is not None:
+            entry['walk_pct'] = wp
         # Heuristic: classify by name + distance
         name_lower = (entry['name'] or '').lower()
         if 'long' in name_lower or entry['dist'] >= 13:
@@ -294,6 +332,29 @@ def update_wellness(api: Garmin, day: date) -> bool:
     return True
 
 
+# ===== Stats refresh =====
+def refresh_stats() -> bool:
+    """Re-run build_stats.py so the Stats tab matches the Runs tab.
+    build_stats.py is a local-only build script (gitignored) — skip quietly if absent."""
+    script = HERE / 'build_stats.py'
+    if not script.exists():
+        print('[stats] build_stats.py not found — skipped')
+        return False
+    env = {**os.environ, 'PYTHONIOENCODING': 'utf-8'}
+    r = subprocess.run([sys.executable, str(script)], cwd=HERE, env=env,
+                       capture_output=True, text=True)  # it dumps the whole JSON to stdout
+    if r.returncode != 0:
+        print(f'[stats] build_stats.py failed (exit {r.returncode}):')
+        print((r.stderr or r.stdout or '').strip()[-500:])
+        return False
+    try:
+        n = len(json.loads((HERE / 'stats.json').read_text(encoding='utf-8'))['runs_list'])
+        print(f'[stats] stats.json refreshed ({n} runs)')
+    except Exception:
+        print('[stats] stats.json refreshed')
+    return True
+
+
 # ===== Main =====
 def main():
     ap = argparse.ArgumentParser()
@@ -301,6 +362,8 @@ def main():
     ap.add_argument('--date', help='Specific date YYYY-MM-DD (overrides --days)')
     ap.add_argument('--skip-activities', action='store_true')
     ap.add_argument('--skip-wellness', action='store_true')
+    ap.add_argument('--skip-stats', action='store_true', help='Do not refresh stats.json')
+    ap.add_argument('--stats', action='store_true', help='Refresh stats.json even if no new activity')
     args = ap.parse_args()
 
     print('=' * 50)
@@ -327,9 +390,17 @@ def main():
     if not args.skip_wellness:
         update_wellness(api, today)
 
+    # New run → stats.json is stale. Refresh it here so Stats can't drift from Runs.
+    stats_done = False
+    if not args.skip_stats and (act_added > 0 or args.stats):
+        stats_done = refresh_stats()
+
     print('=' * 50)
-    print(f'Done. Sleep: +{sleep_added}, Activities: +{act_added}')
+    print(f'Done. Sleep: +{sleep_added}, Activities: +{act_added}'
+          + (', stats.json refreshed' if stats_done else ''))
     print('Next: run "python build_dashboard.py" then git push')
+    if stats_done:
+        print('      (commit stats.json too)')
 
 
 if __name__ == '__main__':
