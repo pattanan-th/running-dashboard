@@ -324,6 +324,23 @@
   ],
   "tempos_intervals": [
     {
+      "wk": null,
+      "date": "2026-07-18",
+      "name": "Si Racha - W4 Sat Tempo - R",
+      "id": "23636077986",
+      "dist": 5.2,
+      "time": "35:51",
+      "pace": "6:53",
+      "hr_avg": 153.0,
+      "hr_max": 181.0,
+      "cad": 169.859375,
+      "cad_max": 184.0,
+      "stride": 0.85,
+      "temp": null,
+      "ascent": 17.0,
+      "walk_pct": 4
+    },
+    {
       "wk": 2,
       "date": "2026-07-03",
       "name": "Si Racha - W2 Fri Intervals",

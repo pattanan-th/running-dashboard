@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-07-17",
+    "generated": "2026-07-18",
     "source": "Garmin (all running activities)"
   },
   "runs_list": [
@@ -983,6 +983,13 @@
       "min": 75.0,
       "cal": 602,
       "gain": 102
+    },
+    {
+      "d": "2026-07-18",
+      "km": 5.2,
+      "min": 35.9,
+      "cal": 340,
+      "gain": 17
     }
   ],
   "rankings": {
@@ -992,6 +999,12 @@
         "date": "2026-06-14",
         "name": "Si Racha Running",
         "pace": "4:53"
+      },
+      {
+        "time": "5:07",
+        "date": "2026-07-18",
+        "name": "Si Racha - W4 Sat Tempo - R",
+        "pace": "5:07"
       },
       {
         "time": "5:13",
@@ -1010,15 +1023,15 @@
         "date": "2026-02-01",
         "name": "Si Racha - W1 Sun Easy Run",
         "pace": "5:32"
-      },
-      {
-        "time": "5:41",
-        "date": "2026-02-07",
-        "name": "Si Racha - W2 Sat Long Run",
-        "pace": "5:41"
       }
     ],
     "1 mile": [
+      {
+        "time": "8:51",
+        "date": "2026-07-18",
+        "name": "Si Racha - W4 Sat Tempo - R",
+        "pace": "5:30"
+      },
       {
         "time": "8:56",
         "date": "2026-06-14",
@@ -1042,12 +1055,6 @@
         "date": "2026-07-12",
         "name": "Si Racha - W3 Sun Long Run",
         "pace": "6:08"
-      },
-      {
-        "time": "9:56",
-        "date": "2026-07-03",
-        "name": "Si Racha - W2 Fri Intervals",
-        "pace": "6:10"
       }
     ],
     "5 km": [
@@ -1070,16 +1077,16 @@
         "pace": "6:42"
       },
       {
+        "time": "34:08",
+        "date": "2026-07-18",
+        "name": "Si Racha - W4 Sat Tempo - R",
+        "pace": "6:49"
+      },
+      {
         "time": "34:10",
         "date": "2026-06-14",
         "name": "Si Racha Running",
         "pace": "6:50"
-      },
-      {
-        "time": "34:15",
-        "date": "2026-02-24",
-        "name": "Si Racha - Pyramid Set",
-        "pace": "6:51"
       }
     ],
     "10 km": [
@@ -1162,19 +1169,19 @@
     ]
   },
   "lifetime": {
-    "runs": 140,
-    "km": 915,
+    "runs": 141,
+    "km": 921,
     "hours": 144,
-    "calories": 68475,
-    "elevation_m": 22966,
+    "calories": 68815,
+    "elevation_m": 22983,
     "since": "2023-05-04"
   },
   "zones_sec": [
-    64075.806,
-    150115.016,
-    154806.25,
-    68416.091,
-    4272.315
+    64332.101,
+    150753.187,
+    155437.547,
+    68908.71,
+    4366.305
   ],
   "by_year": {
     "2023": {
@@ -1193,8 +1200,8 @@
       "hours": 40
     },
     "2026": {
-      "runs": 74,
-      "km": 585,
+      "runs": 75,
+      "km": 591,
       "hours": 87
     }
   },
@@ -1216,11 +1223,11 @@
     "2026-04": 90,
     "2026-05": 124,
     "2026-06": 109,
-    "2026-07": 33
+    "2026-07": 38
   },
   "best": {
     "fastest_1km": "4:53",
-    "fastest_1mi": "8:56",
+    "fastest_1mi": "8:51",
     "longest_run_km": 21.9,
     "longest_run_date": "2026-06-21",
     "fastest_avg_pace": "6:51",

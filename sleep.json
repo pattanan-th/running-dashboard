@@ -2,8 +2,8 @@
   "meta": {
     "user": "ITon",
     "device": "Garmin Instinct Esports",
-    "date_range": "2026-03-14 to 2026-07-17",
-    "nights_collected": 125,
+    "date_range": "2026-03-14 to 2026-07-18",
+    "nights_collected": 126,
     "missing": [
       "2026-04-07"
     ],
@@ -1566,6 +1566,18 @@
       "bd": "10:57 PM",
       "wk": "6:59 AM",
       "r": 58,
+      "bb": null
+    },
+    {
+      "d": "2026-07-18",
+      "t": "5h 56m",
+      "dp": "1h 7m",
+      "li": "3h 49m",
+      "rm": "1h 0m",
+      "aw": "--",
+      "bd": "11:34 PM",
+      "wk": "5:30 AM",
+      "r": 55,
       "bb": null
     }
   ]
