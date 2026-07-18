@@ -13,6 +13,9 @@ build_dashboard.py
 build_stats.py
 make_pacing.py
 
+# Scratch / experiment scripts (local only — keep out of the public repo)
+_*.py
+
 # Local-only data (don't expose raw data; only dashboard.html ships)
 # Comment these out if you WANT to commit raw JSON too
 # activities.json
