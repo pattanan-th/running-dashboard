@@ -3,6 +3,10 @@ REM Daily Garmin → Dashboard pipeline (Level 2 automation)
 REM Double-click this file every morning to update everything.
 cd /d "%~dp0"
 
+REM Force UTF-8 so Thai output from the Python scripts doesn't crash the console
+set PYTHONIOENCODING=utf-8
+chcp 65001 >nul
+
 echo.
 echo ==========================================
 echo  Korat 21 - Daily Update Pipeline
