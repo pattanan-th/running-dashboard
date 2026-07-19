@@ -666,6 +666,24 @@
   ],
   "easy_runs": [
     {
+      "wk": null,
+      "date": "2026-07-19",
+      "name": "Si Racha - W4 Sun Easy Run",
+      "id": "23648106912",
+      "dist": 6.46,
+      "time": "51:11",
+      "pace": "7:55",
+      "hr_avg": 146.0,
+      "hr_max": 168.0,
+      "cad": 167.6875,
+      "cad_max": 178.0,
+      "stride": 0.75,
+      "temp": null,
+      "ascent": 29.0,
+      "walk_pct": 0,
+      "note": "W4 Sun Easy. 6.46km/7:55, HR avg 146 (Z2)/max 168, cadence 168, walk 0% — คุมภาพดีมาก (Z2 เป๊ะ ไม่มีเดิน turnover นิ่ง). ⚠️ ระยะ GPS เด้งกลางรัน (single-band drift) → ตัวเลข dist/pace ไม่น่าเชื่อถือ แต่ HR 146 + cadence 168 = สัญญาณจริงที่เชื่อได้ = easy ที่ดี. นาฬิกาเริ่มเอ๋อบ่อยขึ้น — พิจารณา multi-band Garmin."
+    },
+    {
       "wk": 3,
       "date": "2026-07-15",
       "name": "Si Racha Running",
