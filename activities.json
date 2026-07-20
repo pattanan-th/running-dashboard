@@ -15,6 +15,23 @@
   },
   "long_runs": [
     {
+      "wk": null,
+      "date": "2026-07-20",
+      "name": "Si Racha - W4 Mon Long Run",
+      "id": "23663984483",
+      "dist": 10.29,
+      "time": "1:27:35",
+      "pace": "8:30",
+      "hr_avg": 146.0,
+      "hr_max": 177.0,
+      "cad": 163.828125,
+      "cad_max": 184.0,
+      "stride": 0.72,
+      "temp": null,
+      "ascent": 164.0,
+      "walk_pct": 3
+    },
+    {
       "wk": 3,
       "date": "2026-07-12",
       "name": "Si Racha - W3 Sun Long Run",
