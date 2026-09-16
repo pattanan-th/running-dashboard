@@ -1,0 +1,48 @@
+{
+  "imported_at": "2026-09-16T20:36:20.863894+07:00",
+  "sleep_sessions": 49,
+  "runs": 19,
+  "other_activities": 8,
+  "streams": {
+    "heart_rate": {
+      "fetch_ok": "2026-09-16T13:34:42.928229500+00:00",
+      "parse_ok": null,
+      "parse_error": "not_available"
+    },
+    "daily_summary": {
+      "fetch_ok": "2026-09-16T13:35:22.193451600+00:00",
+      "parse_ok": "2026-09-16T13:35:22.195086300+00:00",
+      "parse_error": null
+    },
+    "workouts": {
+      "fetch_ok": "2026-09-16T13:35:22.782793200+00:00",
+      "parse_ok": "2026-09-16T13:35:22.787622900+00:00",
+      "parse_error": null
+    },
+    "workout_detail": {
+      "fetch_ok": "2026-09-16T02:21:26.896422600+00:00",
+      "parse_ok": "2026-09-16T02:21:26.927440700+00:00",
+      "parse_error": null
+    },
+    "sleep": {
+      "fetch_ok": "2026-09-16T13:35:26.892401100+00:00",
+      "parse_ok": "2026-09-16T13:35:26.952144200+00:00",
+      "parse_error": null
+    },
+    "hrv": {
+      "fetch_ok": "2026-09-16T13:35:50.993233100+00:00",
+      "parse_ok": "2026-09-16T13:35:50.994583200+00:00",
+      "parse_error": null
+    },
+    "wellness": {
+      "fetch_ok": "2026-09-16T13:24:10.015778300+00:00",
+      "parse_ok": "2026-09-16T13:24:10.016707600+00:00",
+      "parse_error": null
+    },
+    "weight": {
+      "fetch_ok": "2026-09-16T09:50:09.231242+00:00",
+      "parse_ok": "2026-09-16T09:50:09.234136100+00:00",
+      "parse_error": null
+    }
+  }
+}

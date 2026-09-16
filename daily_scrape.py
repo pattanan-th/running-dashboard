@@ -357,6 +357,8 @@ def refresh_stats() -> bool:
 
 # ===== Main =====
 def main():
+    if (HERE / "zepp_sync.json").exists():
+        raise SystemExit("This dashboard now uses Zepp. Run python sync_zepp.py instead.")
     ap = argparse.ArgumentParser()
     ap.add_argument('--days', type=int, default=3, help='Look back N days for sleep (default 3)')
     ap.add_argument('--date', help='Specific date YYYY-MM-DD (overrides --days)')

@@ -13,12 +13,12 @@ echo  Korat 21 - Daily Update Pipeline
 echo ==========================================
 echo.
 
-echo [1/4] Scraping Garmin Connect...
-python daily_scrape.py
+echo [1/4] Syncing Zepp health and workouts...
+python sync_zepp.py
 if errorlevel 1 (
     echo.
-    echo ERROR: Garmin scrape failed.
-    echo Check .env credentials or run: python daily_scrape.py
+    echo ERROR: Zepp sync failed or busy.
+    echo Check ZeppBridge connection or run: python sync_zepp.py
     pause
     exit /b 1
 )
@@ -34,15 +34,15 @@ if errorlevel 1 (
 
 echo.
 echo [3/4] Checking for changes...
-git add .
+git add activities.json sleep.json wellness.json stats.json garmin_stats_archive.json zepp_sync.json coach_analysis.html dashboard.html
+if errorlevel 1 exit /b 1
 git diff --cached --quiet
 if errorlevel 1 (
     echo Changes detected, committing...
     git commit -m "daily update %date% %time:~0,5%"
+    if errorlevel 1 exit /b 1
 ) else (
-    echo No changes to push. Done.
-    pause
-    exit /b 0
+    echo No new changes; pushing any existing commits.
 )
 
 echo.

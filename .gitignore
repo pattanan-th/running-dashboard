@@ -32,3 +32,11 @@ Thumbs.db
 
 # Excel temp files
 ~$*.xlsx
+
+# Zepp session and local database files
+*.har
+*.db
+*.db-wal
+*.db-shm
+*.json.tmp
+zepp_tokens/
