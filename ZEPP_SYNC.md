@@ -22,8 +22,15 @@ Raw cloud payloads, GPS coordinates, user IDs and tokens are not exported.
 Cross-source run dates overlapping the Garmin archive fail closed for manual reconciliation.
 
 ## Current boundaries
-Totals and Longest rankings combine Garmin + Zepp. Fastest-split rankings, fastest average
-and HR-zone totals currently remain Garmin-only, explicitly labeled in the UI.
+Totals, Longest and Best Efforts by Distance combine Garmin + Zepp.
+Zepp efforts use currentDistance from local workout_detail: delta seconds and cumulative
+centimetres (validated against every workout total). Rolling windows interpolate distance
+crossings; one fastest result per run/distance. Elapsed time includes pauses within windows.
+Gaps over 15 seconds split the timeline; trailing samples past workout end are omitted.
+One-second duplicate timestamps keep the final reading. Missing/invalid series are skipped
+with an activity-level reason. Results are approximate recorded-distance efforts, not
+Zepp-certified PRs. No raw payload or route is exported. Original Garmin ranks remain.
+Fastest average and HR-zone totals currently remain Garmin-only, explicitly labeled.
 Walk% is unavailable until sample cadence units are verified.
 Do not equate Zepp Hybrid Charge with Garmin Body Battery.
 Do not diagnose readiness/illness from sleep stages or RHR alone.

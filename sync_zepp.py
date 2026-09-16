@@ -5,6 +5,8 @@ import html
 import json
 import os
 import sqlite3
+import zlib
+from zepp_efforts import efforts, DISTANCES
 import subprocess
 from collections import defaultdict
 from datetime import datetime, timezone, timedelta
@@ -51,6 +53,16 @@ def read_bridge(db):
         return [dict(r) for r in c.execute(sql)]
     result = {name: rows('SELECT * FROM ' + name) for name in
               ('daily_metrics', 'sleep_sessions', 'workouts', 'stream_provenance')}
+    # Read only the distance series, not routes or account/authentication data.
+    details = {}
+    for row in c.execute("SELECT payload,payload_zip FROM raw_records WHERE stream='workout_detail' ORDER BY id"):
+        try:
+            payload = json.loads(zlib.decompress(row['payload_zip']) if row['payload_zip'] else row['payload'])
+            d = payload['data']
+            details[str(d['trackid'])] = {'currentDistance': d.get('currentDistance', '')}
+        except (ValueError, KeyError, TypeError, zlib.error):
+            continue
+    result['workout_details'] = details
     c.close()
     return result
 
@@ -72,16 +84,32 @@ def merge_stats(base, runs):
         y['runs'] += 1; y['km'] += r['km']; y['hours'] += r['min']/60
     s['by_month'] = {k:round(v,2) for k,v in sorted(months.items())}
     s['by_year'] = {k:{n:round(v,2) for n,v in values.items()} for k,values in sorted(years.items())}
-    s['rankings']['Longest'] += [dict(time=f"{r['dist']:.1f} km", pace=r['pace'], date=r['date'], name=r['name']) for r in runs]
+    s['rankings']['Longest'] += [dict(time=f"{r['dist']:.1f} km", pace=r['pace'], date=r['date'], name=r['name'], source='zepp') for r in runs]
     s['rankings']['Longest'].sort(key=lambda r:float(r['time'].split()[0]), reverse=True)
     for r in runs:
         if r['dist'] > s['best']['longest_run_km']:
             s['best'].update(longest_run_km=r['dist'], longest_run_date=r['date'])
-    # Split rankings and HR zone totals are kept as Garmin-only until Zepp sample
-    # units and zone boundaries are verified. Never equate whole-run pace to a split.
+    for label, metres in DISTANCES.items():
+        ranks = s['rankings'].setdefault(label, [])
+        for entry in ranks:
+            entry['source'] = 'garmin'
+        for r in runs:
+            seconds = r.get('best_efforts', {}).get(label)
+            if seconds is not None:
+                ranks.append(dict(time=clock(seconds), seconds=seconds, pace=pace(seconds, metres/1000),
+                                  date=r['date'], name=r['name'], source='zepp', id=r['id'],
+                                  method='recorded_distance_elapsed_interpolated'))
+        def seconds(entry):
+            if 'seconds' in entry: return entry['seconds']
+            value = 0
+            for part in entry['time'].split(':'): value = value*60+float(part)
+            return value
+        ranks.sort(key=seconds)
+    for label, field in [('1 km','fastest_1km'),('1 mile','fastest_1mi')]:
+        if s['rankings'][label]: s['best'][field] = s['rankings'][label][0]['time']
     s['meta'].update(generated=datetime.now(TZ).date().isoformat(), source='Garmin archive + Zepp',
-                     split_rankings_source='Garmin archive', zones_source='Garmin archive',
-                     coverage_note='Totals and Longest: Garmin + Zepp. Fastest splits and HR zones: Garmin archive only.')
+                     split_rankings_source='Garmin archive + Zepp recorded distance', zones_source='Garmin archive',
+                     coverage_note='Totals, Longest and distance efforts: Garmin + Zepp. Zepp efforts use interpolated recorded distance and elapsed time; gaps over 15s excluded. Fastest average and HR zones: Garmin archive only.')
     return s
 
 def import_data(data):
@@ -145,6 +173,14 @@ def import_data(data):
             other.append(r); continue
         if day <= cutoff:
             raise ValueError(f'Zepp run overlaps Garmin archive ({day}); reconcile before import')
+        detail = data.get('workout_details', {}).get(w['workout_id'])
+        try:
+            if detail is None: raise ValueError('Distance series unavailable')
+            r['best_efforts'] = efforts(detail, dict(distance_meters=w['distance_meters'],
+                elapsed_seconds=(local(w['end_time'])-local(w['start_time'])).total_seconds()))
+        except ValueError as error:
+            r['best_efforts'] = {}
+            r['best_efforts_unavailable'] = str(error)
         runs.append(r)
         a['long_runs' if km>=13 else 'easy_runs'].append(r)
     for b in BUCKETS:

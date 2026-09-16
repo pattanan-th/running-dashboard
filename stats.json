@@ -2,9 +2,9 @@
   "meta": {
     "generated": "2026-09-16",
     "source": "Garmin archive + Zepp",
-    "split_rankings_source": "Garmin archive",
+    "split_rankings_source": "Garmin archive + Zepp recorded distance",
     "zones_source": "Garmin archive",
-    "coverage_note": "Totals and Longest: Garmin + Zepp. Fastest splits and HR zones: Garmin archive only."
+    "coverage_note": "Totals, Longest and distance efforts: Garmin + Zepp. Zepp efforts use interpolated recorded distance and elapsed time; gaps over 15s excluded. Fastest average and HR zones: Garmin archive only."
   },
   "runs_list": [
     {
@@ -1186,2095 +1186,3043 @@
         "time": "4:53",
         "date": "2026-06-14",
         "name": "Si Racha Running",
-        "pace": "4:53"
+        "pace": "4:53",
+        "source": "garmin"
       },
       {
         "time": "4:58",
         "date": "2026-07-19",
         "name": "Si Racha - W4 Sun Easy Run",
-        "pace": "4:58"
+        "pace": "4:58",
+        "source": "garmin"
       },
       {
         "time": "5:07",
         "date": "2026-07-18",
         "name": "Si Racha - W4 Sat Tempo - R",
-        "pace": "5:07"
+        "pace": "5:07",
+        "source": "garmin"
       },
       {
         "time": "5:13",
         "date": "2026-07-15",
         "name": "Si Racha Running",
-        "pace": "5:13"
+        "pace": "5:13",
+        "source": "garmin"
+      },
+      {
+        "time": "5:18",
+        "seconds": 318.0613718411553,
+        "pace": "5:18",
+        "date": "2026-07-31",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1785493163",
+        "method": "recorded_distance_elapsed_interpolated"
+      },
+      {
+        "time": "5:21",
+        "seconds": 320.71884984025564,
+        "pace": "5:21",
+        "date": "2026-09-04",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1788516022",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "5:23",
         "date": "2026-07-12",
         "name": "Si Racha - W3 Sun Long Run",
-        "pace": "5:23"
+        "pace": "5:23",
+        "source": "garmin"
+      },
+      {
+        "time": "5:24",
+        "seconds": 323.6079295154186,
+        "pace": "5:24",
+        "date": "2026-08-16",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1786831864",
+        "method": "recorded_distance_elapsed_interpolated"
+      },
+      {
+        "time": "5:24",
+        "seconds": 323.7030303030301,
+        "pace": "5:24",
+        "date": "2026-08-14",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1786701677",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "5:32",
         "date": "2026-02-01",
         "name": "Si Racha - W1 Sun Easy Run",
-        "pace": "5:32"
+        "pace": "5:32",
+        "source": "garmin"
       },
       {
         "time": "5:41",
         "date": "2026-02-07",
         "name": "Si Racha - W2 Sat Long Run",
-        "pace": "5:41"
+        "pace": "5:41",
+        "source": "garmin"
+      },
+      {
+        "time": "5:50",
+        "seconds": 350.12267657992606,
+        "pace": "5:50",
+        "date": "2026-08-28",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1787912263",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "5:56",
         "date": "2026-02-18",
         "name": "Si Racha Running",
-        "pace": "5:56"
+        "pace": "5:56",
+        "source": "garmin"
       },
       {
         "time": "6:00",
         "date": "2026-07-03",
         "name": "Si Racha - W2 Fri Intervals",
-        "pace": "6:00"
+        "pace": "6:00",
+        "source": "garmin"
       },
       {
         "time": "6:00",
         "date": "2026-05-29",
         "name": "W12 Fri Interval",
-        "pace": "6:00"
+        "pace": "6:00",
+        "source": "garmin"
+      },
+      {
+        "time": "6:01",
+        "seconds": 360.5019305019305,
+        "pace": "6:01",
+        "date": "2026-09-12",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1789166808",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "6:04",
         "date": "2026-02-23",
         "name": "Si Racha - W5 Mon Tempo - T",
-        "pace": "6:04"
+        "pace": "6:04",
+        "source": "garmin"
       },
       {
         "time": "6:04",
         "date": "2026-04-17",
         "name": "Si Racha - W6 Fri Intervals",
-        "pace": "6:04"
+        "pace": "6:04",
+        "source": "garmin"
       },
       {
         "time": "6:04",
         "date": "2026-06-26",
         "name": "Si Racha - W1 Fri Tempo - R",
-        "pace": "6:04"
+        "pace": "6:04",
+        "source": "garmin"
       },
       {
         "time": "6:12",
         "date": "2026-06-10",
         "name": "Si Racha - W14 Wed Easy Run",
-        "pace": "6:12"
+        "pace": "6:12",
+        "source": "garmin"
       },
       {
         "time": "6:14",
         "date": "2026-05-01",
         "name": "Si Racha - W8 Fri Tempo - O",
-        "pace": "6:14"
+        "pace": "6:14",
+        "source": "garmin"
       },
       {
         "time": "6:14",
         "date": "2026-03-14",
         "name": "Bang Lamung - W1 Sat Long Run",
-        "pace": "6:14"
+        "pace": "6:14",
+        "source": "garmin"
       },
       {
         "time": "6:18",
         "date": "2026-02-24",
         "name": "Si Racha - Pyramid Set",
-        "pace": "6:18"
+        "pace": "6:18",
+        "source": "garmin"
       },
       {
         "time": "6:19",
         "date": "2026-02-26",
         "name": "Si Racha - On Off 200s",
-        "pace": "6:19"
+        "pace": "6:19",
+        "source": "garmin"
+      },
+      {
+        "time": "6:21",
+        "seconds": 381.1511111111113,
+        "pace": "6:21",
+        "date": "2026-09-11",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1789122164",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "6:23",
         "date": "2026-04-03",
         "name": "Si Racha - W4 Fri Tempo - T",
-        "pace": "6:23"
+        "pace": "6:23",
+        "source": "garmin"
       },
       {
         "time": "6:23",
         "date": "2026-06-28",
         "name": "Bang Lamung - W1 Sun Long Run",
-        "pace": "6:23"
+        "pace": "6:23",
+        "source": "garmin"
+      },
+      {
+        "time": "6:24",
+        "seconds": 383.8000000000002,
+        "pace": "6:24",
+        "date": "2026-08-09",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1786236856",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "6:24",
         "date": "2026-05-15",
         "name": "W10 Fri Tempo -",
-        "pace": "6:24"
+        "pace": "6:24",
+        "source": "garmin"
       },
       {
         "time": "6:24",
         "date": "2026-02-13",
         "name": "Si Racha - W3 Fri Tempo - P",
-        "pace": "6:24"
+        "pace": "6:24",
+        "source": "garmin"
       },
       {
         "time": "6:25",
         "date": "2026-01-23",
         "name": "Si Racha - W2 Fri Long Run",
-        "pace": "6:25"
+        "pace": "6:25",
+        "source": "garmin"
       },
       {
         "time": "6:25",
         "date": "2026-04-11",
         "name": "Nakhon Ratchasima - W5 Sat Easy ",
-        "pace": "6:25"
+        "pace": "6:25",
+        "source": "garmin"
       },
       {
         "time": "6:25",
         "date": "2026-06-19",
         "name": "Si Racha - W15 Fri Taper In",
-        "pace": "6:25"
+        "pace": "6:25",
+        "source": "garmin"
       },
       {
         "time": "6:26",
         "date": "2026-02-02",
         "name": "Si Racha - W2 Mon Tempo - O",
-        "pace": "6:26"
+        "pace": "6:26",
+        "source": "garmin"
       },
       {
         "time": "6:27",
         "date": "2025-11-01",
         "name": "Si Racha Running",
-        "pace": "6:27"
+        "pace": "6:27",
+        "source": "garmin"
       },
       {
         "time": "6:27",
         "date": "2026-04-24",
         "name": "Si Racha - W7 Fri Tempo - R",
-        "pace": "6:27"
+        "pace": "6:27",
+        "source": "garmin"
       },
       {
         "time": "6:27",
         "date": "2026-06-21",
         "name": "Nakhon Ratchasima - Korat21 HR-L",
-        "pace": "6:27"
+        "pace": "6:27",
+        "source": "garmin"
+      },
+      {
+        "time": "6:29",
+        "seconds": 388.65999999999985,
+        "pace": "6:29",
+        "date": "2026-07-28",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1785195286",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "6:31",
         "date": "2025-07-31",
         "name": "Si Racha Running",
-        "pace": "6:31"
+        "pace": "6:31",
+        "source": "garmin"
       },
       {
         "time": "6:33",
         "date": "2025-07-23",
         "name": "Si Racha Running",
-        "pace": "6:33"
+        "pace": "6:33",
+        "source": "garmin"
       },
       {
         "time": "6:34",
         "date": "2026-03-07",
         "name": "Si Racha - W6 Sat Long Run",
-        "pace": "6:34"
+        "pace": "6:34",
+        "source": "garmin"
       },
       {
         "time": "6:35",
         "date": "2026-05-10",
         "name": "Si Racha - W9 Sun Long Run",
-        "pace": "6:35"
+        "pace": "6:35",
+        "source": "garmin"
       },
       {
         "time": "6:35",
         "date": "2025-11-12",
         "name": "Si Racha - W5 Wed Tempo - R",
-        "pace": "6:35"
+        "pace": "6:35",
+        "source": "garmin"
+      },
+      {
+        "time": "6:36",
+        "seconds": 395.78515625000045,
+        "pace": "6:36",
+        "date": "2026-08-07",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1786097654",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "6:36",
         "date": "2026-02-20",
         "name": "Si Racha - W4 Fri Easy Run",
-        "pace": "6:36"
+        "pace": "6:36",
+        "source": "garmin"
       },
       {
         "time": "6:38",
         "date": "2026-04-05",
         "name": "Si Racha - W4 Sun Long Run",
-        "pace": "6:38"
+        "pace": "6:38",
+        "source": "garmin"
       },
       {
         "time": "6:38",
         "date": "2026-04-10",
         "name": "Nakhon Ratchasima - W5 Fri Tempo",
-        "pace": "6:38"
+        "pace": "6:38",
+        "source": "garmin"
       },
       {
         "time": "6:41",
         "date": "2026-02-21",
         "name": "Si Racha - W4 Sat Long Run",
-        "pace": "6:41"
+        "pace": "6:41",
+        "source": "garmin"
       },
       {
         "time": "6:41",
         "date": "2025-08-18",
         "name": "Si Racha Running",
-        "pace": "6:41"
+        "pace": "6:41",
+        "source": "garmin"
       },
       {
         "time": "6:41",
         "date": "2026-06-27",
         "name": "Si Racha - W1 Sat Easy Run",
-        "pace": "6:41"
+        "pace": "6:41",
+        "source": "garmin"
       },
       {
         "time": "6:41",
         "date": "2026-05-22",
         "name": "W11 Fri Tempo -",
-        "pace": "6:41"
+        "pace": "6:41",
+        "source": "garmin"
       },
       {
         "time": "6:44",
         "date": "2026-03-29",
         "name": "Si Racha - W3 Sun Long Run",
-        "pace": "6:44"
+        "pace": "6:44",
+        "source": "garmin"
+      },
+      {
+        "time": "6:45",
+        "seconds": 404.9490740740748,
+        "pace": "6:45",
+        "date": "2026-08-23",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1787440334",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "6:45",
         "date": "2025-07-22",
         "name": "Si Racha Running",
-        "pace": "6:45"
+        "pace": "6:45",
+        "source": "garmin"
       },
       {
         "time": "6:45",
         "date": "2026-03-06",
         "name": "Si Racha - W6 Fri Easy Run",
-        "pace": "6:45"
+        "pace": "6:45",
+        "source": "garmin"
       },
       {
         "time": "6:45",
         "date": "2025-10-23",
         "name": "Si Racha Running",
-        "pace": "6:45"
+        "pace": "6:45",
+        "source": "garmin"
       },
       {
         "time": "6:45",
         "date": "2026-01-26",
         "name": "Si Racha - W3 Mon Intervals",
-        "pace": "6:45"
+        "pace": "6:45",
+        "source": "garmin"
       },
       {
         "time": "6:46",
         "date": "2025-10-28",
         "name": "Si Racha - W3 Tue Intervals",
-        "pace": "6:46"
+        "pace": "6:46",
+        "source": "garmin"
       },
       {
         "time": "6:46",
         "date": "2026-01-17",
         "name": "Si Racha - W1 Sat Long Run",
-        "pace": "6:46"
+        "pace": "6:46",
+        "source": "garmin"
       },
       {
         "time": "6:47",
         "date": "2026-04-13",
         "name": "Nakhon Ratchasima - W5 Mon Long ",
-        "pace": "6:47"
+        "pace": "6:47",
+        "source": "garmin"
       },
       {
         "time": "6:52",
         "date": "2025-11-05",
         "name": "Si Racha - W4 Wed Intervals",
-        "pace": "6:52"
+        "pace": "6:52",
+        "source": "garmin"
       },
       {
         "time": "6:52",
         "date": "2026-02-06",
         "name": "Si Racha - W2 Fri Easy Run",
-        "pace": "6:52"
+        "pace": "6:52",
+        "source": "garmin"
       },
       {
         "time": "6:53",
         "date": "2026-03-21",
         "name": "Si Racha - W2 Sat Easy Run",
-        "pace": "6:53"
+        "pace": "6:53",
+        "source": "garmin"
       },
       {
         "time": "6:53",
         "date": "2025-10-25",
         "name": "Si Racha - W2 Sat Long Run",
-        "pace": "6:53"
+        "pace": "6:53",
+        "source": "garmin"
       },
       {
         "time": "6:53",
         "date": "2026-02-27",
         "name": "Si Racha - W5 Fri Easy Run",
-        "pace": "6:53"
+        "pace": "6:53",
+        "source": "garmin"
       },
       {
         "time": "6:56",
         "date": "2026-03-15",
         "name": "Si Racha - W1 Sun Easy Run",
-        "pace": "6:56"
+        "pace": "6:56",
+        "source": "garmin"
       },
       {
         "time": "6:57",
         "date": "2026-01-19",
         "name": "Si Racha - W2 Mon Tempo - R",
-        "pace": "6:57"
+        "pace": "6:57",
+        "source": "garmin"
+      },
+      {
+        "time": "6:58",
+        "seconds": 418.0850202429151,
+        "pace": "6:58",
+        "date": "2026-08-21",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1787306686",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "7:00",
         "date": "2026-04-26",
         "name": "Bang Lamung - W7 Sun Long Run",
-        "pace": "7:00"
+        "pace": "7:00",
+        "source": "garmin"
       },
       {
         "time": "7:02",
         "date": "2025-11-06",
         "name": "Si Racha - W4 Thu Easy Run",
-        "pace": "7:02"
+        "pace": "7:02",
+        "source": "garmin"
       },
       {
         "time": "7:02",
         "date": "2025-07-13",
         "name": "Si Racha Running",
-        "pace": "7:02"
+        "pace": "7:02",
+        "source": "garmin"
       },
       {
         "time": "7:03",
         "date": "2026-02-15",
         "name": "Si Racha Running",
-        "pace": "7:03"
+        "pace": "7:03",
+        "source": "garmin"
       },
       {
         "time": "7:04",
         "date": "2026-05-08",
         "name": "W9 Fri Intervals",
-        "pace": "7:04"
+        "pace": "7:04",
+        "source": "garmin"
       },
       {
         "time": "7:07",
         "date": "2025-10-22",
         "name": "Si Racha - W2 Wed Tempo - P",
-        "pace": "7:07"
+        "pace": "7:07",
+        "source": "garmin"
       },
       {
         "time": "7:08",
         "date": "2025-07-25",
         "name": "Si Racha Running",
-        "pace": "7:08"
+        "pace": "7:08",
+        "source": "garmin"
       },
       {
         "time": "7:09",
         "date": "2026-06-09",
         "name": "Si Racha - W14 Tue Easy Run",
-        "pace": "7:09"
+        "pace": "7:09",
+        "source": "garmin"
       },
       {
         "time": "7:09",
         "date": "2025-08-07",
         "name": "Si Racha - W1 Thu Easy Run",
-        "pace": "7:09"
+        "pace": "7:09",
+        "source": "garmin"
       },
       {
         "time": "7:11",
         "date": "2026-06-11",
         "name": "Si Racha - W14 Thu Long Run",
-        "pace": "7:11"
+        "pace": "7:11",
+        "source": "garmin"
       },
       {
         "time": "7:12",
         "date": "2026-01-25",
         "name": "Si Racha - W2 Sun Easy Run",
-        "pace": "7:12"
+        "pace": "7:12",
+        "source": "garmin"
       },
       {
         "time": "7:12",
         "date": "2025-07-08",
         "name": "Si Racha Running",
-        "pace": "7:12"
+        "pace": "7:12",
+        "source": "garmin"
       },
       {
         "time": "7:12",
         "date": "2025-07-15",
         "name": "Si Racha Running",
-        "pace": "7:12"
+        "pace": "7:12",
+        "source": "garmin"
       },
       {
         "time": "7:14",
         "date": "2025-11-09",
         "name": "Si Racha - W4 Sun Long Run",
-        "pace": "7:14"
+        "pace": "7:14",
+        "source": "garmin"
       },
       {
         "time": "7:15",
         "date": "2025-07-18",
         "name": "Si Racha Running",
-        "pace": "7:15"
+        "pace": "7:15",
+        "source": "garmin"
       },
       {
         "time": "7:19",
         "date": "2025-08-19",
         "name": "Si Racha - W3 Tue Easy Run",
-        "pace": "7:19"
+        "pace": "7:19",
+        "source": "garmin"
       },
       {
         "time": "7:21",
         "date": "2025-08-12",
         "name": "Si Racha - W2 Tue Tempo - P",
-        "pace": "7:21"
+        "pace": "7:21",
+        "source": "garmin"
       },
       {
         "time": "7:22",
         "date": "2025-08-15",
         "name": "Si Racha - W2 Fri Long Run",
-        "pace": "7:22"
+        "pace": "7:22",
+        "source": "garmin"
       },
       {
         "time": "7:22",
         "date": "2026-06-06",
         "name": "Si Racha - W13 Sat Easy Run",
-        "pace": "7:22"
+        "pace": "7:22",
+        "source": "garmin"
       },
       {
         "time": "7:22",
         "date": "2026-05-02",
         "name": "Si Racha - W8 Sat Easy Run",
-        "pace": "7:22"
+        "pace": "7:22",
+        "source": "garmin"
       },
       {
         "time": "7:22",
         "date": "2025-07-24",
         "name": "Si Racha Running",
-        "pace": "7:22"
+        "pace": "7:22",
+        "source": "garmin"
       },
       {
         "time": "7:23",
         "date": "2025-07-17",
         "name": "Si Racha Running",
-        "pace": "7:23"
+        "pace": "7:23",
+        "source": "garmin"
       },
       {
         "time": "7:32",
         "date": "2026-05-30",
         "name": "Si Racha - W12 Sat Easy Run",
-        "pace": "7:32"
+        "pace": "7:32",
+        "source": "garmin"
       },
       {
         "time": "7:32",
         "date": "2025-07-16",
         "name": "Si Racha Running",
-        "pace": "7:32"
+        "pace": "7:32",
+        "source": "garmin"
+      },
+      {
+        "time": "7:32",
+        "seconds": 452.49748743718646,
+        "pace": "7:32",
+        "date": "2026-09-05",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1788563819",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "7:33",
         "date": "2025-07-30",
         "name": "Si Racha Running",
-        "pace": "7:33"
+        "pace": "7:33",
+        "source": "garmin"
       },
       {
         "time": "7:33",
         "date": "2026-05-16",
         "name": "Si Racha - W10 Sat Easy Run",
-        "pace": "7:33"
+        "pace": "7:33",
+        "source": "garmin"
       },
       {
         "time": "7:35",
         "date": "2026-05-17",
         "name": "Si Racha - W10 Sun Long Run",
-        "pace": "7:35"
+        "pace": "7:35",
+        "source": "garmin"
       },
       {
         "time": "7:36",
         "date": "2026-04-04",
         "name": "Si Racha - W4 Sat Easy Run",
-        "pace": "7:36"
+        "pace": "7:36",
+        "source": "garmin"
       },
       {
         "time": "7:36",
         "date": "2026-04-25",
         "name": "Si Racha - W7 Sat Easy Run",
-        "pace": "7:36"
+        "pace": "7:36",
+        "source": "garmin"
+      },
+      {
+        "time": "7:36",
+        "seconds": 456.0405405405405,
+        "pace": "7:36",
+        "date": "2026-08-02",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1785629603",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "7:37",
         "date": "2025-10-17",
         "name": "Si Racha - W1 Fri Easy Run",
-        "pace": "7:37"
+        "pace": "7:37",
+        "source": "garmin"
       },
       {
         "time": "7:42",
         "date": "2026-01-18",
         "name": "Si Racha - W1 Sun Easy Run",
-        "pace": "7:42"
+        "pace": "7:42",
+        "source": "garmin"
       },
       {
         "time": "7:44",
         "date": "2025-08-08",
         "name": "Si Racha - W1 Fri Long Run",
-        "pace": "7:44"
+        "pace": "7:44",
+        "source": "garmin"
       },
       {
         "time": "7:45",
         "date": "2026-03-20",
         "name": "Si Racha - W2 Fri Easy Run",
-        "pace": "7:45"
+        "pace": "7:45",
+        "source": "garmin"
       },
       {
         "time": "7:45",
         "date": "2026-01-30",
         "name": "Si Racha - W3 Fri Long Run",
-        "pace": "7:45"
+        "pace": "7:45",
+        "source": "garmin"
       },
       {
         "time": "7:46",
         "date": "2026-05-24",
         "name": "Si Racha - W11 Sun Long Run",
-        "pace": "7:46"
+        "pace": "7:46",
+        "source": "garmin"
       },
       {
         "time": "7:46",
         "date": "2026-06-05",
         "name": "W13 Fri Tempo -",
-        "pace": "7:46"
+        "pace": "7:46",
+        "source": "garmin"
       },
       {
         "time": "7:53",
         "date": "2026-05-03",
         "name": "Bang Lamung - W8 Sun Long Run",
-        "pace": "7:53"
+        "pace": "7:53",
+        "source": "garmin"
       },
       {
         "time": "7:58",
         "date": "2026-07-20",
         "name": "Si Racha - W4 Mon Long Run",
-        "pace": "7:58"
+        "pace": "7:58",
+        "source": "garmin"
       },
       {
         "time": "8:01",
         "date": "2025-07-12",
         "name": "Si Racha Running",
-        "pace": "8:01"
+        "pace": "8:01",
+        "source": "garmin"
       },
       {
         "time": "8:04",
         "date": "2026-05-09",
         "name": "Si Racha - W9 Sat Easy Run",
-        "pace": "8:04"
+        "pace": "8:04",
+        "source": "garmin"
+      },
+      {
+        "time": "8:04",
+        "seconds": 484.1550802139037,
+        "pace": "8:04",
+        "date": "2026-09-06",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1788654041",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "8:07",
         "date": "2025-10-18",
         "name": "Si Racha - W1 Sat Long Run",
-        "pace": "8:07"
+        "pace": "8:07",
+        "source": "garmin"
       },
       {
         "time": "8:10",
         "date": "2025-08-13",
         "name": "Si Racha Running",
-        "pace": "8:10"
+        "pace": "8:10",
+        "source": "garmin"
       },
       {
         "time": "8:12",
         "date": "2026-06-03",
         "name": "Si Racha - W12 Wed Long Run",
-        "pace": "8:12"
+        "pace": "8:12",
+        "source": "garmin"
       },
       {
         "time": "8:14",
         "date": "2026-05-23",
         "name": "Si Racha - W11 Sat Easy Run",
-        "pace": "8:14"
+        "pace": "8:14",
+        "source": "garmin"
       },
       {
         "time": "8:14",
         "date": "2026-03-27",
         "name": "Si Racha - W3 Fri Easy Run",
-        "pace": "8:14"
+        "pace": "8:14",
+        "source": "garmin"
+      },
+      {
+        "time": "8:22",
+        "seconds": 501.9094488188976,
+        "pace": "8:22",
+        "date": "2026-08-16",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1786843563",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "8:22",
         "date": "2026-06-22",
         "name": "Si Racha Running",
-        "pace": "8:22"
+        "pace": "8:22",
+        "source": "garmin"
+      },
+      {
+        "time": "8:50",
+        "seconds": 529.9408866995072,
+        "pace": "8:50",
+        "date": "2026-08-30",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1788050928",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "8:54",
         "date": "2026-07-05",
         "name": "Bang Lamung - W2 Sun Long Run",
-        "pace": "8:54"
+        "pace": "8:54",
+        "source": "garmin"
+      },
+      {
+        "time": "9:03",
+        "seconds": 543.1381578947369,
+        "pace": "9:03",
+        "date": "2026-08-16",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1786827616",
+        "method": "recorded_distance_elapsed_interpolated"
+      },
+      {
+        "time": "9:21",
+        "seconds": 561.4435483870967,
+        "pace": "9:21",
+        "date": "2026-09-13",
+        "name": "Trail Run",
+        "source": "zepp",
+        "id": "zepp:1789258587",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "9:35",
         "date": "2025-07-06",
         "name": "Si Racha Running",
-        "pace": "9:35"
+        "pace": "9:35",
+        "source": "garmin"
       },
       {
         "time": "9:36",
         "date": "2026-02-28",
         "name": "Si Racha - W5 Sat Long Run",
-        "pace": "9:36"
+        "pace": "9:36",
+        "source": "garmin"
       },
       {
         "time": "9:38",
         "date": "2025-07-07",
         "name": "Si Racha Running",
-        "pace": "9:38"
+        "pace": "9:38",
+        "source": "garmin"
       },
       {
         "time": "10:09",
         "date": "2026-02-14",
         "name": "Si Racha - W3 Sat Long Run",
-        "pace": "10:09"
+        "pace": "10:09",
+        "source": "garmin"
       },
       {
         "time": "10:51",
         "date": "2025-10-05",
         "name": "Si Racha Trail Running",
-        "pace": "10:51"
+        "pace": "10:51",
+        "source": "garmin"
       },
       {
         "time": "11:18",
         "date": "2025-11-16",
         "name": "Si Racha - W5 Sun Easy Run",
-        "pace": "11:18"
+        "pace": "11:18",
+        "source": "garmin"
       },
       {
         "time": "12:17",
         "date": "2026-01-24",
         "name": "Si Racha Trail Running",
-        "pace": "12:17"
+        "pace": "12:17",
+        "source": "garmin"
       },
       {
         "time": "12:51",
         "date": "2025-07-29",
         "name": "Si Racha Running",
-        "pace": "12:51"
+        "pace": "12:51",
+        "source": "garmin"
       },
       {
         "time": "12:56",
         "date": "2025-04-02",
         "name": "Treadmill Running",
-        "pace": "12:56"
+        "pace": "12:56",
+        "source": "garmin"
       },
       {
         "time": "13:27",
         "date": "2025-04-01",
         "name": "Treadmill Running",
-        "pace": "13:27"
+        "pace": "13:27",
+        "source": "garmin"
       },
       {
         "time": "13:54",
         "date": "2025-02-26",
         "name": "Treadmill Running",
-        "pace": "13:54"
+        "pace": "13:54",
+        "source": "garmin"
       },
       {
         "time": "13:55",
         "date": "2025-03-05",
         "name": "Treadmill Running",
-        "pace": "13:55"
+        "pace": "13:55",
+        "source": "garmin"
       },
       {
         "time": "14:08",
         "date": "2025-07-19",
         "name": "Treadmill Running",
-        "pace": "14:08"
+        "pace": "14:08",
+        "source": "garmin"
       },
       {
         "time": "14:29",
         "date": "2025-03-31",
         "name": "Treadmill Running",
-        "pace": "14:29"
+        "pace": "14:29",
+        "source": "garmin"
       },
       {
         "time": "14:39",
         "date": "2025-11-22",
         "name": "Si Racha Trail Running",
-        "pace": "14:39"
+        "pace": "14:39",
+        "source": "garmin"
       },
       {
         "time": "14:45",
         "date": "2026-01-31",
         "name": "Si Racha Trail Running",
-        "pace": "14:45"
+        "pace": "14:45",
+        "source": "garmin"
       }
     ],
     "1 mile": [
       {
+        "time": "8:43",
+        "seconds": 523.4109589041097,
+        "pace": "5:25",
+        "date": "2026-09-04",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1788516022",
+        "method": "recorded_distance_elapsed_interpolated"
+      },
+      {
         "time": "8:51",
         "date": "2026-07-18",
         "name": "Si Racha - W4 Sat Tempo - R",
-        "pace": "5:30"
+        "pace": "5:30",
+        "source": "garmin"
       },
       {
         "time": "8:56",
         "date": "2026-06-14",
         "name": "Si Racha Running",
-        "pace": "5:33"
+        "pace": "5:33",
+        "source": "garmin"
       },
       {
         "time": "9:01",
         "date": "2026-02-01",
         "name": "Si Racha - W1 Sun Easy Run",
-        "pace": "5:36"
+        "pace": "5:36",
+        "source": "garmin"
+      },
+      {
+        "time": "9:17",
+        "seconds": 557.2206405693946,
+        "pace": "5:46",
+        "date": "2026-08-16",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1786831864",
+        "method": "recorded_distance_elapsed_interpolated"
+      },
+      {
+        "time": "9:26",
+        "seconds": 565.8617363344054,
+        "pace": "5:52",
+        "date": "2026-07-31",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1785493163",
+        "method": "recorded_distance_elapsed_interpolated"
+      },
+      {
+        "time": "9:45",
+        "seconds": 584.5537190082644,
+        "pace": "6:03",
+        "date": "2026-08-14",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1786701677",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "9:51",
         "date": "2026-02-18",
         "name": "Si Racha Running",
-        "pace": "6:07"
+        "pace": "6:07",
+        "source": "garmin"
+      },
+      {
+        "time": "9:52",
+        "seconds": 592.4847560975611,
+        "pace": "6:08",
+        "date": "2026-09-12",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1789166808",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "9:53",
         "date": "2026-07-12",
         "name": "Si Racha - W3 Sun Long Run",
-        "pace": "6:08"
+        "pace": "6:08",
+        "source": "garmin"
       },
       {
         "time": "9:56",
         "date": "2026-07-03",
         "name": "Si Racha - W2 Fri Intervals",
-        "pace": "6:10"
+        "pace": "6:10",
+        "source": "garmin"
       },
       {
         "time": "9:57",
         "date": "2026-02-07",
         "name": "Si Racha - W2 Sat Long Run",
-        "pace": "6:11"
+        "pace": "6:11",
+        "source": "garmin"
+      },
+      {
+        "time": "10:03",
+        "seconds": 602.938628158845,
+        "pace": "6:15",
+        "date": "2026-08-28",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1787912263",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "10:03",
         "date": "2026-07-15",
         "name": "Si Racha Running",
-        "pace": "6:14"
+        "pace": "6:14",
+        "source": "garmin"
       },
       {
         "time": "10:03",
         "date": "2026-06-26",
         "name": "Si Racha - W1 Fri Tempo - R",
-        "pace": "6:14"
+        "pace": "6:14",
+        "source": "garmin"
       },
       {
         "time": "10:05",
         "date": "2026-02-23",
         "name": "Si Racha - W5 Mon Tempo - T",
-        "pace": "6:16"
+        "pace": "6:16",
+        "source": "garmin"
       },
       {
         "time": "10:06",
         "date": "2026-05-29",
         "name": "W12 Fri Interval",
-        "pace": "6:17"
+        "pace": "6:17",
+        "source": "garmin"
       },
       {
         "time": "10:06",
         "date": "2026-07-19",
         "name": "Si Racha - W4 Sun Easy Run",
-        "pace": "6:17"
+        "pace": "6:17",
+        "source": "garmin"
       },
       {
         "time": "10:08",
         "date": "2026-03-14",
         "name": "Bang Lamung - W1 Sat Long Run",
-        "pace": "6:18"
+        "pace": "6:18",
+        "source": "garmin"
       },
       {
         "time": "10:09",
         "date": "2026-02-24",
         "name": "Si Racha - Pyramid Set",
-        "pace": "6:19"
+        "pace": "6:19",
+        "source": "garmin"
       },
       {
         "time": "10:14",
         "date": "2026-02-26",
         "name": "Si Racha - On Off 200s",
-        "pace": "6:22"
+        "pace": "6:22",
+        "source": "garmin"
       },
       {
         "time": "10:16",
         "date": "2026-05-01",
         "name": "Si Racha - W8 Fri Tempo - O",
-        "pace": "6:23"
+        "pace": "6:23",
+        "source": "garmin"
       },
       {
         "time": "10:23",
         "date": "2026-05-15",
         "name": "W10 Fri Tempo -",
-        "pace": "6:27"
+        "pace": "6:27",
+        "source": "garmin"
       },
       {
         "time": "10:23",
         "date": "2026-02-13",
         "name": "Si Racha - W3 Fri Tempo - P",
-        "pace": "6:27"
+        "pace": "6:27",
+        "source": "garmin"
+      },
+      {
+        "time": "10:24",
+        "seconds": 624.1722846441949,
+        "pace": "6:28",
+        "date": "2026-07-28",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1785195286",
+        "method": "recorded_distance_elapsed_interpolated"
+      },
+      {
+        "time": "10:25",
+        "seconds": 625.409395973154,
+        "pace": "6:29",
+        "date": "2026-08-09",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1786236856",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "10:27",
         "date": "2026-06-28",
         "name": "Bang Lamung - W1 Sun Long Run",
-        "pace": "6:30"
+        "pace": "6:30",
+        "source": "garmin"
       },
       {
         "time": "10:29",
         "date": "2026-04-17",
         "name": "Si Racha - W6 Fri Intervals",
-        "pace": "6:31"
+        "pace": "6:31",
+        "source": "garmin"
       },
       {
         "time": "10:30",
         "date": "2026-04-03",
         "name": "Si Racha - W4 Fri Tempo - T",
-        "pace": "6:31"
+        "pace": "6:31",
+        "source": "garmin"
       },
       {
         "time": "10:33",
         "date": "2026-04-24",
         "name": "Si Racha - W7 Fri Tempo - R",
-        "pace": "6:33"
+        "pace": "6:33",
+        "source": "garmin"
       },
       {
         "time": "10:35",
         "date": "2026-01-23",
         "name": "Si Racha - W2 Fri Long Run",
-        "pace": "6:35"
+        "pace": "6:35",
+        "source": "garmin"
       },
       {
         "time": "10:38",
         "date": "2026-05-10",
         "name": "Si Racha - W9 Sun Long Run",
-        "pace": "6:36"
+        "pace": "6:36",
+        "source": "garmin"
       },
       {
         "time": "10:40",
         "date": "2025-07-23",
         "name": "Si Racha Running",
-        "pace": "6:38"
+        "pace": "6:38",
+        "source": "garmin"
       },
       {
         "time": "10:40",
         "date": "2026-03-07",
         "name": "Si Racha - W6 Sat Long Run",
-        "pace": "6:38"
+        "pace": "6:38",
+        "source": "garmin"
       },
       {
         "time": "10:42",
         "date": "2026-06-21",
         "name": "Nakhon Ratchasima - Korat21 HR-L",
-        "pace": "6:39"
+        "pace": "6:39",
+        "source": "garmin"
       },
       {
         "time": "10:46",
         "date": "2026-02-02",
         "name": "Si Racha - W2 Mon Tempo - O",
-        "pace": "6:41"
+        "pace": "6:41",
+        "source": "garmin"
       },
       {
         "time": "10:47",
         "date": "2026-06-19",
         "name": "Si Racha - W15 Fri Taper In",
-        "pace": "6:42"
+        "pace": "6:42",
+        "source": "garmin"
       },
       {
         "time": "10:51",
         "date": "2026-04-11",
         "name": "Nakhon Ratchasima - W5 Sat Easy ",
-        "pace": "6:44"
+        "pace": "6:44",
+        "source": "garmin"
       },
       {
         "time": "10:52",
         "date": "2026-04-10",
         "name": "Nakhon Ratchasima - W5 Fri Tempo",
-        "pace": "6:45"
+        "pace": "6:45",
+        "source": "garmin"
       },
       {
         "time": "10:52",
         "date": "2026-02-20",
         "name": "Si Racha - W4 Fri Easy Run",
-        "pace": "6:45"
+        "pace": "6:45",
+        "source": "garmin"
       },
       {
         "time": "10:53",
         "date": "2026-04-05",
         "name": "Si Racha - W4 Sun Long Run",
-        "pace": "6:46"
+        "pace": "6:46",
+        "source": "garmin"
+      },
+      {
+        "time": "10:55",
+        "seconds": 655.424242424242,
+        "pace": "6:47",
+        "date": "2026-08-07",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1786097654",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "10:56",
         "date": "2025-11-01",
         "name": "Si Racha Running",
-        "pace": "6:48"
+        "pace": "6:48",
+        "source": "garmin"
       },
       {
         "time": "10:59",
         "date": "2026-01-17",
         "name": "Si Racha - W1 Sat Long Run",
-        "pace": "6:50"
+        "pace": "6:50",
+        "source": "garmin"
       },
       {
         "time": "11:01",
         "date": "2025-10-23",
         "name": "Si Racha Running",
-        "pace": "6:51"
+        "pace": "6:51",
+        "source": "garmin"
       },
       {
         "time": "11:03",
         "date": "2026-03-06",
         "name": "Si Racha - W6 Fri Easy Run",
-        "pace": "6:52"
+        "pace": "6:52",
+        "source": "garmin"
       },
       {
         "time": "11:04",
         "date": "2026-04-13",
         "name": "Nakhon Ratchasima - W5 Mon Long ",
-        "pace": "6:53"
+        "pace": "6:53",
+        "source": "garmin"
       },
       {
         "time": "11:05",
         "date": "2026-01-26",
         "name": "Si Racha - W3 Mon Intervals",
-        "pace": "6:53"
+        "pace": "6:53",
+        "source": "garmin"
       },
       {
         "time": "11:11",
         "date": "2025-08-18",
         "name": "Si Racha Running",
-        "pace": "6:57"
+        "pace": "6:57",
+        "source": "garmin"
       },
       {
         "time": "11:13",
         "date": "2025-07-31",
         "name": "Si Racha Running",
-        "pace": "6:58"
+        "pace": "6:58",
+        "source": "garmin"
       },
       {
         "time": "11:14",
         "date": "2026-05-22",
         "name": "W11 Fri Tempo -",
-        "pace": "6:59"
+        "pace": "6:59",
+        "source": "garmin"
       },
       {
         "time": "11:15",
         "date": "2026-06-27",
         "name": "Si Racha - W1 Sat Easy Run",
-        "pace": "6:59"
+        "pace": "6:59",
+        "source": "garmin"
+      },
+      {
+        "time": "11:15",
+        "seconds": 675.2040000000002,
+        "pace": "7:00",
+        "date": "2026-08-23",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1787440334",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "11:19",
         "date": "2025-10-25",
         "name": "Si Racha - W2 Sat Long Run",
-        "pace": "7:02"
+        "pace": "7:02",
+        "source": "garmin"
       },
       {
         "time": "11:21",
         "date": "2025-10-28",
         "name": "Si Racha - W3 Tue Intervals",
-        "pace": "7:03"
+        "pace": "7:03",
+        "source": "garmin"
       },
       {
         "time": "11:21",
         "date": "2025-11-05",
         "name": "Si Racha - W4 Wed Intervals",
-        "pace": "7:03"
+        "pace": "7:03",
+        "source": "garmin"
+      },
+      {
+        "time": "11:21",
+        "seconds": 681.4266055045873,
+        "pace": "7:04",
+        "date": "2026-08-21",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1787306686",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "11:23",
         "date": "2026-01-19",
         "name": "Si Racha - W2 Mon Tempo - R",
-        "pace": "7:05"
+        "pace": "7:05",
+        "source": "garmin"
       },
       {
         "time": "11:25",
         "date": "2025-10-22",
         "name": "Si Racha - W2 Wed Tempo - P",
-        "pace": "7:05"
+        "pace": "7:05",
+        "source": "garmin"
       },
       {
         "time": "11:27",
         "date": "2025-11-12",
         "name": "Si Racha - W5 Wed Tempo - R",
-        "pace": "7:07"
+        "pace": "7:07",
+        "source": "garmin"
       },
       {
         "time": "11:27",
         "date": "2026-02-06",
         "name": "Si Racha - W2 Fri Easy Run",
-        "pace": "7:07"
+        "pace": "7:07",
+        "source": "garmin"
       },
       {
         "time": "11:29",
         "date": "2026-04-26",
         "name": "Bang Lamung - W7 Sun Long Run",
-        "pace": "7:08"
+        "pace": "7:08",
+        "source": "garmin"
       },
       {
         "time": "11:31",
         "date": "2026-03-29",
         "name": "Si Racha - W3 Sun Long Run",
-        "pace": "7:09"
+        "pace": "7:09",
+        "source": "garmin"
       },
       {
         "time": "11:33",
         "date": "2026-06-10",
         "name": "Si Racha - W14 Wed Easy Run",
-        "pace": "7:10"
+        "pace": "7:10",
+        "source": "garmin"
       },
       {
         "time": "11:33",
         "date": "2025-07-22",
         "name": "Si Racha Running",
-        "pace": "7:11"
+        "pace": "7:11",
+        "source": "garmin"
+      },
+      {
+        "time": "11:34",
+        "seconds": 693.5767195767198,
+        "pace": "7:11",
+        "date": "2026-09-11",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1789122164",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "11:34",
         "date": "2025-11-06",
         "name": "Si Racha - W4 Thu Easy Run",
-        "pace": "7:11"
+        "pace": "7:11",
+        "source": "garmin"
       },
       {
         "time": "11:40",
         "date": "2026-01-25",
         "name": "Si Racha - W2 Sun Easy Run",
-        "pace": "7:15"
+        "pace": "7:15",
+        "source": "garmin"
       },
       {
         "time": "11:40",
         "date": "2026-02-27",
         "name": "Si Racha - W5 Fri Easy Run",
-        "pace": "7:15"
+        "pace": "7:15",
+        "source": "garmin"
       },
       {
         "time": "11:42",
         "date": "2025-07-18",
         "name": "Si Racha Running",
-        "pace": "7:16"
+        "pace": "7:16",
+        "source": "garmin"
       },
       {
         "time": "11:46",
         "date": "2026-02-15",
         "name": "Si Racha Running",
-        "pace": "7:19"
+        "pace": "7:19",
+        "source": "garmin"
       },
       {
         "time": "11:47",
         "date": "2025-07-13",
         "name": "Si Racha Running",
-        "pace": "7:19"
+        "pace": "7:19",
+        "source": "garmin"
       },
       {
         "time": "11:47",
         "date": "2025-11-09",
         "name": "Si Racha - W4 Sun Long Run",
-        "pace": "7:19"
+        "pace": "7:19",
+        "source": "garmin"
       },
       {
         "time": "11:50",
         "date": "2026-03-21",
         "name": "Si Racha - W2 Sat Easy Run",
-        "pace": "7:21"
+        "pace": "7:21",
+        "source": "garmin"
       },
       {
         "time": "11:51",
         "date": "2025-07-25",
         "name": "Si Racha Running",
-        "pace": "7:21"
+        "pace": "7:21",
+        "source": "garmin"
       },
       {
         "time": "11:51",
         "date": "2025-07-08",
         "name": "Si Racha Running",
-        "pace": "7:22"
+        "pace": "7:22",
+        "source": "garmin"
       },
       {
         "time": "11:52",
         "date": "2026-05-02",
         "name": "Si Racha - W8 Sat Easy Run",
-        "pace": "7:22"
+        "pace": "7:22",
+        "source": "garmin"
       },
       {
         "time": "11:52",
         "date": "2026-06-09",
         "name": "Si Racha - W14 Tue Easy Run",
-        "pace": "7:22"
+        "pace": "7:22",
+        "source": "garmin"
       },
       {
         "time": "11:53",
         "date": "2026-05-08",
         "name": "W9 Fri Intervals",
-        "pace": "7:23"
+        "pace": "7:23",
+        "source": "garmin"
       },
       {
         "time": "11:54",
         "date": "2025-07-15",
         "name": "Si Racha Running",
-        "pace": "7:24"
+        "pace": "7:24",
+        "source": "garmin"
       },
       {
         "time": "11:57",
         "date": "2025-08-15",
         "name": "Si Racha - W2 Fri Long Run",
-        "pace": "7:25"
+        "pace": "7:25",
+        "source": "garmin"
       },
       {
         "time": "11:59",
         "date": "2026-06-06",
         "name": "Si Racha - W13 Sat Easy Run",
-        "pace": "7:27"
+        "pace": "7:27",
+        "source": "garmin"
       },
       {
         "time": "12:00",
         "date": "2025-08-07",
         "name": "Si Racha - W1 Thu Easy Run",
-        "pace": "7:27"
+        "pace": "7:27",
+        "source": "garmin"
       },
       {
         "time": "12:03",
         "date": "2025-08-12",
         "name": "Si Racha - W2 Tue Tempo - P",
-        "pace": "7:29"
+        "pace": "7:29",
+        "source": "garmin"
       },
       {
         "time": "12:04",
         "date": "2026-03-15",
         "name": "Si Racha - W1 Sun Easy Run",
-        "pace": "7:30"
+        "pace": "7:30",
+        "source": "garmin"
       },
       {
         "time": "12:04",
         "date": "2025-08-19",
         "name": "Si Racha - W3 Tue Easy Run",
-        "pace": "7:30"
+        "pace": "7:30",
+        "source": "garmin"
       },
       {
         "time": "12:06",
         "date": "2025-07-24",
         "name": "Si Racha Running",
-        "pace": "7:31"
+        "pace": "7:31",
+        "source": "garmin"
       },
       {
         "time": "12:12",
         "date": "2026-06-11",
         "name": "Si Racha - W14 Thu Long Run",
-        "pace": "7:35"
+        "pace": "7:35",
+        "source": "garmin"
       },
       {
         "time": "12:13",
         "date": "2025-07-30",
         "name": "Si Racha Running",
-        "pace": "7:35"
+        "pace": "7:35",
+        "source": "garmin"
       },
       {
         "time": "12:17",
         "date": "2025-07-17",
         "name": "Si Racha Running",
-        "pace": "7:38"
+        "pace": "7:38",
+        "source": "garmin"
+      },
+      {
+        "time": "12:18",
+        "seconds": 737.8622222222225,
+        "pace": "7:39",
+        "date": "2026-09-05",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1788563819",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "12:24",
         "date": "2026-04-25",
         "name": "Si Racha - W7 Sat Easy Run",
-        "pace": "7:42"
+        "pace": "7:42",
+        "source": "garmin"
+      },
+      {
+        "time": "12:26",
+        "seconds": 745.7741935483871,
+        "pace": "7:44",
+        "date": "2026-08-02",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1785629603",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "12:26",
         "date": "2026-05-17",
         "name": "Si Racha - W10 Sun Long Run",
-        "pace": "7:43"
+        "pace": "7:43",
+        "source": "garmin"
       },
       {
         "time": "12:27",
         "date": "2026-05-30",
         "name": "Si Racha - W12 Sat Easy Run",
-        "pace": "7:44"
+        "pace": "7:44",
+        "source": "garmin"
       },
       {
         "time": "12:28",
         "date": "2025-10-17",
         "name": "Si Racha - W1 Fri Easy Run",
-        "pace": "7:45"
+        "pace": "7:45",
+        "source": "garmin"
       },
       {
         "time": "12:29",
         "date": "2025-07-16",
         "name": "Si Racha Running",
-        "pace": "7:45"
+        "pace": "7:45",
+        "source": "garmin"
       },
       {
         "time": "12:35",
         "date": "2026-04-04",
         "name": "Si Racha - W4 Sat Easy Run",
-        "pace": "7:49"
+        "pace": "7:49",
+        "source": "garmin"
       },
       {
         "time": "12:37",
         "date": "2026-01-18",
         "name": "Si Racha - W1 Sun Easy Run",
-        "pace": "7:50"
+        "pace": "7:50",
+        "source": "garmin"
       },
       {
         "time": "12:39",
         "date": "2026-03-20",
         "name": "Si Racha - W2 Fri Easy Run",
-        "pace": "7:52"
+        "pace": "7:52",
+        "source": "garmin"
       },
       {
         "time": "12:40",
         "date": "2025-08-08",
         "name": "Si Racha - W1 Fri Long Run",
-        "pace": "7:52"
+        "pace": "7:52",
+        "source": "garmin"
       },
       {
         "time": "12:42",
         "date": "2026-05-16",
         "name": "Si Racha - W10 Sat Easy Run",
-        "pace": "7:54"
+        "pace": "7:54",
+        "source": "garmin"
       },
       {
         "time": "12:43",
         "date": "2026-01-30",
         "name": "Si Racha - W3 Fri Long Run",
-        "pace": "7:54"
+        "pace": "7:54",
+        "source": "garmin"
       },
       {
         "time": "12:48",
         "date": "2026-05-03",
         "name": "Bang Lamung - W8 Sun Long Run",
-        "pace": "7:57"
+        "pace": "7:57",
+        "source": "garmin"
       },
       {
         "time": "13:02",
         "date": "2026-05-24",
         "name": "Si Racha - W11 Sun Long Run",
-        "pace": "8:06"
+        "pace": "8:06",
+        "source": "garmin"
+      },
+      {
+        "time": "13:03",
+        "seconds": 782.8341463414633,
+        "pace": "8:07",
+        "date": "2026-09-06",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1788654041",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "13:08",
         "date": "2026-07-20",
         "name": "Si Racha - W4 Mon Long Run",
-        "pace": "8:09"
+        "pace": "8:09",
+        "source": "garmin"
       },
       {
         "time": "13:10",
         "date": "2026-05-09",
         "name": "Si Racha - W9 Sat Easy Run",
-        "pace": "8:11"
+        "pace": "8:11",
+        "source": "garmin"
       },
       {
         "time": "13:10",
         "date": "2025-10-18",
         "name": "Si Racha - W1 Sat Long Run",
-        "pace": "8:11"
+        "pace": "8:11",
+        "source": "garmin"
       },
       {
         "time": "13:11",
         "date": "2026-06-05",
         "name": "W13 Fri Tempo -",
-        "pace": "8:11"
+        "pace": "8:11",
+        "source": "garmin"
       },
       {
         "time": "13:24",
         "date": "2026-06-03",
         "name": "Si Racha - W12 Wed Long Run",
-        "pace": "8:20"
+        "pace": "8:20",
+        "source": "garmin"
       },
       {
         "time": "13:25",
         "date": "2026-05-23",
         "name": "Si Racha - W11 Sat Easy Run",
-        "pace": "8:20"
+        "pace": "8:20",
+        "source": "garmin"
       },
       {
         "time": "13:30",
         "date": "2026-03-27",
         "name": "Si Racha - W3 Fri Easy Run",
-        "pace": "8:23"
+        "pace": "8:23",
+        "source": "garmin"
       },
       {
         "time": "13:50",
         "date": "2026-06-22",
         "name": "Si Racha Running",
-        "pace": "8:36"
+        "pace": "8:36",
+        "source": "garmin"
       },
       {
         "time": "14:07",
         "date": "2025-07-12",
         "name": "Si Racha Running",
-        "pace": "8:46"
+        "pace": "8:46",
+        "source": "garmin"
+      },
+      {
+        "time": "14:26",
+        "seconds": 865.5197740112993,
+        "pace": "8:58",
+        "date": "2026-08-30",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1788050928",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "14:31",
         "date": "2026-07-05",
         "name": "Bang Lamung - W2 Sun Long Run",
-        "pace": "9:01"
+        "pace": "9:01",
+        "source": "garmin"
       },
       {
         "time": "14:52",
         "date": "2025-08-13",
         "name": "Si Racha Running",
-        "pace": "9:14"
+        "pace": "9:14",
+        "source": "garmin"
+      },
+      {
+        "time": "15:20",
+        "seconds": 920.3836477987421,
+        "pace": "9:32",
+        "date": "2026-09-13",
+        "name": "Trail Run",
+        "source": "zepp",
+        "id": "zepp:1789258587",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "15:29",
         "date": "2025-07-07",
         "name": "Si Racha Running",
-        "pace": "9:37"
+        "pace": "9:37",
+        "source": "garmin"
       },
       {
         "time": "15:41",
         "date": "2025-07-06",
         "name": "Si Racha Running",
-        "pace": "9:45"
+        "pace": "9:45",
+        "source": "garmin"
       },
       {
         "time": "16:28",
         "date": "2026-02-14",
         "name": "Si Racha - W3 Sat Long Run",
-        "pace": "10:14"
+        "pace": "10:14",
+        "source": "garmin"
       },
       {
         "time": "16:41",
         "date": "2026-02-21",
         "name": "Si Racha - W4 Sat Long Run",
-        "pace": "10:22"
+        "pace": "10:22",
+        "source": "garmin"
       },
       {
         "time": "16:45",
         "date": "2026-02-28",
         "name": "Si Racha - W5 Sat Long Run",
-        "pace": "10:25"
+        "pace": "10:25",
+        "source": "garmin"
       },
       {
         "time": "18:53",
         "date": "2025-10-05",
         "name": "Si Racha Trail Running",
-        "pace": "11:44"
+        "pace": "11:44",
+        "source": "garmin"
       },
       {
         "time": "19:19",
         "date": "2025-11-16",
         "name": "Si Racha - W5 Sun Easy Run",
-        "pace": "12:00"
+        "pace": "12:00",
+        "source": "garmin"
       },
       {
         "time": "20:34",
         "date": "2026-01-24",
         "name": "Si Racha Trail Running",
-        "pace": "12:47"
+        "pace": "12:47",
+        "source": "garmin"
       },
       {
         "time": "21:08",
         "date": "2025-04-02",
         "name": "Treadmill Running",
-        "pace": "13:08"
+        "pace": "13:08",
+        "source": "garmin"
       },
       {
         "time": "21:18",
         "date": "2025-07-29",
         "name": "Si Racha Running",
-        "pace": "13:14"
+        "pace": "13:14",
+        "source": "garmin"
       },
       {
         "time": "21:50",
         "date": "2025-04-01",
         "name": "Treadmill Running",
-        "pace": "13:34"
+        "pace": "13:34",
+        "source": "garmin"
       },
       {
         "time": "22:24",
         "date": "2025-03-05",
         "name": "Treadmill Running",
-        "pace": "13:55"
+        "pace": "13:55",
+        "source": "garmin"
       },
       {
         "time": "23:11",
         "date": "2025-07-19",
         "name": "Treadmill Running",
-        "pace": "14:24"
+        "pace": "14:24",
+        "source": "garmin"
       },
       {
         "time": "23:24",
         "date": "2025-02-26",
         "name": "Treadmill Running",
-        "pace": "14:33"
+        "pace": "14:33",
+        "source": "garmin"
       },
       {
         "time": "23:38",
         "date": "2025-03-31",
         "name": "Treadmill Running",
-        "pace": "14:41"
+        "pace": "14:41",
+        "source": "garmin"
       },
       {
         "time": "25:24",
         "date": "2026-01-31",
         "name": "Si Racha Trail Running",
-        "pace": "15:47"
+        "pace": "15:47",
+        "source": "garmin"
       },
       {
         "time": "25:27",
         "date": "2025-11-22",
         "name": "Si Racha Trail Running",
-        "pace": "15:49"
+        "pace": "15:49",
+        "source": "garmin"
       }
     ],
     "5 km": [
       {
+        "time": "31:18",
+        "seconds": 1878.27304964539,
+        "pace": "6:16",
+        "date": "2026-08-16",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1786831864",
+        "method": "recorded_distance_elapsed_interpolated"
+      },
+      {
+        "time": "32:20",
+        "seconds": 1940.384236453202,
+        "pace": "6:28",
+        "date": "2026-07-31",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1785493163",
+        "method": "recorded_distance_elapsed_interpolated"
+      },
+      {
+        "time": "32:29",
+        "seconds": 1948.7123287671234,
+        "pace": "6:30",
+        "date": "2026-08-28",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1787912263",
+        "method": "recorded_distance_elapsed_interpolated"
+      },
+      {
         "time": "32:44",
         "date": "2026-02-23",
         "name": "Si Racha - W5 Mon Tempo - T",
-        "pace": "6:32"
+        "pace": "6:32",
+        "source": "garmin"
       },
       {
         "time": "32:44",
         "date": "2026-03-14",
         "name": "Bang Lamung - W1 Sat Long Run",
-        "pace": "6:32"
+        "pace": "6:32",
+        "source": "garmin"
       },
       {
         "time": "33:30",
         "date": "2026-06-28",
         "name": "Bang Lamung - W1 Sun Long Run",
-        "pace": "6:42"
+        "pace": "6:42",
+        "source": "garmin"
+      },
+      {
+        "time": "33:43",
+        "seconds": 2022.5726872246696,
+        "pace": "6:45",
+        "date": "2026-08-14",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1786701677",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "34:08",
         "date": "2026-07-18",
         "name": "Si Racha - W4 Sat Tempo - R",
-        "pace": "6:49"
+        "pace": "6:49",
+        "source": "garmin"
       },
       {
         "time": "34:10",
         "date": "2026-06-14",
         "name": "Si Racha Running",
-        "pace": "6:50"
+        "pace": "6:50",
+        "source": "garmin"
       },
       {
         "time": "34:15",
         "date": "2026-02-24",
         "name": "Si Racha - Pyramid Set",
-        "pace": "6:51"
+        "pace": "6:51",
+        "source": "garmin"
       },
       {
         "time": "34:16",
         "date": "2026-06-21",
         "name": "Nakhon Ratchasima - Korat21 HR-L",
-        "pace": "6:51"
+        "pace": "6:51",
+        "source": "garmin"
       },
       {
         "time": "34:22",
         "date": "2026-07-03",
         "name": "Si Racha - W2 Fri Intervals",
-        "pace": "6:52"
+        "pace": "6:52",
+        "source": "garmin"
       },
       {
         "time": "34:26",
         "date": "2026-03-07",
         "name": "Si Racha - W6 Sat Long Run",
-        "pace": "6:53"
+        "pace": "6:53",
+        "source": "garmin"
       },
       {
         "time": "34:43",
         "date": "2026-04-17",
         "name": "Si Racha - W6 Fri Intervals",
-        "pace": "6:56"
+        "pace": "6:56",
+        "source": "garmin"
       },
       {
         "time": "34:43",
         "date": "2026-04-05",
         "name": "Si Racha - W4 Sun Long Run",
-        "pace": "6:56"
+        "pace": "6:56",
+        "source": "garmin"
       },
       {
         "time": "34:49",
         "date": "2026-04-03",
         "name": "Si Racha - W4 Fri Tempo - T",
-        "pace": "6:57"
+        "pace": "6:57",
+        "source": "garmin"
+      },
+      {
+        "time": "34:52",
+        "seconds": 2092.2231404958675,
+        "pace": "6:58",
+        "date": "2026-08-09",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1786236856",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "35:10",
         "date": "2026-06-19",
         "name": "Si Racha - W15 Fri Taper In",
-        "pace": "7:02"
+        "pace": "7:02",
+        "source": "garmin"
       },
       {
         "time": "35:12",
         "date": "2026-04-24",
         "name": "Si Racha - W7 Fri Tempo - R",
-        "pace": "7:02"
+        "pace": "7:02",
+        "source": "garmin"
       },
       {
         "time": "35:20",
         "date": "2026-02-26",
         "name": "Si Racha - On Off 200s",
-        "pace": "7:04"
+        "pace": "7:04",
+        "source": "garmin"
+      },
+      {
+        "time": "35:20",
+        "seconds": 2120.4519230769233,
+        "pace": "7:04",
+        "date": "2026-09-12",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1789166808",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "35:24",
         "date": "2026-04-13",
         "name": "Nakhon Ratchasima - W5 Mon Long ",
-        "pace": "7:04"
+        "pace": "7:04",
+        "source": "garmin"
       },
       {
         "time": "35:24",
         "date": "2026-03-06",
         "name": "Si Racha - W6 Fri Easy Run",
-        "pace": "7:04"
+        "pace": "7:04",
+        "source": "garmin"
+      },
+      {
+        "time": "35:33",
+        "seconds": 2133.3316062176164,
+        "pace": "7:07",
+        "date": "2026-07-28",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1785195286",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "35:38",
         "date": "2026-02-01",
         "name": "Si Racha - W1 Sun Easy Run",
-        "pace": "7:07"
+        "pace": "7:07",
+        "source": "garmin"
       },
       {
         "time": "35:40",
         "date": "2026-01-23",
         "name": "Si Racha - W2 Fri Long Run",
-        "pace": "7:08"
+        "pace": "7:08",
+        "source": "garmin"
       },
       {
         "time": "35:53",
         "date": "2026-06-26",
         "name": "Si Racha - W1 Fri Tempo - R",
-        "pace": "7:10"
+        "pace": "7:10",
+        "source": "garmin"
+      },
+      {
+        "time": "36:19",
+        "seconds": 2179.217592592592,
+        "pace": "7:16",
+        "date": "2026-08-23",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1787440334",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "36:27",
         "date": "2026-02-20",
         "name": "Si Racha - W4 Fri Easy Run",
-        "pace": "7:17"
+        "pace": "7:17",
+        "source": "garmin"
       },
       {
         "time": "36:37",
         "date": "2025-08-18",
         "name": "Si Racha Running",
-        "pace": "7:19"
+        "pace": "7:19",
+        "source": "garmin"
+      },
+      {
+        "time": "36:55",
+        "seconds": 2214.9590163934427,
+        "pace": "7:23",
+        "date": "2026-08-21",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1787306686",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "37:08",
         "date": "2026-04-11",
         "name": "Nakhon Ratchasima - W5 Sat Easy ",
-        "pace": "7:25"
+        "pace": "7:25",
+        "source": "garmin"
       },
       {
         "time": "37:18",
         "date": "2025-11-12",
         "name": "Si Racha - W5 Wed Tempo - R",
-        "pace": "7:27"
+        "pace": "7:27",
+        "source": "garmin"
       },
       {
         "time": "37:20",
         "date": "2025-11-05",
         "name": "Si Racha - W4 Wed Intervals",
-        "pace": "7:28"
+        "pace": "7:28",
+        "source": "garmin"
       },
       {
         "time": "37:22",
         "date": "2025-10-25",
         "name": "Si Racha - W2 Sat Long Run",
-        "pace": "7:28"
+        "pace": "7:28",
+        "source": "garmin"
       },
       {
         "time": "37:22",
         "date": "2025-11-01",
         "name": "Si Racha Running",
-        "pace": "7:28"
+        "pace": "7:28",
+        "source": "garmin"
       },
       {
         "time": "37:23",
         "date": "2026-05-01",
         "name": "Si Racha - W8 Fri Tempo - O",
-        "pace": "7:28"
+        "pace": "7:28",
+        "source": "garmin"
       },
       {
         "time": "37:25",
         "date": "2026-05-10",
         "name": "Si Racha - W9 Sun Long Run",
-        "pace": "7:29"
+        "pace": "7:29",
+        "source": "garmin"
       },
       {
         "time": "37:34",
         "date": "2026-01-17",
         "name": "Si Racha - W1 Sat Long Run",
-        "pace": "7:30"
+        "pace": "7:30",
+        "source": "garmin"
       },
       {
         "time": "37:38",
         "date": "2026-02-13",
         "name": "Si Racha - W3 Fri Tempo - P",
-        "pace": "7:31"
+        "pace": "7:31",
+        "source": "garmin"
       },
       {
         "time": "37:41",
         "date": "2026-03-29",
         "name": "Si Racha - W3 Sun Long Run",
-        "pace": "7:32"
+        "pace": "7:32",
+        "source": "garmin"
       },
       {
         "time": "37:50",
         "date": "2026-05-15",
         "name": "W10 Fri Tempo -",
-        "pace": "7:34"
+        "pace": "7:34",
+        "source": "garmin"
       },
       {
         "time": "37:51",
         "date": "2026-02-15",
         "name": "Si Racha Running",
-        "pace": "7:34"
+        "pace": "7:34",
+        "source": "garmin"
       },
       {
         "time": "37:54",
         "date": "2026-02-06",
         "name": "Si Racha - W2 Fri Easy Run",
-        "pace": "7:34"
+        "pace": "7:34",
+        "source": "garmin"
       },
       {
         "time": "37:59",
         "date": "2026-04-10",
         "name": "Nakhon Ratchasima - W5 Fri Tempo",
-        "pace": "7:35"
+        "pace": "7:35",
+        "source": "garmin"
       },
       {
         "time": "38:01",
         "date": "2025-10-28",
         "name": "Si Racha - W3 Tue Intervals",
-        "pace": "7:36"
+        "pace": "7:36",
+        "source": "garmin"
       },
       {
         "time": "38:01",
         "date": "2026-04-26",
         "name": "Bang Lamung - W7 Sun Long Run",
-        "pace": "7:36"
+        "pace": "7:36",
+        "source": "garmin"
       },
       {
         "time": "38:02",
         "date": "2026-02-27",
         "name": "Si Racha - W5 Fri Easy Run",
-        "pace": "7:36"
+        "pace": "7:36",
+        "source": "garmin"
       },
       {
         "time": "38:02",
         "date": "2025-11-06",
         "name": "Si Racha - W4 Thu Easy Run",
-        "pace": "7:36"
+        "pace": "7:36",
+        "source": "garmin"
       },
       {
         "time": "38:05",
         "date": "2026-05-08",
         "name": "W9 Fri Intervals",
-        "pace": "7:37"
+        "pace": "7:37",
+        "source": "garmin"
       },
       {
         "time": "38:13",
         "date": "2026-06-27",
         "name": "Si Racha - W1 Sat Easy Run",
-        "pace": "7:38"
+        "pace": "7:38",
+        "source": "garmin"
+      },
+      {
+        "time": "38:46",
+        "seconds": 2325.5858585858587,
+        "pace": "7:45",
+        "date": "2026-09-05",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1788563819",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "38:48",
         "date": "2025-11-09",
         "name": "Si Racha - W4 Sun Long Run",
-        "pace": "7:45"
+        "pace": "7:45",
+        "source": "garmin"
       },
       {
         "time": "38:49",
         "date": "2026-01-26",
         "name": "Si Racha - W3 Mon Intervals",
-        "pace": "7:45"
+        "pace": "7:45",
+        "source": "garmin"
       },
       {
         "time": "38:57",
         "date": "2026-06-09",
         "name": "Si Racha - W14 Tue Easy Run",
-        "pace": "7:47"
+        "pace": "7:47",
+        "source": "garmin"
       },
       {
         "time": "38:58",
         "date": "2026-03-21",
         "name": "Si Racha - W2 Sat Easy Run",
-        "pace": "7:47"
+        "pace": "7:47",
+        "source": "garmin"
       },
       {
         "time": "39:03",
         "date": "2026-07-19",
         "name": "Si Racha - W4 Sun Easy Run",
-        "pace": "7:48"
+        "pace": "7:48",
+        "source": "garmin"
       },
       {
         "time": "39:03",
         "date": "2026-07-15",
         "name": "Si Racha Running",
-        "pace": "7:48"
+        "pace": "7:48",
+        "source": "garmin"
       },
       {
         "time": "39:14",
         "date": "2025-07-15",
         "name": "Si Racha Running",
-        "pace": "7:50"
+        "pace": "7:50",
+        "source": "garmin"
       },
       {
         "time": "39:26",
         "date": "2026-01-19",
         "name": "Si Racha - W2 Mon Tempo - R",
-        "pace": "7:53"
+        "pace": "7:53",
+        "source": "garmin"
       },
       {
         "time": "39:27",
         "date": "2026-06-06",
         "name": "Si Racha - W13 Sat Easy Run",
-        "pace": "7:53"
+        "pace": "7:53",
+        "source": "garmin"
       },
       {
         "time": "39:32",
         "date": "2026-04-04",
         "name": "Si Racha - W4 Sat Easy Run",
-        "pace": "7:54"
+        "pace": "7:54",
+        "source": "garmin"
+      },
+      {
+        "time": "39:37",
+        "seconds": 2376.9945054945056,
+        "pace": "7:55",
+        "date": "2026-09-04",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1788516022",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "39:46",
         "date": "2025-07-30",
         "name": "Si Racha Running",
-        "pace": "7:57"
+        "pace": "7:57",
+        "source": "garmin"
       },
       {
         "time": "39:50",
         "date": "2026-05-02",
         "name": "Si Racha - W8 Sat Easy Run",
-        "pace": "7:58"
+        "pace": "7:58",
+        "source": "garmin"
       },
       {
         "time": "39:55",
         "date": "2025-08-12",
         "name": "Si Racha - W2 Tue Tempo - P",
-        "pace": "7:59"
+        "pace": "7:59",
+        "source": "garmin"
       },
       {
         "time": "40:03",
         "date": "2025-08-19",
         "name": "Si Racha - W3 Tue Easy Run",
-        "pace": "8:00"
+        "pace": "8:00",
+        "source": "garmin"
       },
       {
         "time": "40:06",
         "date": "2026-01-30",
         "name": "Si Racha - W3 Fri Long Run",
-        "pace": "8:01"
+        "pace": "8:01",
+        "source": "garmin"
+      },
+      {
+        "time": "40:13",
+        "seconds": 2412.6864864864865,
+        "pace": "8:03",
+        "date": "2026-08-07",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1786097654",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "40:32",
         "date": "2025-07-23",
         "name": "Si Racha Running",
-        "pace": "8:06"
+        "pace": "8:06",
+        "source": "garmin"
       },
       {
         "time": "40:32",
         "date": "2026-06-10",
         "name": "Si Racha - W14 Wed Easy Run",
-        "pace": "8:06"
+        "pace": "8:06",
+        "source": "garmin"
       },
       {
         "time": "40:48",
         "date": "2026-03-15",
         "name": "Si Racha - W1 Sun Easy Run",
-        "pace": "8:09"
+        "pace": "8:09",
+        "source": "garmin"
+      },
+      {
+        "time": "41:05",
+        "seconds": 2464.7136150234737,
+        "pace": "8:13",
+        "date": "2026-08-02",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1785629603",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "41:07",
         "date": "2026-05-03",
         "name": "Bang Lamung - W8 Sun Long Run",
-        "pace": "8:13"
+        "pace": "8:13",
+        "source": "garmin"
       },
       {
         "time": "41:14",
         "date": "2026-04-25",
         "name": "Si Racha - W7 Sat Easy Run",
-        "pace": "8:14"
+        "pace": "8:14",
+        "source": "garmin"
       },
       {
         "time": "41:14",
         "date": "2025-08-08",
         "name": "Si Racha - W1 Fri Long Run",
-        "pace": "8:14"
+        "pace": "8:14",
+        "source": "garmin"
       },
       {
         "time": "41:18",
         "date": "2025-07-08",
         "name": "Si Racha Running",
-        "pace": "8:15"
+        "pace": "8:15",
+        "source": "garmin"
       },
       {
         "time": "41:28",
         "date": "2026-07-20",
         "name": "Si Racha - W4 Mon Long Run",
-        "pace": "8:17"
+        "pace": "8:17",
+        "source": "garmin"
       },
       {
         "time": "41:28",
         "date": "2026-05-17",
         "name": "Si Racha - W10 Sun Long Run",
-        "pace": "8:17"
+        "pace": "8:17",
+        "source": "garmin"
+      },
+      {
+        "time": "41:35",
+        "seconds": 2495.4507772020725,
+        "pace": "8:19",
+        "date": "2026-09-06",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1788654041",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "41:40",
         "date": "2025-07-18",
         "name": "Si Racha Running",
-        "pace": "8:20"
+        "pace": "8:20",
+        "source": "garmin"
       },
       {
         "time": "41:47",
         "date": "2026-05-16",
         "name": "Si Racha - W10 Sat Easy Run",
-        "pace": "8:21"
+        "pace": "8:21",
+        "source": "garmin"
+      },
+      {
+        "time": "41:49",
+        "seconds": 2508.927461139897,
+        "pace": "8:22",
+        "date": "2026-09-11",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1789122164",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "41:55",
         "date": "2025-10-17",
         "name": "Si Racha - W1 Fri Easy Run",
-        "pace": "8:23"
+        "pace": "8:23",
+        "source": "garmin"
       },
       {
         "time": "41:56",
         "date": "2025-08-07",
         "name": "Si Racha - W1 Thu Easy Run",
-        "pace": "8:23"
+        "pace": "8:23",
+        "source": "garmin"
       },
       {
         "time": "42:00",
         "date": "2025-08-15",
         "name": "Si Racha - W2 Fri Long Run",
-        "pace": "8:24"
+        "pace": "8:24",
+        "source": "garmin"
       },
       {
         "time": "42:09",
         "date": "2026-05-30",
         "name": "Si Racha - W12 Sat Easy Run",
-        "pace": "8:25"
+        "pace": "8:25",
+        "source": "garmin"
       },
       {
         "time": "42:21",
         "date": "2025-07-16",
         "name": "Si Racha Running",
-        "pace": "8:28"
+        "pace": "8:28",
+        "source": "garmin"
       },
       {
         "time": "42:22",
         "date": "2026-01-18",
         "name": "Si Racha - W1 Sun Easy Run",
-        "pace": "8:28"
+        "pace": "8:28",
+        "source": "garmin"
       },
       {
         "time": "42:43",
         "date": "2026-06-03",
         "name": "Si Racha - W12 Wed Long Run",
-        "pace": "8:32"
+        "pace": "8:32",
+        "source": "garmin"
       },
       {
         "time": "42:54",
         "date": "2025-10-18",
         "name": "Si Racha - W1 Sat Long Run",
-        "pace": "8:34"
+        "pace": "8:34",
+        "source": "garmin"
       },
       {
         "time": "43:05",
         "date": "2025-07-31",
         "name": "Si Racha Running",
-        "pace": "8:37"
+        "pace": "8:37",
+        "source": "garmin"
       },
       {
         "time": "43:47",
         "date": "2026-05-24",
         "name": "Si Racha - W11 Sun Long Run",
-        "pace": "8:45"
+        "pace": "8:45",
+        "source": "garmin"
       },
       {
         "time": "43:50",
         "date": "2026-03-27",
         "name": "Si Racha - W3 Fri Easy Run",
-        "pace": "8:46"
+        "pace": "8:46",
+        "source": "garmin"
       },
       {
         "time": "44:39",
         "date": "2025-07-24",
         "name": "Si Racha Running",
-        "pace": "8:55"
+        "pace": "8:55",
+        "source": "garmin"
       },
       {
         "time": "46:26",
         "date": "2026-02-07",
         "name": "Si Racha - W2 Sat Long Run",
-        "pace": "9:17"
+        "pace": "9:17",
+        "source": "garmin"
       },
       {
         "time": "47:12",
         "date": "2026-07-05",
         "name": "Bang Lamung - W2 Sun Long Run",
-        "pace": "9:26"
+        "pace": "9:26",
+        "source": "garmin"
+      },
+      {
+        "time": "47:25",
+        "seconds": 2844.634482758621,
+        "pace": "9:29",
+        "date": "2026-08-30",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1788050928",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "50:45",
         "date": "2025-07-13",
         "name": "Si Racha Running",
-        "pace": "10:09"
+        "pace": "10:09",
+        "source": "garmin"
       },
       {
         "time": "52:40",
         "date": "2025-07-06",
         "name": "Si Racha Running",
-        "pace": "10:32"
+        "pace": "10:32",
+        "source": "garmin"
       },
       {
         "time": "55:48",
         "date": "2026-02-14",
         "name": "Si Racha - W3 Sat Long Run",
-        "pace": "11:09"
+        "pace": "11:09",
+        "source": "garmin"
       },
       {
         "time": "55:54",
         "date": "2025-07-07",
         "name": "Si Racha Running",
-        "pace": "11:10"
+        "pace": "11:10",
+        "source": "garmin"
+      },
+      {
+        "time": "59:22",
+        "seconds": 3561.596412556054,
+        "pace": "11:52",
+        "date": "2026-09-13",
+        "name": "Trail Run",
+        "source": "zepp",
+        "id": "zepp:1789258587",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "1:00:36",
         "date": "2026-02-28",
         "name": "Si Racha - W5 Sat Long Run",
-        "pace": "12:07"
+        "pace": "12:07",
+        "source": "garmin"
       },
       {
         "time": "1:13:14",
         "date": "2026-01-24",
         "name": "Si Racha Trail Running",
-        "pace": "14:38"
+        "pace": "14:38",
+        "source": "garmin"
       },
       {
         "time": "1:14:03",
         "date": "2026-02-21",
         "name": "Si Racha - W4 Sat Long Run",
-        "pace": "14:48"
+        "pace": "14:48",
+        "source": "garmin"
       },
       {
         "time": "1:26:58",
         "date": "2025-11-22",
         "name": "Si Racha Trail Running",
-        "pace": "17:23"
+        "pace": "17:23",
+        "source": "garmin"
       },
       {
         "time": "1:40:33",
         "date": "2026-01-31",
         "name": "Si Racha Trail Running",
-        "pace": "20:06"
+        "pace": "20:06",
+        "source": "garmin"
       },
       {
         "time": "1:41:59",
         "date": "2025-10-05",
         "name": "Si Racha Trail Running",
-        "pace": "20:23"
+        "pace": "20:23",
+        "source": "garmin"
       }
     ],
     "10 km": [
       {
+        "time": "1:05:11",
+        "seconds": 3911.3993506493507,
+        "pace": "6:31",
+        "date": "2026-08-16",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1786831864",
+        "method": "recorded_distance_elapsed_interpolated"
+      },
+      {
         "time": "1:10:29",
         "date": "2026-06-21",
         "name": "Nakhon Ratchasima - Korat21 HR-L",
-        "pace": "7:02"
+        "pace": "7:02",
+        "source": "garmin"
       },
       {
         "time": "1:11:17",
         "date": "2026-03-14",
         "name": "Bang Lamung - W1 Sat Long Run",
-        "pace": "7:07"
+        "pace": "7:07",
+        "source": "garmin"
       },
       {
         "time": "1:11:43",
         "date": "2026-06-28",
         "name": "Bang Lamung - W1 Sun Long Run",
-        "pace": "7:10"
+        "pace": "7:10",
+        "source": "garmin"
       },
       {
         "time": "1:12:46",
         "date": "2026-04-13",
         "name": "Nakhon Ratchasima - W5 Mon Long ",
-        "pace": "7:16"
+        "pace": "7:16",
+        "source": "garmin"
       },
       {
         "time": "1:12:57",
         "date": "2026-04-05",
         "name": "Si Racha - W4 Sun Long Run",
-        "pace": "7:17"
+        "pace": "7:17",
+        "source": "garmin"
       },
       {
         "time": "1:14:43",
         "date": "2026-03-07",
         "name": "Si Racha - W6 Sat Long Run",
-        "pace": "7:28"
+        "pace": "7:28",
+        "source": "garmin"
       },
       {
         "time": "1:16:10",
         "date": "2026-03-29",
         "name": "Si Racha - W3 Sun Long Run",
-        "pace": "7:37"
+        "pace": "7:37",
+        "source": "garmin"
+      },
+      {
+        "time": "1:16:29",
+        "seconds": 4589.032432432433,
+        "pace": "7:39",
+        "date": "2026-08-23",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1787440334",
+        "method": "recorded_distance_elapsed_interpolated"
+      },
+      {
+        "time": "1:18:33",
+        "seconds": 4712.611842105263,
+        "pace": "7:51",
+        "date": "2026-09-12",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1789166808",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "1:20:13",
         "date": "2026-03-21",
         "name": "Si Racha - W2 Sat Easy Run",
-        "pace": "8:01"
+        "pace": "8:01",
+        "source": "garmin"
       },
       {
         "time": "1:20:55",
         "date": "2026-05-10",
         "name": "Si Racha - W9 Sun Long Run",
-        "pace": "8:05"
+        "pace": "8:05",
+        "source": "garmin"
+      },
+      {
+        "time": "1:21:04",
+        "seconds": 4864.048076923077,
+        "pace": "8:06",
+        "date": "2026-08-09",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1786236856",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "1:21:45",
         "date": "2026-04-26",
         "name": "Bang Lamung - W7 Sun Long Run",
-        "pace": "8:10"
+        "pace": "8:10",
+        "source": "garmin"
       },
       {
         "time": "1:24:01",
         "date": "2026-05-17",
         "name": "Si Racha - W10 Sun Long Run",
-        "pace": "8:24"
+        "pace": "8:24",
+        "source": "garmin"
       },
       {
         "time": "1:24:31",
         "date": "2026-07-20",
         "name": "Si Racha - W4 Mon Long Run",
-        "pace": "8:27"
+        "pace": "8:27",
+        "source": "garmin"
+      },
+      {
+        "time": "1:25:57",
+        "seconds": 5156.839805825243,
+        "pace": "8:36",
+        "date": "2026-09-11",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1789122164",
+        "method": "recorded_distance_elapsed_interpolated"
+      },
+      {
+        "time": "1:26:24",
+        "seconds": 5184.022222222223,
+        "pace": "8:38",
+        "date": "2026-08-02",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1785629603",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "1:27:06",
         "date": "2026-05-03",
         "name": "Bang Lamung - W8 Sun Long Run",
-        "pace": "8:42"
+        "pace": "8:42",
+        "source": "garmin"
       },
       {
         "time": "1:27:55",
         "date": "2026-06-03",
         "name": "Si Racha - W12 Wed Long Run",
-        "pace": "8:47"
+        "pace": "8:47",
+        "source": "garmin"
       },
       {
         "time": "1:30:46",
         "date": "2026-05-24",
         "name": "Si Racha - W11 Sun Long Run",
-        "pace": "9:04"
+        "pace": "9:04",
+        "source": "garmin"
       },
       {
         "time": "1:37:10",
         "date": "2026-07-05",
         "name": "Bang Lamung - W2 Sun Long Run",
-        "pace": "9:43"
+        "pace": "9:43",
+        "source": "garmin"
+      },
+      {
+        "time": "1:38:08",
+        "seconds": 5888.495283018869,
+        "pace": "9:49",
+        "date": "2026-08-30",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1788050928",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "2:22:09",
         "date": "2026-02-14",
         "name": "Si Racha - W3 Sat Long Run",
-        "pace": "14:12"
+        "pace": "14:12",
+        "source": "garmin"
       },
       {
         "time": "2:36:18",
         "date": "2026-02-28",
         "name": "Si Racha - W5 Sat Long Run",
-        "pace": "15:37"
+        "pace": "15:37",
+        "source": "garmin"
       }
     ],
     "Half": [
@@ -3282,13 +4230,15 @@
         "time": "2:32:43",
         "date": "2026-06-21",
         "name": "Nakhon Ratchasima - Korat21 HR-L",
-        "pace": "7:14"
+        "pace": "7:14",
+        "source": "garmin"
       },
       {
         "time": "3:26:38",
         "date": "2026-05-24",
         "name": "Si Racha - W11 Sun Long Run",
-        "pace": "9:47"
+        "pace": "9:47",
+        "source": "garmin"
       }
     ],
     "Longest": [
@@ -3314,7 +4264,8 @@
         "time": "16.1 km",
         "pace": "9:15",
         "date": "2026-09-11",
-        "name": "Run"
+        "name": "Run",
+        "source": "zepp"
       },
       {
         "time": "15.5 km",
@@ -3332,7 +4283,8 @@
         "time": "14.0 km",
         "pace": "8:11",
         "date": "2026-08-23",
-        "name": "Run"
+        "name": "Run",
+        "source": "zepp"
       },
       {
         "time": "13.3 km",
@@ -3344,7 +4296,8 @@
         "time": "13.1 km",
         "pace": "8:44",
         "date": "2026-08-02",
-        "name": "Run"
+        "name": "Run",
+        "source": "zepp"
       },
       {
         "time": "13.0 km",
@@ -3404,7 +4357,8 @@
         "time": "10.4 km",
         "pace": "9:54",
         "date": "2026-08-30",
-        "name": "Run"
+        "name": "Run",
+        "source": "zepp"
       },
       {
         "time": "10.3 km",
@@ -3416,19 +4370,22 @@
         "time": "10.2 km",
         "pace": "8:13",
         "date": "2026-08-09",
-        "name": "Run"
+        "name": "Run",
+        "source": "zepp"
       },
       {
         "time": "10.2 km",
         "pace": "6:31",
         "date": "2026-08-16",
-        "name": "Run"
+        "name": "Run",
+        "source": "zepp"
       },
       {
         "time": "10.2 km",
         "pace": "7:58",
         "date": "2026-09-12",
-        "name": "Run"
+        "name": "Run",
+        "source": "zepp"
       },
       {
         "time": "10.1 km",
@@ -3458,7 +4415,8 @@
         "time": "9.6 km",
         "pace": "7:37",
         "date": "2026-08-28",
-        "name": "Run"
+        "name": "Run",
+        "source": "zepp"
       },
       {
         "time": "9.4 km",
@@ -3470,7 +4428,8 @@
         "time": "9.4 km",
         "pace": "7:48",
         "date": "2026-08-21",
-        "name": "Run"
+        "name": "Run",
+        "source": "zepp"
       },
       {
         "time": "9.3 km",
@@ -3500,13 +4459,15 @@
         "time": "9.1 km",
         "pace": "8:35",
         "date": "2026-09-06",
-        "name": "Run"
+        "name": "Run",
+        "source": "zepp"
       },
       {
         "time": "8.8 km",
         "pace": "14:33",
         "date": "2026-09-13",
-        "name": "Trail Run"
+        "name": "Trail Run",
+        "source": "zepp"
       },
       {
         "time": "8.6 km",
@@ -3542,7 +4503,8 @@
         "time": "8.2 km",
         "pace": "8:08",
         "date": "2026-08-14",
-        "name": "Run"
+        "name": "Run",
+        "source": "zepp"
       },
       {
         "time": "8.1 km",
@@ -3572,13 +4534,15 @@
         "time": "7.8 km",
         "pace": "7:16",
         "date": "2026-07-31",
-        "name": "Run"
+        "name": "Run",
+        "source": "zepp"
       },
       {
         "time": "7.8 km",
         "pace": "8:15",
         "date": "2026-08-07",
-        "name": "Run"
+        "name": "Run",
+        "source": "zepp"
       },
       {
         "time": "7.7 km",
@@ -3650,7 +4614,8 @@
         "time": "7.3 km",
         "pace": "7:23",
         "date": "2026-07-28",
-        "name": "Run"
+        "name": "Run",
+        "source": "zepp"
       },
       {
         "time": "7.2 km",
@@ -3674,7 +4639,8 @@
         "time": "7.2 km",
         "pace": "8:00",
         "date": "2026-09-05",
-        "name": "Run"
+        "name": "Run",
+        "source": "zepp"
       },
       {
         "time": "7.1 km",
@@ -3842,7 +4808,8 @@
         "time": "5.7 km",
         "pace": "8:11",
         "date": "2026-09-04",
-        "name": "Run"
+        "name": "Run",
+        "source": "zepp"
       },
       {
         "time": "5.6 km",
@@ -4232,13 +5199,15 @@
         "time": "1.6 km",
         "pace": "9:07",
         "date": "2026-08-16",
-        "name": "Run"
+        "name": "Run",
+        "source": "zepp"
       },
       {
         "time": "1.5 km",
         "pace": "9:53",
         "date": "2026-08-16",
-        "name": "Run"
+        "name": "Run",
+        "source": "zepp"
       },
       {
         "time": "1.3 km",
@@ -4328,7 +5297,7 @@
   },
   "best": {
     "fastest_1km": "4:53",
-    "fastest_1mi": "8:51",
+    "fastest_1mi": "8:43",
     "longest_run_km": 21.9,
     "longest_run_date": "2026-06-21",
     "fastest_avg_pace": "6:51",
