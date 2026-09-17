@@ -56,7 +56,17 @@ class ImportTests(unittest.TestCase):
                 runs=[r for b in z.BUCKETS for r in a[b] if r.get('source')=='zepp']
                 self.assertEqual(s['lifetime']['runs'],base['lifetime']['runs']+len(runs))
                 self.assertEqual(len(runs),len({r['id'] for r in runs}))
+                # A partial cloud refresh must retain historical metrics, then
+                # replace the cached value when the metric returns next sync.
+                health=z.load('wellness.json')
+                day=next(r for r in health['daily_snapshots'] if r.get('source')=='zepp')
+                day['metrics']['retention_test']={'value':12,'unit':'test'}
+                z.save('wellness.json',health)
+                z.import_data(data)
+                cached=next(r for r in z.load('wellness.json')['daily_snapshots'] if r['date']==day['date'])
+                self.assertEqual(cached['metrics']['retention_test'],{'value':12,'unit':'test','retained_from_previous_sync':True})
                 for n in z.load('sleep.json')['nights']:
+
                     if n.get('source')=='zepp':
                         sessions=[r for r in data['sleep_sessions'] if z.local(r['end_time']).date().isoformat()==n['d']]
                         self.assertEqual(n['duration_minutes'],max(r['duration_minutes'] for r in sessions))

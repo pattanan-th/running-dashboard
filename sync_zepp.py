@@ -118,6 +118,13 @@ def import_data(data):
     # Prefer user-fused summaries when both fused and device records exist.
     for r in sorted(data['daily_metrics'], key=lambda r:(r['source_scope']=='user_fused', r['id'])):
         metric_days[r['date']][r['metric']] = dict(value=r['value'], unit=r['unit'])
+    # Incremental responses may omit older metrics: preserve cached history,
+    # while values returned by the current snapshot always take precedence.
+    for previous in wellness.get('daily_snapshots', []):
+        if previous.get('source') == 'zepp':
+            for key, value in previous.get('metrics', {}).items():
+                if key not in metric_days[previous['date']]:
+                    metric_days[previous['date']][key] = dict(value, retained_from_previous_sync=True)
     oldsnaps = {r['date']:r for r in wellness.get('daily_snapshots',[]) if r.get('source')!='zepp'}
     for day, metrics in metric_days.items():
         val = lambda key: metrics.get(key,{}).get('value')
