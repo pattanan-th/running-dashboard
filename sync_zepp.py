@@ -212,7 +212,10 @@ def coach_card(sleep, wellness, runs):
             ('REM',n['rm'],'ค่าประเมินจากนาฬิกา'),('Awake',n['aw'],'ไม่แทนค่าที่ขาดด้วยศูนย์'),
             ('Stress',show(stress),'วันเดียวกับคืนที่แสดง')]
     trend = ' → '.join(f"{x['d'][5:]}: {show(x['r'])}" for x in sleep['nights'][-4:])
+    from zepp_daily_analysis import render
+    daily = render(sleep, wellness)
     return '<div class="card" id="coach-analysis-card"><h2>🧠 Coach\'s Analysis · '+n['d']+'</h2><table><thead><tr><th>Metric</th><th>ค่า</th><th>สถานะ</th></tr></thead><tbody>'+''.join('<tr>'+''.join('<td>'+html.escape(v)+'</td>' for v in row)+'</tr>' for row in rows)+'''</tbody></table>
+    '''+daily+'''
     <p>🚦 Readiness: ข้อมูลประกอบการประเมิน — ไม่ตัดสินความพร้อมจาก RHR ค่าเดียว</p>
     <p style="font-family:var(--mono)">RHR '''+html.escape(trend)+'''</p>
     <p>เปลี่ยนจาก Garmin เป็น Zepp: วิธีประเมิน Sleep/Stress ต่างกัน จึงไม่ใช้ baseline เดิมสรุปว่าล้าหรือป่วย และไม่ยืนยันสาเหตุของ RHR จากเวลาเข้านอนอย่างเดียว</p>

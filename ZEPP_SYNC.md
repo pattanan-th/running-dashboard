@@ -41,3 +41,5 @@ The routine creates a factual Coach card; session-specific interpretation can be
 in coach_analysis.html after import and before build.
 Validation: python -m unittest test_sync_zepp -v (local Zepp database required).
 
+
+Every sync: include date-aligned daily comparisons of sleep duration, RHR, Stress and HRV in the Coach card and chat. Readiness uses its reported date; never fill missing current-day values from yesterday. Sleep end is the latest recorded end, not a confirmed wake time; Zepp can revise an incomplete night on later syncs.
