@@ -1,10 +1,11 @@
 {
   "meta": {
-    "generated": "2026-09-17",
+    "generated": "2026-09-21",
     "source": "Garmin archive + Zepp",
     "split_rankings_source": "Garmin archive + Zepp recorded distance",
     "zones_source": "Garmin archive",
-    "coverage_note": "Totals, Longest and distance efforts: Garmin + Zepp. Zepp efforts use interpolated recorded distance and elapsed time; gaps over 15s excluded. Fastest average and HR zones: Garmin archive only."
+    "coverage_note": "Totals, Longest and distance efforts: Garmin + Zepp. Zepp efforts use interpolated recorded distance and elapsed time; gaps over 15s excluded. Fastest average and HR zones: Garmin archive only.",
+    "time_rankings_source": "Zepp recorded distance; Garmin timeline unavailable in archive"
   },
   "runs_list": [
     {
@@ -1178,6 +1179,33 @@
       "gain": 519.47,
       "source": "zepp",
       "id": "zepp:1789258587"
+    },
+    {
+      "d": "2026-09-18",
+      "km": 7.65,
+      "min": 58.67,
+      "cal": 659,
+      "gain": 11.19,
+      "source": "zepp",
+      "id": "zepp:1789725442"
+    },
+    {
+      "d": "2026-09-19",
+      "km": 9.659,
+      "min": 222.85,
+      "cal": 1514,
+      "gain": 526.45,
+      "source": "zepp",
+      "id": "zepp:1789778233"
+    },
+    {
+      "d": "2026-09-20",
+      "km": 17.126,
+      "min": 152.5,
+      "cal": 1479,
+      "gain": 124.72,
+      "source": "zepp",
+      "id": "zepp:1789862396"
     }
   ],
   "rankings": {
@@ -1310,6 +1338,16 @@
         "name": "Run",
         "source": "zepp",
         "id": "zepp:1789166808",
+        "method": "recorded_distance_elapsed_interpolated"
+      },
+      {
+        "time": "6:03",
+        "seconds": 362.7637795275591,
+        "pace": "6:03",
+        "date": "2026-09-18",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1789725442",
         "method": "recorded_distance_elapsed_interpolated"
       },
       {
@@ -1864,6 +1902,16 @@
       },
       {
         "time": "7:32",
+        "seconds": 452.1708333333331,
+        "pace": "7:32",
+        "date": "2026-09-20",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1789862396",
+        "method": "recorded_distance_elapsed_interpolated"
+      },
+      {
+        "time": "7:32",
         "seconds": 452.49748743718646,
         "pace": "7:32",
         "date": "2026-09-05",
@@ -2185,6 +2233,16 @@
         "source": "garmin"
       },
       {
+        "time": "14:10",
+        "seconds": 850.4226804123718,
+        "pace": "14:10",
+        "date": "2026-09-19",
+        "name": "Trail Run",
+        "source": "zepp",
+        "id": "zepp:1789778233",
+        "method": "recorded_distance_elapsed_interpolated"
+      },
+      {
         "time": "14:29",
         "date": "2025-03-31",
         "name": "Treadmill Running",
@@ -2266,6 +2324,16 @@
         "name": "Run",
         "source": "zepp",
         "id": "zepp:1786701677",
+        "method": "recorded_distance_elapsed_interpolated"
+      },
+      {
+        "time": "9:48",
+        "seconds": 587.9433333333334,
+        "pace": "6:05",
+        "date": "2026-09-18",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1789725442",
         "method": "recorded_distance_elapsed_interpolated"
       },
       {
@@ -2909,6 +2977,16 @@
       },
       {
         "time": "12:27",
+        "seconds": 746.9441624365486,
+        "pace": "7:44",
+        "date": "2026-09-20",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1789862396",
+        "method": "recorded_distance_elapsed_interpolated"
+      },
+      {
+        "time": "12:27",
         "date": "2026-05-30",
         "name": "Si Racha - W12 Sat Easy Run",
         "pace": "7:44",
@@ -3209,6 +3287,16 @@
         "name": "Si Racha Trail Running",
         "pace": "15:49",
         "source": "garmin"
+      },
+      {
+        "time": "25:51",
+        "seconds": 1551.322834645669,
+        "pace": "16:04",
+        "date": "2026-09-19",
+        "name": "Trail Run",
+        "source": "zepp",
+        "id": "zepp:1789778233",
+        "method": "recorded_distance_elapsed_interpolated"
       }
     ],
     "5 km": [
@@ -3314,6 +3402,16 @@
         "name": "Si Racha - W6 Sat Long Run",
         "pace": "6:53",
         "source": "garmin"
+      },
+      {
+        "time": "34:30",
+        "seconds": 2070.351485148515,
+        "pace": "6:54",
+        "date": "2026-09-18",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1789725442",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "34:43",
@@ -3839,6 +3937,16 @@
         "method": "recorded_distance_elapsed_interpolated"
       },
       {
+        "time": "41:51",
+        "seconds": 2510.6875,
+        "pace": "8:22",
+        "date": "2026-09-20",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1789862396",
+        "method": "recorded_distance_elapsed_interpolated"
+      },
+      {
         "time": "41:55",
         "date": "2025-10-17",
         "name": "Si Racha - W1 Fri Easy Run",
@@ -4006,6 +4114,16 @@
         "source": "garmin"
       },
       {
+        "time": "1:25:44",
+        "seconds": 5144.056338028171,
+        "pace": "17:09",
+        "date": "2026-09-19",
+        "name": "Trail Run",
+        "source": "zepp",
+        "id": "zepp:1789778233",
+        "method": "recorded_distance_elapsed_interpolated"
+      },
+      {
         "time": "1:26:58",
         "date": "2025-11-22",
         "name": "Si Racha Trail Running",
@@ -4153,6 +4271,16 @@
         "source": "garmin"
       },
       {
+        "time": "1:24:53",
+        "seconds": 5092.566176470588,
+        "pace": "8:29",
+        "date": "2026-09-20",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1789862396",
+        "method": "recorded_distance_elapsed_interpolated"
+      },
+      {
         "time": "1:25:57",
         "seconds": 5156.839805825243,
         "pace": "8:36",
@@ -4259,6 +4387,13 @@
         "pace": "8:28",
         "date": "2026-05-10",
         "name": "Si Racha - W9 Sun Long Run"
+      },
+      {
+        "time": "17.1 km",
+        "pace": "8:54",
+        "date": "2026-09-20",
+        "name": "Run",
+        "source": "zepp"
       },
       {
         "time": "16.1 km",
@@ -4406,6 +4541,13 @@
         "name": "W9 Fri Intervals"
       },
       {
+        "time": "9.7 km",
+        "pace": "23:04",
+        "date": "2026-09-19",
+        "name": "Trail Run",
+        "source": "zepp"
+      },
+      {
         "time": "9.6 km",
         "pace": "8:24",
         "date": "2026-04-10",
@@ -4549,6 +4691,13 @@
         "pace": "7:44",
         "date": "2026-04-11",
         "name": "Nakhon Ratchasima - W5 Sat Easy "
+      },
+      {
+        "time": "7.7 km",
+        "pace": "7:40",
+        "date": "2026-09-18",
+        "name": "Run",
+        "source": "zepp"
       },
       {
         "time": "7.6 km",
@@ -5236,11 +5385,11 @@
     ]
   },
   "lifetime": {
-    "runs": 162,
-    "km": 1105.3,
-    "hours": 171.02,
-    "calories": 85463.0,
-    "elevation_m": 23853.73,
+    "runs": 165,
+    "km": 1139.74,
+    "hours": 178.26,
+    "calories": 89115.0,
+    "elevation_m": 24516.09,
     "since": "2023-05-04"
   },
   "zones_sec": [
@@ -5267,9 +5416,9 @@
       "hours": 40.34
     },
     "2026": {
-      "runs": 96,
-      "km": 775.58,
-      "hours": 113.71
+      "runs": 99,
+      "km": 810.02,
+      "hours": 120.95
     }
   },
   "by_month": {
@@ -5293,7 +5442,7 @@
     "2026-06": 109.46,
     "2026-07": 69.58,
     "2026-08": 96.01,
-    "2026-09": 57.17
+    "2026-09": 91.61
   },
   "best": {
     "fastest_1km": "4:53",
@@ -5302,5 +5451,809 @@
     "longest_run_date": "2026-06-21",
     "fastest_avg_pace": "6:51",
     "fastest_avg_pace_km": 5.4
+  },
+  "time_rankings": {
+    "5 min": [
+      {
+        "distance_m": 946.1999999999998,
+        "pace": "5:17",
+        "date": "2026-07-31",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1785493163"
+      },
+      {
+        "distance_m": 945.9200000000001,
+        "pace": "5:17",
+        "date": "2026-08-16",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1786831864"
+      },
+      {
+        "distance_m": 934.5299999999997,
+        "pace": "5:21",
+        "date": "2026-09-04",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1788516022"
+      },
+      {
+        "distance_m": 933.19,
+        "pace": "5:21",
+        "date": "2026-08-14",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1786701677"
+      },
+      {
+        "distance_m": 871.8000000000002,
+        "pace": "5:44",
+        "date": "2026-08-28",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1787912263"
+      },
+      {
+        "distance_m": 854.94,
+        "pace": "5:51",
+        "date": "2026-09-12",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1789166808"
+      },
+      {
+        "distance_m": 827.8600000000001,
+        "pace": "6:02",
+        "date": "2026-09-18",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1789725442"
+      },
+      {
+        "distance_m": 792.1500000000005,
+        "pace": "6:19",
+        "date": "2026-08-09",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1786236856"
+      },
+      {
+        "distance_m": 787.0999999999995,
+        "pace": "6:21",
+        "date": "2026-09-11",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1789122164"
+      },
+      {
+        "distance_m": 780.5299999999997,
+        "pace": "6:24",
+        "date": "2026-07-28",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1785195286"
+      },
+      {
+        "distance_m": 775.9400000000005,
+        "pace": "6:27",
+        "date": "2026-08-07",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1786097654"
+      },
+      {
+        "distance_m": 739.25,
+        "pace": "6:46",
+        "date": "2026-08-23",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1787440334"
+      },
+      {
+        "distance_m": 727.4000000000005,
+        "pace": "6:52",
+        "date": "2026-08-21",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1787306686"
+      },
+      {
+        "distance_m": 709.2300000000005,
+        "pace": "7:03",
+        "date": "2026-09-20",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1789862396"
+      },
+      {
+        "distance_m": 678.7899999999995,
+        "pace": "7:22",
+        "date": "2026-09-05",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1788563819"
+      },
+      {
+        "distance_m": 664.84,
+        "pace": "7:31",
+        "date": "2026-08-02",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1785629603"
+      },
+      {
+        "distance_m": 645.12,
+        "pace": "7:45",
+        "date": "2026-08-16",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1786843563"
+      },
+      {
+        "distance_m": 627.1000000000004,
+        "pace": "7:58",
+        "date": "2026-09-06",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1788654041"
+      },
+      {
+        "distance_m": 614.33,
+        "pace": "8:08",
+        "date": "2026-08-16",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1786827616"
+      },
+      {
+        "distance_m": 599.69,
+        "pace": "8:20",
+        "date": "2026-08-30",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1788050928"
+      },
+      {
+        "distance_m": 573.0,
+        "pace": "8:44",
+        "date": "2026-09-13",
+        "name": "Trail Run",
+        "source": "zepp",
+        "id": "zepp:1789258587"
+      },
+      {
+        "distance_m": 381.5199999999995,
+        "pace": "13:06",
+        "date": "2026-09-19",
+        "name": "Trail Run",
+        "source": "zepp",
+        "id": "zepp:1789778233"
+      }
+    ],
+    "10 min": [
+      {
+        "distance_m": 1834.4799999999996,
+        "pace": "5:27",
+        "date": "2026-09-04",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1788516022"
+      },
+      {
+        "distance_m": 1722.9699999999993,
+        "pace": "5:48",
+        "date": "2026-08-16",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1786831864"
+      },
+      {
+        "distance_m": 1709.46,
+        "pace": "5:51",
+        "date": "2026-07-31",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1785493163"
+      },
+      {
+        "distance_m": 1653.6999999999998,
+        "pace": "6:03",
+        "date": "2026-08-14",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1786701677"
+      },
+      {
+        "distance_m": 1642.9399999999996,
+        "pace": "6:05",
+        "date": "2026-09-18",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1789725442"
+      },
+      {
+        "distance_m": 1632.94,
+        "pace": "6:07",
+        "date": "2026-09-12",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1789166808"
+      },
+      {
+        "distance_m": 1600.7300000000005,
+        "pace": "6:15",
+        "date": "2026-08-28",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1787912263"
+      },
+      {
+        "distance_m": 1549.7299999999996,
+        "pace": "6:27",
+        "date": "2026-08-09",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1786236856"
+      },
+      {
+        "distance_m": 1546.9400000000005,
+        "pace": "6:28",
+        "date": "2026-07-28",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1785195286"
+      },
+      {
+        "distance_m": 1482.0299999999997,
+        "pace": "6:45",
+        "date": "2026-08-07",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1786097654"
+      },
+      {
+        "distance_m": 1434.63,
+        "pace": "6:58",
+        "date": "2026-08-23",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1787440334"
+      },
+      {
+        "distance_m": 1427.21,
+        "pace": "7:00",
+        "date": "2026-09-11",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1789122164"
+      },
+      {
+        "distance_m": 1426.3599999999997,
+        "pace": "7:01",
+        "date": "2026-08-21",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1787306686"
+      },
+      {
+        "distance_m": 1315.8300000000008,
+        "pace": "7:36",
+        "date": "2026-09-20",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1789862396"
+      },
+      {
+        "distance_m": 1309.6100000000001,
+        "pace": "7:38",
+        "date": "2026-09-05",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1788563819"
+      },
+      {
+        "distance_m": 1295.97,
+        "pace": "7:43",
+        "date": "2026-08-02",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1785629603"
+      },
+      {
+        "distance_m": 1230.03,
+        "pace": "8:08",
+        "date": "2026-09-06",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1788654041"
+      },
+      {
+        "distance_m": 1179.98,
+        "pace": "8:28",
+        "date": "2026-08-16",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1786843563"
+      },
+      {
+        "distance_m": 1126.8000000000002,
+        "pace": "8:52",
+        "date": "2026-08-30",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1788050928"
+      },
+      {
+        "distance_m": 1089.03,
+        "pace": "9:11",
+        "date": "2026-08-16",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1786827616"
+      },
+      {
+        "distance_m": 1060.52,
+        "pace": "9:26",
+        "date": "2026-09-13",
+        "name": "Trail Run",
+        "source": "zepp",
+        "id": "zepp:1789258587"
+      },
+      {
+        "distance_m": 736.6599999999999,
+        "pace": "13:34",
+        "date": "2026-09-19",
+        "name": "Trail Run",
+        "source": "zepp",
+        "id": "zepp:1789778233"
+      }
+    ],
+    "20 min": [
+      {
+        "distance_m": 3264.4300000000003,
+        "pace": "6:08",
+        "date": "2026-07-31",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1785493163"
+      },
+      {
+        "distance_m": 3255.7599999999993,
+        "pace": "6:09",
+        "date": "2026-08-16",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1786831864"
+      },
+      {
+        "distance_m": 3191.21,
+        "pace": "6:16",
+        "date": "2026-08-14",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1786701677"
+      },
+      {
+        "distance_m": 3149.96,
+        "pace": "6:21",
+        "date": "2026-08-28",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1787912263"
+      },
+      {
+        "distance_m": 3127.3100000000004,
+        "pace": "6:24",
+        "date": "2026-09-12",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1789166808"
+      },
+      {
+        "distance_m": 3049.1600000000003,
+        "pace": "6:34",
+        "date": "2026-09-18",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1789725442"
+      },
+      {
+        "distance_m": 3044.4,
+        "pace": "6:34",
+        "date": "2026-07-28",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1785195286"
+      },
+      {
+        "distance_m": 3013.8499999999995,
+        "pace": "6:38",
+        "date": "2026-08-09",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1786236856"
+      },
+      {
+        "distance_m": 3011.79,
+        "pace": "6:38",
+        "date": "2026-09-04",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1788516022"
+      },
+      {
+        "distance_m": 2810.01,
+        "pace": "7:07",
+        "date": "2026-08-21",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1787306686"
+      },
+      {
+        "distance_m": 2783.7400000000002,
+        "pace": "7:11",
+        "date": "2026-08-23",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1787440334"
+      },
+      {
+        "distance_m": 2670.1400000000003,
+        "pace": "7:29",
+        "date": "2026-08-07",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1786097654"
+      },
+      {
+        "distance_m": 2598.7400000000002,
+        "pace": "7:42",
+        "date": "2026-09-05",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1788563819"
+      },
+      {
+        "distance_m": 2560.2,
+        "pace": "7:49",
+        "date": "2026-09-11",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1789122164"
+      },
+      {
+        "distance_m": 2526.75,
+        "pace": "7:55",
+        "date": "2026-08-02",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1785629603"
+      },
+      {
+        "distance_m": 2514.1800000000003,
+        "pace": "7:57",
+        "date": "2026-09-20",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1789862396"
+      },
+      {
+        "distance_m": 2448.03,
+        "pace": "8:10",
+        "date": "2026-09-06",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1788654041"
+      },
+      {
+        "distance_m": 2224.98,
+        "pace": "8:59",
+        "date": "2026-08-30",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1788050928"
+      },
+      {
+        "distance_m": 2049.21,
+        "pace": "9:46",
+        "date": "2026-09-13",
+        "name": "Trail Run",
+        "source": "zepp",
+        "id": "zepp:1789258587"
+      },
+      {
+        "distance_m": 1278.3400000000001,
+        "pace": "15:39",
+        "date": "2026-09-19",
+        "name": "Trail Run",
+        "source": "zepp",
+        "id": "zepp:1789778233"
+      }
+    ],
+    "30 min": [
+      {
+        "distance_m": 4790.929999999999,
+        "pace": "6:16",
+        "date": "2026-08-16",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1786831864"
+      },
+      {
+        "distance_m": 4728.7699999999995,
+        "pace": "6:21",
+        "date": "2026-07-31",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1785493163"
+      },
+      {
+        "distance_m": 4593.959999999999,
+        "pace": "6:32",
+        "date": "2026-08-28",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1787912263"
+      },
+      {
+        "distance_m": 4586.34,
+        "pace": "6:32",
+        "date": "2026-08-14",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1786701677"
+      },
+      {
+        "distance_m": 4491.27,
+        "pace": "6:41",
+        "date": "2026-09-18",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1789725442"
+      },
+      {
+        "distance_m": 4406.99,
+        "pace": "6:48",
+        "date": "2026-08-09",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1786236856"
+      },
+      {
+        "distance_m": 4333.79,
+        "pace": "6:55",
+        "date": "2026-09-12",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1789166808"
+      },
+      {
+        "distance_m": 4310.3,
+        "pace": "6:58",
+        "date": "2026-07-28",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1785195286"
+      },
+      {
+        "distance_m": 4135.01,
+        "pace": "7:15",
+        "date": "2026-08-23",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1787440334"
+      },
+      {
+        "distance_m": 4112.38,
+        "pace": "7:18",
+        "date": "2026-09-04",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1788516022"
+      },
+      {
+        "distance_m": 4091.9499999999994,
+        "pace": "7:20",
+        "date": "2026-08-21",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1787306686"
+      },
+      {
+        "distance_m": 3879.0099999999998,
+        "pace": "7:44",
+        "date": "2026-09-05",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1788563819"
+      },
+      {
+        "distance_m": 3836.95,
+        "pace": "7:49",
+        "date": "2026-08-07",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1786097654"
+      },
+      {
+        "distance_m": 3741.9800000000005,
+        "pace": "8:01",
+        "date": "2026-09-20",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1789862396"
+      },
+      {
+        "distance_m": 3699.81,
+        "pace": "8:07",
+        "date": "2026-08-02",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1785629603"
+      },
+      {
+        "distance_m": 3690.7299999999996,
+        "pace": "8:08",
+        "date": "2026-09-11",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1789122164"
+      },
+      {
+        "distance_m": 3656.02,
+        "pace": "8:12",
+        "date": "2026-09-06",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1788654041"
+      },
+      {
+        "distance_m": 3252.4999999999995,
+        "pace": "9:13",
+        "date": "2026-08-30",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1788050928"
+      },
+      {
+        "distance_m": 2636.34,
+        "pace": "11:23",
+        "date": "2026-09-13",
+        "name": "Trail Run",
+        "source": "zepp",
+        "id": "zepp:1789258587"
+      },
+      {
+        "distance_m": 1847.63,
+        "pace": "16:14",
+        "date": "2026-09-19",
+        "name": "Trail Run",
+        "source": "zepp",
+        "id": "zepp:1789778233"
+      }
+    ],
+    "60 min": [
+      {
+        "distance_m": 9228.6,
+        "pace": "6:30",
+        "date": "2026-08-16",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1786831864"
+      },
+      {
+        "distance_m": 8463.63,
+        "pace": "7:05",
+        "date": "2026-08-28",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1787912263"
+      },
+      {
+        "distance_m": 8083.650000000001,
+        "pace": "7:25",
+        "date": "2026-09-12",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1789166808"
+      },
+      {
+        "distance_m": 7990.85,
+        "pace": "7:31",
+        "date": "2026-08-23",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1787440334"
+      },
+      {
+        "distance_m": 7912.56,
+        "pace": "7:35",
+        "date": "2026-08-09",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1786236856"
+      },
+      {
+        "distance_m": 7719.45,
+        "pace": "7:46",
+        "date": "2026-08-21",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1787306686"
+      },
+      {
+        "distance_m": 7564.299999999999,
+        "pace": "7:56",
+        "date": "2026-08-14",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1786701677"
+      },
+      {
+        "distance_m": 7316.3099999999995,
+        "pace": "8:12",
+        "date": "2026-08-07",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1786097654"
+      },
+      {
+        "distance_m": 7257.580000000001,
+        "pace": "8:16",
+        "date": "2026-09-20",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1789862396"
+      },
+      {
+        "distance_m": 7181.35,
+        "pace": "8:21",
+        "date": "2026-09-06",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1788654041"
+      },
+      {
+        "distance_m": 7107.05,
+        "pace": "8:27",
+        "date": "2026-09-11",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1789122164"
+      },
+      {
+        "distance_m": 7040.9400000000005,
+        "pace": "8:31",
+        "date": "2026-08-02",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1785629603"
+      },
+      {
+        "distance_m": 6263.96,
+        "pace": "9:35",
+        "date": "2026-08-30",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1788050928"
+      },
+      {
+        "distance_m": 5073.07,
+        "pace": "11:50",
+        "date": "2026-09-13",
+        "name": "Trail Run",
+        "source": "zepp",
+        "id": "zepp:1789258587"
+      },
+      {
+        "distance_m": 3572.29,
+        "pace": "16:48",
+        "date": "2026-09-19",
+        "name": "Trail Run",
+        "source": "zepp",
+        "id": "zepp:1789778233"
+      }
+    ]
   }
 }

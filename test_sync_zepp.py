@@ -6,6 +6,20 @@ from pathlib import Path
 import sync_zepp as z
 
 class EffortTests(unittest.TestCase):
+    def test_time_efforts_rolling_and_interpolation(self):
+        from zepp_efforts import furthest
+        points = [(0,0),(100,100),(150,400),(250,500)]
+        self.assertAlmostEqual(furthest(points,100),350)
+        self.assertEqual(furthest(points,250),500)
+        self.assertIsNone(furthest(points,251))
+        self.assertEqual(furthest([(0,0),(50,100),(100,100),(150,200)],150),200)
+
+    def test_time_efforts_skip_gaps(self):
+        from zepp_efforts import time_efforts
+        result = time_efforts({'currentDistance':'0,0;150,100000;150,200000;'},
+                              {'distance_meters':2000,'elapsed_seconds':300})
+        self.assertEqual(result,{})
+
     def test_rolling_crosses_lap_boundary(self):
         from zepp_efforts import fastest
         self.assertEqual(fastest([(0,0),(300,500),(400,1000),(500,1500),(800,2000)],1000),200)

@@ -6,7 +6,7 @@ import json
 import os
 import sqlite3
 import zlib
-from zepp_efforts import efforts, DISTANCES
+from zepp_efforts import efforts, time_efforts, DISTANCES, TIMES
 import subprocess
 from collections import defaultdict
 from datetime import datetime, timezone, timedelta
@@ -110,6 +110,16 @@ def merge_stats(base, runs):
     s['meta'].update(generated=datetime.now(TZ).date().isoformat(), source='Garmin archive + Zepp',
                      split_rankings_source='Garmin archive + Zepp recorded distance', zones_source='Garmin archive',
                      coverage_note='Totals, Longest and distance efforts: Garmin + Zepp. Zepp efforts use interpolated recorded distance and elapsed time; gaps over 15s excluded. Fastest average and HR zones: Garmin archive only.')
+    s['time_rankings'] = {}
+    for label, seconds in TIMES.items():
+        ranks = []
+        for r in runs:
+            metres = r.get('best_time_efforts', {}).get(label)
+            if metres is not None:
+                ranks.append(dict(distance_m=metres, pace=pace(seconds, metres/1000),
+                                  date=r['date'], name=r['name'], source='zepp', id=r['id']))
+        s['time_rankings'][label] = sorted(ranks, key=lambda e: e['distance_m'], reverse=True)
+    s['meta']['time_rankings_source'] = 'Zepp recorded distance; Garmin timeline unavailable in archive'
     return s
 
 def import_data(data):
@@ -185,8 +195,11 @@ def import_data(data):
             if detail is None: raise ValueError('Distance series unavailable')
             r['best_efforts'] = efforts(detail, dict(distance_meters=w['distance_meters'],
                 elapsed_seconds=(local(w['end_time'])-local(w['start_time'])).total_seconds()))
+            r['best_time_efforts'] = time_efforts(detail, dict(distance_meters=w['distance_meters'],
+                elapsed_seconds=(local(w['end_time'])-local(w['start_time'])).total_seconds()))
         except ValueError as error:
             r['best_efforts'] = {}
+            r['best_time_efforts'] = {}
             r['best_efforts_unavailable'] = str(error)
         runs.append(r)
         a['long_runs' if km>=13 else 'easy_runs'].append(r)

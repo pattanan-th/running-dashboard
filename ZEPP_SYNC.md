@@ -22,6 +22,10 @@ Raw cloud payloads, GPS coordinates, user IDs and tokens are not exported.
 Cross-source run dates overlapping the Garmin archive fail closed for manual reconciliation.
 
 ## Current boundaries
+Best Efforts by Time ranks the furthest recorded distance in rolling 5, 10, 20,
+30 and 60 minute elapsed-time windows. One result per run; interpolated endpoints,
+pauses included, gaps over 15 seconds excluded. Zepp-only because the archived
+Garmin summary has no distance timeline. Rebuilt automatically on every import.
 Totals, Longest and Best Efforts by Distance combine Garmin + Zepp.
 Zepp efforts use currentDistance from local workout_detail: delta seconds and cumulative
 centimetres (validated against every workout total). Rolling windows interpolate distance

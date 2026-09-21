@@ -1,6 +1,37 @@
 """Zepp health presentation shared by the local dashboard builder."""
 import html
+import json
 from pathlib import Path
+
+def time_efforts_card(root):
+    rankings = json.loads((root/'stats.json').read_text(encoding='utf8')).get('time_rankings', {})
+    esc = lambda v: html.escape(str(v))
+    parts = ['<div class="card" id="stats-time-efforts"><h2>⏱ Best Efforts by Time</h2>',
+             '<p>ระยะไกลที่สุดในเวลาที่เลือก · Zepp เท่านั้น เพราะประวัติ Garmin ยังไม่มีระยะรายเวลา</p>',
+             '<p>ค่าประมาณจากระยะนาฬิกา รวมเวลาหยุดภายในช่วง ไม่ข้ามช่วงข้อมูลขาดเกิน 15 วินาที</p>',
+             '<style>#stats-time-efforts .time-tabs{display:flex;flex-wrap:wrap;gap:6px}',
+             '#stats-time-efforts .time-panel{display:none;flex-basis:100%}',
+             '#stats-time-efforts input:focus-visible+label{outline:2px solid currentColor}',
+             '#stats-time-efforts input:checked+label{background:var(--accent);color:var(--bg)}']
+    for i in range(len(rankings)):
+        parts.append(f'#time-effort-{i}:checked~#time-panel-{i}'+'{display:block}')
+    parts.append('</style><div class="time-tabs">')
+    for i, label in enumerate(rankings):
+        checked = ' checked' if i == 0 else ''
+        parts.append(f'<input style="position:absolute;opacity:0;width:1px;height:1px" type="radio" name="time-effort" id="time-effort-{i}"{checked}><label class="btn" for="time-effort-{i}">{esc(label)}</label>')
+    for i, (label, entries) in enumerate(rankings.items()):
+        parts.append(f'<div class="time-panel" id="time-panel-{i}" aria-label="{esc(label)}"><p>ทั้งหมด {len(entries)} รัน · เลื่อนดูประวัติได้</p>')
+        if entries:
+            parts.append('<div style="max-height:300px;overflow:auto"><table><thead><tr><th>อันดับ</th><th>ระยะ</th><th>Pace /km</th><th>วันที่</th><th>กิจกรรม</th></tr></thead><tbody>')
+            for position, e in enumerate(entries, 1):
+                values = [position, f"{e['distance_m']/1000:.3f} km", e['pace'], e['date'], e['name']+' · Zepp']
+                parts.append('<tr>'+''.join('<td>'+esc(v)+'</td>' for v in values)+'</tr>')
+            parts.append('</tbody></table></div>')
+        else:
+            parts.append('<p>ยังไม่มีรันที่มีข้อมูลต่อเนื่องครบช่วงเวลานี้</p>')
+        parts.append('</div>')
+    parts.append('</div></div>')
+    return ''.join(parts)
 
 def enrich(page, root, wellness, activities):
     card=root/'coach_analysis.html'
@@ -34,5 +65,9 @@ def enrich(page, root, wellness, activities):
     page=page.replace('<div id="stats-zones"></div>','<p>HR zones: Garmin archive เท่านั้น ยังไม่รวม Zepp เพราะขอบเขต Zone ต่างกัน</p><div id="stats-zones"></div>')
     page=page.replace('min: 48, max: 70, title:','suggestedMin: 48, title:')
     page=page.replace('อ่านจาก Garmin app แล้วกรอก','อ่านจาก Zepp app แล้วกรอก')
+    marker = '<div class="card">\n    <h2>❤️ HR Zone Distribution (all time)</h2>'
+    if marker not in page:
+        raise ValueError('Best Efforts insertion point missing')
+    page = page.replace(marker, time_efforts_card(root)+marker)
     return page
 

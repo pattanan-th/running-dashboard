@@ -5,6 +5,33 @@ from bisect import bisect_left, bisect_right
 import math
 
 DISTANCES = {'1 km': 1000, '1 mile': 1609, '5 km': 5000, '10 km': 10000, 'Half': 21098}
+TIMES = {f'{minutes} min': minutes * 60 for minutes in (5, 10, 20, 30, 60)}
+
+
+def furthest(points, seconds):
+    """Largest distance in a complete elapsed-time window, including stops."""
+    if len(points) < 2 or points[-1][0] - points[0][0] < seconds:
+        return None
+    ts, ds = zip(*points)
+    def at(t):
+        i = bisect_left(ts, t)
+        if ts[i] == t:
+            return ds[i]
+        return ds[i-1] + (t-ts[i-1]) / (ts[i]-ts[i-1]) * (ds[i]-ds[i-1])
+    starts = set(ts) | {t-seconds for t in ts}
+    return max(at(t+seconds)-at(t) for t in starts
+               if ts[0] <= t <= ts[-1]-seconds)
+
+
+def time_efforts(detail, workout):
+    segments = distance_segments(detail.get('currentDistance', ''),
+                                 workout['distance_meters'], workout['elapsed_seconds'])
+    result = {}
+    for label, seconds in TIMES.items():
+        values = [v for segment in segments if (v := furthest(segment, seconds)) is not None]
+        if values and max(values) > 0:
+            result[label] = max(values)
+    return result
 
 
 def distance_segments(encoded, total_m, elapsed):
