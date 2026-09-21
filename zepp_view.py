@@ -5,10 +5,8 @@ from pathlib import Path
 
 def best_efforts_card(root):
     stats = json.loads((root/'stats.json').read_text(encoding='utf8'))
-    groups, options = [], []
-    esc = lambda value: html.escape(str(value))
+    groups = []
     for title, rankings in [('ตามระยะ', stats.get('rankings', {})), ('ตามเวลา', stats.get('time_rankings', {}))]:
-        options.append('<optgroup label="'+title+'">')
         for label, entries in rankings.items():
             longest = label == 'Longest duration'
             timed = title == 'ตามเวลา' and not longest
@@ -24,19 +22,38 @@ def best_efforts_card(root):
             for rank, e in enumerate(entries, 1):
                 value = f"{e['distance_m']/1000:.3f} km" if timed or longest else e['time']
                 rows.append([rank]+([e['time']] if longest else [])+[value, e['pace'], e['date'], e.get('name','Run')+' · '+('Zepp' if e.get('source')=='zepp' else 'Garmin')])
-            options.append(f'<option value="{len(groups)}">{esc(display)}</option>')
-            groups.append(dict(headers=headers, rows=rows, note=note))
-        options.append('</optgroup>')
+            groups.append(dict(headers=headers, rows=rows, note=note, label=display,
+                               kind='distance' if title=='ตามระยะ' else 'time'))
     data = json.dumps(groups, ensure_ascii=False).replace('<', '\\u003c')
     return ('<div class="card" id="best-efforts-card"><h2>🏅 Best Efforts</h2>'
-            '<label for="best-effort-select">เลือกสถิติ </label><select id="best-effort-select" style="max-width:100%;padding:8px;margin-bottom:12px">'+''.join(options)+
-            '</select><p id="best-effort-note"></p><p id="best-effort-count" aria-live="polite"></p>'
+            '<div id="best-effort-types" role="group" aria-label="ประเภทสถิติ" style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px"></div>'
+            '<div id="best-effort-options" role="group" aria-label="ระยะหรือช่วงเวลา" style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px"></div>'
+            '<p id="best-effort-note"></p><p id="best-effort-count" aria-live="polite"></p>'
             '<div id="best-effort-scroll" style="max-height:360px;overflow:auto"><table id="best-effort-table"><thead></thead><tbody></tbody></table></div></div>'
             '<script>(()=>{const groups='+data+''';
-const select=document.getElementById('best-effort-select');
 const table=document.getElementById('best-effort-table');
+const types=document.getElementById('best-effort-types');
+const options=document.getElementById('best-effort-options');
+let kind='distance';
+const selected={distance:groups.findIndex(g=>g.kind==='distance'),time:groups.findIndex(g=>g.kind==='time')};
+function button(label,active,action){
+ const b=document.createElement('button');b.type='button';b.className='btn'+(active?' primary':'');
+ b.textContent=label;b.setAttribute('aria-pressed',String(active));b.addEventListener('click',action);return b;
+}
+function renderTypes(){
+ types.replaceChildren();
+ [['distance','Distance'],['time','Time']].forEach(([key,label])=>{
+  types.appendChild(button(label,kind===key,()=>{kind=key;renderTypes();renderOptions();show();}));
+ });
+}
+function renderOptions(){
+ options.replaceChildren();
+ groups.forEach((g,i)=>{if(g.kind===kind)options.appendChild(button(g.label,selected[kind]===i,()=>{
+  selected[kind]=i;renderOptions();show();
+ }));});
+}
 function show(){
- const group=groups[Number(select.value)]; if(!group)return;
+ const group=groups[selected[kind]]; if(!group)return;
  document.getElementById('best-effort-note').textContent=group.note;
  document.getElementById('best-effort-count').textContent=group.rows.length ? 'ทั้งหมด '+group.rows.length+' รัน · เลื่อนดูได้' : 'ยังไม่มีข้อมูลสำหรับสถิตินี้';
  table.tHead.replaceChildren(); table.tBodies[0].replaceChildren();
@@ -46,7 +63,7 @@ function show(){
  group.rows.forEach(values=>{const row=document.createElement('tr');values.forEach(text=>{const cell=document.createElement('td');cell.textContent=text;row.appendChild(cell);});table.tBodies[0].appendChild(row);});
  document.getElementById('best-effort-scroll').scrollTop=0;
 }
-select.addEventListener('change',show);show();})();</script>''')
+renderTypes();renderOptions();show();})();</script>''')
 
 def enrich(page, root, wellness, activities):
     card=root/'coach_analysis.html'
