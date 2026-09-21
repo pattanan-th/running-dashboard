@@ -7,7 +7,7 @@ def time_efforts_card(root):
     rankings = json.loads((root/'stats.json').read_text(encoding='utf8')).get('time_rankings', {})
     esc = lambda v: html.escape(str(v))
     parts = ['<div class="card" id="stats-time-efforts"><h2>⏱ Best Efforts by Time</h2>',
-             '<p>ระยะไกลที่สุดในเวลาที่เลือก · Zepp เท่านั้น เพราะประวัติ Garmin ยังไม่มีระยะรายเวลา</p>',
+             '<p>5–60 นาที: ระยะไกลที่สุดจาก Zepp · Longest duration: เวลากิจกรรมยาวที่สุด รวม Garmin + Zepp</p>',
              '<p>ค่าประมาณจากระยะนาฬิกา รวมเวลาหยุดภายในช่วง ไม่ข้ามช่วงข้อมูลขาดเกิน 15 วินาที</p>',
              '<style>#stats-time-efforts .time-tabs{display:flex;flex-wrap:wrap;gap:6px}',
              '#stats-time-efforts .time-panel{display:none;flex-basis:100%}',
@@ -21,10 +21,13 @@ def time_efforts_card(root):
         parts.append(f'<input style="position:absolute;opacity:0;width:1px;height:1px" type="radio" name="time-effort" id="time-effort-{i}"{checked}><label class="btn" for="time-effort-{i}">{esc(label)}</label>')
     for i, (label, entries) in enumerate(rankings.items()):
         parts.append(f'<div class="time-panel" id="time-panel-{i}" aria-label="{esc(label)}"><p>ทั้งหมด {len(entries)} รัน · เลื่อนดูประวัติได้</p>')
+        longest = label == 'Longest duration'
+        if longest:
+            parts.append('<p>เรียงตามเวลากิจกรรมที่บันทึก ไม่ใช่เวลาเร็วที่สุดหรือเวลาเคลื่อนไหวที่ยืนยันเหมือนกันทุกอุปกรณ์; Garmin เดิมปัดเป็น 0.1 นาที ส่วน Zepp ใช้ moving time เมื่อมีข้อมูล</p>')
         if entries:
-            parts.append('<div style="max-height:300px;overflow:auto"><table><thead><tr><th>อันดับ</th><th>ระยะ</th><th>Pace /km</th><th>วันที่</th><th>กิจกรรม</th></tr></thead><tbody>')
+            parts.append('<div style="max-height:300px;overflow:auto"><table><thead><tr><th>อันดับ</th>'+('<th>เวลา</th>' if longest else '')+'<th>ระยะ</th><th>Pace /km</th><th>วันที่</th><th>กิจกรรม</th></tr></thead><tbody>')
             for position, e in enumerate(entries, 1):
-                values = [position, f"{e['distance_m']/1000:.3f} km", e['pace'], e['date'], e['name']+' · Zepp']
+                values = [position]+([e['time']] if longest else [])+[f"{e['distance_m']/1000:.3f} km", e['pace'], e['date'], e['name']+' · '+('Garmin' if e['source']=='garmin' else 'Zepp')]
                 parts.append('<tr>'+''.join('<td>'+esc(v)+'</td>' for v in values)+'</tr>')
             parts.append('</tbody></table></div>')
         else:

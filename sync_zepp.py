@@ -120,6 +120,13 @@ def merge_stats(base, runs):
                                   date=r['date'], name=r['name'], source='zepp', id=r['id']))
         s['time_rankings'][label] = sorted(ranks, key=lambda e: e['distance_m'], reverse=True)
     s['meta']['time_rankings_source'] = 'Zepp recorded distance; Garmin timeline unavailable in archive'
+    longest = [dict(duration_seconds=r['min']*60, time=clock(r['min']*60),
+                    distance_m=r['km']*1000, pace=pace(r['min']*60,r['km']),
+                    date=r['d'], name='Run', source='garmin') for r in base['runs_list']]
+    longest += [dict(duration_seconds=r['duration_seconds'], time=clock(r['duration_seconds']),
+                     distance_m=r['dist']*1000, pace=r['pace'], date=r['date'],
+                     name=r['name'], source='zepp', id=r['id']) for r in runs]
+    s['time_rankings']['Longest duration'] = sorted(longest, key=lambda e:e['duration_seconds'], reverse=True)
     return s
 
 def import_data(data):

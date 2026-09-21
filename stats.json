@@ -4503,8 +4503,8 @@
       },
       {
         "time": "10.2 km",
-        "pace": "8:13",
-        "date": "2026-08-09",
+        "pace": "7:58",
+        "date": "2026-09-12",
         "name": "Run",
         "source": "zepp"
       },
@@ -4517,8 +4517,8 @@
       },
       {
         "time": "10.2 km",
-        "pace": "7:58",
-        "date": "2026-09-12",
+        "pace": "8:13",
+        "date": "2026-08-09",
         "name": "Run",
         "source": "zepp"
       },
@@ -4674,15 +4674,15 @@
       },
       {
         "time": "7.8 km",
-        "pace": "7:16",
-        "date": "2026-07-31",
+        "pace": "8:15",
+        "date": "2026-08-07",
         "name": "Run",
         "source": "zepp"
       },
       {
         "time": "7.8 km",
-        "pace": "8:15",
-        "date": "2026-08-07",
+        "pace": "7:16",
+        "date": "2026-07-31",
         "name": "Run",
         "source": "zepp"
       },
@@ -6253,6 +6253,1515 @@
         "name": "Trail Run",
         "source": "zepp",
         "id": "zepp:1789778233"
+      }
+    ],
+    "Longest duration": [
+      {
+        "duration_seconds": 13371,
+        "time": "3:42:51",
+        "distance_m": 9659.0,
+        "pace": "23:04",
+        "date": "2026-09-19",
+        "name": "Trail Run",
+        "source": "zepp",
+        "id": "zepp:1789778233"
+      },
+      {
+        "duration_seconds": 12948.0,
+        "time": "3:35:48",
+        "distance_m": 21850.0,
+        "pace": "9:53",
+        "date": "2026-05-24",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 11184.0,
+        "time": "3:06:24",
+        "distance_m": 8560.0,
+        "pace": "21:47",
+        "date": "2026-01-24",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 10620.0,
+        "time": "2:57:00",
+        "distance_m": 7470.0,
+        "pace": "23:42",
+        "date": "2025-11-22",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 9564.0,
+        "time": "2:39:24",
+        "distance_m": 21870.0,
+        "pace": "7:17",
+        "date": "2026-06-21",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 9504.0,
+        "time": "2:38:24",
+        "distance_m": 10140.0,
+        "pace": "15:37",
+        "date": "2026-02-28",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 9150,
+        "time": "2:32:30",
+        "distance_m": 17126.0,
+        "pace": "8:54",
+        "date": "2026-09-20",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1789862396"
+      },
+      {
+        "duration_seconds": 9072.0,
+        "time": "2:31:12",
+        "distance_m": 17860.0,
+        "pace": "8:28",
+        "date": "2026-05-10",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 8910,
+        "time": "2:28:30",
+        "distance_m": 16059.999999999998,
+        "pace": "9:15",
+        "date": "2026-09-11",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1789122164"
+      },
+      {
+        "duration_seconds": 8640.0,
+        "time": "2:24:00",
+        "distance_m": 7370.0,
+        "pace": "19:32",
+        "date": "2025-10-05",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 8586.0,
+        "time": "2:23:06",
+        "distance_m": 10070.0,
+        "pace": "14:13",
+        "date": "2026-02-14",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 8190.0,
+        "time": "2:16:30",
+        "distance_m": 15540.0,
+        "pace": "8:47",
+        "date": "2026-05-03",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 8040.0,
+        "time": "2:14:00",
+        "distance_m": 6910.0,
+        "pace": "19:24",
+        "date": "2026-01-31",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 8010.0,
+        "time": "2:13:30",
+        "distance_m": 8530.0,
+        "pace": "15:39",
+        "date": "2026-02-21",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 7746.0,
+        "time": "2:09:06",
+        "distance_m": 14500.0,
+        "pace": "8:54",
+        "date": "2026-06-03",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 7719,
+        "time": "2:08:39",
+        "distance_m": 8842.0,
+        "pace": "14:33",
+        "date": "2026-09-13",
+        "name": "Trail Run",
+        "source": "zepp",
+        "id": "zepp:1789258587"
+      },
+      {
+        "duration_seconds": 7524.0,
+        "time": "2:05:24",
+        "distance_m": 9080.0,
+        "pace": "13:49",
+        "date": "2026-02-07",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 6895,
+        "time": "1:54:55",
+        "distance_m": 14037.0,
+        "pace": "8:11",
+        "date": "2026-08-23",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1787440334"
+      },
+      {
+        "duration_seconds": 6870.0,
+        "time": "1:54:30",
+        "distance_m": 13340.0,
+        "pace": "8:35",
+        "date": "2026-04-26",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 6844,
+        "time": "1:54:04",
+        "distance_m": 13050.0,
+        "pace": "8:44",
+        "date": "2026-08-02",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1785629603"
+      },
+      {
+        "duration_seconds": 6726.0,
+        "time": "1:52:06",
+        "distance_m": 11380.0,
+        "pace": "9:51",
+        "date": "2026-07-05",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 6152,
+        "time": "1:42:32",
+        "distance_m": 10353.0,
+        "pace": "9:54",
+        "date": "2026-08-30",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1788050928"
+      },
+      {
+        "duration_seconds": 5976.0,
+        "time": "1:39:36",
+        "distance_m": 12190.0,
+        "pace": "8:10",
+        "date": "2026-03-21",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 5778.0,
+        "time": "1:36:18",
+        "distance_m": 12990.0,
+        "pace": "7:25",
+        "date": "2026-04-13",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 5748.0,
+        "time": "1:35:48",
+        "distance_m": 12960.0,
+        "pace": "7:24",
+        "date": "2026-06-28",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 5622.0,
+        "time": "1:33:42",
+        "distance_m": 9120.0,
+        "pace": "10:16",
+        "date": "2023-05-04",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 5472.0,
+        "time": "1:31:12",
+        "distance_m": 10860.0,
+        "pace": "8:24",
+        "date": "2026-05-17",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 5256.0,
+        "time": "1:27:36",
+        "distance_m": 10290.0,
+        "pace": "8:31",
+        "date": "2026-07-20",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 5094.0,
+        "time": "1:24:54",
+        "distance_m": 11100.0,
+        "pace": "7:39",
+        "date": "2026-03-07",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 5019,
+        "time": "1:23:39",
+        "distance_m": 10188.0,
+        "pace": "8:13",
+        "date": "2026-08-09",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1786236856"
+      },
+      {
+        "duration_seconds": 4962.0,
+        "time": "1:22:42",
+        "distance_m": 10800.0,
+        "pace": "7:39",
+        "date": "2026-03-29",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 4901,
+        "time": "1:21:41",
+        "distance_m": 10244.0,
+        "pace": "7:58",
+        "date": "2026-09-12",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1789166808"
+      },
+      {
+        "duration_seconds": 4848.0,
+        "time": "1:20:48",
+        "distance_m": 9600.0,
+        "pace": "8:25",
+        "date": "2026-04-10",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 4818.0,
+        "time": "1:20:18",
+        "distance_m": 9660.0,
+        "pace": "8:19",
+        "date": "2026-05-08",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 4794.0,
+        "time": "1:19:54",
+        "distance_m": 9400.0,
+        "pace": "8:30",
+        "date": "2026-06-10",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 4699,
+        "time": "1:18:19",
+        "distance_m": 9118.0,
+        "pace": "8:35",
+        "date": "2026-09-06",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1788654041"
+      },
+      {
+        "duration_seconds": 4674.0,
+        "time": "1:17:54",
+        "distance_m": 7190.0,
+        "pace": "10:50",
+        "date": "2023-05-09",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 4620.0,
+        "time": "1:17:00",
+        "distance_m": 8500.0,
+        "pace": "9:04",
+        "date": "2025-07-18",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 4608.0,
+        "time": "1:16:48",
+        "distance_m": 10520.0,
+        "pace": "7:18",
+        "date": "2026-03-14",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 4590.0,
+        "time": "1:16:30",
+        "distance_m": 10360.0,
+        "pace": "7:23",
+        "date": "2026-04-05",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 4500.0,
+        "time": "1:15:00",
+        "distance_m": 9310.0,
+        "pace": "8:03",
+        "date": "2026-07-15",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 4405,
+        "time": "1:13:25",
+        "distance_m": 9413.0,
+        "pace": "7:48",
+        "date": "2026-08-21",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1787306686"
+      },
+      {
+        "duration_seconds": 4395,
+        "time": "1:13:15",
+        "distance_m": 9624.0,
+        "pace": "7:37",
+        "date": "2026-08-28",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1787912263"
+      },
+      {
+        "duration_seconds": 4302.0,
+        "time": "1:11:42",
+        "distance_m": 8180.0,
+        "pace": "8:46",
+        "date": "2026-01-30",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 4218.0,
+        "time": "1:10:18",
+        "distance_m": 7350.0,
+        "pace": "9:34",
+        "date": "2023-05-10",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 4206.0,
+        "time": "1:10:06",
+        "distance_m": 9300.0,
+        "pace": "7:32",
+        "date": "2026-07-03",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 4170.0,
+        "time": "1:09:30",
+        "distance_m": 6270.0,
+        "pace": "11:05",
+        "date": "2025-07-06",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 4170.0,
+        "time": "1:09:30",
+        "distance_m": 8150.0,
+        "pace": "8:32",
+        "date": "2026-04-25",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 4152.0,
+        "time": "1:09:12",
+        "distance_m": 5500.0,
+        "pace": "12:35",
+        "date": "2023-05-11",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 4146.0,
+        "time": "1:09:06",
+        "distance_m": 7800.0,
+        "pace": "8:52",
+        "date": "2025-08-19",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 4080.0,
+        "time": "1:08:00",
+        "distance_m": 7620.0,
+        "pace": "8:55",
+        "date": "2026-03-27",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 4032.0,
+        "time": "1:07:12",
+        "distance_m": 3930.0,
+        "pace": "17:06",
+        "date": "2025-07-19",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 4007,
+        "time": "1:06:47",
+        "distance_m": 10242.0,
+        "pace": "6:31",
+        "date": "2026-08-16",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1786831864"
+      },
+      {
+        "duration_seconds": 4004,
+        "time": "1:06:44",
+        "distance_m": 8201.0,
+        "pace": "8:08",
+        "date": "2026-08-14",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1786701677"
+      },
+      {
+        "duration_seconds": 3882.0,
+        "time": "1:04:42",
+        "distance_m": 8119.999999999999,
+        "pace": "7:58",
+        "date": "2026-05-01",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 3881,
+        "time": "1:04:41",
+        "distance_m": 7837.0,
+        "pace": "8:15",
+        "date": "2026-08-07",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1786097654"
+      },
+      {
+        "duration_seconds": 3845.9999999999995,
+        "time": "1:04:06",
+        "distance_m": 5500.0,
+        "pace": "11:39",
+        "date": "2025-07-07",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 3840.0,
+        "time": "1:04:00",
+        "distance_m": 7260.0,
+        "pace": "8:49",
+        "date": "2025-08-15",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 3840.0,
+        "time": "1:04:00",
+        "distance_m": 8100.0,
+        "pace": "7:54",
+        "date": "2026-06-26",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 3804.0,
+        "time": "1:03:24",
+        "distance_m": 7000.0,
+        "pace": "9:03",
+        "date": "2024-02-25",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 3762.0,
+        "time": "1:02:42",
+        "distance_m": 7230.0,
+        "pace": "8:40",
+        "date": "2026-05-16",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 3762.0,
+        "time": "1:02:42",
+        "distance_m": 8370.0,
+        "pace": "7:29",
+        "date": "2026-06-19",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 3726.0,
+        "time": "1:02:06",
+        "distance_m": 7200.0,
+        "pace": "8:38",
+        "date": "2025-07-23",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 3618.0,
+        "time": "1:00:18",
+        "distance_m": 3670.0,
+        "pace": "16:26",
+        "date": "2025-04-01",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 3594.0,
+        "time": "59:54",
+        "distance_m": 7730.0,
+        "pace": "7:45",
+        "date": "2026-04-11",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 3576.0,
+        "time": "59:36",
+        "distance_m": 7580.0,
+        "pace": "7:52",
+        "date": "2026-04-24",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 3546.0,
+        "time": "59:06",
+        "distance_m": 7350.0,
+        "pace": "8:02",
+        "date": "2026-04-04",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 3520,
+        "time": "58:40",
+        "distance_m": 7650.0,
+        "pace": "7:40",
+        "date": "2026-09-18",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1789725442"
+      },
+      {
+        "duration_seconds": 3516.0,
+        "time": "58:36",
+        "distance_m": 7030.0,
+        "pace": "8:20",
+        "date": "2026-05-02",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 3468.0,
+        "time": "57:48",
+        "distance_m": 3670.0,
+        "pace": "15:45",
+        "date": "2025-03-05",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 3462.0,
+        "time": "57:42",
+        "distance_m": 6540.0,
+        "pace": "8:49",
+        "date": "2025-07-30",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 3456.0,
+        "time": "57:36",
+        "distance_m": 5480.0,
+        "pace": "10:31",
+        "date": "2025-07-13",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 3450.0,
+        "time": "57:30",
+        "distance_m": 5930.0,
+        "pace": "9:42",
+        "date": "2024-05-04",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 3448,
+        "time": "57:28",
+        "distance_m": 7178.0,
+        "pace": "8:00",
+        "date": "2026-09-05",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1788563819"
+      },
+      {
+        "duration_seconds": 3438.0,
+        "time": "57:18",
+        "distance_m": 4720.0,
+        "pace": "12:08",
+        "date": "2024-05-12",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 3420,
+        "time": "57:00",
+        "distance_m": 7843.0,
+        "pace": "7:16",
+        "date": "2026-07-31",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1785493163"
+      },
+      {
+        "duration_seconds": 3408.0,
+        "time": "56:48",
+        "distance_m": 7290.0,
+        "pace": "7:47",
+        "date": "2025-10-25",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 3330.0,
+        "time": "55:30",
+        "distance_m": 6320.0,
+        "pace": "8:47",
+        "date": "2026-02-15",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 3318.0,
+        "time": "55:18",
+        "distance_m": 6380.0,
+        "pace": "8:40",
+        "date": "2023-11-21",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 3312.0,
+        "time": "55:12",
+        "distance_m": 3260.0,
+        "pace": "16:56",
+        "date": "2025-02-26",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 3294.0,
+        "time": "54:54",
+        "distance_m": 6220.0,
+        "pace": "8:50",
+        "date": "2025-10-18",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 3270.0,
+        "time": "54:30",
+        "distance_m": 7080.0,
+        "pace": "7:42",
+        "date": "2026-06-27",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 3222.0,
+        "time": "53:42",
+        "distance_m": 6320.0,
+        "pace": "8:30",
+        "date": "2025-08-08",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 3222,
+        "time": "53:42",
+        "distance_m": 7279.0,
+        "pace": "7:23",
+        "date": "2026-07-28",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1785195286"
+      },
+      {
+        "duration_seconds": 3210.0,
+        "time": "53:30",
+        "distance_m": 7310.0,
+        "pace": "7:19",
+        "date": "2026-03-06",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 3204.0,
+        "time": "53:24",
+        "distance_m": 6380.0,
+        "pace": "8:22",
+        "date": "2023-11-28",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 3192.0,
+        "time": "53:12",
+        "distance_m": 4720.0,
+        "pace": "11:16",
+        "date": "2024-05-23",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 3168.0,
+        "time": "52:48",
+        "distance_m": 7480.0,
+        "pace": "7:04",
+        "date": "2026-02-24",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 3144.0,
+        "time": "52:24",
+        "distance_m": 7130.0,
+        "pace": "7:21",
+        "date": "2026-01-23",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 3108.0,
+        "time": "51:48",
+        "distance_m": 3230.0,
+        "pace": "16:02",
+        "date": "2025-04-02",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 3108.0,
+        "time": "51:48",
+        "distance_m": 5530.0,
+        "pace": "9:22",
+        "date": "2025-07-31",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 3108.0,
+        "time": "51:48",
+        "distance_m": 6730.0,
+        "pace": "7:42",
+        "date": "2025-11-12",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 3102.0,
+        "time": "51:42",
+        "distance_m": 6010.0,
+        "pace": "8:36",
+        "date": "2025-07-08",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 3096.0,
+        "time": "51:36",
+        "distance_m": 3510.0,
+        "pace": "14:42",
+        "date": "2024-04-05",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 3072.0,
+        "time": "51:12",
+        "distance_m": 6460.0,
+        "pace": "7:56",
+        "date": "2026-07-19",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 3000.0,
+        "time": "50:00",
+        "distance_m": 6770.0,
+        "pace": "7:23",
+        "date": "2026-02-23",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2994.0,
+        "time": "49:54",
+        "distance_m": 6720.0,
+        "pace": "7:26",
+        "date": "2026-04-03",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2976.0,
+        "time": "49:36",
+        "distance_m": 3630.0,
+        "pace": "13:40",
+        "date": "2023-05-16",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2970.0,
+        "time": "49:30",
+        "distance_m": 6270.0,
+        "pace": "7:54",
+        "date": "2025-11-05",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2958.0,
+        "time": "49:18",
+        "distance_m": 3570.0,
+        "pace": "13:49",
+        "date": "2025-07-29",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2958.0,
+        "time": "49:18",
+        "distance_m": 6280.0,
+        "pace": "7:51",
+        "date": "2025-11-06",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2898.0,
+        "time": "48:18",
+        "distance_m": 6150.0,
+        "pace": "7:51",
+        "date": "2026-02-27",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2874.0,
+        "time": "47:54",
+        "distance_m": 6020.0,
+        "pace": "7:57",
+        "date": "2026-02-01",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2862.0,
+        "time": "47:42",
+        "distance_m": 4940.0,
+        "pace": "9:39",
+        "date": "2025-07-17",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2838.0,
+        "time": "47:18",
+        "distance_m": 5480.0,
+        "pace": "8:38",
+        "date": "2026-05-30",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2826.0,
+        "time": "47:06",
+        "distance_m": 6010.0,
+        "pace": "7:50",
+        "date": "2026-01-17",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2815,
+        "time": "46:55",
+        "distance_m": 5731.0,
+        "pace": "8:11",
+        "date": "2026-09-04",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1788516022"
+      },
+      {
+        "duration_seconds": 2814.0,
+        "time": "46:54",
+        "distance_m": 6370.0,
+        "pace": "7:22",
+        "date": "2026-02-26",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2784.0,
+        "time": "46:24",
+        "distance_m": 5630.0,
+        "pace": "8:14",
+        "date": "2026-06-06",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2772.0,
+        "time": "46:12",
+        "distance_m": 5380.0,
+        "pace": "8:35",
+        "date": "2025-08-07",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2766.0,
+        "time": "46:06",
+        "distance_m": 5510.0,
+        "pace": "8:22",
+        "date": "2026-03-15",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2748.0,
+        "time": "45:48",
+        "distance_m": 5340.0,
+        "pace": "8:35",
+        "date": "2026-01-18",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2700.0,
+        "time": "45:00",
+        "distance_m": 5540.0,
+        "pace": "8:07",
+        "date": "2025-07-15",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2700.0,
+        "time": "45:00",
+        "distance_m": 5700.0,
+        "pace": "7:54",
+        "date": "2026-02-13",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2682.0,
+        "time": "44:42",
+        "distance_m": 5010.0,
+        "pace": "8:55",
+        "date": "2025-07-24",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2658.0,
+        "time": "44:18",
+        "distance_m": 5660.0,
+        "pace": "7:50",
+        "date": "2026-06-09",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2640.0,
+        "time": "44:00",
+        "distance_m": 5430.0,
+        "pace": "8:06",
+        "date": "2026-01-19",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2634.0,
+        "time": "43:54",
+        "distance_m": 5350.0,
+        "pace": "8:12",
+        "date": "2025-08-12",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2622.0,
+        "time": "43:42",
+        "distance_m": 4750.0,
+        "pace": "9:12",
+        "date": "2023-11-25",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2622.0,
+        "time": "43:42",
+        "distance_m": 5190.0,
+        "pace": "8:25",
+        "date": "2025-10-17",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2622.0,
+        "time": "43:42",
+        "distance_m": 5410.0,
+        "pace": "8:05",
+        "date": "2026-01-26",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2610.0,
+        "time": "43:30",
+        "distance_m": 5910.0,
+        "pace": "7:22",
+        "date": "2026-04-17",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2598.0,
+        "time": "43:18",
+        "distance_m": 5430.0,
+        "pace": "7:58",
+        "date": "2025-11-09",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2592.0,
+        "time": "43:12",
+        "distance_m": 5390.0,
+        "pace": "8:01",
+        "date": "2026-05-15",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2580.0,
+        "time": "43:00",
+        "distance_m": 4500.0,
+        "pace": "9:33",
+        "date": "2025-07-22",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2574.0,
+        "time": "42:54",
+        "distance_m": 3890.0,
+        "pace": "11:02",
+        "date": "2025-07-12",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2544.0,
+        "time": "42:24",
+        "distance_m": 5010.0,
+        "pace": "8:28",
+        "date": "2025-07-16",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2532.0,
+        "time": "42:12",
+        "distance_m": 5360.0,
+        "pace": "7:52",
+        "date": "2025-11-01",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2526.0,
+        "time": "42:06",
+        "distance_m": 5490.0,
+        "pace": "7:40",
+        "date": "2025-08-18",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2520.0,
+        "time": "42:00",
+        "distance_m": 4820.0,
+        "pace": "8:43",
+        "date": "2023-11-24",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2508.0,
+        "time": "41:48",
+        "distance_m": 4540.0,
+        "pace": "9:12",
+        "date": "2026-05-22",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2472.0,
+        "time": "41:12",
+        "distance_m": 5450.0,
+        "pace": "7:34",
+        "date": "2026-02-20",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2436.0,
+        "time": "40:36",
+        "distance_m": 4230.0,
+        "pace": "9:36",
+        "date": "2026-05-29",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2430.0,
+        "time": "40:30",
+        "distance_m": 5320.0,
+        "pace": "7:37",
+        "date": "2026-02-06",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2388.0,
+        "time": "39:48",
+        "distance_m": 4810.0,
+        "pace": "8:16",
+        "date": "2025-10-22",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2388.0,
+        "time": "39:48",
+        "distance_m": 5160.0,
+        "pace": "7:43",
+        "date": "2025-10-28",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2364.0,
+        "time": "39:24",
+        "distance_m": 4840.0,
+        "pace": "8:08",
+        "date": "2025-10-30",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2322.0,
+        "time": "38:42",
+        "distance_m": 4920.0,
+        "pace": "7:52",
+        "date": "2026-02-02",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2280.0,
+        "time": "38:00",
+        "distance_m": 4230.0,
+        "pace": "8:59",
+        "date": "2026-06-22",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2244.0,
+        "time": "37:24",
+        "distance_m": 5450.0,
+        "pace": "6:52",
+        "date": "2026-06-14",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2226.0,
+        "time": "37:06",
+        "distance_m": 4530.0,
+        "pace": "8:11",
+        "date": "2026-03-20",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2214.0,
+        "time": "36:54",
+        "distance_m": 2370.0,
+        "pace": "15:34",
+        "date": "2025-03-31",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2154.0,
+        "time": "35:54",
+        "distance_m": 5200.0,
+        "pace": "6:54",
+        "date": "2026-07-18",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2148.0,
+        "time": "35:48",
+        "distance_m": 4050.0,
+        "pace": "8:50",
+        "date": "2023-11-20",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2124.0,
+        "time": "35:24",
+        "distance_m": 2430.0,
+        "pace": "14:34",
+        "date": "2023-05-19",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2027.9999999999998,
+        "time": "33:48",
+        "distance_m": 3770.0,
+        "pace": "8:58",
+        "date": "2026-05-09",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 2004.0,
+        "time": "33:24",
+        "distance_m": 4510.0,
+        "pace": "7:24",
+        "date": "2026-01-25",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 1997.9999999999998,
+        "time": "33:18",
+        "distance_m": 4170.0,
+        "pace": "7:59",
+        "date": "2026-06-11",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 1926.0,
+        "time": "32:06",
+        "distance_m": 3510.0,
+        "pace": "9:09",
+        "date": "2024-02-24",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 1908.0,
+        "time": "31:48",
+        "distance_m": 4080.0,
+        "pace": "7:48",
+        "date": "2025-10-23",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 1848.0,
+        "time": "30:48",
+        "distance_m": 3150.0,
+        "pace": "9:47",
+        "date": "2025-08-13",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 1782.0,
+        "time": "29:42",
+        "distance_m": 3850.0,
+        "pace": "7:43",
+        "date": "2026-02-18",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 1656.0,
+        "time": "27:36",
+        "distance_m": 3120.0,
+        "pace": "8:51",
+        "date": "2025-07-25",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 1416.0,
+        "time": "23:36",
+        "distance_m": 1920.0,
+        "pace": "12:18",
+        "date": "2025-11-16",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 1392.0,
+        "time": "23:12",
+        "distance_m": 2380.0,
+        "pace": "9:45",
+        "date": "2024-04-06",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 1194.0,
+        "time": "19:54",
+        "distance_m": 2240.0,
+        "pace": "8:53",
+        "date": "2026-05-23",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 1128.0,
+        "time": "18:48",
+        "distance_m": 2070.0,
+        "pace": "9:05",
+        "date": "2023-11-29",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 1128.0,
+        "time": "18:48",
+        "distance_m": 2040.0,
+        "pace": "9:13",
+        "date": "2026-06-05",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 990.0,
+        "time": "16:30",
+        "distance_m": 2520.0,
+        "pace": "6:33",
+        "date": "2026-07-12",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 912.0,
+        "time": "15:12",
+        "distance_m": 920.0,
+        "pace": "16:31",
+        "date": "2025-08-13",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 873,
+        "time": "14:33",
+        "distance_m": 1473.0,
+        "pace": "9:53",
+        "date": "2026-08-16",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1786827616"
+      },
+      {
+        "duration_seconds": 869,
+        "time": "14:29",
+        "distance_m": 1588.0,
+        "pace": "9:07",
+        "date": "2026-08-16",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1786843563"
+      },
+      {
+        "duration_seconds": 840.0,
+        "time": "14:00",
+        "distance_m": 1290.0,
+        "pace": "10:51",
+        "date": "2023-11-22",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 498.00000000000006,
+        "time": "8:18",
+        "distance_m": 600.0,
+        "pace": "13:50",
+        "date": "2026-01-17",
+        "name": "Run",
+        "source": "garmin"
+      },
+      {
+        "duration_seconds": 306.0,
+        "time": "5:06",
+        "distance_m": 500.0,
+        "pace": "10:12",
+        "date": "2025-10-05",
+        "name": "Run",
+        "source": "garmin"
       }
     ]
   }
