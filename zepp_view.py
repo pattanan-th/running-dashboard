@@ -3,38 +3,50 @@ import html
 import json
 from pathlib import Path
 
-def time_efforts_card(root):
-    rankings = json.loads((root/'stats.json').read_text(encoding='utf8')).get('time_rankings', {})
-    esc = lambda v: html.escape(str(v))
-    parts = ['<div class="card" id="stats-time-efforts"><h2>⏱ Best Efforts by Time</h2>',
-             '<p>5–60 นาที: ระยะไกลที่สุดจาก Zepp · Longest duration: เวลากิจกรรมยาวที่สุด รวม Garmin + Zepp</p>',
-             '<p>ค่าประมาณจากระยะนาฬิกา รวมเวลาหยุดภายในช่วง ไม่ข้ามช่วงข้อมูลขาดเกิน 15 วินาที</p>',
-             '<style>#stats-time-efforts .time-tabs{display:flex;flex-wrap:wrap;gap:6px}',
-             '#stats-time-efforts .time-panel{display:none;flex-basis:100%}',
-             '#stats-time-efforts input:focus-visible+label{outline:2px solid currentColor}',
-             '#stats-time-efforts input:checked+label{background:var(--accent);color:var(--bg)}']
-    for i in range(len(rankings)):
-        parts.append(f'#time-effort-{i}:checked~#time-panel-{i}'+'{display:block}')
-    parts.append('</style><div class="time-tabs">')
-    for i, label in enumerate(rankings):
-        checked = ' checked' if i == 0 else ''
-        parts.append(f'<input style="position:absolute;opacity:0;width:1px;height:1px" type="radio" name="time-effort" id="time-effort-{i}"{checked}><label class="btn" for="time-effort-{i}">{esc(label)}</label>')
-    for i, (label, entries) in enumerate(rankings.items()):
-        parts.append(f'<div class="time-panel" id="time-panel-{i}" aria-label="{esc(label)}"><p>ทั้งหมด {len(entries)} รัน · เลื่อนดูประวัติได้</p>')
-        longest = label == 'Longest duration'
-        if longest:
-            parts.append('<p>เรียงตามเวลากิจกรรมที่บันทึก ไม่ใช่เวลาเร็วที่สุดหรือเวลาเคลื่อนไหวที่ยืนยันเหมือนกันทุกอุปกรณ์; Garmin เดิมปัดเป็น 0.1 นาที ส่วน Zepp ใช้ moving time เมื่อมีข้อมูล</p>')
-        if entries:
-            parts.append('<div style="max-height:300px;overflow:auto"><table><thead><tr><th>อันดับ</th>'+('<th>เวลา</th>' if longest else '')+'<th>ระยะ</th><th>Pace /km</th><th>วันที่</th><th>กิจกรรม</th></tr></thead><tbody>')
-            for position, e in enumerate(entries, 1):
-                values = [position]+([e['time']] if longest else [])+[f"{e['distance_m']/1000:.3f} km", e['pace'], e['date'], e['name']+' · '+('Garmin' if e['source']=='garmin' else 'Zepp')]
-                parts.append('<tr>'+''.join('<td>'+esc(v)+'</td>' for v in values)+'</tr>')
-            parts.append('</tbody></table></div>')
-        else:
-            parts.append('<p>ยังไม่มีรันที่มีข้อมูลต่อเนื่องครบช่วงเวลานี้</p>')
-        parts.append('</div>')
-    parts.append('</div></div>')
-    return ''.join(parts)
+def best_efforts_card(root):
+    stats = json.loads((root/'stats.json').read_text(encoding='utf8'))
+    groups, options = [], []
+    esc = lambda value: html.escape(str(value))
+    for title, rankings in [('ตามระยะ', stats.get('rankings', {})), ('ตามเวลา', stats.get('time_rankings', {}))]:
+        options.append('<optgroup label="'+title+'">')
+        for label, entries in rankings.items():
+            longest = label == 'Longest duration'
+            timed = title == 'ตามเวลา' and not longest
+            display = {'Longest':'ระยะไกลที่สุด', 'Longest duration':'ใช้เวลานานที่สุด'}.get(label, label)
+            note = ('เวลารวมกิจกรรม · Garmin + Zepp; Garmin ปัดเป็น 0.1 นาที ส่วน Zepp ใช้ moving time เมื่อมี' if longest else
+                    'ระยะไกลที่สุดในเวลาที่เลือก · Zepp เท่านั้น; ประวัติ Garmin ยังไม่มีระยะรายเวลา' if timed else
+                    'ระยะรวมกิจกรรม · Garmin + Zepp' if label == 'Longest' else
+                    'เวลาที่เร็วที่สุดตามระยะ · Garmin + Zepp')
+            if label not in ('Longest','Longest duration'):
+                note += ' · Zepp เป็นค่าประมาณ รวมเวลาหยุดในช่วง และไม่ข้ามข้อมูลขาดเกิน 15 วินาที'
+            headers = ['อันดับ']+(['เวลา'] if longest else [])+['ระยะ' if timed or label=='Longest' or longest else 'เวลา', 'Pace /km', 'วันที่', 'กิจกรรม / แหล่งข้อมูล']
+            rows = []
+            for rank, e in enumerate(entries, 1):
+                value = f"{e['distance_m']/1000:.3f} km" if timed or longest else e['time']
+                rows.append([rank]+([e['time']] if longest else [])+[value, e['pace'], e['date'], e.get('name','Run')+' · '+('Zepp' if e.get('source')=='zepp' else 'Garmin')])
+            options.append(f'<option value="{len(groups)}">{esc(display)}</option>')
+            groups.append(dict(headers=headers, rows=rows, note=note))
+        options.append('</optgroup>')
+    data = json.dumps(groups, ensure_ascii=False).replace('<', '\\u003c')
+    return ('<div class="card" id="best-efforts-card"><h2>🏅 Best Efforts</h2>'
+            '<label for="best-effort-select">เลือกสถิติ </label><select id="best-effort-select" style="max-width:100%;padding:8px;margin-bottom:12px">'+''.join(options)+
+            '</select><p id="best-effort-note"></p><p id="best-effort-count" aria-live="polite"></p>'
+            '<div id="best-effort-scroll" style="max-height:360px;overflow:auto"><table id="best-effort-table"><thead></thead><tbody></tbody></table></div></div>'
+            '<script>(()=>{const groups='+data+''';
+const select=document.getElementById('best-effort-select');
+const table=document.getElementById('best-effort-table');
+function show(){
+ const group=groups[Number(select.value)]; if(!group)return;
+ document.getElementById('best-effort-note').textContent=group.note;
+ document.getElementById('best-effort-count').textContent=group.rows.length ? 'ทั้งหมด '+group.rows.length+' รัน · เลื่อนดูได้' : 'ยังไม่มีข้อมูลสำหรับสถิตินี้';
+ table.tHead.replaceChildren(); table.tBodies[0].replaceChildren();
+ const head=document.createElement('tr');
+ group.headers.forEach(text=>{const cell=document.createElement('th');cell.scope='col';cell.textContent=text;head.appendChild(cell);});
+ table.tHead.appendChild(head);
+ group.rows.forEach(values=>{const row=document.createElement('tr');values.forEach(text=>{const cell=document.createElement('td');cell.textContent=text;row.appendChild(cell);});table.tBodies[0].appendChild(row);});
+ document.getElementById('best-effort-scroll').scrollTop=0;
+}
+select.addEventListener('change',show);show();})();</script>''')
 
 def enrich(page, root, wellness, activities):
     card=root/'coach_analysis.html'
@@ -71,6 +83,7 @@ def enrich(page, root, wellness, activities):
     marker = '<div class="card">\n    <h2>❤️ HR Zone Distribution (all time)</h2>'
     if marker not in page:
         raise ValueError('Best Efforts insertion point missing')
-    page = page.replace(marker, time_efforts_card(root)+marker)
+    start = page.rfind('<div class="card">', 0, page.index('<h2>🏅 Best Efforts</h2>'))
+    end = page.index(marker, start)
+    page = page[:start] + best_efforts_card(root) + page[end:]
     return page
-
