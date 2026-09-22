@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-09-21",
+    "generated": "2026-09-22",
     "source": "Garmin archive + Zepp",
     "split_rankings_source": "Garmin archive + Zepp recorded distance",
     "zones_source": "Garmin archive",
@@ -4503,8 +4503,8 @@
       },
       {
         "time": "10.2 km",
-        "pace": "7:58",
-        "date": "2026-09-12",
+        "pace": "8:13",
+        "date": "2026-08-09",
         "name": "Run",
         "source": "zepp"
       },
@@ -4517,8 +4517,8 @@
       },
       {
         "time": "10.2 km",
-        "pace": "8:13",
-        "date": "2026-08-09",
+        "pace": "7:58",
+        "date": "2026-09-12",
         "name": "Run",
         "source": "zepp"
       },
@@ -4674,15 +4674,15 @@
       },
       {
         "time": "7.8 km",
-        "pace": "8:15",
-        "date": "2026-08-07",
+        "pace": "7:16",
+        "date": "2026-07-31",
         "name": "Run",
         "source": "zepp"
       },
       {
         "time": "7.8 km",
-        "pace": "7:16",
-        "date": "2026-07-31",
+        "pace": "8:15",
+        "date": "2026-08-07",
         "name": "Run",
         "source": "zepp"
       },
