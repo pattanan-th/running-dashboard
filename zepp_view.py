@@ -20,7 +20,7 @@ def best_efforts_card(root):
             headers = ['อันดับ']+(['เวลา'] if longest else [])+['ระยะ' if timed or label=='Longest' or longest else 'เวลา', 'Pace /km', 'วันที่', 'กิจกรรม / แหล่งข้อมูล']
             rows = []
             for rank, e in enumerate(entries, 1):
-                value = f"{e['distance_m']/1000:.2f} km" if timed or longest else e['time']
+                value = f"{e['distance_m']/1000:.3f} km" if timed or longest else e['time']
                 if label == 'Longest':
                     value = f"{float(e['time'].split()[0]):.2f} km"
                 rows.append([rank]+([e['time']] if longest else [])+[value, e['pace'], e['date'], e.get('name','Run')+' · '+('Zepp' if e.get('source')=='zepp' else 'Garmin')])
