@@ -8,6 +8,7 @@ const charts = new Map();
 const fmt = v => v == null ? '—' : typeof v === 'number' ? Number(v.toFixed(2)).toLocaleString() : String(v);
 const km = v => v == null ? '—' : fmt(v/1000);
 const time = s => { const n=Math.round(s); return Math.floor(n/60)+':'+String(n%60).padStart(2,'0'); };
+const metricValue = (s,v) => v == null ? '—' : s.unit==='min/km' ? time(v*60) : fmt(v);
 const el = (tag,text,cls) => {const n=document.createElement(tag);if(text!=null)n.textContent=text;if(cls)n.className=cls;return n;};
 function table(headers,rows){
  const wrap=el('div',null,'zepp-table-scroll'), t=el('table'),head=el('thead'),hr=el('tr'),body=el('tbody');
@@ -46,13 +47,13 @@ function plot(parent,label,unit,bins,options={}){
    interaction:{mode:'index',intersect:false},
    plugins:{legend:{display:false},tooltip:{callbacks:{
     title:items=>options.xtick?options.xtick(items[0].parsed.x):'นาที '+fmt(items[0].parsed.x),
-    label:item=>item.dataset.label+': '+fmt(item.parsed.y)+' '+unit
+    label:item=>item.dataset.label+': '+metricValue({unit},item.parsed.y)+' '+unit
    }}},
    scales:{x:{type:'linear',min:options.xmin??0,max:options.xmax,
       title:{display:true,text:options.xlabel||'นาทีหลังเริ่มกิจกรรม'},
       ticks:options.xtick?{callback:options.xtick,maxTicksLimit:8}:{}},
     y:{reverse:!!options.reverse,title:{display:true,text:unit},min:options.ymin,max:options.ymax,
-       ticks:options.ytick?{callback:options.ytick}:{}}
+       ticks:options.ytick?{callback:options.ytick}:unit==='min/km'?{callback:v=>time(v*60)}:{}}
    }
   }});
   charts.set(canvas,chart);
@@ -74,7 +75,7 @@ function workout(r){
  const labels={distance_meters:'Distance (m)',calories:'Calories (kcal)',avg_hr:'HR เฉลี่ย (bpm)',max_hr:'HR สูงสุด (bpm)',min_hr:'HR ต่ำสุด (bpm)',total_steps:'Steps',moving_seconds:'Moving time (s)',elevation_gain_m:'Elevation gain (m)',elevation_loss_m:'Elevation loss (m)',max_altitude_m:'Altitude max (m)',min_altitude_m:'Altitude min (m)',training_load:'Training load',vo2max:'VO₂max estimate',training_effect:'Aerobic TE',anaerobic_training_effect:'Anaerobic TE',rpe:'RPE จาก Zepp',avg_cadence_spm:'Cadence เฉลี่ย (spm)',max_cadence_spm:'Cadence สูงสุด (spm)',avg_stride_cm:'Step length เฉลี่ย (cm)'};
  parent.appendChild(table(['ค่า','ผล'],Object.entries(r.summary).map(([k,v])=>[labels[k]||k,v])));
  parent.appendChild(el('h3','กราฟทุกช่องที่อ่านได้'));
- parent.appendChild(table(['กราฟ','เฉลี่ย','ต่ำสุด','สูงสุด','หน่วย','ข้อมูลที่ใช้ได้'],Object.values(r.series).map(s=>[s.label,s.mean,s.min,s.max,s.unit,fmt(s.coverage_pct)+'%'])));
+ parent.appendChild(table(['กราฟ','เฉลี่ย','ต่ำสุด','สูงสุด','หน่วย','ข้อมูลที่ใช้ได้'],Object.values(r.series).map(s=>[s.label,metricValue(s,s.mean),metricValue(s,s.min),metricValue(s,s.max),s.unit,fmt(s.coverage_pct)+'%'])));
  list(parent,r.warnings);
  graphTools(parent);
  const grid=el('div',null,'zepp-graph-grid');parent.appendChild(grid);
@@ -84,12 +85,12 @@ function workout(r){
  });
  if(r.fastest_400m){
   const e=r.fastest_400m;parent.appendChild(el('h3','ช่วง 400 m เร็วที่สุด · '+time(e.start_s)+'–'+time(e.end_s)));
-  parent.appendChild(table(['กราฟ','เฉลี่ยช่วงนี้','เฉลี่ยทั้งกิจกรรม','หน่วย'],Object.entries(e.metrics).map(([k,s])=>[r.series[k].label,s.mean,r.series[k].mean,r.series[k].unit])));
+  parent.appendChild(table(['กราฟ','เฉลี่ยช่วงนี้','เฉลี่ยทั้งกิจกรรม','หน่วย'],Object.entries(e.metrics).map(([k,s])=>[r.series[k].label,metricValue(r.series[k],s.mean),metricValue(r.series[k],r.series[k].mean),r.series[k].unit])));
   parent.appendChild(el('p','HR เฉลี่ย 60 วินาทีก่อนช่วงนี้: '+fmt(e.before_hr?.mean)+' / หลังช่วงนี้: '+fmt(e.after_hr?.mean)+' bpm · '+e.after_note));
  }
  if(r.hr_peak_context){
   const p=r.hr_peak_context;parent.appendChild(el('h3','รอบจุด HR สูงสุด ±15 วินาที · '+time(p.time_s)));
-  parent.appendChild(table(['กราฟ','เฉลี่ย','หน่วย'],Object.entries(p.metrics).map(([k,s])=>[r.series[k].label,s.mean,r.series[k].unit])));
+  parent.appendChild(table(['กราฟ','เฉลี่ย','หน่วย'],Object.entries(p.metrics).map(([k,s])=>[r.series[k].label,metricValue(r.series[k],s.mean),r.series[k].unit])));
  }
  parent.appendChild(el('h3','Split ตามระยะ · คำนวณจากระยะสะสม'));
  parent.appendChild(table(['กม.','เวลา','Pace','HR','Cadence','Power','GCT','Step length'],r.splits.map(s=>[fmt(s.km_start)+'–'+fmt(s.km_end),time(s.duration_s),s.pace,s.metrics.hr.mean,s.metrics.cadence.mean,s.metrics.power.mean,s.metrics.gct.mean,s.metrics.stride.mean])));
