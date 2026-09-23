@@ -245,7 +245,7 @@ def coach_card(sleep, wellness, runs):
     rows = [('RHR',show(n['r']),'ดูแนวโน้มภายใน Zepp'),('Sleep',n['t'],'ข้อมูลคืนล่าสุด'),
             ('Bed',n['bd'],'เวลาไทย'),('Deep',n['dp'],'ค่าประเมินจากนาฬิกา'),
             ('REM',n['rm'],'ค่าประเมินจากนาฬิกา'),('Awake',n['aw'],'ไม่แทนค่าที่ขาดด้วยศูนย์'),
-            ('Stress',show(stress),'วันเดียวกับคืนที่แสดง')]
+            ('Stress · daily summary',show(stress),'ค่าสรุปของวันเดียวกับคืนที่แสดง; แยกจากกราฟรายช่วง')]
     trend = ' → '.join(f"{x['d'][5:]}: {show(x['r'])}" for x in sleep['nights'][-4:])
     from zepp_daily_analysis import render
     daily = render(sleep, wellness)

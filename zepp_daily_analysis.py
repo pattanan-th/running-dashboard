@@ -30,7 +30,7 @@ def summaries(sleep, wellness):
         else:
             parts.append('ไม่มีข้อมูลวันก่อนหน้าสำหรับเปรียบเทียบ')
         missing = [label for key,label in [('stress','Stress'),('sleep_hrv','HRV'),('readiness','Readiness')] if metric(key) is None]
-        if missing: parts.append('ยังไม่มี '+', '.join(missing)+' ของวันนี้')
+        if missing: parts.append('ยังไม่มีค่าสรุปรายวัน '+', '.join(missing)+' ของวันนี้ (อาจมีตัวอย่างรายช่วงในกราฟด้านล่าง)')
         if any(v.get('retained_from_previous_sync') for v in h.get('metrics',{}).values()):
             parts.append('บางค่าเก็บจากการซิงค์ก่อนหน้า')
         row['analysis'] = ' · '.join(parts)
