@@ -103,4 +103,31 @@ def enrich(page, root, wellness, activities):
     start = page.rfind('<div class="card">', 0, page.index('<h2>🏅 Best Efforts</h2>'))
     end = page.index(marker, start)
     page = page[:start] + best_efforts_card(root) + page[end:]
+    analysis_path = root/'zepp_analysis.json'
+    if analysis_path.exists():
+        payload = analysis_path.read_text(encoding='utf8').replace('<', '\\u003c')
+        styles = '''<style>
+        .zepp-buttons{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0}
+        .zepp-select{display:flex;gap:6px;overflow:auto;padding:10px 0;max-height:180px;flex-wrap:wrap}
+        .zepp-select button{white-space:nowrap}
+        .zepp-table-scroll{overflow:auto;max-height:420px;margin:12px 0}
+        .zepp-graph-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr));gap:12px}
+        .zepp-graph{border:1px solid var(--border,#444);border-radius:10px;padding:12px;margin:8px 0;min-width:0}
+        .zepp-graph summary{cursor:pointer;font-weight:600}
+        .zepp-canvas{position:relative;height:220px;margin-top:12px}
+        .zepp-note{font-size:12px;color:var(--text-muted)}
+        </style>'''
+        run_card = ('<div class="card" id="zepp-workout-analysis"><h2>📈 วิเคราะห์จากกราฟ · Zepp</h2>'
+                    '<p>อ่านข้อมูลทุกช่องที่ตรวจหน่วยได้ พร้อมเลือกดูทุกกิจกรรมย้อนหลัง</p>'
+                    '<div id="zepp-workout-select" class="zepp-select"></div><div id="zepp-workout-content"></div></div>')
+        health_card = ('<div class="card" id="zepp-health-analysis"><h2>🌿 กราฟสุขภาพและการนอน · Zepp</h2>'
+                       '<div id="zepp-health-select" class="zepp-select"></div><div id="zepp-health-content"></div>'
+                       '<h3>แนวโน้มทุกค่ารายวัน</h3><div id="zepp-trend-select" class="zepp-select"></div>'
+                       '<div id="zepp-trend-content"></div></div>')
+        page=page.replace('<div id="runs-list"></div>',run_card+'<div id="runs-list"></div>')
+        page=page.replace('<div id="coach-analysis-sleep-mirror"></div>',
+                          '<div id="coach-analysis-sleep-mirror"></div>'+health_card)
+        script=(root/'zepp_analysis_view.js').read_text(encoding='utf8')
+        page=page.replace('</body>',styles+'<script id="zepp-series-data" type="application/json">'+payload+
+                          '</script><script>'+script+'</script></body>')
     return page

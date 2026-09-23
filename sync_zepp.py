@@ -19,10 +19,10 @@ BUCKETS = ('long_runs', 'tempos_intervals', 'easy_runs')
 def load(name):
     return json.loads((HERE / name).read_text(encoding='utf-8'))
 
-def save(name, value):
+def save(name, value, compact=False):
     p = HERE / name
     tmp = p.with_suffix(p.suffix + '.tmp')
-    tmp.write_text(json.dumps(value, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+    tmp.write_text(json.dumps(value, ensure_ascii=False, indent=None if compact else 2, allow_nan=False) + '\n', encoding='utf-8')
     tmp.replace(p)
 
 def local(s):
@@ -53,13 +53,28 @@ def read_bridge(db):
         return [dict(r) for r in c.execute(sql)]
     result = {name: rows('SELECT * FROM ' + name) for name in
               ('daily_metrics', 'sleep_sessions', 'workouts', 'stream_provenance')}
-    # Read only the distance series, not routes or account/authentication data.
+    from zepp_analysis import RAW_CHANNELS
+    # Explicit columns: do not export device IDs, routes, raw payloads or auth.
+    for table, columns in {
+        'workout_samples': 'workout_id,timestamp,heart_rate,pace,speed,cadence,altitude,stride,power_watts,ground_contact_ms,vertical_oscillation_mm,vertical_ratio_pct,equivalent_pace_s',
+        'workout_pauses': 'workout_id,start_time,end_time,kind',
+        'workout_laps': 'workout_id,lap_index,start_time,end_time,distance_m,duration_seconds,avg_hr,max_hr',
+        'workout_splits': 'workout_id,split_index,start_time,end_time,distance_m,duration_seconds,pace_min_per_km,avg_hr,max_hr,elevation_gain_m,elevation_loss_m,partial',
+        'workout_hr_zones': 'workout_id,zone_index,upper_bound_bpm,seconds',
+        'metric_samples': 'metric,timestamp,value,unit,source_scope',
+        'sleep_stages': 'sleep_id,stage,start_time,end_time',
+    }.items():
+        result[table] = rows('SELECT '+columns+' FROM '+table)
+    # Only allowlisted graph channels leave the raw-record reader.
     details = {}
     for row in c.execute("SELECT payload,payload_zip FROM raw_records WHERE stream='workout_detail' ORDER BY id"):
         try:
             payload = json.loads(zlib.decompress(row['payload_zip']) if row['payload_zip'] else row['payload'])
             d = payload['data']
-            details[str(d['trackid'])] = {'currentDistance': d.get('currentDistance', '')}
+            details[str(d['trackid'])] = {k:d.get(k,'') for k in RAW_CHANNELS}
+            details[str(d['trackid'])]['_fields'] = {
+                k:bool(v) for k,v in d.items()
+                if k not in ('longitude_latitude','memo','source','provider','trackid')}
         except (ValueError, KeyError, TypeError, zlib.error):
             continue
     result['workout_details'] = details
@@ -264,8 +279,13 @@ def main():
             raise SystemExit('Expected unmodified Garmin stats archive')
         save('garmin_stats_archive.json',original)
     sleep,wellness,runs=import_data(data)
+    from zepp_analysis import analyze, report
+    analysis=analyze(data,wellness,sleep,load('activities.json'))
+    save('zepp_analysis.json',analysis,compact=True)
+    (HERE/'latest_analysis.md').write_text(report(analysis),encoding='utf-8')
     (HERE/'coach_analysis.html').write_text(coach_card(sleep,wellness,runs),encoding='utf-8')
-    print(json.dumps(dict(zepp_runs=len(runs),sleep_sessions=len(data['sleep_sessions']),latest_sleep=sleep['nights'][-1]['d'],latest_run=runs[-1]['date'] if runs else None)))
+    print(json.dumps(dict(zepp_runs=len(runs),sleep_sessions=len(data['sleep_sessions']),latest_sleep=sleep['nights'][-1]['d'],latest_run=runs[-1]['date'] if runs else None,
+                         analyzed_workouts=len(analysis['workouts']),analysis_report='latest_analysis.md')))
 
 if __name__=='__main__':
     main()
