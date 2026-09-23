@@ -107,6 +107,7 @@ def enrich(page, root, wellness, activities):
     if analysis_path.exists():
         payload = analysis_path.read_text(encoding='utf8').replace('<', '\\u003c')
         styles = '''<style>
+        #zepp-workout-analysis,#zepp-health-analysis{column-span:all;width:100%;box-sizing:border-box}
         .zepp-buttons{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0}
         .zepp-select{display:flex;gap:6px;overflow:auto;padding:10px 0;max-height:180px;flex-wrap:wrap}
         .zepp-select button{white-space:nowrap}
@@ -124,7 +125,8 @@ def enrich(page, root, wellness, activities):
                        '<div id="zepp-health-select" class="zepp-select"></div><div id="zepp-health-content"></div>'
                        '<h3>แนวโน้มทุกค่ารายวัน</h3><div id="zepp-trend-select" class="zepp-select"></div>'
                        '<div id="zepp-trend-content"></div></div>')
-        page=page.replace('<div id="runs-list"></div>',run_card+'<div id="runs-list"></div>')
+        page=page.replace('<section class="page" id="page-runs">',
+                          '<section class="page" id="page-runs">'+run_card)
         page=page.replace('<div id="coach-analysis-sleep-mirror"></div>',
                           '<div id="coach-analysis-sleep-mirror"></div>'+health_card)
         script=(root/'zepp_analysis_view.js').read_text(encoding='utf8')

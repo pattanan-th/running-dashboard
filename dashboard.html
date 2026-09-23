@@ -945,7 +945,7 @@ renderTypes();renderOptions();show();})();</script><div class="card">
 </section>
 
 <!-- ============= RUNS PAGE ============= -->
-<section class="page" id="page-runs">
+<section class="page" id="page-runs"><div class="card" id="zepp-workout-analysis"><h2>📈 วิเคราะห์จากกราฟ · Zepp</h2><p>อ่านข้อมูลทุกช่องที่ตรวจหน่วยได้ พร้อมเลือกดูทุกกิจกรรมย้อนหลัง</p><div id="zepp-workout-select" class="zepp-select"></div><div id="zepp-workout-content"></div></div>
   <div class="card">
     <h2>🏃 Long Runs Progression</h2>
     <div class="chart-container"><canvas id="long-runs-chart"></canvas></div>
@@ -971,7 +971,7 @@ renderTypes();renderOptions();show();})();</script><div class="card">
       <button class="btn" onclick="filterRuns('tempo')" id="ft-tempo">💨 Tempo/Int</button>
       <button class="btn" onclick="filterRuns('easy')" id="ft-easy">🟢 Easy</button>
     </div>
-    <div class="card" id="zepp-workout-analysis"><h2>📈 วิเคราะห์จากกราฟ · Zepp</h2><p>อ่านข้อมูลทุกช่องที่ตรวจหน่วยได้ พร้อมเลือกดูทุกกิจกรรมย้อนหลัง</p><div id="zepp-workout-select" class="zepp-select"></div><div id="zepp-workout-content"></div></div><div id="runs-list"></div><div class="card"><h2>กิจกรรมอื่นจาก Zepp</h2><div style="max-height:300px;overflow:auto"><table><thead><tr><th>วันที่</th><th>กิจกรรม</th><th>เวลา</th><th>HR เฉลี่ย</th></tr></thead><tbody><tr><td>2026-08-29</td><td>Badminton</td><td>13:58</td><td>128</td></tr><tr><td>2026-08-29</td><td>Badminton</td><td>28:17</td><td>137</td></tr><tr><td>2026-08-29</td><td>Badminton</td><td>23:44</td><td>125</td></tr><tr><td>2026-08-29</td><td>Badminton</td><td>15:23</td><td>130</td></tr><tr><td>2026-08-22</td><td>Badminton</td><td>39:43</td><td>133</td></tr><tr><td>2026-07-29</td><td>Esports</td><td>1:07:52</td><td>71</td></tr><tr><td>2026-07-29</td><td>Esports</td><td>19:00</td><td>80</td></tr><tr><td>2026-07-28</td><td>Esports</td><td>49:31</td><td>79</td></tr></tbody></table></div></div>
+    <div id="runs-list"></div><div class="card"><h2>กิจกรรมอื่นจาก Zepp</h2><div style="max-height:300px;overflow:auto"><table><thead><tr><th>วันที่</th><th>กิจกรรม</th><th>เวลา</th><th>HR เฉลี่ย</th></tr></thead><tbody><tr><td>2026-08-29</td><td>Badminton</td><td>13:58</td><td>128</td></tr><tr><td>2026-08-29</td><td>Badminton</td><td>28:17</td><td>137</td></tr><tr><td>2026-08-29</td><td>Badminton</td><td>23:44</td><td>125</td></tr><tr><td>2026-08-29</td><td>Badminton</td><td>15:23</td><td>130</td></tr><tr><td>2026-08-22</td><td>Badminton</td><td>39:43</td><td>133</td></tr><tr><td>2026-07-29</td><td>Esports</td><td>1:07:52</td><td>71</td></tr><tr><td>2026-07-29</td><td>Esports</td><td>19:00</td><td>80</td></tr><tr><td>2026-07-28</td><td>Esports</td><td>49:31</td><td>79</td></tr></tbody></table></div></div>
   </div>
 </section>
 
@@ -3556,6 +3556,7 @@ renderChecklist();
 })();
 </script>
 <style>
+        #zepp-workout-analysis,#zepp-health-analysis{column-span:all;width:100%;box-sizing:border-box}
         .zepp-buttons{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0}
         .zepp-select{display:flex;gap:6px;overflow:auto;padding:10px 0;max-height:180px;flex-wrap:wrap}
         .zepp-select button{white-space:nowrap}
