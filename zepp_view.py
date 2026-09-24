@@ -5,6 +5,7 @@ from pathlib import Path
 
 def best_efforts_card(root):
     stats = json.loads((root/'stats.json').read_text(encoding='utf8'))
+    garmin_time = stats.get('meta', {}).get('garmin_time_coverage')
     groups = []
     for title, rankings in [('ตามระยะ', stats.get('rankings', {})), ('ตามเวลา', stats.get('time_rankings', {}))]:
         for label, entries in rankings.items():
@@ -12,11 +13,15 @@ def best_efforts_card(root):
             timed = title == 'ตามเวลา' and not longest
             display = {'Longest':'ระยะไกลที่สุด', 'Longest duration':'ใช้เวลานานที่สุด'}.get(label, label)
             note = ('เวลารวมกิจกรรม · Garmin + Zepp; Garmin ปัดเป็น 0.1 นาที ส่วน Zepp ใช้ moving time เมื่อมี' if longest else
-                    'ระยะไกลที่สุดในเวลาที่เลือก · Zepp เท่านั้น; ประวัติ Garmin ยังไม่มีระยะรายเวลา' if timed else
+                    ('ระยะไกลที่สุดในเวลาที่เลือก · Garmin + Zepp · lifetime' if garmin_time else
+                     'ระยะไกลที่สุดในเวลาที่เลือก · Zepp เท่านั้น; ประวัติ Garmin ยังไม่มีระยะรายเวลา') if timed else
                     'ระยะรวมกิจกรรม · Garmin + Zepp' if label == 'Longest' else
                     'เวลาที่เร็วที่สุดตามระยะ · Garmin + Zepp')
             if label not in ('Longest','Longest duration'):
-                note += ' · Zepp เป็นค่าประมาณ รวมเวลาหยุดในช่วง และไม่ข้ามข้อมูลขาดเกิน 15 วินาที'
+                note += (' · คำนวณจากระยะรายเวลา รวมเวลาหยุดในช่วง ไม่ข้ามข้อมูลขาดเกิน 15 วินาที' if timed else
+                         ' · Zepp เป็นค่าประมาณ รวมเวลาหยุดในช่วง และไม่ข้ามข้อมูลขาดเกิน 15 วินาที')
+            if timed and garmin_time:
+                note += f" · อ่านประวัติ Garmin ได้ {garmin_time['available_runs']}/{garmin_time['total_runs']} รัน; แต่ละช่วงเวลานับเฉพาะรันที่มีข้อมูลต่อเนื่องยาวพอ"
             headers = ['อันดับ']+(['เวลา'] if longest else [])+['ระยะ' if timed or label=='Longest' or longest else 'เวลา', 'Pace /km', 'วันที่', 'กิจกรรม / แหล่งข้อมูล']
             rows = []
             for rank, e in enumerate(entries, 1):

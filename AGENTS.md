@@ -38,3 +38,10 @@ Checks after analysis changes:
 
 Decoder unit reference: ZeppBridge v2.4.0, commit
 ff5e2d9039f26788e0fe2c1d3d1cf4df452579a4, workout_detail.rs and storage/mod.rs.
+
+Garmin lifetime time efforts are preserved in garmin_time_efforts.json and
+merged on every Zepp sync. backfill_garmin_efforts.py downloads historical TCX
+and retains only local time/distance pairs in ignored .garmin_effort_cache/.
+Use its --local-only option to recompute new duration choices without logging
+in. Reconcile the archive before adding Garmin activities beyond its cutoff;
+do not double-count Garmin/Zepp copies. Never publish the local cache.

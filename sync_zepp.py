@@ -81,7 +81,7 @@ def read_bridge(db):
     c.close()
     return result
 
-def merge_stats(base, runs):
+def merge_stats(base, runs, garmin_time=None):
     s = copy.deepcopy(base)
     extra = [dict(d=r['date'], km=r['dist'], min=round(r['duration_seconds']/60, 2),
                   cal=r.get('calories') or 0, gain=r.get('ascent') or 0,
@@ -128,13 +128,20 @@ def merge_stats(base, runs):
     s['time_rankings'] = {}
     for label, seconds in TIMES.items():
         ranks = []
+        for r in (garmin_time or {}).get('runs', []):
+            metres = r.get('best_time_efforts', {}).get(label)
+            if metres is not None:
+                ranks.append(dict(distance_m=metres, pace=pace(seconds, metres/1000),
+                                  date=r['date'], name=r['name'], source='garmin', id=r['id']))
         for r in runs:
             metres = r.get('best_time_efforts', {}).get(label)
             if metres is not None:
                 ranks.append(dict(distance_m=metres, pace=pace(seconds, metres/1000),
                                   date=r['date'], name=r['name'], source='zepp', id=r['id']))
         s['time_rankings'][label] = sorted(ranks, key=lambda e: e['distance_m'], reverse=True)
-    s['meta']['time_rankings_source'] = 'Zepp recorded distance; Garmin timeline unavailable in archive'
+    s['meta']['time_rankings_source'] = 'Garmin TCX + Zepp recorded distance' if garmin_time else 'Zepp recorded distance; Garmin timeline unavailable in archive'
+    if garmin_time:
+        s['meta']['garmin_time_coverage'] = garmin_time['meta']
     longest = [dict(duration_seconds=r['min']*60, time=clock(r['min']*60),
                     distance_m=r['km']*1000, pace=pace(r['min']*60,r['km']),
                     date=r['d'], name='Run', source='garmin') for r in base['runs_list']]
@@ -232,7 +239,8 @@ def import_data(data):
     health = {r['stream']:dict(fetch_ok=r['last_fetch_ok_at'], parse_ok=r['last_parse_ok_at'],
                              parse_error=r['last_parse_error_kind']) for r in data['stream_provenance']}
     save('activities.json',a); save('sleep.json',sleep); save('wellness.json',wellness)
-    save('stats.json',merge_stats(base,runs))
+    garmin_time = load('garmin_time_efforts.json') if (HERE/'garmin_time_efforts.json').exists() else None
+    save('stats.json',merge_stats(base,runs,garmin_time))
     save('zepp_sync.json',dict(imported_at=datetime.now(TZ).isoformat(), sleep_sessions=len(data['sleep_sessions']),
                              runs=len(runs), other_activities=len(other), streams=health))
     return sleep, wellness, runs

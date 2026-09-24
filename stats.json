@@ -5,7 +5,24 @@
     "split_rankings_source": "Garmin archive + Zepp recorded distance",
     "zones_source": "Garmin archive",
     "coverage_note": "Totals, Longest and distance efforts: Garmin + Zepp. Zepp efforts use interpolated recorded distance and elapsed time; gaps over 15s excluded. Fastest average and HR zones: Garmin archive only.",
-    "time_rankings_source": "Zepp recorded distance; Garmin timeline unavailable in archive"
+    "time_rankings_source": "Garmin TCX + Zepp recorded distance",
+    "garmin_time_coverage": {
+      "source": "Garmin TCX recorded time/distance",
+      "archive_cutoff": "2026-07-20",
+      "total_runs": 143,
+      "available_runs": 142,
+      "unavailable_runs": 1,
+      "method": "Rolling elapsed-time distance, linear interpolation; gaps over 15s excluded",
+      "windows_minutes": [
+        5,
+        10,
+        20,
+        30,
+        60,
+        90,
+        120
+      ]
+    }
   },
   "runs_list": [
     {
@@ -5547,6 +5564,46 @@
   "time_rankings": {
     "5 min": [
       {
+        "distance_m": 1019.09033203125,
+        "pace": "4:54",
+        "date": "2026-06-14",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:23240141539"
+      },
+      {
+        "distance_m": 1003.3500366210938,
+        "pace": "4:59",
+        "date": "2026-07-19",
+        "name": "Si Racha - W4 Sun Easy Run",
+        "source": "garmin",
+        "id": "garmin:23648106912"
+      },
+      {
+        "distance_m": 979.7041259765624,
+        "pace": "5:06",
+        "date": "2026-07-18",
+        "name": "Si Racha - W4 Sat Tempo - R",
+        "source": "garmin",
+        "id": "garmin:23636077986"
+      },
+      {
+        "distance_m": 971.8614501953125,
+        "pace": "5:09",
+        "date": "2026-07-15",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:23606327657"
+      },
+      {
+        "distance_m": 969.4400227864585,
+        "pace": "5:09",
+        "date": "2024-02-24",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:14107538641"
+      },
+      {
         "distance_m": 946.1999999999998,
         "pace": "5:17",
         "date": "2026-07-31",
@@ -5561,6 +5618,14 @@
         "name": "Run",
         "source": "zepp",
         "id": "zepp:1786831864"
+      },
+      {
+        "distance_m": 941.6399332682292,
+        "pace": "5:19",
+        "date": "2026-07-12",
+        "name": "Si Racha - W3 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:23564891247"
       },
       {
         "distance_m": 934.5299999999997,
@@ -5579,12 +5644,76 @@
         "id": "zepp:1786701677"
       },
       {
+        "distance_m": 928.880126953125,
+        "pace": "5:23",
+        "date": "2026-02-21",
+        "name": "Si Racha - W4 Sat Long Run",
+        "source": "garmin",
+        "id": "garmin:21933292808"
+      },
+      {
+        "distance_m": 919.10986328125,
+        "pace": "5:26",
+        "date": "2024-05-04",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:15218496253"
+      },
+      {
+        "distance_m": 904.4599609375,
+        "pace": "5:32",
+        "date": "2026-02-01",
+        "name": "Si Racha - W1 Sun Easy Run",
+        "source": "garmin",
+        "id": "garmin:21728848970"
+      },
+      {
+        "distance_m": 904.175048828125,
+        "pace": "5:32",
+        "date": "2026-02-07",
+        "name": "Si Racha - W2 Sat Long Run",
+        "source": "garmin",
+        "id": "garmin:21787834943"
+      },
+      {
+        "distance_m": 899.1999860491069,
+        "pace": "5:34",
+        "date": "2024-02-25",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:14123051662"
+      },
+      {
+        "distance_m": 893.27001953125,
+        "pace": "5:36",
+        "date": "2026-07-03",
+        "name": "Si Racha - W2 Fri Intervals",
+        "source": "garmin",
+        "id": "garmin:23463524696"
+      },
+      {
         "distance_m": 871.8000000000002,
         "pace": "5:44",
         "date": "2026-08-28",
         "name": "Run",
         "source": "zepp",
         "id": "zepp:1787912263"
+      },
+      {
+        "distance_m": 857.3019958496094,
+        "pace": "5:50",
+        "date": "2026-04-17",
+        "name": "Si Racha - W6 Fri Intervals",
+        "source": "garmin",
+        "id": "garmin:22557721866"
+      },
+      {
+        "distance_m": 856.039794921875,
+        "pace": "5:50",
+        "date": "2026-02-18",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:21905588479"
       },
       {
         "distance_m": 854.94,
@@ -5595,12 +5724,36 @@
         "id": "zepp:1789166808"
       },
       {
+        "distance_m": 854.5333658854165,
+        "pace": "5:51",
+        "date": "2026-05-29",
+        "name": "W12 Fri Interval",
+        "source": "garmin",
+        "id": "garmin:23049791264"
+      },
+      {
         "distance_m": 854.4099999999999,
         "pace": "5:51",
         "date": "2026-09-22",
         "name": "Run",
         "source": "zepp",
         "id": "zepp:1790071976"
+      },
+      {
+        "distance_m": 846.9676513671875,
+        "pace": "5:54",
+        "date": "2026-06-10",
+        "name": "Si Racha - W14 Wed Easy Run",
+        "source": "garmin",
+        "id": "garmin:23198678099"
+      },
+      {
+        "distance_m": 830.3917236328125,
+        "pace": "6:01",
+        "date": "2025-08-18",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:20096359018"
       },
       {
         "distance_m": 827.8600000000001,
@@ -5611,12 +5764,108 @@
         "id": "zepp:1789725442"
       },
       {
+        "distance_m": 827.7924499511719,
+        "pace": "6:02",
+        "date": "2026-02-23",
+        "name": "Si Racha - W5 Mon Tempo - T",
+        "source": "garmin",
+        "id": "garmin:21957059799"
+      },
+      {
+        "distance_m": 814.3701171875,
+        "pace": "6:08",
+        "date": "2026-06-26",
+        "name": "Si Racha - W1 Fri Tempo - R",
+        "source": "garmin",
+        "id": "garmin:23384767284"
+      },
+      {
+        "distance_m": 808.920166015625,
+        "pace": "6:11",
+        "date": "2026-02-24",
+        "name": "Si Racha - Pyramid Set",
+        "source": "garmin",
+        "id": "garmin:21968028564"
+      },
+      {
+        "distance_m": 805.6742292131696,
+        "pace": "6:12",
+        "date": "2026-03-14",
+        "name": "Bang Lamung - W1 Sat Long Run",
+        "source": "garmin",
+        "id": "garmin:22165151317"
+      },
+      {
+        "distance_m": 803.8265787760415,
+        "pace": "6:13",
+        "date": "2026-05-01",
+        "name": "Si Racha - W8 Fri Tempo - O",
+        "source": "garmin",
+        "id": "garmin:22719872743"
+      },
+      {
+        "distance_m": 801.06005859375,
+        "pace": "6:15",
+        "date": "2026-04-11",
+        "name": "Nakhon Ratchasima - W5 Sat Easy Run",
+        "source": "garmin",
+        "id": "garmin:22487281289"
+      },
+      {
+        "distance_m": 793.1541573660716,
+        "pace": "6:18",
+        "date": "2026-01-23",
+        "name": "Si Racha - W2 Fri Long Run",
+        "source": "garmin",
+        "id": "garmin:21638072561"
+      },
+      {
+        "distance_m": 792.2756696428569,
+        "pace": "6:19",
+        "date": "2026-02-26",
+        "name": "Si Racha - On Off 200s",
+        "source": "garmin",
+        "id": "garmin:21990779430"
+      },
+      {
         "distance_m": 792.1500000000005,
         "pace": "6:19",
         "date": "2026-08-09",
         "name": "Run",
         "source": "zepp",
         "id": "zepp:1786236856"
+      },
+      {
+        "distance_m": 791.3067220052085,
+        "pace": "6:19",
+        "date": "2026-02-02",
+        "name": "Si Racha - W2 Mon Tempo - O",
+        "source": "garmin",
+        "id": "garmin:21738866340"
+      },
+      {
+        "distance_m": 788.26171875,
+        "pace": "6:21",
+        "date": "2026-06-21",
+        "name": "Nakhon Ratchasima - Korat21 HR-Locke",
+        "source": "garmin",
+        "id": "garmin:23322768957"
+      },
+      {
+        "distance_m": 788.080078125,
+        "pace": "6:21",
+        "date": "2026-05-10",
+        "name": "Si Racha - W9 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:22826416629"
+      },
+      {
+        "distance_m": 787.9319335937498,
+        "pace": "6:21",
+        "date": "2026-04-03",
+        "name": "Si Racha - W4 Fri Tempo - T",
+        "source": "garmin",
+        "id": "garmin:22392265133"
       },
       {
         "distance_m": 787.0999999999995,
@@ -5627,12 +5876,92 @@
         "id": "zepp:1789122164"
       },
       {
+        "distance_m": 786.2181152343746,
+        "pace": "6:22",
+        "date": "2026-05-15",
+        "name": "W10 Fri Tempo -",
+        "source": "garmin",
+        "id": "garmin:22884283585"
+      },
+      {
+        "distance_m": 785.8699951171875,
+        "pace": "6:22",
+        "date": "2025-07-31",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19904964042"
+      },
+      {
+        "distance_m": 784.725341796875,
+        "pace": "6:22",
+        "date": "2026-06-28",
+        "name": "Bang Lamung - W1 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:23401587239"
+      },
+      {
+        "distance_m": 781.6228724888392,
+        "pace": "6:24",
+        "date": "2023-11-20",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:12803260693"
+      },
+      {
+        "distance_m": 781.3798828125,
+        "pace": "6:24",
+        "date": "2026-02-13",
+        "name": "Si Racha - W3 Fri Tempo - P",
+        "source": "garmin",
+        "id": "garmin:21853898022"
+      },
+      {
+        "distance_m": 781.3012390136719,
+        "pace": "6:24",
+        "date": "2025-11-01",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:20857684071"
+      },
+      {
+        "distance_m": 780.8301757812496,
+        "pace": "6:24",
+        "date": "2023-05-10",
+        "name": "Nakhon Ratchasima Running",
+        "source": "garmin",
+        "id": "garmin:11086044579"
+      },
+      {
         "distance_m": 780.5299999999997,
         "pace": "6:24",
         "date": "2026-07-28",
         "name": "Run",
         "source": "zepp",
         "id": "zepp:1785195286"
+      },
+      {
+        "distance_m": 779.309814453125,
+        "pace": "6:25",
+        "date": "2025-11-12",
+        "name": "Si Racha - W5 Wed Tempo - R",
+        "source": "garmin",
+        "id": "garmin:20966263287"
+      },
+      {
+        "distance_m": 779.1300048828125,
+        "pace": "6:25",
+        "date": "2026-04-24",
+        "name": "Si Racha - W7 Fri Tempo - R",
+        "source": "garmin",
+        "id": "garmin:22640745444"
+      },
+      {
+        "distance_m": 778.9632568359375,
+        "pace": "6:25",
+        "date": "2025-07-22",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19810876499"
       },
       {
         "distance_m": 777.54,
@@ -5651,12 +5980,204 @@
         "id": "zepp:1786097654"
       },
       {
+        "distance_m": 774.9599609375,
+        "pace": "6:27",
+        "date": "2026-06-19",
+        "name": "Si Racha - W15 Fri Taper In",
+        "source": "garmin",
+        "id": "garmin:23300597520"
+      },
+      {
+        "distance_m": 765.4324340820312,
+        "pace": "6:32",
+        "date": "2026-01-26",
+        "name": "Si Racha - W3 Mon Intervals",
+        "source": "garmin",
+        "id": "garmin:21667938892"
+      },
+      {
+        "distance_m": 765.3499999999999,
+        "pace": "6:32",
+        "date": "2026-04-10",
+        "name": "Nakhon Ratchasima - W5 Fri Tempo - O",
+        "source": "garmin",
+        "id": "garmin:22475866289"
+      },
+      {
+        "distance_m": 765.3375244140625,
+        "pace": "6:32",
+        "date": "2026-03-29",
+        "name": "Si Racha - W3 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:22337124295"
+      },
+      {
+        "distance_m": 765.3014351981026,
+        "pace": "6:32",
+        "date": "2025-07-23",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19822453673"
+      },
+      {
+        "distance_m": 763.5699462890625,
+        "pace": "6:33",
+        "date": "2026-06-27",
+        "name": "Si Racha - W1 Sat Easy Run",
+        "source": "garmin",
+        "id": "garmin:23390926482"
+      },
+      {
+        "distance_m": 763.1699829101562,
+        "pace": "6:33",
+        "date": "2025-07-08",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19667352311"
+      },
+      {
+        "distance_m": 763.0939453125002,
+        "pace": "6:33",
+        "date": "2026-03-07",
+        "name": "Si Racha - W6 Sat Long Run",
+        "source": "garmin",
+        "id": "garmin:22089914362"
+      },
+      {
+        "distance_m": 762.453857421875,
+        "pace": "6:33",
+        "date": "2023-11-25",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:12866566797"
+      },
+      {
+        "distance_m": 761.59326171875,
+        "pace": "6:34",
+        "date": "2026-05-22",
+        "name": "W11 Fri Tempo -",
+        "source": "garmin",
+        "id": "garmin:22965984580"
+      },
+      {
+        "distance_m": 761.2500610351562,
+        "pace": "6:34",
+        "date": "2026-03-21",
+        "name": "Si Racha - W2 Sat Easy Run",
+        "source": "garmin",
+        "id": "garmin:22243563946"
+      },
+      {
+        "distance_m": 761.1579833984374,
+        "pace": "6:34",
+        "date": "2026-02-20",
+        "name": "Si Racha - W4 Fri Easy Run",
+        "source": "garmin",
+        "id": "garmin:21926291442"
+      },
+      {
+        "distance_m": 755.5,
+        "pace": "6:37",
+        "date": "2026-04-13",
+        "name": "Nakhon Ratchasima - W5 Mon Long Run",
+        "source": "garmin",
+        "id": "garmin:22505985835"
+      },
+      {
+        "distance_m": 754.5513828822544,
+        "pace": "6:38",
+        "date": "2026-02-27",
+        "name": "Si Racha - W5 Fri Easy Run",
+        "source": "garmin",
+        "id": "garmin:22001806849"
+      },
+      {
+        "distance_m": 750.5175476074219,
+        "pace": "6:40",
+        "date": "2026-01-17",
+        "name": "Si Racha - W1 Sat Long Run",
+        "source": "garmin",
+        "id": "garmin:21571049136"
+      },
+      {
+        "distance_m": 749.619873046875,
+        "pace": "6:40",
+        "date": "2026-04-05",
+        "name": "Si Racha - W4 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:22415442199"
+      },
+      {
+        "distance_m": 749.5025482177734,
+        "pace": "6:40",
+        "date": "2026-03-15",
+        "name": "Si Racha - W1 Sun Easy Run",
+        "source": "garmin",
+        "id": "garmin:22179247239"
+      },
+      {
+        "distance_m": 744.4000040690105,
+        "pace": "6:43",
+        "date": "2025-10-28",
+        "name": "Si Racha - W3 Tue Intervals",
+        "source": "garmin",
+        "id": "garmin:20819812604"
+      },
+      {
+        "distance_m": 744.309814453125,
+        "pace": "6:43",
+        "date": "2026-03-06",
+        "name": "Si Racha - W6 Fri Easy Run",
+        "source": "garmin",
+        "id": "garmin:22079678995"
+      },
+      {
+        "distance_m": 744.2879699707032,
+        "pace": "6:43",
+        "date": "2025-11-06",
+        "name": "Si Racha - W4 Thu Easy Run",
+        "source": "garmin",
+        "id": "garmin:20908478119"
+      },
+      {
+        "distance_m": 742.8561859130859,
+        "pace": "6:44",
+        "date": "2025-10-23",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:20773584938"
+      },
+      {
         "distance_m": 739.25,
         "pace": "6:46",
         "date": "2026-08-23",
         "name": "Run",
         "source": "zepp",
         "id": "zepp:1787440334"
+      },
+      {
+        "distance_m": 734.946614583333,
+        "pace": "6:48",
+        "date": "2023-05-09",
+        "name": "Nakhon Ratchasima Running",
+        "source": "garmin",
+        "id": "garmin:11078817529"
+      },
+      {
+        "distance_m": 733.580078125,
+        "pace": "6:49",
+        "date": "2025-10-25",
+        "name": "Si Racha - W2 Sat Long Run",
+        "source": "garmin",
+        "id": "garmin:20788465704"
+      },
+      {
+        "distance_m": 733.5333658854165,
+        "pace": "6:49",
+        "date": "2026-06-11",
+        "name": "Si Racha - W14 Thu Long Run",
+        "source": "garmin",
+        "id": "garmin:23209980515"
       },
       {
         "distance_m": 727.4000000000005,
@@ -5667,12 +6188,252 @@
         "id": "zepp:1787306686"
       },
       {
+        "distance_m": 726.6966959635415,
+        "pace": "6:53",
+        "date": "2025-11-05",
+        "name": "Si Racha - W4 Wed Intervals",
+        "source": "garmin",
+        "id": "garmin:20898309662"
+      },
+      {
+        "distance_m": 726.3599853515625,
+        "pace": "6:53",
+        "date": "2026-05-08",
+        "name": "W9 Fri Intervals",
+        "source": "garmin",
+        "id": "garmin:22807048007"
+      },
+      {
+        "distance_m": 722.7600250244141,
+        "pace": "6:55",
+        "date": "2026-06-09",
+        "name": "Si Racha - W14 Tue Easy Run",
+        "source": "garmin",
+        "id": "garmin:23185758277"
+      },
+      {
+        "distance_m": 722.3570731026784,
+        "pace": "6:55",
+        "date": "2025-07-13",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19719745319"
+      },
+      {
+        "distance_m": 717.510009765625,
+        "pace": "6:58",
+        "date": "2026-02-06",
+        "name": "Si Racha - W2 Fri Easy Run",
+        "source": "garmin",
+        "id": "garmin:21781449207"
+      },
+      {
+        "distance_m": 716.06494140625,
+        "pace": "6:59",
+        "date": "2026-04-26",
+        "name": "Bang Lamung - W7 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:22660073333"
+      },
+      {
+        "distance_m": 715.9999389648438,
+        "pace": "6:59",
+        "date": "2026-01-19",
+        "name": "Si Racha - W2 Mon Tempo - R",
+        "source": "garmin",
+        "id": "garmin:21595449809"
+      },
+      {
+        "distance_m": 712.64013671875,
+        "pace": "7:01",
+        "date": "2025-10-22",
+        "name": "Si Racha - W2 Wed Tempo - P",
+        "source": "garmin",
+        "id": "garmin:20763895756"
+      },
+      {
+        "distance_m": 712.0999755859375,
+        "pace": "7:01",
+        "date": "2023-11-28",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:12903670781"
+      },
+      {
+        "distance_m": 711.508280436198,
+        "pace": "7:02",
+        "date": "2026-02-15",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:21874117809"
+      },
+      {
+        "distance_m": 710.0321533203123,
+        "pace": "7:03",
+        "date": "2025-07-25",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19842885781"
+      },
+      {
         "distance_m": 709.2300000000005,
         "pace": "7:03",
         "date": "2026-09-20",
         "name": "Run",
         "source": "zepp",
         "id": "zepp:1789862396"
+      },
+      {
+        "distance_m": 708.0800170898438,
+        "pace": "7:04",
+        "date": "2023-11-29",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:12916286168"
+      },
+      {
+        "distance_m": 706.000017438616,
+        "pace": "7:05",
+        "date": "2025-08-12",
+        "name": "Si Racha - W2 Tue Tempo - P",
+        "source": "garmin",
+        "id": "garmin:20032761643"
+      },
+      {
+        "distance_m": 704.0900268554688,
+        "pace": "7:06",
+        "date": "2025-08-07",
+        "name": "Si Racha - W1 Thu Easy Run",
+        "source": "garmin",
+        "id": "garmin:19979770686"
+      },
+      {
+        "distance_m": 703.9638977050781,
+        "pace": "7:06",
+        "date": "2025-07-15",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19739417453"
+      },
+      {
+        "distance_m": 703.9183756510417,
+        "pace": "7:06",
+        "date": "2025-07-24",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19833225677"
+      },
+      {
+        "distance_m": 701.0101318359375,
+        "pace": "7:08",
+        "date": "2025-07-18",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19770899718"
+      },
+      {
+        "distance_m": 699.7628435407366,
+        "pace": "7:09",
+        "date": "2026-05-16",
+        "name": "Si Racha - W10 Sat Easy Run",
+        "source": "garmin",
+        "id": "garmin:22895211286"
+      },
+      {
+        "distance_m": 699.31982421875,
+        "pace": "7:09",
+        "date": "2026-01-25",
+        "name": "Si Racha - W2 Sun Easy Run",
+        "source": "garmin",
+        "id": "garmin:21657681862"
+      },
+      {
+        "distance_m": 697.150146484375,
+        "pace": "7:10",
+        "date": "2026-06-06",
+        "name": "Si Racha - W13 Sat Easy Run",
+        "source": "garmin",
+        "id": "garmin:23145202575"
+      },
+      {
+        "distance_m": 696.0400390625,
+        "pace": "7:11",
+        "date": "2026-05-30",
+        "name": "Si Racha - W12 Sat Easy Run",
+        "source": "garmin",
+        "id": "garmin:23066241770"
+      },
+      {
+        "distance_m": 694.3499755859375,
+        "pace": "7:12",
+        "date": "2023-11-21",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:12816331305"
+      },
+      {
+        "distance_m": 689.216715494792,
+        "pace": "7:15",
+        "date": "2025-11-09",
+        "name": "Si Racha - W4 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:20936555221"
+      },
+      {
+        "distance_m": 688.5599365234375,
+        "pace": "7:16",
+        "date": "2025-07-17",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19760786589"
+      },
+      {
+        "distance_m": 687.1724853515625,
+        "pace": "7:17",
+        "date": "2025-08-19",
+        "name": "Si Racha - W3 Tue Easy Run",
+        "source": "garmin",
+        "id": "garmin:20107446375"
+      },
+      {
+        "distance_m": 684.7814453124993,
+        "pace": "7:18",
+        "date": "2026-05-17",
+        "name": "Si Racha - W10 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:22906987901"
+      },
+      {
+        "distance_m": 684.7097981770835,
+        "pace": "7:18",
+        "date": "2025-07-12",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19708836951"
+      },
+      {
+        "distance_m": 683.9700317382812,
+        "pace": "7:19",
+        "date": "2025-08-15",
+        "name": "Si Racha - W2 Fri Long Run",
+        "source": "garmin",
+        "id": "garmin:20065550088"
+      },
+      {
+        "distance_m": 683.060041155134,
+        "pace": "7:19",
+        "date": "2026-05-02",
+        "name": "Si Racha - W8 Sat Easy Run",
+        "source": "garmin",
+        "id": "garmin:22732160277"
+      },
+      {
+        "distance_m": 682.4667154947917,
+        "pace": "7:20",
+        "date": "2023-11-24",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:12854767544"
       },
       {
         "distance_m": 678.7899999999995,
@@ -5683,12 +6444,124 @@
         "id": "zepp:1788563819"
       },
       {
+        "distance_m": 675.9350179036458,
+        "pace": "7:24",
+        "date": "2025-07-16",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19750014695"
+      },
+      {
+        "distance_m": 674.22998046875,
+        "pace": "7:25",
+        "date": "2025-07-30",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19894303723"
+      },
+      {
+        "distance_m": 673.4070870535716,
+        "pace": "7:25",
+        "date": "2026-04-04",
+        "name": "Si Racha - W4 Sat Easy Run",
+        "source": "garmin",
+        "id": "garmin:22404296952"
+      },
+      {
+        "distance_m": 672.8108908913352,
+        "pace": "7:26",
+        "date": "2026-06-05",
+        "name": "W13 Fri Tempo -",
+        "source": "garmin",
+        "id": "garmin:23135704026"
+      },
+      {
+        "distance_m": 667.5518798828125,
+        "pace": "7:29",
+        "date": "2025-10-17",
+        "name": "Si Racha - W1 Fri Easy Run",
+        "source": "garmin",
+        "id": "garmin:20715405087"
+      },
+      {
+        "distance_m": 667.0370744977679,
+        "pace": "7:30",
+        "date": "2026-01-18",
+        "name": "Si Racha - W1 Sun Easy Run",
+        "source": "garmin",
+        "id": "garmin:21581782598"
+      },
+      {
+        "distance_m": 665.1500244140625,
+        "pace": "7:31",
+        "date": "2026-05-24",
+        "name": "Si Racha - W11 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:22989751425"
+      },
+      {
         "distance_m": 664.84,
         "pace": "7:31",
         "date": "2026-08-02",
         "name": "Run",
         "source": "zepp",
         "id": "zepp:1785629603"
+      },
+      {
+        "distance_m": 664.16748046875,
+        "pace": "7:32",
+        "date": "2026-03-20",
+        "name": "Si Racha - W2 Fri Easy Run",
+        "source": "garmin",
+        "id": "garmin:22235793527"
+      },
+      {
+        "distance_m": 657.719970703125,
+        "pace": "7:36",
+        "date": "2026-04-25",
+        "name": "Si Racha - W7 Sat Easy Run",
+        "source": "garmin",
+        "id": "garmin:22652534632"
+      },
+      {
+        "distance_m": 657.430094401042,
+        "pace": "7:36",
+        "date": "2023-05-04",
+        "name": "Nakhon Ratchasima Running",
+        "source": "garmin",
+        "id": "garmin:11043202469"
+      },
+      {
+        "distance_m": 655.9500732421875,
+        "pace": "7:37",
+        "date": "2024-04-06",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:14760275607"
+      },
+      {
+        "distance_m": 649.259765625,
+        "pace": "7:42",
+        "date": "2026-07-20",
+        "name": "Si Racha - W4 Mon Long Run",
+        "source": "garmin",
+        "id": "garmin:23663984483"
+      },
+      {
+        "distance_m": 649.2099609375,
+        "pace": "7:42",
+        "date": "2025-08-08",
+        "name": "Si Racha - W1 Fri Long Run",
+        "source": "garmin",
+        "id": "garmin:19990420917"
+      },
+      {
+        "distance_m": 647.4785518305642,
+        "pace": "7:43",
+        "date": "2026-05-03",
+        "name": "Bang Lamung - W8 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:22743886437"
       },
       {
         "distance_m": 645.12,
@@ -5699,12 +6572,76 @@
         "id": "zepp:1786843563"
       },
       {
+        "distance_m": 644.1943359375,
+        "pace": "7:46",
+        "date": "2026-01-30",
+        "name": "Si Racha - W3 Fri Long Run",
+        "source": "garmin",
+        "id": "garmin:21709557008"
+      },
+      {
+        "distance_m": 641.3700256347656,
+        "pace": "7:48",
+        "date": "2025-08-13",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:20044213293"
+      },
+      {
+        "distance_m": 627.8433284759521,
+        "pace": "7:58",
+        "date": "2026-06-03",
+        "name": "Si Racha - W12 Wed Long Run",
+        "source": "garmin",
+        "id": "garmin:23110375358"
+      },
+      {
         "distance_m": 627.1000000000004,
         "pace": "7:58",
         "date": "2026-09-06",
         "name": "Run",
         "source": "zepp",
         "id": "zepp:1788654041"
+      },
+      {
+        "distance_m": 623.5533040364584,
+        "pace": "8:01",
+        "date": "2026-05-09",
+        "name": "Si Racha - W9 Sat Easy Run",
+        "source": "garmin",
+        "id": "garmin:22814290479"
+      },
+      {
+        "distance_m": 617.9901123046875,
+        "pace": "8:05",
+        "date": "2025-10-18",
+        "name": "Si Racha - W1 Sat Long Run",
+        "source": "garmin",
+        "id": "garmin:20725101626"
+      },
+      {
+        "distance_m": 616.2699584960938,
+        "pace": "8:07",
+        "date": "2026-05-23",
+        "name": "Si Racha - W11 Sat Easy Run",
+        "source": "garmin",
+        "id": "garmin:22977273845"
+      },
+      {
+        "distance_m": 615.626668294271,
+        "pace": "8:07",
+        "date": "2026-03-27",
+        "name": "Si Racha - W3 Fri Easy Run",
+        "source": "garmin",
+        "id": "garmin:22314923663"
+      },
+      {
+        "distance_m": 614.913340250651,
+        "pace": "8:08",
+        "date": "2026-06-22",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:23338549468"
       },
       {
         "distance_m": 614.33,
@@ -5723,6 +6660,22 @@
         "id": "zepp:1788050928"
       },
       {
+        "distance_m": 582.6348876953125,
+        "pace": "8:35",
+        "date": "2026-02-28",
+        "name": "Si Racha - W5 Sat Long Run",
+        "source": "garmin",
+        "id": "garmin:22009058664"
+      },
+      {
+        "distance_m": 574.175048828125,
+        "pace": "8:42",
+        "date": "2026-07-05",
+        "name": "Bang Lamung - W2 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:23482051434"
+      },
+      {
         "distance_m": 573.0,
         "pace": "8:44",
         "date": "2026-09-13",
@@ -5731,12 +6684,164 @@
         "id": "zepp:1789258587"
       },
       {
+        "distance_m": 539.0957728794647,
+        "pace": "9:16",
+        "date": "2025-07-06",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19648697727"
+      },
+      {
+        "distance_m": 538.4450073242188,
+        "pace": "9:17",
+        "date": "2025-07-07",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19657959446"
+      },
+      {
+        "distance_m": 525.73193359375,
+        "pace": "9:31",
+        "date": "2026-02-14",
+        "name": "Si Racha - W3 Sat Long Run",
+        "source": "garmin",
+        "id": "garmin:21860771605"
+      },
+      {
+        "distance_m": 520.633463541667,
+        "pace": "9:36",
+        "date": "2025-11-22",
+        "name": "Si Racha Trail Running",
+        "source": "garmin",
+        "id": "garmin:21056211320"
+      },
+      {
+        "distance_m": 519.3026123046875,
+        "pace": "9:38",
+        "date": "2025-10-05",
+        "name": "Si Racha Trail Running",
+        "source": "garmin",
+        "id": "garmin:20591663664"
+      },
+      {
+        "distance_m": 517.696646531423,
+        "pace": "9:39",
+        "date": "2025-11-16",
+        "name": "Si Racha - W5 Sun Easy Run",
+        "source": "garmin",
+        "id": "garmin:21039176863"
+      },
+      {
+        "distance_m": 514.642822265625,
+        "pace": "9:43",
+        "date": "2024-05-23",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:15537951518"
+      },
+      {
+        "distance_m": 501.5881902521307,
+        "pace": "9:58",
+        "date": "2025-10-05",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:20591701308"
+      },
+      {
+        "distance_m": 487.6929408482142,
+        "pace": "10:15",
+        "date": "2024-05-12",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:15354420117"
+      },
+      {
+        "distance_m": 486.7025146484375,
+        "pace": "10:16",
+        "date": "2026-01-24",
+        "name": "Si Racha Trail Running",
+        "source": "garmin",
+        "id": "garmin:21645536036"
+      },
+      {
+        "distance_m": 478.5899963378906,
+        "pace": "10:27",
+        "date": "2023-11-22",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:12829107525"
+      },
+      {
+        "distance_m": 452.22998046875,
+        "pace": "11:03",
+        "date": "2023-05-16",
+        "name": "Nakhon Ratchasima Running",
+        "source": "garmin",
+        "id": "garmin:11127828703"
+      },
+      {
+        "distance_m": 437.3733469645182,
+        "pace": "11:26",
+        "date": "2025-08-13",
+        "name": "W2 Wed Easy Run",
+        "source": "garmin",
+        "id": "garmin:20043809172"
+      },
+      {
+        "distance_m": 424.080078125,
+        "pace": "11:47",
+        "date": "2023-05-11",
+        "name": "Nakhon Ratchasima Running",
+        "source": "garmin",
+        "id": "garmin:11093215574"
+      },
+      {
+        "distance_m": 414.23716517857144,
+        "pace": "12:04",
+        "date": "2026-01-17",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:21574080785"
+      },
+      {
+        "distance_m": 414.0499928792318,
+        "pace": "12:05",
+        "date": "2023-05-19",
+        "name": "Nakhon Ratchasima Running",
+        "source": "garmin",
+        "id": "garmin:11149286262"
+      },
+      {
+        "distance_m": 403.320068359375,
+        "pace": "12:24",
+        "date": "2025-07-29",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19883054842"
+      },
+      {
+        "distance_m": 386.21599731445315,
+        "pace": "12:57",
+        "date": "2026-01-31",
+        "name": "Si Racha Trail Running",
+        "source": "garmin",
+        "id": "garmin:21715628949"
+      },
+      {
         "distance_m": 381.5199999999995,
         "pace": "13:06",
         "date": "2026-09-19",
         "name": "Trail Run",
         "source": "zepp",
         "id": "zepp:1789778233"
+      },
+      {
+        "distance_m": 368.15374755859375,
+        "pace": "13:35",
+        "date": "2024-04-05",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:14744503551"
       }
     ],
     "10 min": [
@@ -5747,6 +6852,30 @@
         "name": "Run",
         "source": "zepp",
         "id": "zepp:1788516022"
+      },
+      {
+        "distance_m": 1808.259989420573,
+        "pace": "5:32",
+        "date": "2026-07-18",
+        "name": "Si Racha - W4 Sat Tempo - R",
+        "source": "garmin",
+        "id": "garmin:23636077986"
+      },
+      {
+        "distance_m": 1780.563435872396,
+        "pace": "5:37",
+        "date": "2026-02-01",
+        "name": "Si Racha - W1 Sun Easy Run",
+        "source": "garmin",
+        "id": "garmin:21728848970"
+      },
+      {
+        "distance_m": 1730.85986328125,
+        "pace": "5:47",
+        "date": "2026-06-14",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:23240141539"
       },
       {
         "distance_m": 1722.9699999999993,
@@ -5789,12 +6918,60 @@
         "id": "zepp:1789725442"
       },
       {
+        "distance_m": 1635.2898864746094,
+        "pace": "6:07",
+        "date": "2026-02-18",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:21905588479"
+      },
+      {
         "distance_m": 1632.94,
         "pace": "6:07",
         "date": "2026-09-12",
         "name": "Run",
         "source": "zepp",
         "id": "zepp:1789166808"
+      },
+      {
+        "distance_m": 1626.6699829101562,
+        "pace": "6:09",
+        "date": "2026-07-12",
+        "name": "Si Racha - W3 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:23564891247"
+      },
+      {
+        "distance_m": 1619.58984375,
+        "pace": "6:10",
+        "date": "2026-07-03",
+        "name": "Si Racha - W2 Fri Intervals",
+        "source": "garmin",
+        "id": "garmin:23463524696"
+      },
+      {
+        "distance_m": 1613.80029296875,
+        "pace": "6:12",
+        "date": "2026-02-07",
+        "name": "Si Racha - W2 Sat Long Run",
+        "source": "garmin",
+        "id": "garmin:21787834943"
+      },
+      {
+        "distance_m": 1604.0124995708466,
+        "pace": "6:14",
+        "date": "2026-07-15",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:23606327657"
+      },
+      {
+        "distance_m": 1602.5400390625,
+        "pace": "6:14",
+        "date": "2026-06-26",
+        "name": "Si Racha - W1 Fri Tempo - R",
+        "source": "garmin",
+        "id": "garmin:23384767284"
       },
       {
         "distance_m": 1600.7300000000005,
@@ -5805,12 +6982,92 @@
         "id": "zepp:1787912263"
       },
       {
+        "distance_m": 1597.329833984375,
+        "pace": "6:16",
+        "date": "2026-02-23",
+        "name": "Si Racha - W5 Mon Tempo - T",
+        "source": "garmin",
+        "id": "garmin:21957059799"
+      },
+      {
+        "distance_m": 1595.771817294034,
+        "pace": "6:16",
+        "date": "2026-05-29",
+        "name": "W12 Fri Interval",
+        "source": "garmin",
+        "id": "garmin:23049791264"
+      },
+      {
+        "distance_m": 1594.3300094604492,
+        "pace": "6:16",
+        "date": "2026-07-19",
+        "name": "Si Racha - W4 Sun Easy Run",
+        "source": "garmin",
+        "id": "garmin:23648106912"
+      },
+      {
+        "distance_m": 1593.9874572753906,
+        "pace": "6:16",
+        "date": "2024-02-24",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:14107538641"
+      },
+      {
+        "distance_m": 1589.39013671875,
+        "pace": "6:18",
+        "date": "2026-02-24",
+        "name": "Si Racha - Pyramid Set",
+        "source": "garmin",
+        "id": "garmin:21968028564"
+      },
+      {
+        "distance_m": 1587.1575927734375,
+        "pace": "6:18",
+        "date": "2026-03-14",
+        "name": "Bang Lamung - W1 Sat Long Run",
+        "source": "garmin",
+        "id": "garmin:22165151317"
+      },
+      {
+        "distance_m": 1570.9098632812502,
+        "pace": "6:22",
+        "date": "2026-02-26",
+        "name": "Si Racha - On Off 200s",
+        "source": "garmin",
+        "id": "garmin:21990779430"
+      },
+      {
+        "distance_m": 1567.4344308035716,
+        "pace": "6:23",
+        "date": "2026-05-01",
+        "name": "Si Racha - W8 Fri Tempo - O",
+        "source": "garmin",
+        "id": "garmin:22719872743"
+      },
+      {
+        "distance_m": 1549.9442661830353,
+        "pace": "6:27",
+        "date": "2026-02-13",
+        "name": "Si Racha - W3 Fri Tempo - P",
+        "source": "garmin",
+        "id": "garmin:21853898022"
+      },
+      {
         "distance_m": 1549.7299999999996,
         "pace": "6:27",
         "date": "2026-08-09",
         "name": "Run",
         "source": "zepp",
         "id": "zepp:1786236856"
+      },
+      {
+        "distance_m": 1548.8474731445312,
+        "pace": "6:27",
+        "date": "2026-05-15",
+        "name": "W10 Fri Tempo -",
+        "source": "garmin",
+        "id": "garmin:22884283585"
       },
       {
         "distance_m": 1546.9400000000005,
@@ -5821,12 +7078,252 @@
         "id": "zepp:1785195286"
       },
       {
+        "distance_m": 1539.25,
+        "pace": "6:30",
+        "date": "2026-06-28",
+        "name": "Bang Lamung - W1 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:23401587239"
+      },
+      {
+        "distance_m": 1536.2085484095983,
+        "pace": "6:31",
+        "date": "2026-04-03",
+        "name": "Si Racha - W4 Fri Tempo - T",
+        "source": "garmin",
+        "id": "garmin:22392265133"
+      },
+      {
+        "distance_m": 1532.1228724888392,
+        "pace": "6:32",
+        "date": "2026-04-17",
+        "name": "Si Racha - W6 Fri Intervals",
+        "source": "garmin",
+        "id": "garmin:22557721866"
+      },
+      {
+        "distance_m": 1525.8499755859375,
+        "pace": "6:33",
+        "date": "2026-04-24",
+        "name": "Si Racha - W7 Fri Tempo - R",
+        "source": "garmin",
+        "id": "garmin:22640745444"
+      },
+      {
+        "distance_m": 1522.0315987723216,
+        "pace": "6:34",
+        "date": "2026-01-23",
+        "name": "Si Racha - W2 Fri Long Run",
+        "source": "garmin",
+        "id": "garmin:21638072561"
+      },
+      {
+        "distance_m": 1520.550130208334,
+        "pace": "6:35",
+        "date": "2026-05-10",
+        "name": "Si Racha - W9 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:22826416629"
+      },
+      {
+        "distance_m": 1510.6600748697915,
+        "pace": "6:37",
+        "date": "2026-03-07",
+        "name": "Si Racha - W6 Sat Long Run",
+        "source": "garmin",
+        "id": "garmin:22089914362"
+      },
+      {
+        "distance_m": 1510.575927734375,
+        "pace": "6:37",
+        "date": "2025-07-23",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19822453673"
+      },
+      {
+        "distance_m": 1509.0842633928587,
+        "pace": "6:38",
+        "date": "2026-06-21",
+        "name": "Nakhon Ratchasima - Korat21 HR-Locke",
+        "source": "garmin",
+        "id": "garmin:23322768957"
+      },
+      {
+        "distance_m": 1504.0849609375,
+        "pace": "6:39",
+        "date": "2026-02-02",
+        "name": "Si Racha - W2 Mon Tempo - O",
+        "source": "garmin",
+        "id": "garmin:21738866340"
+      },
+      {
+        "distance_m": 1494.599609375,
+        "pace": "6:41",
+        "date": "2026-04-11",
+        "name": "Nakhon Ratchasima - W5 Sat Easy Run",
+        "source": "garmin",
+        "id": "garmin:22487281289"
+      },
+      {
+        "distance_m": 1489.2501464843754,
+        "pace": "6:43",
+        "date": "2023-11-25",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:12866566797"
+      },
+      {
+        "distance_m": 1486.65966796875,
+        "pace": "6:44",
+        "date": "2026-06-19",
+        "name": "Si Racha - W15 Fri Taper In",
+        "source": "garmin",
+        "id": "garmin:23300597520"
+      },
+      {
+        "distance_m": 1485.5700073242188,
+        "pace": "6:44",
+        "date": "2026-02-20",
+        "name": "Si Racha - W4 Fri Easy Run",
+        "source": "garmin",
+        "id": "garmin:21926291442"
+      },
+      {
+        "distance_m": 1483.56005859375,
+        "pace": "6:44",
+        "date": "2026-04-10",
+        "name": "Nakhon Ratchasima - W5 Fri Tempo - O",
+        "source": "garmin",
+        "id": "garmin:22475866289"
+      },
+      {
         "distance_m": 1482.0299999999997,
         "pace": "6:45",
         "date": "2026-08-07",
         "name": "Run",
         "source": "zepp",
         "id": "zepp:1786097654"
+      },
+      {
+        "distance_m": 1481.3798828125,
+        "pace": "6:45",
+        "date": "2026-04-05",
+        "name": "Si Racha - W4 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:22415442199"
+      },
+      {
+        "distance_m": 1481.3062133789062,
+        "pace": "6:45",
+        "date": "2025-11-01",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:20857684071"
+      },
+      {
+        "distance_m": 1472.5198974609375,
+        "pace": "6:47",
+        "date": "2026-01-17",
+        "name": "Si Racha - W1 Sat Long Run",
+        "source": "garmin",
+        "id": "garmin:21571049136"
+      },
+      {
+        "distance_m": 1471.8534342447915,
+        "pace": "6:48",
+        "date": "2023-11-20",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:12803260693"
+      },
+      {
+        "distance_m": 1465.8966064453125,
+        "pace": "6:49",
+        "date": "2025-08-18",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:20096359018"
+      },
+      {
+        "distance_m": 1464.573404947917,
+        "pace": "6:50",
+        "date": "2024-05-04",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:15218496253"
+      },
+      {
+        "distance_m": 1462.9850158691406,
+        "pace": "6:50",
+        "date": "2025-10-23",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:20773584938"
+      },
+      {
+        "distance_m": 1462.3524475097656,
+        "pace": "6:50",
+        "date": "2026-01-26",
+        "name": "Si Racha - W3 Mon Intervals",
+        "source": "garmin",
+        "id": "garmin:21667938892"
+      },
+      {
+        "distance_m": 1461.0774536132812,
+        "pace": "6:51",
+        "date": "2026-04-13",
+        "name": "Nakhon Ratchasima - W5 Mon Long Run",
+        "source": "garmin",
+        "id": "garmin:22505985835"
+      },
+      {
+        "distance_m": 1460.4066772460938,
+        "pace": "6:51",
+        "date": "2026-03-06",
+        "name": "Si Racha - W6 Fri Easy Run",
+        "source": "garmin",
+        "id": "garmin:22079678995"
+      },
+      {
+        "distance_m": 1457.269980430603,
+        "pace": "6:52",
+        "date": "2026-06-27",
+        "name": "Si Racha - W1 Sat Easy Run",
+        "source": "garmin",
+        "id": "garmin:23390926482"
+      },
+      {
+        "distance_m": 1457.10009765625,
+        "pace": "6:52",
+        "date": "2024-02-25",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:14123051662"
+      },
+      {
+        "distance_m": 1451.860026041667,
+        "pace": "6:53",
+        "date": "2025-07-31",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19904964042"
+      },
+      {
+        "distance_m": 1445.4458984375,
+        "pace": "6:55",
+        "date": "2026-05-22",
+        "name": "W11 Fri Tempo -",
+        "source": "garmin",
+        "id": "garmin:22965984580"
+      },
+      {
+        "distance_m": 1442.0401436941963,
+        "pace": "6:56",
+        "date": "2025-07-22",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19810876499"
       },
       {
         "distance_m": 1434.63,
@@ -5837,12 +7334,36 @@
         "id": "zepp:1787440334"
       },
       {
+        "distance_m": 1433.0367024739585,
+        "pace": "6:59",
+        "date": "2025-11-05",
+        "name": "Si Racha - W4 Wed Intervals",
+        "source": "garmin",
+        "id": "garmin:20898309662"
+      },
+      {
+        "distance_m": 1428.949951171875,
+        "pace": "7:00",
+        "date": "2026-06-10",
+        "name": "Si Racha - W14 Wed Easy Run",
+        "source": "garmin",
+        "id": "garmin:23198678099"
+      },
+      {
         "distance_m": 1427.21,
         "pace": "7:00",
         "date": "2026-09-11",
         "name": "Run",
         "source": "zepp",
         "id": "zepp:1789122164"
+      },
+      {
+        "distance_m": 1426.4634602864583,
+        "pace": "7:01",
+        "date": "2025-11-12",
+        "name": "Si Racha - W5 Wed Tempo - R",
+        "source": "garmin",
+        "id": "garmin:20966263287"
       },
       {
         "distance_m": 1426.3599999999997,
@@ -5853,12 +7374,292 @@
         "id": "zepp:1787306686"
       },
       {
+        "distance_m": 1418.868326822917,
+        "pace": "7:03",
+        "date": "2025-10-25",
+        "name": "Si Racha - W2 Sat Long Run",
+        "source": "garmin",
+        "id": "garmin:20788465704"
+      },
+      {
+        "distance_m": 1416.9600742885045,
+        "pace": "7:03",
+        "date": "2025-10-28",
+        "name": "Si Racha - W3 Tue Intervals",
+        "source": "garmin",
+        "id": "garmin:20819812604"
+      },
+      {
+        "distance_m": 1413.4400227864585,
+        "pace": "7:04",
+        "date": "2025-10-22",
+        "name": "Si Racha - W2 Wed Tempo - P",
+        "source": "garmin",
+        "id": "garmin:20763895756"
+      },
+      {
+        "distance_m": 1412.732421875,
+        "pace": "7:05",
+        "date": "2026-04-26",
+        "name": "Bang Lamung - W7 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:22660073333"
+      },
+      {
+        "distance_m": 1411.47998046875,
+        "pace": "7:05",
+        "date": "2026-02-06",
+        "name": "Si Racha - W2 Fri Easy Run",
+        "source": "garmin",
+        "id": "garmin:21781449207"
+      },
+      {
         "distance_m": 1409.9800000000005,
         "pace": "7:06",
         "date": "2026-09-23",
         "name": "Run",
         "source": "zepp",
         "id": "zepp:1790158711"
+      },
+      {
+        "distance_m": 1409.4029541015625,
+        "pace": "7:06",
+        "date": "2026-01-19",
+        "name": "Si Racha - W2 Mon Tempo - R",
+        "source": "garmin",
+        "id": "garmin:21595449809"
+      },
+      {
+        "distance_m": 1406.550048828125,
+        "pace": "7:07",
+        "date": "2026-03-29",
+        "name": "Si Racha - W3 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:22337124295"
+      },
+      {
+        "distance_m": 1401.22998046875,
+        "pace": "7:08",
+        "date": "2023-05-10",
+        "name": "Nakhon Ratchasima Running",
+        "source": "garmin",
+        "id": "garmin:11086044579"
+      },
+      {
+        "distance_m": 1399.904270717076,
+        "pace": "7:09",
+        "date": "2023-11-28",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:12903670781"
+      },
+      {
+        "distance_m": 1397.4242350260415,
+        "pace": "7:09",
+        "date": "2025-07-13",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19719745319"
+      },
+      {
+        "distance_m": 1389.6261718750002,
+        "pace": "7:12",
+        "date": "2026-01-25",
+        "name": "Si Racha - W2 Sun Easy Run",
+        "source": "garmin",
+        "id": "garmin:21657681862"
+      },
+      {
+        "distance_m": 1388.4166870117188,
+        "pace": "7:12",
+        "date": "2025-07-08",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19667352311"
+      },
+      {
+        "distance_m": 1387.2061523437496,
+        "pace": "7:13",
+        "date": "2026-02-27",
+        "name": "Si Racha - W5 Fri Easy Run",
+        "source": "garmin",
+        "id": "garmin:22001806849"
+      },
+      {
+        "distance_m": 1386.25244140625,
+        "pace": "7:13",
+        "date": "2026-03-21",
+        "name": "Si Racha - W2 Sat Easy Run",
+        "source": "garmin",
+        "id": "garmin:22243563946"
+      },
+      {
+        "distance_m": 1385.575696672712,
+        "pace": "7:13",
+        "date": "2025-11-06",
+        "name": "Si Racha - W4 Thu Easy Run",
+        "source": "garmin",
+        "id": "garmin:20908478119"
+      },
+      {
+        "distance_m": 1381.68994140625,
+        "pace": "7:14",
+        "date": "2025-07-18",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19770899718"
+      },
+      {
+        "distance_m": 1377.1897321428569,
+        "pace": "7:16",
+        "date": "2023-05-09",
+        "name": "Nakhon Ratchasima Running",
+        "source": "garmin",
+        "id": "garmin:11078817529"
+      },
+      {
+        "distance_m": 1373.6172485351562,
+        "pace": "7:17",
+        "date": "2025-11-09",
+        "name": "Si Racha - W4 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:20936555221"
+      },
+      {
+        "distance_m": 1373.198282877604,
+        "pace": "7:17",
+        "date": "2026-02-15",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:21874117809"
+      },
+      {
+        "distance_m": 1368.9398803710938,
+        "pace": "7:18",
+        "date": "2025-07-25",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19842885781"
+      },
+      {
+        "distance_m": 1363.2687639508927,
+        "pace": "7:20",
+        "date": "2026-05-08",
+        "name": "W9 Fri Intervals",
+        "source": "garmin",
+        "id": "garmin:22807048007"
+      },
+      {
+        "distance_m": 1362.8650207519531,
+        "pace": "7:20",
+        "date": "2026-06-09",
+        "name": "Si Racha - W14 Tue Easy Run",
+        "source": "garmin",
+        "id": "garmin:23185758277"
+      },
+      {
+        "distance_m": 1359.4249877929688,
+        "pace": "7:21",
+        "date": "2025-07-15",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19739417453"
+      },
+      {
+        "distance_m": 1357.8999633789062,
+        "pace": "7:22",
+        "date": "2026-03-15",
+        "name": "Si Racha - W1 Sun Easy Run",
+        "source": "garmin",
+        "id": "garmin:22179247239"
+      },
+      {
+        "distance_m": 1357.001445225307,
+        "pace": "7:22",
+        "date": "2025-08-07",
+        "name": "Si Racha - W1 Thu Easy Run",
+        "source": "garmin",
+        "id": "garmin:19979770686"
+      },
+      {
+        "distance_m": 1356.1314435686386,
+        "pace": "7:22",
+        "date": "2026-05-02",
+        "name": "Si Racha - W8 Sat Easy Run",
+        "source": "garmin",
+        "id": "garmin:22732160277"
+      },
+      {
+        "distance_m": 1353.4700317382812,
+        "pace": "7:23",
+        "date": "2025-08-15",
+        "name": "Si Racha - W2 Fri Long Run",
+        "source": "garmin",
+        "id": "garmin:20065550088"
+      },
+      {
+        "distance_m": 1346.60498046875,
+        "pace": "7:26",
+        "date": "2026-06-06",
+        "name": "Si Racha - W13 Sat Easy Run",
+        "source": "garmin",
+        "id": "garmin:23145202575"
+      },
+      {
+        "distance_m": 1345.47314453125,
+        "pace": "7:26",
+        "date": "2025-08-19",
+        "name": "Si Racha - W3 Tue Easy Run",
+        "source": "garmin",
+        "id": "garmin:20107446375"
+      },
+      {
+        "distance_m": 1344.8100237165177,
+        "pace": "7:26",
+        "date": "2026-06-11",
+        "name": "Si Racha - W14 Thu Long Run",
+        "source": "garmin",
+        "id": "garmin:23209980515"
+      },
+      {
+        "distance_m": 1336.1050618489585,
+        "pace": "7:29",
+        "date": "2025-07-24",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19833225677"
+      },
+      {
+        "distance_m": 1334.3668619791665,
+        "pace": "7:30",
+        "date": "2025-08-12",
+        "name": "Si Racha - W2 Tue Tempo - P",
+        "source": "garmin",
+        "id": "garmin:20032761643"
+      },
+      {
+        "distance_m": 1329.6629813058037,
+        "pace": "7:31",
+        "date": "2025-07-30",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19894303723"
+      },
+      {
+        "distance_m": 1327.4300537109375,
+        "pace": "7:32",
+        "date": "2023-11-21",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:12816331305"
+      },
+      {
+        "distance_m": 1324.510009765625,
+        "pace": "7:33",
+        "date": "2023-11-24",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:12854767544"
       },
       {
         "distance_m": 1315.8300000000008,
@@ -5869,12 +7670,60 @@
         "id": "zepp:1789862396"
       },
       {
+        "distance_m": 1310.718532017299,
+        "pace": "7:38",
+        "date": "2026-05-16",
+        "name": "Si Racha - W10 Sat Easy Run",
+        "source": "garmin",
+        "id": "garmin:22895211286"
+      },
+      {
+        "distance_m": 1310.5662536621094,
+        "pace": "7:38",
+        "date": "2026-04-25",
+        "name": "Si Racha - W7 Sat Easy Run",
+        "source": "garmin",
+        "id": "garmin:22652534632"
+      },
+      {
+        "distance_m": 1310.320068359375,
+        "pace": "7:38",
+        "date": "2025-07-17",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19760786589"
+      },
+      {
         "distance_m": 1309.6100000000001,
         "pace": "7:38",
         "date": "2026-09-05",
         "name": "Run",
         "source": "zepp",
         "id": "zepp:1788563819"
+      },
+      {
+        "distance_m": 1309.1099548339844,
+        "pace": "7:38",
+        "date": "2026-05-30",
+        "name": "Si Racha - W12 Sat Easy Run",
+        "source": "garmin",
+        "id": "garmin:23066241770"
+      },
+      {
+        "distance_m": 1306.099934895834,
+        "pace": "7:39",
+        "date": "2026-05-17",
+        "name": "Si Racha - W10 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:22906987901"
+      },
+      {
+        "distance_m": 1305.7599731445312,
+        "pace": "7:40",
+        "date": "2025-07-16",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19750014695"
       },
       {
         "distance_m": 1295.97,
@@ -5885,12 +7734,156 @@
         "id": "zepp:1785629603"
       },
       {
+        "distance_m": 1293.6110568576387,
+        "pace": "7:44",
+        "date": "2023-05-04",
+        "name": "Nakhon Ratchasima Running",
+        "source": "garmin",
+        "id": "garmin:11043202469"
+      },
+      {
+        "distance_m": 1291.5887451171875,
+        "pace": "7:45",
+        "date": "2025-10-17",
+        "name": "Si Racha - W1 Fri Easy Run",
+        "source": "garmin",
+        "id": "garmin:20715405087"
+      },
+      {
+        "distance_m": 1289.719970703125,
+        "pace": "7:45",
+        "date": "2026-04-04",
+        "name": "Si Racha - W4 Sat Easy Run",
+        "source": "garmin",
+        "id": "garmin:22404296952"
+      },
+      {
+        "distance_m": 1285.31005859375,
+        "pace": "7:47",
+        "date": "2025-08-08",
+        "name": "Si Racha - W1 Fri Long Run",
+        "source": "garmin",
+        "id": "garmin:19990420917"
+      },
+      {
+        "distance_m": 1283.919937133789,
+        "pace": "7:47",
+        "date": "2026-03-20",
+        "name": "Si Racha - W2 Fri Easy Run",
+        "source": "garmin",
+        "id": "garmin:22235793527"
+      },
+      {
+        "distance_m": 1275.2778862847226,
+        "pace": "7:50",
+        "date": "2026-01-30",
+        "name": "Si Racha - W3 Fri Long Run",
+        "source": "garmin",
+        "id": "garmin:21709557008"
+      },
+      {
+        "distance_m": 1259.359992980957,
+        "pace": "7:56",
+        "date": "2026-05-03",
+        "name": "Bang Lamung - W8 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:22743886437"
+      },
+      {
+        "distance_m": 1259.159912109375,
+        "pace": "7:57",
+        "date": "2026-01-18",
+        "name": "Si Racha - W1 Sun Easy Run",
+        "source": "garmin",
+        "id": "garmin:21581782598"
+      },
+      {
+        "distance_m": 1252.4766794840496,
+        "pace": "7:59",
+        "date": "2026-05-24",
+        "name": "Si Racha - W11 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:22989751425"
+      },
+      {
+        "distance_m": 1250.7909046519885,
+        "pace": "8:00",
+        "date": "2026-06-05",
+        "name": "W13 Fri Tempo -",
+        "source": "garmin",
+        "id": "garmin:23135704026"
+      },
+      {
+        "distance_m": 1244.083984375,
+        "pace": "8:02",
+        "date": "2023-11-29",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:12916286168"
+      },
+      {
+        "distance_m": 1240.1400756835938,
+        "pace": "8:04",
+        "date": "2026-07-20",
+        "name": "Si Racha - W4 Mon Long Run",
+        "source": "garmin",
+        "id": "garmin:23663984483"
+      },
+      {
+        "distance_m": 1236.4349975585938,
+        "pace": "8:05",
+        "date": "2026-05-09",
+        "name": "Si Racha - W9 Sat Easy Run",
+        "source": "garmin",
+        "id": "garmin:22814290479"
+      },
+      {
         "distance_m": 1230.03,
         "pace": "8:08",
         "date": "2026-09-06",
         "name": "Run",
         "source": "zepp",
         "id": "zepp:1788654041"
+      },
+      {
+        "distance_m": 1215.3233642578125,
+        "pace": "8:14",
+        "date": "2025-10-18",
+        "name": "Si Racha - W1 Sat Long Run",
+        "source": "garmin",
+        "id": "garmin:20725101626"
+      },
+      {
+        "distance_m": 1212.099609375,
+        "pace": "8:15",
+        "date": "2026-06-03",
+        "name": "Si Racha - W12 Wed Long Run",
+        "source": "garmin",
+        "id": "garmin:23110375358"
+      },
+      {
+        "distance_m": 1208.6666870117188,
+        "pace": "8:16",
+        "date": "2026-05-23",
+        "name": "Si Racha - W11 Sat Easy Run",
+        "source": "garmin",
+        "id": "garmin:22977273845"
+      },
+      {
+        "distance_m": 1201.8699340820312,
+        "pace": "8:19",
+        "date": "2026-03-27",
+        "name": "Si Racha - W3 Fri Easy Run",
+        "source": "garmin",
+        "id": "garmin:22314923663"
+      },
+      {
+        "distance_m": 1201.050048828125,
+        "pace": "8:20",
+        "date": "2025-07-12",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19708836951"
       },
       {
         "distance_m": 1179.98,
@@ -5901,12 +7894,52 @@
         "id": "zepp:1786843563"
       },
       {
+        "distance_m": 1171.175048828125,
+        "pace": "8:32",
+        "date": "2024-04-06",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:14760275607"
+      },
+      {
+        "distance_m": 1167.7449645996094,
+        "pace": "8:34",
+        "date": "2026-06-22",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:23338549468"
+      },
+      {
+        "distance_m": 1154.5052490234375,
+        "pace": "8:40",
+        "date": "2026-02-21",
+        "name": "Si Racha - W4 Sat Long Run",
+        "source": "garmin",
+        "id": "garmin:21933292808"
+      },
+      {
+        "distance_m": 1144.6799926757812,
+        "pace": "8:44",
+        "date": "2025-08-13",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:20044213293"
+      },
+      {
         "distance_m": 1126.8000000000002,
         "pace": "8:52",
         "date": "2026-08-30",
         "name": "Run",
         "source": "zepp",
         "id": "zepp:1788050928"
+      },
+      {
+        "distance_m": 1121.41357421875,
+        "pace": "8:55",
+        "date": "2026-07-05",
+        "name": "Bang Lamung - W2 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:23482051434"
       },
       {
         "distance_m": 1089.03,
@@ -5925,15 +7958,159 @@
         "id": "zepp:1789258587"
       },
       {
+        "distance_m": 1042.7785295758927,
+        "pace": "9:35",
+        "date": "2025-07-06",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19648697727"
+      },
+      {
+        "distance_m": 1035.5775146484375,
+        "pace": "9:39",
+        "date": "2025-07-07",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19657959446"
+      },
+      {
+        "distance_m": 1029.019775390625,
+        "pace": "9:43",
+        "date": "2026-02-28",
+        "name": "Si Racha - W5 Sat Long Run",
+        "source": "garmin",
+        "id": "garmin:22009058664"
+      },
+      {
+        "distance_m": 1003.1522081163193,
+        "pace": "9:58",
+        "date": "2024-05-23",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:15537951518"
+      },
+      {
+        "distance_m": 984.599853515625,
+        "pace": "10:09",
+        "date": "2026-02-14",
+        "name": "Si Racha - W3 Sat Long Run",
+        "source": "garmin",
+        "id": "garmin:21860771605"
+      },
+      {
+        "distance_m": 952.4674072265625,
+        "pace": "10:30",
+        "date": "2024-05-12",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:15354420117"
+      },
+      {
+        "distance_m": 936.30029296875,
+        "pace": "10:41",
+        "date": "2025-10-05",
+        "name": "Si Racha Trail Running",
+        "source": "garmin",
+        "id": "garmin:20591663664"
+      },
+      {
+        "distance_m": 919.3799947102864,
+        "pace": "10:53",
+        "date": "2023-11-22",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:12829107525"
+      },
+      {
+        "distance_m": 905.912841796875,
+        "pace": "11:02",
+        "date": "2025-11-16",
+        "name": "Si Racha - W5 Sun Easy Run",
+        "source": "garmin",
+        "id": "garmin:21039176863"
+      },
+      {
+        "distance_m": 875.7999267578125,
+        "pace": "11:25",
+        "date": "2023-05-16",
+        "name": "Nakhon Ratchasima Running",
+        "source": "garmin",
+        "id": "garmin:11127828703"
+      },
+      {
+        "distance_m": 862.076578776042,
+        "pace": "11:36",
+        "date": "2026-01-24",
+        "name": "Si Racha Trail Running",
+        "source": "garmin",
+        "id": "garmin:21645536036"
+      },
+      {
+        "distance_m": 841.98681640625,
+        "pace": "11:53",
+        "date": "2023-05-11",
+        "name": "Nakhon Ratchasima Running",
+        "source": "garmin",
+        "id": "garmin:11093215574"
+      },
+      {
+        "distance_m": 779.8299713134766,
+        "pace": "12:49",
+        "date": "2025-07-29",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19883054842"
+      },
+      {
         "distance_m": 736.6599999999999,
         "pace": "13:34",
         "date": "2026-09-19",
         "name": "Trail Run",
         "source": "zepp",
         "id": "zepp:1789778233"
+      },
+      {
+        "distance_m": 727.0400390625,
+        "pace": "13:45",
+        "date": "2024-04-05",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:14744503551"
+      },
+      {
+        "distance_m": 694.650146484375,
+        "pace": "14:24",
+        "date": "2023-05-19",
+        "name": "Nakhon Ratchasima Running",
+        "source": "garmin",
+        "id": "garmin:11149286262"
+      },
+      {
+        "distance_m": 677.8973388671875,
+        "pace": "14:45",
+        "date": "2025-11-22",
+        "name": "Si Racha Trail Running",
+        "source": "garmin",
+        "id": "garmin:21056211320"
+      },
+      {
+        "distance_m": 665.1700019836426,
+        "pace": "15:02",
+        "date": "2026-01-31",
+        "name": "Si Racha Trail Running",
+        "source": "garmin",
+        "id": "garmin:21715628949"
       }
     ],
     "20 min": [
+      {
+        "distance_m": 3349.650146484375,
+        "pace": "5:58",
+        "date": "2026-07-18",
+        "name": "Si Racha - W4 Sat Tempo - R",
+        "source": "garmin",
+        "id": "garmin:23636077986"
+      },
       {
         "distance_m": 3346.04,
         "pace": "5:59",
@@ -5941,6 +8118,14 @@
         "name": "Run",
         "source": "zepp",
         "id": "zepp:1790071976"
+      },
+      {
+        "distance_m": 3338.932080078125,
+        "pace": "5:59",
+        "date": "2026-02-01",
+        "name": "Si Racha - W1 Sun Easy Run",
+        "source": "garmin",
+        "id": "garmin:21728848970"
       },
       {
         "distance_m": 3264.4300000000003,
@@ -5975,12 +8160,44 @@
         "id": "zepp:1787912263"
       },
       {
+        "distance_m": 3145.962681361607,
+        "pace": "6:21",
+        "date": "2026-02-23",
+        "name": "Si Racha - W5 Mon Tempo - T",
+        "source": "garmin",
+        "id": "garmin:21957059799"
+      },
+      {
         "distance_m": 3127.3100000000004,
         "pace": "6:24",
         "date": "2026-09-12",
         "name": "Run",
         "source": "zepp",
         "id": "zepp:1789166808"
+      },
+      {
+        "distance_m": 3121.919921875,
+        "pace": "6:24",
+        "date": "2026-06-26",
+        "name": "Si Racha - W1 Fri Tempo - R",
+        "source": "garmin",
+        "id": "garmin:23384767284"
+      },
+      {
+        "distance_m": 3086.3932596842446,
+        "pace": "6:29",
+        "date": "2026-03-14",
+        "name": "Bang Lamung - W1 Sat Long Run",
+        "source": "garmin",
+        "id": "garmin:22165151317"
+      },
+      {
+        "distance_m": 3081.219970703125,
+        "pace": "6:29",
+        "date": "2026-02-26",
+        "name": "Si Racha - On Off 200s",
+        "source": "garmin",
+        "id": "garmin:21990779430"
       },
       {
         "distance_m": 3049.1600000000003,
@@ -5991,12 +8208,60 @@
         "id": "zepp:1789725442"
       },
       {
+        "distance_m": 3046.160087585449,
+        "pace": "6:34",
+        "date": "2026-02-18",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:21905588479"
+      },
+      {
         "distance_m": 3044.4,
         "pace": "6:34",
         "date": "2026-07-28",
         "name": "Run",
         "source": "zepp",
         "id": "zepp:1785195286"
+      },
+      {
+        "distance_m": 3030.5280029296873,
+        "pace": "6:36",
+        "date": "2026-02-24",
+        "name": "Si Racha - Pyramid Set",
+        "source": "garmin",
+        "id": "garmin:21968028564"
+      },
+      {
+        "distance_m": 3028.3771449497767,
+        "pace": "6:36",
+        "date": "2026-05-01",
+        "name": "Si Racha - W8 Fri Tempo - O",
+        "source": "garmin",
+        "id": "garmin:22719872743"
+      },
+      {
+        "distance_m": 3024.449951171875,
+        "pace": "6:37",
+        "date": "2026-04-24",
+        "name": "Si Racha - W7 Fri Tempo - R",
+        "source": "garmin",
+        "id": "garmin:22640745444"
+      },
+      {
+        "distance_m": 3023.37939453125,
+        "pace": "6:37",
+        "date": "2026-06-28",
+        "name": "Bang Lamung - W1 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:23401587239"
+      },
+      {
+        "distance_m": 3018.40810546875,
+        "pace": "6:38",
+        "date": "2026-04-17",
+        "name": "Si Racha - W6 Fri Intervals",
+        "source": "garmin",
+        "id": "garmin:22557721866"
       },
       {
         "distance_m": 3013.8499999999995,
@@ -6015,12 +8280,188 @@
         "id": "zepp:1788516022"
       },
       {
+        "distance_m": 3000.479736328125,
+        "pace": "6:40",
+        "date": "2026-02-13",
+        "name": "Si Racha - W3 Fri Tempo - P",
+        "source": "garmin",
+        "id": "garmin:21853898022"
+      },
+      {
+        "distance_m": 2996.60498046875,
+        "pace": "6:40",
+        "date": "2026-06-14",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:23240141539"
+      },
+      {
+        "distance_m": 2994.59326171875,
+        "pace": "6:41",
+        "date": "2026-06-21",
+        "name": "Nakhon Ratchasima - Korat21 HR-Locke",
+        "source": "garmin",
+        "id": "garmin:23322768957"
+      },
+      {
+        "distance_m": 2988.5201416015625,
+        "pace": "6:42",
+        "date": "2026-07-03",
+        "name": "Si Racha - W2 Fri Intervals",
+        "source": "garmin",
+        "id": "garmin:23463524696"
+      },
+      {
+        "distance_m": 2964.300048828125,
+        "pace": "6:45",
+        "date": "2026-03-07",
+        "name": "Si Racha - W6 Sat Long Run",
+        "source": "garmin",
+        "id": "garmin:22089914362"
+      },
+      {
+        "distance_m": 2959.3088623046874,
+        "pace": "6:46",
+        "date": "2026-05-15",
+        "name": "W10 Fri Tempo -",
+        "source": "garmin",
+        "id": "garmin:22884283585"
+      },
+      {
+        "distance_m": 2955.469873046875,
+        "pace": "6:46",
+        "date": "2026-04-03",
+        "name": "Si Racha - W4 Fri Tempo - T",
+        "source": "garmin",
+        "id": "garmin:22392265133"
+      },
+      {
+        "distance_m": 2929.064174107143,
+        "pace": "6:50",
+        "date": "2026-04-05",
+        "name": "Si Racha - W4 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:22415442199"
+      },
+      {
+        "distance_m": 2911.875244140625,
+        "pace": "6:52",
+        "date": "2026-06-19",
+        "name": "Si Racha - W15 Fri Taper In",
+        "source": "garmin",
+        "id": "garmin:23300597520"
+      },
+      {
+        "distance_m": 2906.6201171875,
+        "pace": "6:53",
+        "date": "2026-02-20",
+        "name": "Si Racha - W4 Fri Easy Run",
+        "source": "garmin",
+        "id": "garmin:21926291442"
+      },
+      {
+        "distance_m": 2903.682791573661,
+        "pace": "6:53",
+        "date": "2026-03-06",
+        "name": "Si Racha - W6 Fri Easy Run",
+        "source": "garmin",
+        "id": "garmin:22079678995"
+      },
+      {
+        "distance_m": 2892.795247395833,
+        "pace": "6:55",
+        "date": "2026-01-23",
+        "name": "Si Racha - W2 Fri Long Run",
+        "source": "garmin",
+        "id": "garmin:21638072561"
+      },
+      {
+        "distance_m": 2889.320050920759,
+        "pace": "6:55",
+        "date": "2026-02-02",
+        "name": "Si Racha - W2 Mon Tempo - O",
+        "source": "garmin",
+        "id": "garmin:21738866340"
+      },
+      {
+        "distance_m": 2886.731236049107,
+        "pace": "6:56",
+        "date": "2026-04-13",
+        "name": "Nakhon Ratchasima - W5 Mon Long Run",
+        "source": "garmin",
+        "id": "garmin:22505985835"
+      },
+      {
+        "distance_m": 2860.615234375,
+        "pace": "6:59",
+        "date": "2026-05-10",
+        "name": "Si Racha - W9 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:22826416629"
+      },
+      {
+        "distance_m": 2849.6650390625,
+        "pace": "7:01",
+        "date": "2026-01-26",
+        "name": "Si Racha - W3 Mon Intervals",
+        "source": "garmin",
+        "id": "garmin:21667938892"
+      },
+      {
+        "distance_m": 2841.0629068102157,
+        "pace": "7:02",
+        "date": "2026-01-17",
+        "name": "Si Racha - W1 Sat Long Run",
+        "source": "garmin",
+        "id": "garmin:21571049136"
+      },
+      {
+        "distance_m": 2828.372837611607,
+        "pace": "7:04",
+        "date": "2026-04-11",
+        "name": "Nakhon Ratchasima - W5 Sat Easy Run",
+        "source": "garmin",
+        "id": "garmin:22487281289"
+      },
+      {
+        "distance_m": 2814.849853515625,
+        "pace": "7:06",
+        "date": "2026-04-10",
+        "name": "Nakhon Ratchasima - W5 Fri Tempo - O",
+        "source": "garmin",
+        "id": "garmin:22475866289"
+      },
+      {
         "distance_m": 2810.01,
         "pace": "7:07",
         "date": "2026-08-21",
         "name": "Run",
         "source": "zepp",
         "id": "zepp:1787306686"
+      },
+      {
+        "distance_m": 2799.693896484375,
+        "pace": "7:09",
+        "date": "2025-11-05",
+        "name": "Si Racha - W4 Wed Intervals",
+        "source": "garmin",
+        "id": "garmin:20898309662"
+      },
+      {
+        "distance_m": 2793.356968470982,
+        "pace": "7:10",
+        "date": "2025-11-12",
+        "name": "Si Racha - W5 Wed Tempo - R",
+        "source": "garmin",
+        "id": "garmin:20966263287"
+      },
+      {
+        "distance_m": 2784.080078125,
+        "pace": "7:11",
+        "date": "2025-08-18",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:20096359018"
       },
       {
         "distance_m": 2783.7400000000002,
@@ -6031,12 +8472,300 @@
         "id": "zepp:1787440334"
       },
       {
+        "distance_m": 2781.252859933036,
+        "pace": "7:11",
+        "date": "2025-11-01",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:20857684071"
+      },
+      {
+        "distance_m": 2765.41015625,
+        "pace": "7:14",
+        "date": "2025-10-25",
+        "name": "Si Racha - W2 Sat Long Run",
+        "source": "garmin",
+        "id": "garmin:20788465704"
+      },
+      {
+        "distance_m": 2760.9599173409597,
+        "pace": "7:15",
+        "date": "2025-10-28",
+        "name": "Si Racha - W3 Tue Intervals",
+        "source": "garmin",
+        "id": "garmin:20819812604"
+      },
+      {
+        "distance_m": 2748.2698974609375,
+        "pace": "7:17",
+        "date": "2026-07-19",
+        "name": "Si Racha - W4 Sun Easy Run",
+        "source": "garmin",
+        "id": "garmin:23648106912"
+      },
+      {
+        "distance_m": 2748.02978515625,
+        "pace": "7:17",
+        "date": "2026-01-25",
+        "name": "Si Racha - W2 Sun Easy Run",
+        "source": "garmin",
+        "id": "garmin:21657681862"
+      },
+      {
+        "distance_m": 2741.705793108259,
+        "pace": "7:18",
+        "date": "2026-02-06",
+        "name": "Si Racha - W2 Fri Easy Run",
+        "source": "garmin",
+        "id": "garmin:21781449207"
+      },
+      {
+        "distance_m": 2741.1262969970703,
+        "pace": "7:18",
+        "date": "2025-10-22",
+        "name": "Si Racha - W2 Wed Tempo - P",
+        "source": "garmin",
+        "id": "garmin:20763895756"
+      },
+      {
+        "distance_m": 2727.2636108398438,
+        "pace": "7:20",
+        "date": "2025-07-31",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19904964042"
+      },
+      {
+        "distance_m": 2719.1613159179688,
+        "pace": "7:21",
+        "date": "2026-04-26",
+        "name": "Bang Lamung - W7 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:22660073333"
+      },
+      {
+        "distance_m": 2718.5000610351562,
+        "pace": "7:21",
+        "date": "2026-07-15",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:23606327657"
+      },
+      {
+        "distance_m": 2717.4432983398438,
+        "pace": "7:22",
+        "date": "2026-01-19",
+        "name": "Si Racha - W2 Mon Tempo - R",
+        "source": "garmin",
+        "id": "garmin:21595449809"
+      },
+      {
+        "distance_m": 2706.0747680664062,
+        "pace": "7:23",
+        "date": "2026-03-29",
+        "name": "Si Racha - W3 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:22337124295"
+      },
+      {
+        "distance_m": 2706.056559244792,
+        "pace": "7:23",
+        "date": "2026-02-27",
+        "name": "Si Racha - W5 Fri Easy Run",
+        "source": "garmin",
+        "id": "garmin:22001806849"
+      },
+      {
+        "distance_m": 2698.2532958984375,
+        "pace": "7:25",
+        "date": "2025-07-23",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19822453673"
+      },
+      {
+        "distance_m": 2694.3279052734374,
+        "pace": "7:25",
+        "date": "2023-11-25",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:12866566797"
+      },
+      {
+        "distance_m": 2687.709991455078,
+        "pace": "7:26",
+        "date": "2025-11-06",
+        "name": "Si Racha - W4 Thu Easy Run",
+        "source": "garmin",
+        "id": "garmin:20908478119"
+      },
+      {
+        "distance_m": 2686.306640625,
+        "pace": "7:27",
+        "date": "2026-06-06",
+        "name": "Si Racha - W13 Sat Easy Run",
+        "source": "garmin",
+        "id": "garmin:23145202575"
+      },
+      {
+        "distance_m": 2679.102117919922,
+        "pace": "7:28",
+        "date": "2026-05-08",
+        "name": "W9 Fri Intervals",
+        "source": "garmin",
+        "id": "garmin:22807048007"
+      },
+      {
+        "distance_m": 2677.2940185546877,
+        "pace": "7:28",
+        "date": "2026-02-15",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:21874117809"
+      },
+      {
+        "distance_m": 2674.388117009943,
+        "pace": "7:29",
+        "date": "2026-05-22",
+        "name": "W11 Fri Tempo -",
+        "source": "garmin",
+        "id": "garmin:22965984580"
+      },
+      {
+        "distance_m": 2674.346598307292,
+        "pace": "7:29",
+        "date": "2025-11-09",
+        "name": "Si Racha - W4 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:20936555221"
+      },
+      {
         "distance_m": 2670.1400000000003,
         "pace": "7:29",
         "date": "2026-08-07",
         "name": "Run",
         "source": "zepp",
         "id": "zepp:1786097654"
+      },
+      {
+        "distance_m": 2668.5899707078934,
+        "pace": "7:30",
+        "date": "2025-10-23",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:20773584938"
+      },
+      {
+        "distance_m": 2668.070068359375,
+        "pace": "7:30",
+        "date": "2023-11-28",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:12903670781"
+      },
+      {
+        "distance_m": 2667.1390245225693,
+        "pace": "7:30",
+        "date": "2023-05-09",
+        "name": "Nakhon Ratchasima Running",
+        "source": "garmin",
+        "id": "garmin:11078817529"
+      },
+      {
+        "distance_m": 2666.623321533203,
+        "pace": "7:30",
+        "date": "2025-07-15",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19739417453"
+      },
+      {
+        "distance_m": 2662.3326110839844,
+        "pace": "7:31",
+        "date": "2026-05-02",
+        "name": "Si Racha - W8 Sat Easy Run",
+        "source": "garmin",
+        "id": "garmin:22732160277"
+      },
+      {
+        "distance_m": 2661.3266423543296,
+        "pace": "7:31",
+        "date": "2026-06-09",
+        "name": "Si Racha - W14 Tue Easy Run",
+        "source": "garmin",
+        "id": "garmin:23185758277"
+      },
+      {
+        "distance_m": 2661.070068359375,
+        "pace": "7:31",
+        "date": "2025-08-12",
+        "name": "Si Racha - W2 Tue Tempo - P",
+        "source": "garmin",
+        "id": "garmin:20032761643"
+      },
+      {
+        "distance_m": 2653.9900716145835,
+        "pace": "7:32",
+        "date": "2025-07-18",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19770899718"
+      },
+      {
+        "distance_m": 2650.410110473633,
+        "pace": "7:33",
+        "date": "2026-06-27",
+        "name": "Si Racha - W1 Sat Easy Run",
+        "source": "garmin",
+        "id": "garmin:23390926482"
+      },
+      {
+        "distance_m": 2637.1361328125,
+        "pace": "7:35",
+        "date": "2026-03-21",
+        "name": "Si Racha - W2 Sat Easy Run",
+        "source": "garmin",
+        "id": "garmin:22243563946"
+      },
+      {
+        "distance_m": 2635.8932291666665,
+        "pace": "7:35",
+        "date": "2025-07-24",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19833225677"
+      },
+      {
+        "distance_m": 2627.849853515625,
+        "pace": "7:37",
+        "date": "2025-07-08",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19667352311"
+      },
+      {
+        "distance_m": 2626.8943219866073,
+        "pace": "7:37",
+        "date": "2023-05-10",
+        "name": "Nakhon Ratchasima Running",
+        "source": "garmin",
+        "id": "garmin:11086044579"
+      },
+      {
+        "distance_m": 2615.1800333658853,
+        "pace": "7:39",
+        "date": "2025-08-15",
+        "name": "Si Racha - W2 Fri Long Run",
+        "source": "garmin",
+        "id": "garmin:20065550088"
+      },
+      {
+        "distance_m": 2610.3899448939733,
+        "pace": "7:40",
+        "date": "2025-07-30",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19894303723"
       },
       {
         "distance_m": 2598.7400000000002,
@@ -6047,12 +8776,44 @@
         "id": "zepp:1788563819"
       },
       {
+        "distance_m": 2595.9798990885415,
+        "pace": "7:42",
+        "date": "2025-08-19",
+        "name": "Si Racha - W3 Tue Easy Run",
+        "source": "garmin",
+        "id": "garmin:20107446375"
+      },
+      {
         "distance_m": 2592.0199999999995,
         "pace": "7:43",
         "date": "2026-09-23",
         "name": "Run",
         "source": "zepp",
         "id": "zepp:1790158711"
+      },
+      {
+        "distance_m": 2588.6201171875,
+        "pace": "7:44",
+        "date": "2026-06-10",
+        "name": "Si Racha - W14 Wed Easy Run",
+        "source": "garmin",
+        "id": "garmin:23198678099"
+      },
+      {
+        "distance_m": 2577.5299072265625,
+        "pace": "7:46",
+        "date": "2025-07-16",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19750014695"
+      },
+      {
+        "distance_m": 2571.3013131277903,
+        "pace": "7:47",
+        "date": "2026-03-15",
+        "name": "Si Racha - W1 Sun Easy Run",
+        "source": "garmin",
+        "id": "garmin:22179247239"
       },
       {
         "distance_m": 2560.2,
@@ -6063,12 +8824,100 @@
         "id": "zepp:1789122164"
       },
       {
+        "distance_m": 2553.9599609375,
+        "pace": "7:50",
+        "date": "2026-04-04",
+        "name": "Si Racha - W4 Sat Easy Run",
+        "source": "garmin",
+        "id": "garmin:22404296952"
+      },
+      {
+        "distance_m": 2551.8025512695312,
+        "pace": "7:50",
+        "date": "2025-10-17",
+        "name": "Si Racha - W1 Fri Easy Run",
+        "source": "garmin",
+        "id": "garmin:20715405087"
+      },
+      {
+        "distance_m": 2549.5788955688477,
+        "pace": "7:51",
+        "date": "2023-11-20",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:12803260693"
+      },
+      {
+        "distance_m": 2544.739990234375,
+        "pace": "7:52",
+        "date": "2026-05-17",
+        "name": "Si Racha - W10 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:22906987901"
+      },
+      {
+        "distance_m": 2543.152062988281,
+        "pace": "7:52",
+        "date": "2025-08-07",
+        "name": "Si Racha - W1 Thu Easy Run",
+        "source": "garmin",
+        "id": "garmin:19979770686"
+      },
+      {
+        "distance_m": 2539.20751953125,
+        "pace": "7:53",
+        "date": "2023-11-21",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:12816331305"
+      },
+      {
+        "distance_m": 2538.0466512044272,
+        "pace": "7:53",
+        "date": "2024-02-24",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:14107538641"
+      },
+      {
+        "distance_m": 2536.34033203125,
+        "pace": "7:53",
+        "date": "2026-02-07",
+        "name": "Si Racha - W2 Sat Long Run",
+        "source": "garmin",
+        "id": "garmin:21787834943"
+      },
+      {
+        "distance_m": 2527.840122767857,
+        "pace": "7:55",
+        "date": "2026-06-11",
+        "name": "Si Racha - W14 Thu Long Run",
+        "source": "garmin",
+        "id": "garmin:23209980515"
+      },
+      {
         "distance_m": 2526.75,
         "pace": "7:55",
         "date": "2026-08-02",
         "name": "Run",
         "source": "zepp",
         "id": "zepp:1785629603"
+      },
+      {
+        "distance_m": 2522.718505859375,
+        "pace": "7:56",
+        "date": "2026-01-30",
+        "name": "Si Racha - W3 Fri Long Run",
+        "source": "garmin",
+        "id": "garmin:21709557008"
+      },
+      {
+        "distance_m": 2521.5699462890625,
+        "pace": "7:56",
+        "date": "2026-04-25",
+        "name": "Si Racha - W7 Sat Easy Run",
+        "source": "garmin",
+        "id": "garmin:22652534632"
       },
       {
         "distance_m": 2514.1800000000003,
@@ -6079,12 +8928,180 @@
         "id": "zepp:1789862396"
       },
       {
+        "distance_m": 2513.9024658203125,
+        "pace": "7:57",
+        "date": "2023-05-04",
+        "name": "Nakhon Ratchasima Running",
+        "source": "garmin",
+        "id": "garmin:11043202469"
+      },
+      {
+        "distance_m": 2512.260009765625,
+        "pace": "7:58",
+        "date": "2025-08-08",
+        "name": "Si Racha - W1 Fri Long Run",
+        "source": "garmin",
+        "id": "garmin:19990420917"
+      },
+      {
+        "distance_m": 2501.538034057617,
+        "pace": "8:00",
+        "date": "2025-07-25",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19842885781"
+      },
+      {
+        "distance_m": 2493.77490234375,
+        "pace": "8:01",
+        "date": "2024-05-04",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:15218496253"
+      },
+      {
+        "distance_m": 2491.5011121961807,
+        "pace": "8:02",
+        "date": "2026-03-20",
+        "name": "Si Racha - W2 Fri Easy Run",
+        "source": "garmin",
+        "id": "garmin:22235793527"
+      },
+      {
+        "distance_m": 2482.419921875,
+        "pace": "8:03",
+        "date": "2024-02-25",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:14123051662"
+      },
+      {
+        "distance_m": 2467.050041437149,
+        "pace": "8:06",
+        "date": "2026-05-03",
+        "name": "Bang Lamung - W8 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:22743886437"
+      },
+      {
+        "distance_m": 2459.5239135742186,
+        "pace": "8:08",
+        "date": "2023-11-24",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:12854767544"
+      },
+      {
         "distance_m": 2448.03,
         "pace": "8:10",
         "date": "2026-09-06",
         "name": "Run",
         "source": "zepp",
         "id": "zepp:1788654041"
+      },
+      {
+        "distance_m": 2441.6232706705728,
+        "pace": "8:11",
+        "date": "2026-05-16",
+        "name": "Si Racha - W10 Sat Easy Run",
+        "source": "garmin",
+        "id": "garmin:22895211286"
+      },
+      {
+        "distance_m": 2438.2349853515625,
+        "pace": "8:12",
+        "date": "2026-05-30",
+        "name": "Si Racha - W12 Sat Easy Run",
+        "source": "garmin",
+        "id": "garmin:23066241770"
+      },
+      {
+        "distance_m": 2437.4599609375,
+        "pace": "8:12",
+        "date": "2026-07-20",
+        "name": "Si Racha - W4 Mon Long Run",
+        "source": "garmin",
+        "id": "garmin:23663984483"
+      },
+      {
+        "distance_m": 2436.625,
+        "pace": "8:12",
+        "date": "2026-01-18",
+        "name": "Si Racha - W1 Sun Easy Run",
+        "source": "garmin",
+        "id": "garmin:21581782598"
+      },
+      {
+        "distance_m": 2409.9798583984375,
+        "pace": "8:18",
+        "date": "2025-07-22",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19810876499"
+      },
+      {
+        "distance_m": 2399.7700805664062,
+        "pace": "8:20",
+        "date": "2025-07-17",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19760786589"
+      },
+      {
+        "distance_m": 2398.4300394058228,
+        "pace": "8:20",
+        "date": "2026-05-09",
+        "name": "Si Racha - W9 Sat Easy Run",
+        "source": "garmin",
+        "id": "garmin:22814290479"
+      },
+      {
+        "distance_m": 2397.27001953125,
+        "pace": "8:21",
+        "date": "2026-06-03",
+        "name": "Si Racha - W12 Wed Long Run",
+        "source": "garmin",
+        "id": "garmin:23110375358"
+      },
+      {
+        "distance_m": 2395.2082112630205,
+        "pace": "8:21",
+        "date": "2025-07-13",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19719745319"
+      },
+      {
+        "distance_m": 2373.950912475586,
+        "pace": "8:25",
+        "date": "2026-05-24",
+        "name": "Si Racha - W11 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:22989751425"
+      },
+      {
+        "distance_m": 2367.2220947265623,
+        "pace": "8:27",
+        "date": "2025-10-18",
+        "name": "Si Racha - W1 Sat Long Run",
+        "source": "garmin",
+        "id": "garmin:20725101626"
+      },
+      {
+        "distance_m": 2349.112775530134,
+        "pace": "8:31",
+        "date": "2026-03-27",
+        "name": "Si Racha - W3 Fri Easy Run",
+        "source": "garmin",
+        "id": "garmin:22314923663"
+      },
+      {
+        "distance_m": 2298.596608479818,
+        "pace": "8:42",
+        "date": "2026-06-22",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:23338549468"
       },
       {
         "distance_m": 2224.98,
@@ -6095,6 +9112,38 @@
         "id": "zepp:1788050928"
       },
       {
+        "distance_m": 2193.58984375,
+        "pace": "9:07",
+        "date": "2026-07-05",
+        "name": "Bang Lamung - W2 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:23482051434"
+      },
+      {
+        "distance_m": 2156.659912109375,
+        "pace": "9:16",
+        "date": "2025-07-12",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19708836951"
+      },
+      {
+        "distance_m": 2130.0998962402346,
+        "pace": "9:23",
+        "date": "2024-04-06",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:14760275607"
+      },
+      {
+        "distance_m": 2056.19970703125,
+        "pace": "9:44",
+        "date": "2025-07-06",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19648697727"
+      },
+      {
         "distance_m": 2049.21,
         "pace": "9:46",
         "date": "2026-09-13",
@@ -6103,12 +9152,140 @@
         "id": "zepp:1789258587"
       },
       {
+        "distance_m": 2007.5669642857142,
+        "pace": "9:58",
+        "date": "2025-07-07",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19657959446"
+      },
+      {
+        "distance_m": 1981.2532552083333,
+        "pace": "10:06",
+        "date": "2024-05-23",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:15537951518"
+      },
+      {
+        "distance_m": 1926.4487653459819,
+        "pace": "10:23",
+        "date": "2026-02-14",
+        "name": "Si Racha - W3 Sat Long Run",
+        "source": "garmin",
+        "id": "garmin:21860771605"
+      },
+      {
+        "distance_m": 1860.4520507812504,
+        "pace": "10:45",
+        "date": "2026-02-28",
+        "name": "Si Racha - W5 Sat Long Run",
+        "source": "garmin",
+        "id": "garmin:22009058664"
+      },
+      {
+        "distance_m": 1859.85498046875,
+        "pace": "10:45",
+        "date": "2024-05-12",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:15354420117"
+      },
+      {
+        "distance_m": 1790.4800502232147,
+        "pace": "11:10",
+        "date": "2026-02-21",
+        "name": "Si Racha - W4 Sat Long Run",
+        "source": "garmin",
+        "id": "garmin:21933292808"
+      },
+      {
+        "distance_m": 1704.2548828125,
+        "pace": "11:44",
+        "date": "2025-10-05",
+        "name": "Si Racha Trail Running",
+        "source": "garmin",
+        "id": "garmin:20591663664"
+      },
+      {
+        "distance_m": 1672.195755822318,
+        "pace": "11:58",
+        "date": "2025-11-16",
+        "name": "Si Racha - W5 Sun Easy Run",
+        "source": "garmin",
+        "id": "garmin:21039176863"
+      },
+      {
+        "distance_m": 1669.9719482421874,
+        "pace": "11:59",
+        "date": "2023-05-11",
+        "name": "Nakhon Ratchasima Running",
+        "source": "garmin",
+        "id": "garmin:11093215574"
+      },
+      {
+        "distance_m": 1661.4351196289062,
+        "pace": "12:02",
+        "date": "2023-05-16",
+        "name": "Nakhon Ratchasima Running",
+        "source": "garmin",
+        "id": "garmin:11127828703"
+      },
+      {
+        "distance_m": 1561.769775390625,
+        "pace": "12:48",
+        "date": "2026-01-24",
+        "name": "Si Racha Trail Running",
+        "source": "garmin",
+        "id": "garmin:21645536036"
+      },
+      {
+        "distance_m": 1491.52001953125,
+        "pace": "13:25",
+        "date": "2025-07-29",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19883054842"
+      },
+      {
+        "distance_m": 1411.2919189453125,
+        "pace": "14:10",
+        "date": "2024-04-05",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:14744503551"
+      },
+      {
+        "distance_m": 1353.6765950520835,
+        "pace": "14:46",
+        "date": "2023-05-19",
+        "name": "Nakhon Ratchasima Running",
+        "source": "garmin",
+        "id": "garmin:11149286262"
+      },
+      {
+        "distance_m": 1305.903645833333,
+        "pace": "15:19",
+        "date": "2025-11-22",
+        "name": "Si Racha Trail Running",
+        "source": "garmin",
+        "id": "garmin:21056211320"
+      },
+      {
         "distance_m": 1278.3400000000001,
         "pace": "15:39",
         "date": "2026-09-19",
         "name": "Trail Run",
         "source": "zepp",
         "id": "zepp:1789778233"
+      },
+      {
+        "distance_m": 1145.4650268554688,
+        "pace": "17:28",
+        "date": "2026-01-31",
+        "name": "Si Racha Trail Running",
+        "source": "garmin",
+        "id": "garmin:21715628949"
       }
     ],
     "30 min": [
@@ -6137,6 +9314,22 @@
         "id": "zepp:1790071976"
       },
       {
+        "distance_m": 4648.893872070313,
+        "pace": "6:27",
+        "date": "2026-02-23",
+        "name": "Si Racha - W5 Mon Tempo - T",
+        "source": "garmin",
+        "id": "garmin:21957059799"
+      },
+      {
+        "distance_m": 4594.620147705078,
+        "pace": "6:32",
+        "date": "2026-03-14",
+        "name": "Bang Lamung - W1 Sat Long Run",
+        "source": "garmin",
+        "id": "garmin:22165151317"
+      },
+      {
         "distance_m": 4593.959999999999,
         "pace": "6:32",
         "date": "2026-08-28",
@@ -6153,6 +9346,22 @@
         "id": "zepp:1786701677"
       },
       {
+        "distance_m": 4527.3364181518555,
+        "pace": "6:38",
+        "date": "2026-07-18",
+        "name": "Si Racha - W4 Sat Tempo - R",
+        "source": "garmin",
+        "id": "garmin:23636077986"
+      },
+      {
+        "distance_m": 4502.2998046875,
+        "pace": "6:40",
+        "date": "2026-06-28",
+        "name": "Bang Lamung - W1 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:23401587239"
+      },
+      {
         "distance_m": 4491.27,
         "pace": "6:41",
         "date": "2026-09-18",
@@ -6161,12 +9370,92 @@
         "id": "zepp:1789725442"
       },
       {
+        "distance_m": 4441.259826660156,
+        "pace": "6:45",
+        "date": "2026-02-01",
+        "name": "Si Racha - W1 Sun Easy Run",
+        "source": "garmin",
+        "id": "garmin:21728848970"
+      },
+      {
+        "distance_m": 4423.139892578125,
+        "pace": "6:47",
+        "date": "2026-07-03",
+        "name": "Si Racha - W2 Fri Intervals",
+        "source": "garmin",
+        "id": "garmin:23463524696"
+      },
+      {
+        "distance_m": 4409.533101399739,
+        "pace": "6:48",
+        "date": "2026-04-03",
+        "name": "Si Racha - W4 Fri Tempo - T",
+        "source": "garmin",
+        "id": "garmin:22392265133"
+      },
+      {
+        "distance_m": 4408.109949747722,
+        "pace": "6:48",
+        "date": "2026-02-24",
+        "name": "Si Racha - Pyramid Set",
+        "source": "garmin",
+        "id": "garmin:21968028564"
+      },
+      {
         "distance_m": 4406.99,
         "pace": "6:48",
         "date": "2026-08-09",
         "name": "Run",
         "source": "zepp",
         "id": "zepp:1786236856"
+      },
+      {
+        "distance_m": 4394.6818359375,
+        "pace": "6:50",
+        "date": "2026-04-24",
+        "name": "Si Racha - W7 Fri Tempo - R",
+        "source": "garmin",
+        "id": "garmin:22640745444"
+      },
+      {
+        "distance_m": 4393.97998046875,
+        "pace": "6:50",
+        "date": "2026-06-21",
+        "name": "Nakhon Ratchasima - Korat21 HR-Locke",
+        "source": "garmin",
+        "id": "garmin:23322768957"
+      },
+      {
+        "distance_m": 4387.863210042317,
+        "pace": "6:50",
+        "date": "2026-03-07",
+        "name": "Si Racha - W6 Sat Long Run",
+        "source": "garmin",
+        "id": "garmin:22089914362"
+      },
+      {
+        "distance_m": 4344.955078125,
+        "pace": "6:54",
+        "date": "2026-06-19",
+        "name": "Si Racha - W15 Fri Taper In",
+        "source": "garmin",
+        "id": "garmin:23300597520"
+      },
+      {
+        "distance_m": 4340.7900390625,
+        "pace": "6:55",
+        "date": "2026-04-05",
+        "name": "Si Racha - W4 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:22415442199"
+      },
+      {
+        "distance_m": 4336.1600341796875,
+        "pace": "6:55",
+        "date": "2026-06-14",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:23240141539"
       },
       {
         "distance_m": 4333.79,
@@ -6185,12 +9474,108 @@
         "id": "zepp:1785195286"
       },
       {
+        "distance_m": 4298.5625,
+        "pace": "6:59",
+        "date": "2026-06-26",
+        "name": "Si Racha - W1 Fri Tempo - R",
+        "source": "garmin",
+        "id": "garmin:23384767284"
+      },
+      {
+        "distance_m": 4297.369873046875,
+        "pace": "6:59",
+        "date": "2026-02-26",
+        "name": "Si Racha - On Off 200s",
+        "source": "garmin",
+        "id": "garmin:21990779430"
+      },
+      {
+        "distance_m": 4278.431283405849,
+        "pace": "7:01",
+        "date": "2026-02-20",
+        "name": "Si Racha - W4 Fri Easy Run",
+        "source": "garmin",
+        "id": "garmin:21926291442"
+      },
+      {
+        "distance_m": 4277.19970703125,
+        "pace": "7:01",
+        "date": "2026-04-13",
+        "name": "Nakhon Ratchasima - W5 Mon Long Run",
+        "source": "garmin",
+        "id": "garmin:22505985835"
+      },
+      {
+        "distance_m": 4274.209852430556,
+        "pace": "7:01",
+        "date": "2026-02-13",
+        "name": "Si Racha - W3 Fri Tempo - P",
+        "source": "garmin",
+        "id": "garmin:21853898022"
+      },
+      {
+        "distance_m": 4273.0022210015195,
+        "pace": "7:01",
+        "date": "2026-03-06",
+        "name": "Si Racha - W6 Fri Easy Run",
+        "source": "garmin",
+        "id": "garmin:22079678995"
+      },
+      {
+        "distance_m": 4239.441853841146,
+        "pace": "7:05",
+        "date": "2026-01-23",
+        "name": "Si Racha - W2 Fri Long Run",
+        "source": "garmin",
+        "id": "garmin:21638072561"
+      },
+      {
+        "distance_m": 4170.021842956543,
+        "pace": "7:12",
+        "date": "2026-05-15",
+        "name": "W10 Fri Tempo -",
+        "source": "garmin",
+        "id": "garmin:22884283585"
+      },
+      {
+        "distance_m": 4143.426641464233,
+        "pace": "7:14",
+        "date": "2026-01-17",
+        "name": "Si Racha - W1 Sat Long Run",
+        "source": "garmin",
+        "id": "garmin:21571049136"
+      },
+      {
         "distance_m": 4135.01,
         "pace": "7:15",
         "date": "2026-08-23",
         "name": "Run",
         "source": "zepp",
         "id": "zepp:1787440334"
+      },
+      {
+        "distance_m": 4128.73486328125,
+        "pace": "7:16",
+        "date": "2025-08-18",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:20096359018"
+      },
+      {
+        "distance_m": 4123.929931640625,
+        "pace": "7:16",
+        "date": "2025-11-01",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:20857684071"
+      },
+      {
+        "distance_m": 4115.7601318359375,
+        "pace": "7:17",
+        "date": "2026-05-01",
+        "name": "Si Racha - W8 Fri Tempo - O",
+        "source": "garmin",
+        "id": "garmin:22719872743"
       },
       {
         "distance_m": 4112.38,
@@ -6201,12 +9586,252 @@
         "id": "zepp:1788516022"
       },
       {
+        "distance_m": 4103.160217285156,
+        "pace": "7:19",
+        "date": "2026-01-26",
+        "name": "Si Racha - W3 Mon Intervals",
+        "source": "garmin",
+        "id": "garmin:21667938892"
+      },
+      {
+        "distance_m": 4095.3858119419647,
+        "pace": "7:20",
+        "date": "2026-01-25",
+        "name": "Si Racha - W2 Sun Easy Run",
+        "source": "garmin",
+        "id": "garmin:21657681862"
+      },
+      {
+        "distance_m": 4094.85009765625,
+        "pace": "7:20",
+        "date": "2025-11-05",
+        "name": "Si Racha - W4 Wed Intervals",
+        "source": "garmin",
+        "id": "garmin:20898309662"
+      },
+      {
         "distance_m": 4091.9499999999994,
         "pace": "7:20",
         "date": "2026-08-21",
         "name": "Run",
         "source": "zepp",
         "id": "zepp:1787306686"
+      },
+      {
+        "distance_m": 4089.6698364257813,
+        "pace": "7:20",
+        "date": "2025-11-12",
+        "name": "Si Racha - W5 Wed Tempo - R",
+        "source": "garmin",
+        "id": "garmin:20966263287"
+      },
+      {
+        "distance_m": 4084.616943359375,
+        "pace": "7:21",
+        "date": "2026-04-11",
+        "name": "Nakhon Ratchasima - W5 Sat Easy Run",
+        "source": "garmin",
+        "id": "garmin:22487281289"
+      },
+      {
+        "distance_m": 4082.2458408900666,
+        "pace": "7:21",
+        "date": "2026-02-02",
+        "name": "Si Racha - W2 Mon Tempo - O",
+        "source": "garmin",
+        "id": "garmin:21738866340"
+      },
+      {
+        "distance_m": 4081.2337890625004,
+        "pace": "7:21",
+        "date": "2026-05-10",
+        "name": "Si Racha - W9 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:22826416629"
+      },
+      {
+        "distance_m": 4080.4000854492188,
+        "pace": "7:21",
+        "date": "2025-10-28",
+        "name": "Si Racha - W3 Tue Intervals",
+        "source": "garmin",
+        "id": "garmin:20819812604"
+      },
+      {
+        "distance_m": 4075.919921875,
+        "pace": "7:22",
+        "date": "2025-10-25",
+        "name": "Si Racha - W2 Sat Long Run",
+        "source": "garmin",
+        "id": "garmin:20788465704"
+      },
+      {
+        "distance_m": 4040.800048828125,
+        "pace": "7:25",
+        "date": "2026-02-27",
+        "name": "Si Racha - W5 Fri Easy Run",
+        "source": "garmin",
+        "id": "garmin:22001806849"
+      },
+      {
+        "distance_m": 4037.8933919270835,
+        "pace": "7:26",
+        "date": "2026-04-26",
+        "name": "Bang Lamung - W7 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:22660073333"
+      },
+      {
+        "distance_m": 4012.1974601745605,
+        "pace": "7:29",
+        "date": "2026-04-10",
+        "name": "Nakhon Ratchasima - W5 Fri Tempo - O",
+        "source": "garmin",
+        "id": "garmin:22475866289"
+      },
+      {
+        "distance_m": 4010.6824951171875,
+        "pace": "7:29",
+        "date": "2026-03-29",
+        "name": "Si Racha - W3 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:22337124295"
+      },
+      {
+        "distance_m": 4007.1068115234375,
+        "pace": "7:29",
+        "date": "2026-02-15",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:21874117809"
+      },
+      {
+        "distance_m": 3990.3949584960938,
+        "pace": "7:31",
+        "date": "2026-02-06",
+        "name": "Si Racha - W2 Fri Easy Run",
+        "source": "garmin",
+        "id": "garmin:21781449207"
+      },
+      {
+        "distance_m": 3956.699905395508,
+        "pace": "7:35",
+        "date": "2026-06-27",
+        "name": "Si Racha - W1 Sat Easy Run",
+        "source": "garmin",
+        "id": "garmin:23390926482"
+      },
+      {
+        "distance_m": 3955.590118408203,
+        "pace": "7:35",
+        "date": "2026-07-19",
+        "name": "Si Racha - W4 Sun Easy Run",
+        "source": "garmin",
+        "id": "garmin:23648106912"
+      },
+      {
+        "distance_m": 3950.036641438802,
+        "pace": "7:36",
+        "date": "2026-06-06",
+        "name": "Si Racha - W13 Sat Easy Run",
+        "source": "garmin",
+        "id": "garmin:23145202575"
+      },
+      {
+        "distance_m": 3938.453643798828,
+        "pace": "7:37",
+        "date": "2025-11-06",
+        "name": "Si Racha - W4 Thu Easy Run",
+        "source": "garmin",
+        "id": "garmin:20908478119"
+      },
+      {
+        "distance_m": 3935.416763305664,
+        "pace": "7:37",
+        "date": "2025-10-22",
+        "name": "Si Racha - W2 Wed Tempo - P",
+        "source": "garmin",
+        "id": "garmin:20763895756"
+      },
+      {
+        "distance_m": 3923.589931488037,
+        "pace": "7:39",
+        "date": "2026-07-15",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:23606327657"
+      },
+      {
+        "distance_m": 3921.4173583984375,
+        "pace": "7:39",
+        "date": "2025-07-31",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19904964042"
+      },
+      {
+        "distance_m": 3917.58984375,
+        "pace": "7:39",
+        "date": "2023-11-28",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:12903670781"
+      },
+      {
+        "distance_m": 3915.2513427734375,
+        "pace": "7:40",
+        "date": "2025-11-09",
+        "name": "Si Racha - W4 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:20936555221"
+      },
+      {
+        "distance_m": 3914.5651092529297,
+        "pace": "7:40",
+        "date": "2026-01-19",
+        "name": "Si Racha - W2 Mon Tempo - R",
+        "source": "garmin",
+        "id": "garmin:21595449809"
+      },
+      {
+        "distance_m": 3909.8648681640625,
+        "pace": "7:40",
+        "date": "2023-05-10",
+        "name": "Nakhon Ratchasima Running",
+        "source": "garmin",
+        "id": "garmin:11086044579"
+      },
+      {
+        "distance_m": 3907.1300659179688,
+        "pace": "7:41",
+        "date": "2025-07-23",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19822453673"
+      },
+      {
+        "distance_m": 3904.8601684570312,
+        "pace": "7:41",
+        "date": "2025-07-15",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19739417453"
+      },
+      {
+        "distance_m": 3901.2699584960938,
+        "pace": "7:41",
+        "date": "2026-06-09",
+        "name": "Si Racha - W14 Tue Easy Run",
+        "source": "garmin",
+        "id": "garmin:23185758277"
+      },
+      {
+        "distance_m": 3887.9898274739585,
+        "pace": "7:43",
+        "date": "2026-03-21",
+        "name": "Si Racha - W2 Sat Easy Run",
+        "source": "garmin",
+        "id": "garmin:22243563946"
       },
       {
         "distance_m": 3879.0099999999998,
@@ -6225,12 +9850,140 @@
         "id": "zepp:1790158711"
       },
       {
+        "distance_m": 3861.9181722005205,
+        "pace": "7:46",
+        "date": "2025-07-30",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19894303723"
+      },
+      {
+        "distance_m": 3853.6638793945312,
+        "pace": "7:47",
+        "date": "2025-08-12",
+        "name": "Si Racha - W2 Tue Tempo - P",
+        "source": "garmin",
+        "id": "garmin:20032761643"
+      },
+      {
         "distance_m": 3836.95,
         "pace": "7:49",
         "date": "2026-08-07",
         "name": "Run",
         "source": "zepp",
         "id": "zepp:1786097654"
+      },
+      {
+        "distance_m": 3835.9784807477677,
+        "pace": "7:49",
+        "date": "2026-05-02",
+        "name": "Si Racha - W8 Sat Easy Run",
+        "source": "garmin",
+        "id": "garmin:22732160277"
+      },
+      {
+        "distance_m": 3834.485908126831,
+        "pace": "7:49",
+        "date": "2025-10-23",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:20773584938"
+      },
+      {
+        "distance_m": 3817.205399946733,
+        "pace": "7:52",
+        "date": "2026-05-22",
+        "name": "W11 Fri Tempo -",
+        "source": "garmin",
+        "id": "garmin:22965984580"
+      },
+      {
+        "distance_m": 3803.60009765625,
+        "pace": "7:53",
+        "date": "2026-04-04",
+        "name": "Si Racha - W4 Sat Easy Run",
+        "source": "garmin",
+        "id": "garmin:22404296952"
+      },
+      {
+        "distance_m": 3796.5,
+        "pace": "7:54",
+        "date": "2025-07-18",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19770899718"
+      },
+      {
+        "distance_m": 3787.7100830078125,
+        "pace": "7:55",
+        "date": "2025-07-16",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19750014695"
+      },
+      {
+        "distance_m": 3777.7600708007812,
+        "pace": "7:56",
+        "date": "2026-03-15",
+        "name": "Si Racha - W1 Sun Easy Run",
+        "source": "garmin",
+        "id": "garmin:22179247239"
+      },
+      {
+        "distance_m": 3768.1123962402344,
+        "pace": "7:58",
+        "date": "2025-07-24",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19833225677"
+      },
+      {
+        "distance_m": 3763.8748779296875,
+        "pace": "7:58",
+        "date": "2023-11-21",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:12816331305"
+      },
+      {
+        "distance_m": 3759.098687065972,
+        "pace": "7:59",
+        "date": "2026-01-30",
+        "name": "Si Racha - W3 Fri Long Run",
+        "source": "garmin",
+        "id": "garmin:21709557008"
+      },
+      {
+        "distance_m": 3751.4134216308594,
+        "pace": "8:00",
+        "date": "2026-06-11",
+        "name": "Si Racha - W14 Thu Long Run",
+        "source": "garmin",
+        "id": "garmin:23209980515"
+      },
+      {
+        "distance_m": 3751.21796875,
+        "pace": "8:00",
+        "date": "2026-06-10",
+        "name": "Si Racha - W14 Wed Easy Run",
+        "source": "garmin",
+        "id": "garmin:23198678099"
+      },
+      {
+        "distance_m": 3751.095184326172,
+        "pace": "8:00",
+        "date": "2025-07-08",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19667352311"
+      },
+      {
+        "distance_m": 3747.0234196980796,
+        "pace": "8:00",
+        "date": "2025-08-07",
+        "name": "Si Racha - W1 Thu Easy Run",
+        "source": "garmin",
+        "id": "garmin:19979770686"
       },
       {
         "distance_m": 3741.9800000000005,
@@ -6241,12 +9994,60 @@
         "id": "zepp:1789862396"
       },
       {
+        "distance_m": 3724.000081380208,
+        "pace": "8:03",
+        "date": "2026-03-20",
+        "name": "Si Racha - W2 Fri Easy Run",
+        "source": "garmin",
+        "id": "garmin:22235793527"
+      },
+      {
+        "distance_m": 3707.9199023246765,
+        "pace": "8:05",
+        "date": "2026-04-25",
+        "name": "Si Racha - W7 Sat Easy Run",
+        "source": "garmin",
+        "id": "garmin:22652534632"
+      },
+      {
+        "distance_m": 3704.210205078125,
+        "pace": "8:06",
+        "date": "2023-05-04",
+        "name": "Nakhon Ratchasima Running",
+        "source": "garmin",
+        "id": "garmin:11043202469"
+      },
+      {
         "distance_m": 3699.81,
         "pace": "8:07",
         "date": "2026-08-02",
         "name": "Run",
         "source": "zepp",
         "id": "zepp:1785629603"
+      },
+      {
+        "distance_m": 3697.3526611328125,
+        "pace": "8:07",
+        "date": "2025-08-08",
+        "name": "Si Racha - W1 Fri Long Run",
+        "source": "garmin",
+        "id": "garmin:19990420917"
+      },
+      {
+        "distance_m": 3691.9200439453125,
+        "pace": "8:08",
+        "date": "2025-10-17",
+        "name": "Si Racha - W1 Fri Easy Run",
+        "source": "garmin",
+        "id": "garmin:20715405087"
+      },
+      {
+        "distance_m": 3690.782470703125,
+        "pace": "8:08",
+        "date": "2026-05-17",
+        "name": "Si Racha - W10 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:22906987901"
       },
       {
         "distance_m": 3690.7299999999996,
@@ -6257,12 +10058,196 @@
         "id": "zepp:1789122164"
       },
       {
+        "distance_m": 3670.4399950504303,
+        "pace": "8:10",
+        "date": "2026-05-03",
+        "name": "Bang Lamung - W8 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:22743886437"
+      },
+      {
+        "distance_m": 3658.9199829101562,
+        "pace": "8:12",
+        "date": "2026-05-16",
+        "name": "Si Racha - W10 Sat Easy Run",
+        "source": "garmin",
+        "id": "garmin:22895211286"
+      },
+      {
         "distance_m": 3656.02,
         "pace": "8:12",
         "date": "2026-09-06",
         "name": "Run",
         "source": "zepp",
         "id": "zepp:1788654041"
+      },
+      {
+        "distance_m": 3646.646110534668,
+        "pace": "8:14",
+        "date": "2025-08-15",
+        "name": "Si Racha - W2 Fri Long Run",
+        "source": "garmin",
+        "id": "garmin:20065550088"
+      },
+      {
+        "distance_m": 3638.2874145507812,
+        "pace": "8:15",
+        "date": "2026-05-30",
+        "name": "Si Racha - W12 Sat Easy Run",
+        "source": "garmin",
+        "id": "garmin:23066241770"
+      },
+      {
+        "distance_m": 3621.110107421875,
+        "pace": "8:17",
+        "date": "2026-07-20",
+        "name": "Si Racha - W4 Mon Long Run",
+        "source": "garmin",
+        "id": "garmin:23663984483"
+      },
+      {
+        "distance_m": 3608.6240173339843,
+        "pace": "8:19",
+        "date": "2023-11-24",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:12854767544"
+      },
+      {
+        "distance_m": 3583.664794921875,
+        "pace": "8:22",
+        "date": "2023-11-25",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:12866566797"
+      },
+      {
+        "distance_m": 3570.9403320312504,
+        "pace": "8:24",
+        "date": "2026-06-03",
+        "name": "Si Racha - W12 Wed Long Run",
+        "source": "garmin",
+        "id": "garmin:23110375358"
+      },
+      {
+        "distance_m": 3565.740234375,
+        "pace": "8:25",
+        "date": "2024-05-04",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:15218496253"
+      },
+      {
+        "distance_m": 3553.3814086914062,
+        "pace": "8:27",
+        "date": "2025-08-19",
+        "name": "Si Racha - W3 Tue Easy Run",
+        "source": "garmin",
+        "id": "garmin:20107446375"
+      },
+      {
+        "distance_m": 3543.9298095703125,
+        "pace": "8:28",
+        "date": "2026-01-18",
+        "name": "Si Racha - W1 Sun Easy Run",
+        "source": "garmin",
+        "id": "garmin:21581782598"
+      },
+      {
+        "distance_m": 3527.2100830078125,
+        "pace": "8:30",
+        "date": "2025-10-18",
+        "name": "Si Racha - W1 Sat Long Run",
+        "source": "garmin",
+        "id": "garmin:20725101626"
+      },
+      {
+        "distance_m": 3511.3987879488204,
+        "pace": "8:33",
+        "date": "2023-11-20",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:12803260693"
+      },
+      {
+        "distance_m": 3507.3757006781443,
+        "pace": "8:33",
+        "date": "2026-05-09",
+        "name": "Si Racha - W9 Sat Easy Run",
+        "source": "garmin",
+        "id": "garmin:22814290479"
+      },
+      {
+        "distance_m": 3504.7197265625,
+        "pace": "8:34",
+        "date": "2024-02-25",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:14123051662"
+      },
+      {
+        "distance_m": 3499.3399993896483,
+        "pace": "8:34",
+        "date": "2026-05-24",
+        "name": "Si Racha - W11 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:22989751425"
+      },
+      {
+        "distance_m": 3482.264350043403,
+        "pace": "8:37",
+        "date": "2023-05-09",
+        "name": "Nakhon Ratchasima Running",
+        "source": "garmin",
+        "id": "garmin:11078817529"
+      },
+      {
+        "distance_m": 3461.9332962036133,
+        "pace": "8:40",
+        "date": "2026-03-27",
+        "name": "Si Racha - W3 Fri Easy Run",
+        "source": "garmin",
+        "id": "garmin:22314923663"
+      },
+      {
+        "distance_m": 3417.0000610351562,
+        "pace": "8:47",
+        "date": "2026-06-22",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:23338549468"
+      },
+      {
+        "distance_m": 3374.310049874442,
+        "pace": "8:53",
+        "date": "2025-07-22",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19810876499"
+      },
+      {
+        "distance_m": 3367.7519119262697,
+        "pace": "8:54",
+        "date": "2024-02-24",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:14107538641"
+      },
+      {
+        "distance_m": 3347.1353759765625,
+        "pace": "8:58",
+        "date": "2026-02-07",
+        "name": "Si Racha - W2 Sat Long Run",
+        "source": "garmin",
+        "id": "garmin:21787834943"
+      },
+      {
+        "distance_m": 3314.93017578125,
+        "pace": "9:03",
+        "date": "2025-07-13",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19719745319"
       },
       {
         "distance_m": 3252.4999999999995,
@@ -6273,6 +10258,70 @@
         "id": "zepp:1788050928"
       },
       {
+        "distance_m": 3234.14013671875,
+        "pace": "9:17",
+        "date": "2026-07-05",
+        "name": "Bang Lamung - W2 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:23482051434"
+      },
+      {
+        "distance_m": 3018.93017578125,
+        "pace": "9:56",
+        "date": "2025-07-06",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19648697727"
+      },
+      {
+        "distance_m": 3005.699951171875,
+        "pace": "9:59",
+        "date": "2025-07-07",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19657959446"
+      },
+      {
+        "distance_m": 2971.969940185547,
+        "pace": "10:06",
+        "date": "2025-07-12",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19708836951"
+      },
+      {
+        "distance_m": 2886.8150024414062,
+        "pace": "10:24",
+        "date": "2024-05-23",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:15537951518"
+      },
+      {
+        "distance_m": 2838.452706473214,
+        "pace": "10:34",
+        "date": "2026-02-14",
+        "name": "Si Racha - W3 Sat Long Run",
+        "source": "garmin",
+        "id": "garmin:21860771605"
+      },
+      {
+        "distance_m": 2690.7001953125,
+        "pace": "11:09",
+        "date": "2026-02-28",
+        "name": "Si Racha - W5 Sat Long Run",
+        "source": "garmin",
+        "id": "garmin:22009058664"
+      },
+      {
+        "distance_m": 2682.1466878255205,
+        "pace": "11:11",
+        "date": "2024-05-12",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:15354420117"
+      },
+      {
         "distance_m": 2636.34,
         "pace": "11:23",
         "date": "2026-09-13",
@@ -6281,12 +10330,76 @@
         "id": "zepp:1789258587"
       },
       {
+        "distance_m": 2557.39990234375,
+        "pace": "11:44",
+        "date": "2026-02-21",
+        "name": "Si Racha - W4 Sat Long Run",
+        "source": "garmin",
+        "id": "garmin:21933292808"
+      },
+      {
+        "distance_m": 2479.0699462890625,
+        "pace": "12:06",
+        "date": "2023-05-11",
+        "name": "Nakhon Ratchasima Running",
+        "source": "garmin",
+        "id": "garmin:11093215574"
+      },
+      {
+        "distance_m": 2333.216715494792,
+        "pace": "12:51",
+        "date": "2026-01-24",
+        "name": "Si Racha Trail Running",
+        "source": "garmin",
+        "id": "garmin:21645536036"
+      },
+      {
+        "distance_m": 2327.5201416015625,
+        "pace": "12:53",
+        "date": "2023-05-16",
+        "name": "Nakhon Ratchasima Running",
+        "source": "garmin",
+        "id": "garmin:11127828703"
+      },
+      {
+        "distance_m": 2193.9861450195312,
+        "pace": "13:40",
+        "date": "2025-10-05",
+        "name": "Si Racha Trail Running",
+        "source": "garmin",
+        "id": "garmin:20591663664"
+      },
+      {
+        "distance_m": 2106.6084507533483,
+        "pace": "14:14",
+        "date": "2024-04-05",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:14744503551"
+      },
+      {
+        "distance_m": 1884.4599609375,
+        "pace": "15:55",
+        "date": "2025-11-22",
+        "name": "Si Racha Trail Running",
+        "source": "garmin",
+        "id": "garmin:21056211320"
+      },
+      {
         "distance_m": 1847.63,
         "pace": "16:14",
         "date": "2026-09-19",
         "name": "Trail Run",
         "source": "zepp",
         "id": "zepp:1789778233"
+      },
+      {
+        "distance_m": 1625.5101841517858,
+        "pace": "18:27",
+        "date": "2026-01-31",
+        "name": "Si Racha Trail Running",
+        "source": "garmin",
+        "id": "garmin:21715628949"
       }
     ],
     "60 min": [
@@ -6299,6 +10412,30 @@
         "id": "zepp:1786831864"
       },
       {
+        "distance_m": 8605.080322265625,
+        "pace": "6:58",
+        "date": "2026-06-21",
+        "name": "Nakhon Ratchasima - Korat21 HR-Locke",
+        "source": "garmin",
+        "id": "garmin:23322768957"
+      },
+      {
+        "distance_m": 8542.020477294922,
+        "pace": "7:01",
+        "date": "2026-03-14",
+        "name": "Bang Lamung - W1 Sat Long Run",
+        "source": "garmin",
+        "id": "garmin:22165151317"
+      },
+      {
+        "distance_m": 8516.88994140625,
+        "pace": "7:03",
+        "date": "2026-06-28",
+        "name": "Bang Lamung - W1 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:23401587239"
+      },
+      {
         "distance_m": 8463.63,
         "pace": "7:05",
         "date": "2026-08-28",
@@ -6307,12 +10444,52 @@
         "id": "zepp:1787912263"
       },
       {
+        "distance_m": 8335.839721679688,
+        "pace": "7:12",
+        "date": "2026-04-05",
+        "name": "Si Racha - W4 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:22415442199"
+      },
+      {
+        "distance_m": 8309.232526506696,
+        "pace": "7:13",
+        "date": "2026-04-13",
+        "name": "Nakhon Ratchasima - W5 Mon Long Run",
+        "source": "garmin",
+        "id": "garmin:22505985835"
+      },
+      {
+        "distance_m": 8278.20751953125,
+        "pace": "7:15",
+        "date": "2026-07-03",
+        "name": "Si Racha - W2 Fri Intervals",
+        "source": "garmin",
+        "id": "garmin:23463524696"
+      },
+      {
+        "distance_m": 8235.4404296875,
+        "pace": "7:17",
+        "date": "2026-03-07",
+        "name": "Si Racha - W6 Sat Long Run",
+        "source": "garmin",
+        "id": "garmin:22089914362"
+      },
+      {
         "distance_m": 8083.650000000001,
         "pace": "7:25",
         "date": "2026-09-12",
         "name": "Run",
         "source": "zepp",
         "id": "zepp:1789166808"
+      },
+      {
+        "distance_m": 8046.213026258681,
+        "pace": "7:27",
+        "date": "2026-06-19",
+        "name": "Si Racha - W15 Fri Taper In",
+        "source": "garmin",
+        "id": "garmin:23300597520"
       },
       {
         "distance_m": 7990.85,
@@ -6331,6 +10508,22 @@
         "id": "zepp:1786236856"
       },
       {
+        "distance_m": 7854.667297363281,
+        "pace": "7:38",
+        "date": "2026-03-29",
+        "name": "Si Racha - W3 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:22337124295"
+      },
+      {
+        "distance_m": 7785.8023681640625,
+        "pace": "7:42",
+        "date": "2026-04-26",
+        "name": "Bang Lamung - W7 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:22660073333"
+      },
+      {
         "distance_m": 7719.45,
         "pace": "7:46",
         "date": "2026-08-21",
@@ -6339,12 +10532,52 @@
         "id": "zepp:1787306686"
       },
       {
+        "distance_m": 7716.360201875369,
+        "pace": "7:47",
+        "date": "2026-04-10",
+        "name": "Nakhon Ratchasima - W5 Fri Tempo - O",
+        "source": "garmin",
+        "id": "garmin:22475866289"
+      },
+      {
+        "distance_m": 7659.767263139997,
+        "pace": "7:50",
+        "date": "2026-06-26",
+        "name": "Si Racha - W1 Fri Tempo - R",
+        "source": "garmin",
+        "id": "garmin:23384767284"
+      },
+      {
+        "distance_m": 7658.130078125,
+        "pace": "7:50",
+        "date": "2026-05-10",
+        "name": "Si Racha - W9 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:22826416629"
+      },
+      {
+        "distance_m": 7575.250244140625,
+        "pace": "7:55",
+        "date": "2026-03-21",
+        "name": "Si Racha - W2 Sat Easy Run",
+        "source": "garmin",
+        "id": "garmin:22243563946"
+      },
+      {
         "distance_m": 7564.299999999999,
         "pace": "7:56",
         "date": "2026-08-14",
         "name": "Run",
         "source": "zepp",
         "id": "zepp:1786701677"
+      },
+      {
+        "distance_m": 7437.245175361633,
+        "pace": "8:04",
+        "date": "2026-07-15",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:23606327657"
       },
       {
         "distance_m": 7316.3099999999995,
@@ -6363,12 +10596,44 @@
         "id": "zepp:1789862396"
       },
       {
+        "distance_m": 7218.190032958984,
+        "pace": "8:19",
+        "date": "2026-01-30",
+        "name": "Si Racha - W3 Fri Long Run",
+        "source": "garmin",
+        "id": "garmin:21709557008"
+      },
+      {
+        "distance_m": 7182.2950439453125,
+        "pace": "8:21",
+        "date": "2026-06-10",
+        "name": "Si Racha - W14 Wed Easy Run",
+        "source": "garmin",
+        "id": "garmin:23198678099"
+      },
+      {
         "distance_m": 7181.35,
         "pace": "8:21",
         "date": "2026-09-06",
         "name": "Run",
         "source": "zepp",
         "id": "zepp:1788654041"
+      },
+      {
+        "distance_m": 7129.026359796524,
+        "pace": "8:25",
+        "date": "2026-05-03",
+        "name": "Bang Lamung - W8 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:22743886437"
+      },
+      {
+        "distance_m": 7128.309997558594,
+        "pace": "8:25",
+        "date": "2026-07-20",
+        "name": "Si Racha - W4 Mon Long Run",
+        "source": "garmin",
+        "id": "garmin:23663984483"
       },
       {
         "distance_m": 7107.05,
@@ -6379,12 +10644,116 @@
         "id": "zepp:1789122164"
       },
       {
+        "distance_m": 7098.625,
+        "pace": "8:27",
+        "date": "2026-05-17",
+        "name": "Si Racha - W10 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:22906987901"
+      },
+      {
+        "distance_m": 7072.757670879364,
+        "pace": "8:29",
+        "date": "2026-04-25",
+        "name": "Si Racha - W7 Sat Easy Run",
+        "source": "garmin",
+        "id": "garmin:22652534632"
+      },
+      {
         "distance_m": 7040.9400000000005,
         "pace": "8:31",
         "date": "2026-08-02",
         "name": "Run",
         "source": "zepp",
         "id": "zepp:1785629603"
+      },
+      {
+        "distance_m": 7035.540179782443,
+        "pace": "8:32",
+        "date": "2025-07-23",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19822453673"
+      },
+      {
+        "distance_m": 7030.098563058035,
+        "pace": "8:32",
+        "date": "2025-07-18",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19770899718"
+      },
+      {
+        "distance_m": 6993.690017700195,
+        "pace": "8:35",
+        "date": "2026-05-16",
+        "name": "Si Racha - W10 Sat Easy Run",
+        "source": "garmin",
+        "id": "garmin:22895211286"
+      },
+      {
+        "distance_m": 6927.6697998046875,
+        "pace": "8:40",
+        "date": "2025-08-15",
+        "name": "Si Racha - W2 Fri Long Run",
+        "source": "garmin",
+        "id": "garmin:20065550088"
+      },
+      {
+        "distance_m": 6927.4498291015625,
+        "pace": "8:40",
+        "date": "2026-06-03",
+        "name": "Si Racha - W12 Wed Long Run",
+        "source": "garmin",
+        "id": "garmin:23110375358"
+      },
+      {
+        "distance_m": 6730.919979095459,
+        "pace": "8:55",
+        "date": "2026-05-24",
+        "name": "Si Racha - W11 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:22989751425"
+      },
+      {
+        "distance_m": 6690.619934082031,
+        "pace": "8:58",
+        "date": "2024-02-25",
+        "name": "Pluak Daeng Running",
+        "source": "garmin",
+        "id": "garmin:14123051662"
+      },
+      {
+        "distance_m": 6602.502590603299,
+        "pace": "9:05",
+        "date": "2023-05-04",
+        "name": "Nakhon Ratchasima Running",
+        "source": "garmin",
+        "id": "garmin:11043202469"
+      },
+      {
+        "distance_m": 6575.745208740234,
+        "pace": "9:07",
+        "date": "2023-05-10",
+        "name": "Nakhon Ratchasima Running",
+        "source": "garmin",
+        "id": "garmin:11086044579"
+      },
+      {
+        "distance_m": 6444.4454345703125,
+        "pace": "9:19",
+        "date": "2026-02-07",
+        "name": "Si Racha - W2 Sat Long Run",
+        "source": "garmin",
+        "id": "garmin:21787834943"
+      },
+      {
+        "distance_m": 6298.66015625,
+        "pace": "9:32",
+        "date": "2026-07-05",
+        "name": "Bang Lamung - W2 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:23482051434"
       },
       {
         "distance_m": 6263.96,
@@ -6395,6 +10764,38 @@
         "id": "zepp:1788050928"
       },
       {
+        "distance_m": 5840.5001220703125,
+        "pace": "10:16",
+        "date": "2023-05-09",
+        "name": "Nakhon Ratchasima Running",
+        "source": "garmin",
+        "id": "garmin:11078817529"
+      },
+      {
+        "distance_m": 5598.150207519531,
+        "pace": "10:43",
+        "date": "2025-07-06",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19648697727"
+      },
+      {
+        "distance_m": 5351.439910888672,
+        "pace": "11:13",
+        "date": "2026-02-14",
+        "name": "Si Racha - W3 Sat Long Run",
+        "source": "garmin",
+        "id": "garmin:21860771605"
+      },
+      {
+        "distance_m": 5261.359909057617,
+        "pace": "11:24",
+        "date": "2025-07-07",
+        "name": "Si Racha Running",
+        "source": "garmin",
+        "id": "garmin:19657959446"
+      },
+      {
         "distance_m": 5073.07,
         "pace": "11:50",
         "date": "2026-09-13",
@@ -6403,15 +10804,79 @@
         "id": "zepp:1789258587"
       },
       {
+        "distance_m": 4950.1799392700195,
+        "pace": "12:07",
+        "date": "2026-02-28",
+        "name": "Si Racha - W5 Sat Long Run",
+        "source": "garmin",
+        "id": "garmin:22009058664"
+      },
+      {
+        "distance_m": 4860.830139160156,
+        "pace": "12:21",
+        "date": "2023-05-11",
+        "name": "Nakhon Ratchasima Running",
+        "source": "garmin",
+        "id": "garmin:11093215574"
+      },
+      {
+        "distance_m": 4243.5623779296875,
+        "pace": "14:08",
+        "date": "2026-01-24",
+        "name": "Si Racha Trail Running",
+        "source": "garmin",
+        "id": "garmin:21645536036"
+      },
+      {
+        "distance_m": 4128.6646399564215,
+        "pace": "14:32",
+        "date": "2026-02-21",
+        "name": "Si Racha - W4 Sat Long Run",
+        "source": "garmin",
+        "id": "garmin:21933292808"
+      },
+      {
         "distance_m": 3572.29,
         "pace": "16:48",
         "date": "2026-09-19",
         "name": "Trail Run",
         "source": "zepp",
         "id": "zepp:1789778233"
+      },
+      {
+        "distance_m": 3399.9502301897323,
+        "pace": "17:39",
+        "date": "2025-11-22",
+        "name": "Si Racha Trail Running",
+        "source": "garmin",
+        "id": "garmin:21056211320"
       }
     ],
     "90 min": [
+      {
+        "distance_m": 12622.290405273438,
+        "pace": "7:08",
+        "date": "2026-06-21",
+        "name": "Nakhon Ratchasima - Korat21 HR-Locke",
+        "source": "garmin",
+        "id": "garmin:23322768957"
+      },
+      {
+        "distance_m": 12283.695853642055,
+        "pace": "7:20",
+        "date": "2026-04-13",
+        "name": "Nakhon Ratchasima - W5 Mon Long Run",
+        "source": "garmin",
+        "id": "garmin:22505985835"
+      },
+      {
+        "distance_m": 12282.999765396118,
+        "pace": "7:20",
+        "date": "2026-06-28",
+        "name": "Bang Lamung - W1 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:23401587239"
+      },
       {
         "distance_m": 11545.849999999999,
         "pace": "7:48",
@@ -6419,6 +10884,38 @@
         "name": "Run",
         "source": "zepp",
         "id": "zepp:1787440334"
+      },
+      {
+        "distance_m": 11148.052908761161,
+        "pace": "8:04",
+        "date": "2026-03-21",
+        "name": "Si Racha - W2 Sat Easy Run",
+        "source": "garmin",
+        "id": "garmin:22243563946"
+      },
+      {
+        "distance_m": 11024.40673828125,
+        "pace": "8:10",
+        "date": "2026-05-10",
+        "name": "Si Racha - W9 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:22826416629"
+      },
+      {
+        "distance_m": 10862.899803161621,
+        "pace": "8:17",
+        "date": "2026-04-26",
+        "name": "Bang Lamung - W7 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:22660073333"
+      },
+      {
+        "distance_m": 10738.389531254768,
+        "pace": "8:23",
+        "date": "2026-05-17",
+        "name": "Si Racha - W10 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:22906987901"
       },
       {
         "distance_m": 10488.14,
@@ -6445,6 +10942,30 @@
         "id": "zepp:1785629603"
       },
       {
+        "distance_m": 10227.1796875,
+        "pace": "8:48",
+        "date": "2026-06-03",
+        "name": "Si Racha - W12 Wed Long Run",
+        "source": "garmin",
+        "id": "garmin:23110375358"
+      },
+      {
+        "distance_m": 9926.466653664907,
+        "pace": "9:04",
+        "date": "2026-05-24",
+        "name": "Si Racha - W11 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:22989751425"
+      },
+      {
+        "distance_m": 9286.780029296875,
+        "pace": "9:41",
+        "date": "2026-07-05",
+        "name": "Bang Lamung - W2 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:23482051434"
+      },
+      {
         "distance_m": 9216.74,
         "pace": "9:46",
         "date": "2026-08-30",
@@ -6453,12 +10974,36 @@
         "id": "zepp:1788050928"
       },
       {
+        "distance_m": 8918.31005859375,
+        "pace": "10:05",
+        "date": "2023-05-04",
+        "name": "Nakhon Ratchasima Running",
+        "source": "garmin",
+        "id": "garmin:11043202469"
+      },
+      {
         "distance_m": 7024.46,
         "pace": "12:49",
         "date": "2026-09-13",
         "name": "Trail Run",
         "source": "zepp",
         "id": "zepp:1789258587"
+      },
+      {
+        "distance_m": 6624.593370225694,
+        "pace": "13:35",
+        "date": "2026-02-28",
+        "name": "Si Racha - W5 Sat Long Run",
+        "source": "garmin",
+        "id": "garmin:22009058664"
+      },
+      {
+        "distance_m": 5918.6264778574305,
+        "pace": "15:12",
+        "date": "2026-02-21",
+        "name": "Si Racha - W4 Sat Long Run",
+        "source": "garmin",
+        "id": "garmin:21933292808"
       },
       {
         "distance_m": 5194.85,
@@ -6471,12 +11016,36 @@
     ],
     "120 min": [
       {
+        "distance_m": 16738.35173688616,
+        "pace": "7:10",
+        "date": "2026-06-21",
+        "name": "Nakhon Ratchasima - Korat21 HR-Locke",
+        "source": "garmin",
+        "id": "garmin:23322768957"
+      },
+      {
+        "distance_m": 14578.13003540039,
+        "pace": "8:14",
+        "date": "2026-05-10",
+        "name": "Si Racha - W9 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:22826416629"
+      },
+      {
         "distance_m": 13737.31,
         "pace": "8:44",
         "date": "2026-09-20",
         "name": "Run",
         "source": "zepp",
         "id": "zepp:1789862396"
+      },
+      {
+        "distance_m": 13529.764736175537,
+        "pace": "8:52",
+        "date": "2026-06-03",
+        "name": "Si Racha - W12 Wed Long Run",
+        "source": "garmin",
+        "id": "garmin:23110375358"
       },
       {
         "distance_m": 13294.64,
@@ -6487,12 +11056,28 @@
         "id": "zepp:1789122164"
       },
       {
+        "distance_m": 12989.892070770264,
+        "pace": "9:14",
+        "date": "2026-05-24",
+        "name": "Si Racha - W11 Sun Long Run",
+        "source": "garmin",
+        "id": "garmin:22989751425"
+      },
+      {
         "distance_m": 8402.54,
         "pace": "14:17",
         "date": "2026-09-13",
         "name": "Trail Run",
         "source": "zepp",
         "id": "zepp:1789258587"
+      },
+      {
+        "distance_m": 7433.8965250651045,
+        "pace": "16:09",
+        "date": "2026-02-21",
+        "name": "Si Racha - W4 Sat Long Run",
+        "source": "garmin",
+        "id": "garmin:21933292808"
       },
       {
         "distance_m": 6310.2300000000005,

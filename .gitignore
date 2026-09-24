@@ -40,3 +40,4 @@ Thumbs.db
 *.db-shm
 *.json.tmp
 zepp_tokens/
+.garmin_effort_cache/
