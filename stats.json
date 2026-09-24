@@ -6411,6 +6411,98 @@
         "id": "zepp:1789778233"
       }
     ],
+    "90 min": [
+      {
+        "distance_m": 11545.849999999999,
+        "pace": "7:48",
+        "date": "2026-08-23",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1787440334"
+      },
+      {
+        "distance_m": 10488.14,
+        "pace": "8:35",
+        "date": "2026-09-20",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1789862396"
+      },
+      {
+        "distance_m": 10453.279999999999,
+        "pace": "8:37",
+        "date": "2026-09-11",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1789122164"
+      },
+      {
+        "distance_m": 10333.66,
+        "pace": "8:43",
+        "date": "2026-08-02",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1785629603"
+      },
+      {
+        "distance_m": 9216.74,
+        "pace": "9:46",
+        "date": "2026-08-30",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1788050928"
+      },
+      {
+        "distance_m": 7024.46,
+        "pace": "12:49",
+        "date": "2026-09-13",
+        "name": "Trail Run",
+        "source": "zepp",
+        "id": "zepp:1789258587"
+      },
+      {
+        "distance_m": 5194.85,
+        "pace": "17:19",
+        "date": "2026-09-19",
+        "name": "Trail Run",
+        "source": "zepp",
+        "id": "zepp:1789778233"
+      }
+    ],
+    "120 min": [
+      {
+        "distance_m": 13737.31,
+        "pace": "8:44",
+        "date": "2026-09-20",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1789862396"
+      },
+      {
+        "distance_m": 13294.64,
+        "pace": "9:02",
+        "date": "2026-09-11",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1789122164"
+      },
+      {
+        "distance_m": 8402.54,
+        "pace": "14:17",
+        "date": "2026-09-13",
+        "name": "Trail Run",
+        "source": "zepp",
+        "id": "zepp:1789258587"
+      },
+      {
+        "distance_m": 6310.2300000000005,
+        "pace": "19:01",
+        "date": "2026-09-19",
+        "name": "Trail Run",
+        "source": "zepp",
+        "id": "zepp:1789778233"
+      }
+    ],
     "Longest duration": [
       {
         "duration_seconds": 13371,

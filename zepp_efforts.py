@@ -5,7 +5,7 @@ from bisect import bisect_left, bisect_right
 import math
 
 DISTANCES = {'1 km': 1000, '1 mile': 1609, '5 km': 5000, '10 km': 10000, 'Half': 21098}
-TIMES = {f'{minutes} min': minutes * 60 for minutes in (5, 10, 20, 30, 60)}
+TIMES = {f'{minutes} min': minutes * 60 for minutes in (5, 10, 20, 30, 60, 90, 120)}
 
 
 def furthest(points, seconds):
