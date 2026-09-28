@@ -13811,7 +13811,7 @@
       "date": "2026-09-23",
       "source": "zepp",
       "stress": {
-        "score": 24.0
+        "score": 45.0
       },
       "rhr": {
         "current": 57.0
@@ -13897,7 +13897,7 @@
           "unit": "ml/kg/min"
         },
         "stress": {
-          "value": 24.0,
+          "value": 45.0,
           "unit": "score"
         },
         "stress_min": {
@@ -13905,23 +13905,23 @@
           "unit": "score"
         },
         "stress_max": {
-          "value": 75.0,
+          "value": 84.0,
           "unit": "score"
         },
         "stress_relaxed_pct": {
-          "value": 84.0,
+          "value": 33.0,
           "unit": "%"
         },
         "stress_normal_pct": {
-          "value": 11.0,
+          "value": 36.0,
           "unit": "%"
         },
         "stress_medium_pct": {
-          "value": 5.0,
+          "value": 30.0,
           "unit": "%"
         },
         "stress_high_pct": {
-          "value": 0.0,
+          "value": 1.0,
           "unit": "%"
         },
         "respiratory_rate": {
@@ -13953,15 +13953,15 @@
           "unit": "min"
         },
         "pai_daily": {
-          "value": 0.0159912109375,
+          "value": 0.0781097412109375,
           "unit": "pai"
         },
         "pai_low_zone": {
-          "value": 0.0159912109375,
+          "value": 0.072479248046875,
           "unit": "pai"
         },
         "pai_medium_zone": {
-          "value": 0.0,
+          "value": 0.0056304931640625,
           "unit": "pai"
         },
         "pai_high_zone": {
@@ -13977,11 +13977,11 @@
           "unit": "bpm"
         },
         "pai_total": {
-          "value": 161.5150146484375,
+          "value": 161.57713317871094,
           "unit": "pai"
         },
         "pai_low_zone_minutes": {
-          "value": 2.0,
+          "value": 10.0,
           "unit": "min"
         },
         "pai_medium_zone_minutes": {
@@ -14058,13 +14058,13 @@
       "date": "2026-09-24",
       "source": "zepp",
       "stress": {
-        "score": null
+        "score": 45.0
       },
       "rhr": {
         "current": 57.0
       },
       "steps": {
-        "count": 552.0
+        "count": 3368.0
       },
       "metrics": {
         "training_load": {
@@ -14076,16 +14076,176 @@
           "unit": "bpm"
         },
         "steps": {
-          "value": 552.0,
+          "value": 3368.0,
           "unit": "steps"
         },
         "active_calories": {
-          "value": 23.0,
+          "value": 141.0,
           "unit": "kcal"
         },
         "distance": {
-          "value": 377.0,
+          "value": 2216.0,
           "unit": "m"
+        },
+        "afib_readiness": {
+          "value": 255.0,
+          "unit": "score"
+        },
+        "ahi_baseline": {
+          "value": 0.23350878059864044,
+          "unit": "events/h"
+        },
+        "ahi_readiness": {
+          "value": 100.0,
+          "unit": "score"
+        },
+        "hrv_baseline": {
+          "value": 55.0,
+          "unit": "ms"
+        },
+        "hrv_readiness": {
+          "value": 83.0,
+          "unit": "score"
+        },
+        "mental_readiness": {
+          "value": 255.0,
+          "unit": "score"
+        },
+        "physical_readiness": {
+          "value": 255.0,
+          "unit": "score"
+        },
+        "readiness": {
+          "value": 92.0,
+          "unit": "score"
+        },
+        "rhr_baseline": {
+          "value": 58.0,
+          "unit": "bpm"
+        },
+        "rhr_readiness": {
+          "value": 90.0,
+          "unit": "score"
+        },
+        "skin_temp_readiness": {
+          "value": 99.0,
+          "unit": "score"
+        },
+        "sleep_hrv": {
+          "value": 59.0,
+          "unit": "ms"
+        },
+        "sleep_rhr": {
+          "value": 57.0,
+          "unit": "bpm"
+        },
+        "stress": {
+          "value": 45.0,
+          "unit": "score"
+        },
+        "stress_min": {
+          "value": 11.0,
+          "unit": "score"
+        },
+        "stress_max": {
+          "value": 84.0,
+          "unit": "score"
+        },
+        "stress_relaxed_pct": {
+          "value": 38.0,
+          "unit": "%"
+        },
+        "stress_normal_pct": {
+          "value": 27.0,
+          "unit": "%"
+        },
+        "stress_medium_pct": {
+          "value": 28.0,
+          "unit": "%"
+        },
+        "stress_high_pct": {
+          "value": 7.0,
+          "unit": "%"
+        },
+        "respiratory_rate": {
+          "value": 13.6,
+          "unit": "brpm"
+        },
+        "respiratory_rate_min": {
+          "value": 9.0,
+          "unit": "brpm"
+        },
+        "respiratory_rate_max": {
+          "value": 17.0,
+          "unit": "brpm"
+        },
+        "spo2_odi": {
+          "value": 0.4,
+          "unit": "events/h"
+        },
+        "spo2_odi_events": {
+          "value": 2.0,
+          "unit": "count"
+        },
+        "spo2_night_score": {
+          "value": 99.0,
+          "unit": "score"
+        },
+        "spo2_measured_minutes": {
+          "value": 300.0,
+          "unit": "min"
+        },
+        "pai_daily": {
+          "value": 1.2991485595703125,
+          "unit": "pai"
+        },
+        "pai_low_zone": {
+          "value": 1.0,
+          "unit": "pai"
+        },
+        "pai_medium_zone": {
+          "value": 0.7797393798828125,
+          "unit": "pai"
+        },
+        "pai_high_zone": {
+          "value": 0.0,
+          "unit": "pai"
+        },
+        "device_max_hr": {
+          "value": 193.0,
+          "unit": "bpm"
+        },
+        "device_resting_hr": {
+          "value": 56.0,
+          "unit": "bpm"
+        },
+        "pai_total": {
+          "value": 130.1985321044922,
+          "unit": "pai"
+        },
+        "pai_low_zone_minutes": {
+          "value": 72.0,
+          "unit": "min"
+        },
+        "pai_medium_zone_minutes": {
+          "value": 8.0,
+          "unit": "min"
+        },
+        "pai_high_zone_minutes": {
+          "value": 0.0,
+          "unit": "min"
+        },
+        "pai_low_zone_lower_hr": {
+          "value": 97.0,
+          "unit": "bpm"
+        },
+        "pai_medium_zone_lower_hr": {
+          "value": 116.0,
+          "unit": "bpm"
+        },
+        "pai_high_zone_lower_hr": {
+          "value": 154.0,
+          "unit": "bpm"
         },
         "active_minutes": {
           "value": 0.0,
@@ -14100,7 +14260,7 @@
           "unit": "kcal"
         },
         "calories": {
-          "value": 23.0,
+          "value": 141.0,
           "unit": "kcal"
         },
         "cycling_distance": {
@@ -14116,15 +14276,759 @@
           "unit": "steps"
         },
         "hybrid_charge": {
-          "value": 74.0,
+          "value": 68.0,
           "unit": "score"
         },
         "mental_charge": {
-          "value": 69.03050231933594,
+          "value": 54.50156784057617,
           "unit": "score"
         },
         "physical_charge": {
-          "value": 78.47930908203125,
+          "value": 81.93018341064453,
+          "unit": "score"
+        }
+      }
+    },
+    {
+      "date": "2026-09-25",
+      "source": "zepp",
+      "stress": {
+        "score": 37.0
+      },
+      "rhr": {
+        "current": 57.0
+      },
+      "steps": {
+        "count": 11520.0
+      },
+      "metrics": {
+        "training_load": {
+          "value": 294.0,
+          "unit": "load"
+        },
+        "resting_hr": {
+          "value": 57.0,
+          "unit": "bpm"
+        },
+        "steps": {
+          "value": 11520.0,
+          "unit": "steps"
+        },
+        "active_calories": {
+          "value": 404.0,
+          "unit": "kcal"
+        },
+        "distance": {
+          "value": 7895.0,
+          "unit": "m"
+        },
+        "stress": {
+          "value": 37.0,
+          "unit": "score"
+        },
+        "stress_min": {
+          "value": 10.0,
+          "unit": "score"
+        },
+        "stress_max": {
+          "value": 81.0,
+          "unit": "score"
+        },
+        "stress_relaxed_pct": {
+          "value": 52.0,
+          "unit": "%"
+        },
+        "stress_normal_pct": {
+          "value": 27.0,
+          "unit": "%"
+        },
+        "stress_medium_pct": {
+          "value": 20.0,
+          "unit": "%"
+        },
+        "stress_high_pct": {
+          "value": 1.0,
+          "unit": "%"
+        },
+        "respiratory_rate": {
+          "value": 14.3,
+          "unit": "brpm"
+        },
+        "respiratory_rate_min": {
+          "value": 12.0,
+          "unit": "brpm"
+        },
+        "respiratory_rate_max": {
+          "value": 17.0,
+          "unit": "brpm"
+        },
+        "spo2_odi": {
+          "value": 0.12,
+          "unit": "events/h"
+        },
+        "spo2_odi_events": {
+          "value": 1.0,
+          "unit": "count"
+        },
+        "spo2_night_score": {
+          "value": 100.0,
+          "unit": "score"
+        },
+        "spo2_measured_minutes": {
+          "value": 500.0,
+          "unit": "min"
+        },
+        "pai_daily": {
+          "value": 0.05408477783203125,
+          "unit": "pai"
+        },
+        "pai_low_zone": {
+          "value": 0.05408477783203125,
+          "unit": "pai"
+        },
+        "pai_medium_zone": {
+          "value": 0.0,
+          "unit": "pai"
+        },
+        "pai_high_zone": {
+          "value": 0.0,
+          "unit": "pai"
+        },
+        "device_max_hr": {
+          "value": 193.0,
+          "unit": "bpm"
+        },
+        "device_resting_hr": {
+          "value": 56.0,
+          "unit": "bpm"
+        },
+        "pai_total": {
+          "value": 123.63450622558594,
+          "unit": "pai"
+        },
+        "pai_low_zone_minutes": {
+          "value": 5.0,
+          "unit": "min"
+        },
+        "pai_medium_zone_minutes": {
+          "value": 0.0,
+          "unit": "min"
+        },
+        "pai_high_zone_minutes": {
+          "value": 0.0,
+          "unit": "min"
+        },
+        "pai_low_zone_lower_hr": {
+          "value": 97.0,
+          "unit": "bpm"
+        },
+        "pai_medium_zone_lower_hr": {
+          "value": 116.0,
+          "unit": "bpm"
+        },
+        "pai_high_zone_lower_hr": {
+          "value": 154.0,
+          "unit": "bpm"
+        },
+        "active_minutes": {
+          "value": 4.0,
+          "unit": "min"
+        },
+        "active_minutes_goal": {
+          "value": 30.0,
+          "unit": "min"
+        },
+        "calorie_goal": {
+          "value": 300.0,
+          "unit": "kcal"
+        },
+        "calories": {
+          "value": 404.0,
+          "unit": "kcal"
+        },
+        "cycling_distance": {
+          "value": 0.0,
+          "unit": "m"
+        },
+        "running_distance": {
+          "value": 0.0,
+          "unit": "m"
+        },
+        "step_goal": {
+          "value": 8000.0,
+          "unit": "steps"
+        },
+        "hybrid_charge": {
+          "value": 78.0,
+          "unit": "score"
+        },
+        "mental_charge": {
+          "value": 72.50334930419922,
+          "unit": "score"
+        },
+        "physical_charge": {
+          "value": 84.40654754638672,
+          "unit": "score"
+        }
+      }
+    },
+    {
+      "date": "2026-09-26",
+      "source": "zepp",
+      "stress": {
+        "score": 44.0
+      },
+      "rhr": {
+        "current": 62.0
+      },
+      "steps": {
+        "count": 1304.0
+      },
+      "metrics": {
+        "afib_readiness": {
+          "value": 255.0,
+          "unit": "score"
+        },
+        "ahi_baseline": {
+          "value": 0.2280701994895935,
+          "unit": "events/h"
+        },
+        "ahi_readiness": {
+          "value": 100.0,
+          "unit": "score"
+        },
+        "hrv_baseline": {
+          "value": 55.0,
+          "unit": "ms"
+        },
+        "hrv_readiness": {
+          "value": 95.0,
+          "unit": "score"
+        },
+        "mental_readiness": {
+          "value": 255.0,
+          "unit": "score"
+        },
+        "physical_readiness": {
+          "value": 255.0,
+          "unit": "score"
+        },
+        "readiness": {
+          "value": 97.0,
+          "unit": "score"
+        },
+        "rhr_baseline": {
+          "value": 58.0,
+          "unit": "bpm"
+        },
+        "rhr_readiness": {
+          "value": 96.0,
+          "unit": "score"
+        },
+        "skin_temp_readiness": {
+          "value": 98.0,
+          "unit": "score"
+        },
+        "sleep_hrv": {
+          "value": 74.0,
+          "unit": "ms"
+        },
+        "sleep_rhr": {
+          "value": 55.0,
+          "unit": "bpm"
+        },
+        "training_load": {
+          "value": 280.0,
+          "unit": "load"
+        },
+        "resting_hr": {
+          "value": 62.0,
+          "unit": "bpm"
+        },
+        "steps": {
+          "value": 1304.0,
+          "unit": "steps"
+        },
+        "active_calories": {
+          "value": 99.0,
+          "unit": "kcal"
+        },
+        "distance": {
+          "value": 849.0,
+          "unit": "m"
+        },
+        "stress": {
+          "value": 44.0,
+          "unit": "score"
+        },
+        "stress_min": {
+          "value": 10.0,
+          "unit": "score"
+        },
+        "stress_max": {
+          "value": 87.0,
+          "unit": "score"
+        },
+        "stress_relaxed_pct": {
+          "value": 36.0,
+          "unit": "%"
+        },
+        "stress_normal_pct": {
+          "value": 34.0,
+          "unit": "%"
+        },
+        "stress_medium_pct": {
+          "value": 20.0,
+          "unit": "%"
+        },
+        "stress_high_pct": {
+          "value": 10.0,
+          "unit": "%"
+        },
+        "respiratory_rate": {
+          "value": 14.0,
+          "unit": "brpm"
+        },
+        "respiratory_rate_min": {
+          "value": 12.0,
+          "unit": "brpm"
+        },
+        "respiratory_rate_max": {
+          "value": 17.0,
+          "unit": "brpm"
+        },
+        "spo2_odi": {
+          "value": 0.2,
+          "unit": "events/h"
+        },
+        "spo2_odi_events": {
+          "value": 1.0,
+          "unit": "count"
+        },
+        "spo2_night_score": {
+          "value": 100.0,
+          "unit": "score"
+        },
+        "spo2_measured_minutes": {
+          "value": 297.0,
+          "unit": "min"
+        },
+        "pai_daily": {
+          "value": 75.0,
+          "unit": "pai"
+        },
+        "pai_low_zone": {
+          "value": 2.0,
+          "unit": "pai"
+        },
+        "pai_medium_zone": {
+          "value": 27.901893615722656,
+          "unit": "pai"
+        },
+        "pai_high_zone": {
+          "value": 46.87583923339844,
+          "unit": "pai"
+        },
+        "device_max_hr": {
+          "value": 193.0,
+          "unit": "bpm"
+        },
+        "device_resting_hr": {
+          "value": 57.0,
+          "unit": "bpm"
+        },
+        "pai_total": {
+          "value": 155.299072265625,
+          "unit": "pai"
+        },
+        "pai_low_zone_minutes": {
+          "value": 46.0,
+          "unit": "min"
+        },
+        "pai_medium_zone_minutes": {
+          "value": 137.0,
+          "unit": "min"
+        },
+        "pai_high_zone_minutes": {
+          "value": 52.0,
+          "unit": "min"
+        },
+        "pai_low_zone_lower_hr": {
+          "value": 98.0,
+          "unit": "bpm"
+        },
+        "pai_medium_zone_lower_hr": {
+          "value": 116.0,
+          "unit": "bpm"
+        },
+        "pai_high_zone_lower_hr": {
+          "value": 154.0,
+          "unit": "bpm"
+        },
+        "active_minutes": {
+          "value": 0.0,
+          "unit": "min"
+        },
+        "active_minutes_goal": {
+          "value": 30.0,
+          "unit": "min"
+        },
+        "calorie_goal": {
+          "value": 300.0,
+          "unit": "kcal"
+        },
+        "calories": {
+          "value": 99.0,
+          "unit": "kcal"
+        },
+        "cycling_distance": {
+          "value": 0.0,
+          "unit": "m"
+        },
+        "running_distance": {
+          "value": 0.0,
+          "unit": "m"
+        },
+        "step_goal": {
+          "value": 8000.0,
+          "unit": "steps"
+        },
+        "hybrid_charge": {
+          "value": 57.0,
+          "unit": "score"
+        },
+        "mental_charge": {
+          "value": 53.14487838745117,
+          "unit": "score"
+        },
+        "physical_charge": {
+          "value": 61.49039077758789,
+          "unit": "score"
+        }
+      }
+    },
+    {
+      "date": "2026-09-27",
+      "source": "zepp",
+      "stress": {
+        "score": 31.0
+      },
+      "rhr": {
+        "current": 55.0
+      },
+      "steps": {
+        "count": 22609.0
+      },
+      "metrics": {
+        "training_load": {
+          "value": 393.0,
+          "unit": "load"
+        },
+        "vo2max": {
+          "value": 45.0,
+          "unit": "ml/kg/min"
+        },
+        "resting_hr": {
+          "value": 55.0,
+          "unit": "bpm"
+        },
+        "steps": {
+          "value": 22609.0,
+          "unit": "steps"
+        },
+        "active_calories": {
+          "value": 2142.0,
+          "unit": "kcal"
+        },
+        "distance": {
+          "value": 17713.0,
+          "unit": "m"
+        },
+        "stress": {
+          "value": 31.0,
+          "unit": "score"
+        },
+        "stress_min": {
+          "value": 12.0,
+          "unit": "score"
+        },
+        "stress_max": {
+          "value": 81.0,
+          "unit": "score"
+        },
+        "stress_relaxed_pct": {
+          "value": 73.0,
+          "unit": "%"
+        },
+        "stress_normal_pct": {
+          "value": 13.0,
+          "unit": "%"
+        },
+        "stress_medium_pct": {
+          "value": 12.0,
+          "unit": "%"
+        },
+        "stress_high_pct": {
+          "value": 2.0,
+          "unit": "%"
+        },
+        "respiratory_rate": {
+          "value": 14.5,
+          "unit": "brpm"
+        },
+        "respiratory_rate_min": {
+          "value": 12.0,
+          "unit": "brpm"
+        },
+        "respiratory_rate_max": {
+          "value": 18.0,
+          "unit": "brpm"
+        },
+        "spo2_odi": {
+          "value": 0.34,
+          "unit": "events/h"
+        },
+        "spo2_odi_events": {
+          "value": 3.0,
+          "unit": "count"
+        },
+        "spo2_night_score": {
+          "value": 99.0,
+          "unit": "score"
+        },
+        "spo2_measured_minutes": {
+          "value": 527.0,
+          "unit": "min"
+        },
+        "pai_daily": {
+          "value": 0.003814697265625,
+          "unit": "pai"
+        },
+        "pai_low_zone": {
+          "value": 0.003814697265625,
+          "unit": "pai"
+        },
+        "pai_medium_zone": {
+          "value": 0.0,
+          "unit": "pai"
+        },
+        "pai_high_zone": {
+          "value": 0.0,
+          "unit": "pai"
+        },
+        "device_max_hr": {
+          "value": 193.0,
+          "unit": "bpm"
+        },
+        "device_resting_hr": {
+          "value": 55.0,
+          "unit": "bpm"
+        },
+        "pai_total": {
+          "value": 155.1951141357422,
+          "unit": "pai"
+        },
+        "pai_low_zone_minutes": {
+          "value": 1.0,
+          "unit": "min"
+        },
+        "pai_medium_zone_minutes": {
+          "value": 0.0,
+          "unit": "min"
+        },
+        "pai_high_zone_minutes": {
+          "value": 0.0,
+          "unit": "min"
+        },
+        "pai_low_zone_lower_hr": {
+          "value": 96.0,
+          "unit": "bpm"
+        },
+        "pai_medium_zone_lower_hr": {
+          "value": 116.0,
+          "unit": "bpm"
+        },
+        "pai_high_zone_lower_hr": {
+          "value": 154.0,
+          "unit": "bpm"
+        },
+        "active_minutes": {
+          "value": 191.0,
+          "unit": "min"
+        },
+        "active_minutes_goal": {
+          "value": 30.0,
+          "unit": "min"
+        },
+        "calorie_goal": {
+          "value": 300.0,
+          "unit": "kcal"
+        },
+        "calories": {
+          "value": 2142.0,
+          "unit": "kcal"
+        },
+        "cycling_distance": {
+          "value": 0.0,
+          "unit": "m"
+        },
+        "running_distance": {
+          "value": 15598.78515625,
+          "unit": "m"
+        },
+        "step_goal": {
+          "value": 8000.0,
+          "unit": "steps"
+        },
+        "hybrid_charge": {
+          "value": 85.0,
+          "unit": "score"
+        },
+        "mental_charge": {
+          "value": 93.07344818115234,
+          "unit": "score"
+        },
+        "physical_charge": {
+          "value": 76.18230438232422,
+          "unit": "score"
+        }
+      }
+    },
+    {
+      "date": "2026-09-28",
+      "source": "zepp",
+      "stress": {
+        "score": null
+      },
+      "rhr": {
+        "current": 60.0
+      },
+      "steps": {
+        "count": 1721.0
+      },
+      "metrics": {
+        "afib_readiness": {
+          "value": 255.0,
+          "unit": "score"
+        },
+        "ahi_baseline": {
+          "value": 0.22929823398590088,
+          "unit": "events/h"
+        },
+        "ahi_readiness": {
+          "value": 100.0,
+          "unit": "score"
+        },
+        "hrv_baseline": {
+          "value": 55.0,
+          "unit": "ms"
+        },
+        "hrv_readiness": {
+          "value": 81.0,
+          "unit": "score"
+        },
+        "mental_readiness": {
+          "value": 255.0,
+          "unit": "score"
+        },
+        "physical_readiness": {
+          "value": 255.0,
+          "unit": "score"
+        },
+        "readiness": {
+          "value": 88.0,
+          "unit": "score"
+        },
+        "rhr_baseline": {
+          "value": 58.0,
+          "unit": "bpm"
+        },
+        "rhr_readiness": {
+          "value": 79.0,
+          "unit": "score"
+        },
+        "skin_temp_readiness": {
+          "value": 99.0,
+          "unit": "score"
+        },
+        "sleep_hrv": {
+          "value": 57.0,
+          "unit": "ms"
+        },
+        "sleep_rhr": {
+          "value": 60.0,
+          "unit": "bpm"
+        },
+        "training_load": {
+          "value": 393.0,
+          "unit": "load"
+        },
+        "resting_hr": {
+          "value": 60.0,
+          "unit": "bpm"
+        },
+        "steps": {
+          "value": 1721.0,
+          "unit": "steps"
+        },
+        "active_calories": {
+          "value": 93.0,
+          "unit": "kcal"
+        },
+        "distance": {
+          "value": 1137.0,
+          "unit": "m"
+        },
+        "respiratory_rate": {
+          "value": 13.6,
+          "unit": "brpm"
+        },
+        "respiratory_rate_min": {
+          "value": 13.0,
+          "unit": "brpm"
+        },
+        "respiratory_rate_max": {
+          "value": 14.0,
+          "unit": "brpm"
+        },
+        "active_minutes": {
+          "value": 0.0,
+          "unit": "min"
+        },
+        "active_minutes_goal": {
+          "value": 30.0,
+          "unit": "min"
+        },
+        "calorie_goal": {
+          "value": 300.0,
+          "unit": "kcal"
+        },
+        "calories": {
+          "value": 94.0,
+          "unit": "kcal"
+        },
+        "cycling_distance": {
+          "value": 0.0,
+          "unit": "m"
+        },
+        "running_distance": {
+          "value": 0.0,
+          "unit": "m"
+        },
+        "step_goal": {
+          "value": 8000.0,
+          "unit": "steps"
+        },
+        "hybrid_charge": {
+          "value": 59.0,
+          "unit": "score"
+        },
+        "mental_charge": {
+          "value": 41.531063079833984,
+          "unit": "score"
+        },
+        "physical_charge": {
+          "value": 76.96580505371094,
           "unit": "score"
         }
       }
