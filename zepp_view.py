@@ -115,6 +115,20 @@ def enrich(page, root, wellness, activities):
         payload = analysis_path.read_text(encoding='utf8').replace('<', '\\u003c')
         styles = '''<style>
         #zepp-workout-analysis,#zepp-health-analysis{column-span:all;width:100%;box-sizing:border-box}
+        #page-runs.active{column-count:1}
+        #page-runs .card{min-width:0;max-width:100%;box-sizing:border-box}
+        #zepp-workout-select{flex-wrap:nowrap;max-height:none;padding-bottom:12px}
+        #zepp-workout-select button{flex:0 0 auto}
+        .zepp-overview{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:16px 0}
+        .zepp-overview>div{padding:14px;border:1px solid var(--border,#444);border-radius:10px}
+        .zepp-overview span{display:block;font-size:12px;color:var(--text-muted);margin-bottom:8px}
+        .zepp-overview strong{font-size:20px}
+        .zepp-section{border-top:1px solid var(--border,#444);padding:14px 0}
+        .zepp-section>summary{cursor:pointer;font-weight:600;line-height:1.6}
+        .zepp-section ul{padding-left:22px;line-height:1.8;overflow-wrap:anywhere}
+        #zepp-workout-content .zepp-graph-grid{align-items:start}
+        #zepp-workout-content .zepp-graph{margin:0}
+        @media(max-width:600px){.zepp-overview{grid-template-columns:repeat(2,minmax(0,1fr))}.zepp-overview strong{font-size:17px}}
         .zepp-buttons{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0}
         .zepp-select{display:flex;gap:6px;overflow:auto;padding:10px 0;max-height:180px;flex-wrap:wrap}
         .zepp-select button{white-space:nowrap}

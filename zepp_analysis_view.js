@@ -108,6 +108,26 @@ function workout(r){
  const used=new Set(['heart_rate','gait','speed','pace','altitude','time_delta_altitude','currentDistance','equivPace','power_meter','runPosture','pause','lap','kilo_pace','time']);
  audit.appendChild(table(['ช่องข้อมูล','สถานะ'],Object.entries(r.raw_fields).map(([k,v])=>[k,!v?'ไม่มีข้อมูล':used.has(k)?'มี · ใช้ช่องที่ตรวจหน่วยแล้ว/ข้อมูลสรุป':'มี · ยังไม่ยืนยันความหมาย จึงไม่นำมาตีความ'])));
  parent.appendChild(audit);
+ // Keep the complete analysis, but reveal the useful overview before the report.
+ const nodes=Array.from(parent.children);
+ parent.replaceChildren();
+ parent.appendChild(nodes[0]);
+ const overview=el('div',null,'zepp-overview');
+ [['ระยะ',km(r.summary.distance_meters)+' km'],['เวลา',time(r.elapsed_s)],
+  ['เพซรวม',r.summary.distance_meters>0?time(r.elapsed_s/(r.summary.distance_meters/1000))+' /km':'—'],
+  ['HR เฉลี่ย / สูงสุด',fmt(r.summary.avg_hr)+' / '+fmt(r.summary.max_hr)+' bpm']].forEach(([label,value])=>{
+   const tile=el('div');tile.appendChild(el('span',label));tile.appendChild(el('strong',value));overview.appendChild(tile);
+  });
+ parent.appendChild(overview);
+ parent.appendChild(grid);
+ const tools=nodes.find(n=>n.className==='zepp-buttons');if(tools)parent.appendChild(tools);
+ let section=el('details',null,'zepp-section');section.appendChild(el('summary','บันทึกและข้อสังเกต'));parent.appendChild(section);
+ nodes.slice(1).forEach(n=>{
+  if(n===grid||n===tools)return;
+  if(n.tagName==='H3'){
+   section=el('details',null,'zepp-section');section.appendChild(el('summary',n.textContent));parent.appendChild(section);
+  }else section.appendChild(n);
+ });
 }
 function health(h){
  const parent=document.getElementById('zepp-health-content');clear(parent);

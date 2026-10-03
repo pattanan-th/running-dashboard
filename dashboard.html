@@ -3557,6 +3557,20 @@ renderChecklist();
 </script>
 <style>
         #zepp-workout-analysis,#zepp-health-analysis{column-span:all;width:100%;box-sizing:border-box}
+        #page-runs.active{column-count:1}
+        #page-runs .card{min-width:0;max-width:100%;box-sizing:border-box}
+        #zepp-workout-select{flex-wrap:nowrap;max-height:none;padding-bottom:12px}
+        #zepp-workout-select button{flex:0 0 auto}
+        .zepp-overview{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:16px 0}
+        .zepp-overview>div{padding:14px;border:1px solid var(--border,#444);border-radius:10px}
+        .zepp-overview span{display:block;font-size:12px;color:var(--text-muted);margin-bottom:8px}
+        .zepp-overview strong{font-size:20px}
+        .zepp-section{border-top:1px solid var(--border,#444);padding:14px 0}
+        .zepp-section>summary{cursor:pointer;font-weight:600;line-height:1.6}
+        .zepp-section ul{padding-left:22px;line-height:1.8;overflow-wrap:anywhere}
+        #zepp-workout-content .zepp-graph-grid{align-items:start}
+        #zepp-workout-content .zepp-graph{margin:0}
+        @media(max-width:600px){.zepp-overview{grid-template-columns:repeat(2,minmax(0,1fr))}.zepp-overview strong{font-size:17px}}
         .zepp-buttons{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0}
         .zepp-select{display:flex;gap:6px;overflow:auto;padding:10px 0;max-height:180px;flex-wrap:wrap}
         .zepp-select button{white-space:nowrap}
@@ -3677,6 +3691,26 @@ function workout(r){
  const used=new Set(['heart_rate','gait','speed','pace','altitude','time_delta_altitude','currentDistance','equivPace','power_meter','runPosture','pause','lap','kilo_pace','time']);
  audit.appendChild(table(['ช่องข้อมูล','สถานะ'],Object.entries(r.raw_fields).map(([k,v])=>[k,!v?'ไม่มีข้อมูล':used.has(k)?'มี · ใช้ช่องที่ตรวจหน่วยแล้ว/ข้อมูลสรุป':'มี · ยังไม่ยืนยันความหมาย จึงไม่นำมาตีความ'])));
  parent.appendChild(audit);
+ // Keep the complete analysis, but reveal the useful overview before the report.
+ const nodes=Array.from(parent.children);
+ parent.replaceChildren();
+ parent.appendChild(nodes[0]);
+ const overview=el('div',null,'zepp-overview');
+ [['ระยะ',km(r.summary.distance_meters)+' km'],['เวลา',time(r.elapsed_s)],
+  ['เพซรวม',r.summary.distance_meters>0?time(r.elapsed_s/(r.summary.distance_meters/1000))+' /km':'—'],
+  ['HR เฉลี่ย / สูงสุด',fmt(r.summary.avg_hr)+' / '+fmt(r.summary.max_hr)+' bpm']].forEach(([label,value])=>{
+   const tile=el('div');tile.appendChild(el('span',label));tile.appendChild(el('strong',value));overview.appendChild(tile);
+  });
+ parent.appendChild(overview);
+ parent.appendChild(grid);
+ const tools=nodes.find(n=>n.className==='zepp-buttons');if(tools)parent.appendChild(tools);
+ let section=el('details',null,'zepp-section');section.appendChild(el('summary','บันทึกและข้อสังเกต'));parent.appendChild(section);
+ nodes.slice(1).forEach(n=>{
+  if(n===grid||n===tools)return;
+  if(n.tagName==='H3'){
+   section=el('details',null,'zepp-section');section.appendChild(el('summary',n.textContent));parent.appendChild(section);
+  }else section.appendChild(n);
+ });
 }
 function health(h){
  const parent=document.getElementById('zepp-health-content');clear(parent);
