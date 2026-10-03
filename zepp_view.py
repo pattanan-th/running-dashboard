@@ -112,7 +112,10 @@ def enrich(page, root, wellness, activities):
     page = page[:start] + best_efforts_card(root) + page[end:]
     analysis_path = root/'zepp_analysis.json'
     if analysis_path.exists():
-        payload = analysis_path.read_text(encoding='utf8').replace('<', '\\u003c')
+        analysis = json.loads(analysis_path.read_text(encoding='utf8'))
+        reviews_path = root/'run_reviews.json'
+        analysis['run_reviews'] = json.loads(reviews_path.read_text(encoding='utf8')) if reviews_path.exists() else {}
+        payload = json.dumps(analysis, ensure_ascii=False, separators=(',', ':')).replace('<', '\\u003c')
         styles = '''<style>
         #zepp-workout-analysis,#zepp-health-analysis{column-span:all;width:100%;box-sizing:border-box}
         #page-runs.active{column-count:1}
@@ -139,8 +142,8 @@ def enrich(page, root, wellness, activities):
         .zepp-canvas{position:relative;height:220px;margin-top:12px}
         .zepp-note{font-size:12px;color:var(--text-muted)}
         </style>'''
-        run_card = ('<div class="card" id="zepp-workout-analysis"><h2>📈 วิเคราะห์จากกราฟ · Zepp</h2>'
-                    '<p>อ่านข้อมูลทุกช่องที่ตรวจหน่วยได้ พร้อมเลือกดูทุกกิจกรรมย้อนหลัง</p>'
+        run_card = ('<div class="card" id="zepp-workout-analysis"><h2>วิเคราะห์การซ้อม</h2>'
+                    '<p>สรุปจากกราฟและข้อมูลการวิ่ง · เลือกกิจกรรมย้อนหลังได้</p>'
                     '<div id="zepp-workout-select" class="zepp-select"></div><div id="zepp-workout-content"></div></div>')
         health_card = ('<div class="card" id="zepp-health-analysis"><h2>🌿 กราฟสุขภาพและการนอน · Zepp</h2>'
                        '<div id="zepp-health-select" class="zepp-select"></div><div id="zepp-health-content"></div>'

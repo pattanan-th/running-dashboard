@@ -119,8 +119,22 @@ function workout(r){
    const tile=el('div');tile.appendChild(el('span',label));tile.appendChild(el('strong',value));overview.appendChild(tile);
   });
  parent.appendChild(overview);
- parent.appendChild(grid);
- const tools=nodes.find(n=>n.className==='zepp-buttons');if(tools)parent.appendChild(tools);
+ const review=data.run_reviews?.[r.id];
+ parent.appendChild(el('h3','วิเคราะห์การซ้อม'));
+ if(review){
+  parent.appendChild(el('p',review.overall));
+  list(parent,review.observations);
+  parent.appendChild(el('h3','ปรับการซ้อมอย่างไร'));
+  parent.appendChild(el('p',review.action));
+  parent.appendChild(el('p',review.limits,'zepp-note'));
+ }else{
+  parent.appendChild(el('p',r.user_note||'ยังไม่มีบทวิเคราะห์เฉพาะรันนี้'));
+  parent.appendChild(el('p','รายละเอียดจากนาฬิกาอยู่ด้านล่าง; ยังไม่มีข้อสรุปเฉพาะรันจากการอ่านกราฟครบทุกช่อง','zepp-note'));
+ }
+ const graphSection=el('details',null,'zepp-section');graphSection.appendChild(el('summary','กราฟประกอบ (เปิดเมื่อต้องการ)'));
+ const tools=nodes.find(n=>n.className==='zepp-buttons');if(tools)graphSection.appendChild(tools);
+ graphSection.appendChild(grid);parent.appendChild(graphSection);
+ graphSection.addEventListener('toggle',()=>{if(graphSection.open)grid.querySelectorAll('canvas').forEach(c=>charts.get(c)?.resize());});
  let section=el('details',null,'zepp-section');section.appendChild(el('summary','บันทึกและข้อสังเกต'));parent.appendChild(section);
  nodes.slice(1).forEach(n=>{
   if(n===grid||n===tools)return;

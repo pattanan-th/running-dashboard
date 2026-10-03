@@ -15,6 +15,12 @@ When the user requests sync:
 4. Build with `python build_dashboard.py`, run appropriate checks, then commit
    and push the explicitly selected generated files, per the user's standing
    auto-push request. `update_and_deploy.bat` runs the same complete workflow.
+   Before building, update run_reviews.json for newly synced runs after reading
+   their full graph evidence. Key by workout id; fields: overall, observations
+   (list), action, limits. Present useful interpretation and conditional training
+   actions, not a dump of measurements. Do not invent prescribed workout targets.
+   Include run_reviews.json explicitly in the commit when changed. The Runs page
+   must lead with written analysis; keep graphs optional and collapsed by default.
 5. Reply in Thai with a run card, sleep/health summary, useful graph findings,
    missing/stale-data caveats and concrete training implications. Do not merely
    repeat averages when graph data is available. Keep running terms in English.
