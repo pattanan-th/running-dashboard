@@ -117,16 +117,16 @@ def enrich(page, root, wellness, activities):
         analysis['run_reviews'] = json.loads(reviews_path.read_text(encoding='utf8')) if reviews_path.exists() else {}
         payload = json.dumps(analysis, ensure_ascii=False, separators=(',', ':')).replace('<', '\\u003c')
         styles = '''<style>
-        #zepp-workout-analysis,#zepp-health-analysis{column-span:all;width:100%;box-sizing:border-box}
-        #page-runs.active{column-count:1}
+        #zepp-health-analysis{column-span:all;width:100%;box-sizing:border-box}
+        #zepp-workout-analysis{column-span:none;width:100%;box-sizing:border-box}
         #page-runs .card{min-width:0;max-width:100%;box-sizing:border-box}
         #zepp-workout-select{flex-wrap:nowrap;max-height:none;padding-bottom:12px}
         #zepp-workout-select button{flex:0 0 auto}
-        .zepp-overview{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:16px 0}
-        .zepp-overview>div{padding:14px;border:1px solid var(--border,#444);border-radius:10px}
+        .zepp-overview{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin:12px 0}
+        .zepp-overview>div{padding:10px;border:1px solid var(--border,#444);border-radius:10px}
         .zepp-overview span{display:block;font-size:12px;color:var(--text-muted);margin-bottom:8px}
-        .zepp-overview strong{font-size:20px}
-        .zepp-section{border-top:1px solid var(--border,#444);padding:14px 0}
+        .zepp-overview strong{font-size:17px}
+        .zepp-section{border-top:1px solid var(--border,#444);padding:10px 0}
         .zepp-section>summary{cursor:pointer;font-weight:600;line-height:1.6}
         .zepp-section ul{padding-left:22px;line-height:1.8;overflow-wrap:anywhere}
         #zepp-workout-content .zepp-graph-grid{align-items:start}
