@@ -1,0 +1,499 @@
+{
+  "id": "zepp:1791108921",
+  "boundary_seconds": 5158.447,
+  "segments": [
+    {
+      "name": "all",
+      "elapsed": 9063.0,
+      "all": {
+        "cadence": 158.508,
+        "hr": 150.231,
+        "speed": 6.961,
+        "gct": 276.461,
+        "stride": 0.715,
+        "power": 226.468
+      },
+      "thresholds": {
+        "140": {
+          "cadence": {
+            "mean": 170.429,
+            "min": 143.0,
+            "max": 183.0,
+            "seconds": 7524.0,
+            "coverage_pct": 83.019,
+            "peak_s": 7973.0
+          },
+          "hr": {
+            "mean": 153.105,
+            "min": 102,
+            "max": 173,
+            "seconds": 7524.0,
+            "coverage_pct": 83.019,
+            "peak_s": 6619.0
+          },
+          "speed": {
+            "mean": 7.467,
+            "min": 5.573,
+            "max": 10.141,
+            "seconds": 7524.0,
+            "coverage_pct": 83.019,
+            "peak_s": 8475.0
+          },
+          "gct": {
+            "mean": 265.24,
+            "min": 225.0,
+            "max": 323.0,
+            "seconds": 7524.0,
+            "coverage_pct": 83.019,
+            "peak_s": 3635.0
+          },
+          "stride": {
+            "mean": 0.736,
+            "min": 0.0,
+            "max": 1.02,
+            "seconds": 7524.0,
+            "coverage_pct": 83.019,
+            "peak_s": 8518.0
+          },
+          "power": {
+            "mean": 253.468,
+            "min": 0.0,
+            "max": 314.0,
+            "seconds": 7524.0,
+            "coverage_pct": 83.019,
+            "peak_s": 8497.0
+          }
+        },
+        "150": {
+          "cadence": {
+            "mean": 170.432,
+            "min": 153.0,
+            "max": 183.0,
+            "seconds": 7523.0,
+            "coverage_pct": 83.008,
+            "peak_s": 7973.0
+          },
+          "hr": {
+            "mean": 153.106,
+            "min": 102,
+            "max": 173,
+            "seconds": 7523.0,
+            "coverage_pct": 83.008,
+            "peak_s": 6619.0
+          },
+          "speed": {
+            "mean": 7.467,
+            "min": 5.573,
+            "max": 10.141,
+            "seconds": 7523.0,
+            "coverage_pct": 83.008,
+            "peak_s": 8475.0
+          },
+          "gct": {
+            "mean": 265.235,
+            "min": 225.0,
+            "max": 323.0,
+            "seconds": 7523.0,
+            "coverage_pct": 83.008,
+            "peak_s": 3635.0
+          },
+          "stride": {
+            "mean": 0.736,
+            "min": 0.0,
+            "max": 1.02,
+            "seconds": 7523.0,
+            "coverage_pct": 83.008,
+            "peak_s": 8518.0
+          },
+          "power": {
+            "mean": 253.475,
+            "min": 0.0,
+            "max": 314.0,
+            "seconds": 7523.0,
+            "coverage_pct": 83.008,
+            "peak_s": 8497.0
+          }
+        },
+        "160": {
+          "cadence": {
+            "mean": 170.452,
+            "min": 160.0,
+            "max": 183.0,
+            "seconds": 7513.0,
+            "coverage_pct": 82.897,
+            "peak_s": 7973.0
+          },
+          "hr": {
+            "mean": 153.1,
+            "min": 102,
+            "max": 173,
+            "seconds": 7513.0,
+            "coverage_pct": 82.897,
+            "peak_s": 6619.0
+          },
+          "speed": {
+            "mean": 7.468,
+            "min": 5.573,
+            "max": 10.141,
+            "seconds": 7513.0,
+            "coverage_pct": 82.897,
+            "peak_s": 8475.0
+          },
+          "gct": {
+            "mean": 265.198,
+            "min": 225.0,
+            "max": 323.0,
+            "seconds": 7513.0,
+            "coverage_pct": 82.897,
+            "peak_s": 3635.0
+          },
+          "stride": {
+            "mean": 0.736,
+            "min": 0.0,
+            "max": 1.02,
+            "seconds": 7513.0,
+            "coverage_pct": 82.897,
+            "peak_s": 8518.0
+          },
+          "power": {
+            "mean": 253.518,
+            "min": 0.0,
+            "max": 314.0,
+            "seconds": 7513.0,
+            "coverage_pct": 82.897,
+            "peak_s": 8497.0
+          }
+        }
+      }
+    },
+    {
+      "name": "Novablast 5",
+      "elapsed": 5158.447,
+      "all": {
+        "cadence": 161.278,
+        "hr": 147.991,
+        "speed": 6.799,
+        "gct": 266.506,
+        "stride": 0.673,
+        "power": 232.427
+      },
+      "thresholds": {
+        "140": {
+          "cadence": {
+            "mean": 169.345,
+            "min": 143.0,
+            "max": 177.0,
+            "seconds": 4868.447,
+            "coverage_pct": 94.378,
+            "peak_s": 1156.0
+          },
+          "hr": {
+            "mean": 148.942,
+            "min": 102,
+            "max": 159,
+            "seconds": 4868.447,
+            "coverage_pct": 94.378,
+            "peak_s": 3310.0
+          },
+          "speed": {
+            "mean": 7.128,
+            "min": 5.573,
+            "max": 10.112,
+            "seconds": 4868.447,
+            "coverage_pct": 94.378,
+            "peak_s": 10.0
+          },
+          "gct": {
+            "mean": 265.559,
+            "min": 253.0,
+            "max": 323.0,
+            "seconds": 4868.447,
+            "coverage_pct": 94.378,
+            "peak_s": 3635.0
+          },
+          "stride": {
+            "mean": 0.704,
+            "min": 0.0,
+            "max": 0.91,
+            "seconds": 4868.447,
+            "coverage_pct": 94.378,
+            "peak_s": 22.0
+          },
+          "power": {
+            "mean": 244.652,
+            "min": 0.0,
+            "max": 308.0,
+            "seconds": 4868.447,
+            "coverage_pct": 94.378,
+            "peak_s": 17.0
+          }
+        },
+        "150": {
+          "cadence": {
+            "mean": 169.351,
+            "min": 153.0,
+            "max": 177.0,
+            "seconds": 4867.447,
+            "coverage_pct": 94.359,
+            "peak_s": 1156.0
+          },
+          "hr": {
+            "mean": 148.943,
+            "min": 102,
+            "max": 159,
+            "seconds": 4867.447,
+            "coverage_pct": 94.359,
+            "peak_s": 3310.0
+          },
+          "speed": {
+            "mean": 7.128,
+            "min": 5.573,
+            "max": 10.112,
+            "seconds": 4867.447,
+            "coverage_pct": 94.359,
+            "peak_s": 10.0
+          },
+          "gct": {
+            "mean": 265.552,
+            "min": 253.0,
+            "max": 323.0,
+            "seconds": 4867.447,
+            "coverage_pct": 94.359,
+            "peak_s": 3635.0
+          },
+          "stride": {
+            "mean": 0.704,
+            "min": 0.0,
+            "max": 0.91,
+            "seconds": 4867.447,
+            "coverage_pct": 94.359,
+            "peak_s": 22.0
+          },
+          "power": {
+            "mean": 244.662,
+            "min": 0.0,
+            "max": 308.0,
+            "seconds": 4867.447,
+            "coverage_pct": 94.359,
+            "peak_s": 17.0
+          }
+        },
+        "160": {
+          "cadence": {
+            "mean": 169.365,
+            "min": 160.0,
+            "max": 177.0,
+            "seconds": 4862.447,
+            "coverage_pct": 94.262,
+            "peak_s": 1156.0
+          },
+          "hr": {
+            "mean": 148.943,
+            "min": 102,
+            "max": 159,
+            "seconds": 4862.447,
+            "coverage_pct": 94.262,
+            "peak_s": 3310.0
+          },
+          "speed": {
+            "mean": 7.129,
+            "min": 5.573,
+            "max": 10.112,
+            "seconds": 4862.447,
+            "coverage_pct": 94.262,
+            "peak_s": 10.0
+          },
+          "gct": {
+            "mean": 265.52,
+            "min": 253.0,
+            "max": 323.0,
+            "seconds": 4862.447,
+            "coverage_pct": 94.262,
+            "peak_s": 3635.0
+          },
+          "stride": {
+            "mean": 0.705,
+            "min": 0.0,
+            "max": 0.91,
+            "seconds": 4862.447,
+            "coverage_pct": 94.262,
+            "peak_s": 22.0
+          },
+          "power": {
+            "mean": 244.709,
+            "min": 0.0,
+            "max": 308.0,
+            "seconds": 4862.447,
+            "coverage_pct": 94.262,
+            "peak_s": 17.0
+          }
+        }
+      }
+    },
+    {
+      "name": "Boston 13",
+      "elapsed": 3904.553,
+      "all": {
+        "cadence": 154.848,
+        "hr": 153.191,
+        "speed": 7.174,
+        "gct": 289.165,
+        "stride": 0.772,
+        "power": 218.594
+      },
+      "thresholds": {
+        "140": {
+          "cadence": {
+            "mean": 172.415,
+            "min": 155.0,
+            "max": 183.0,
+            "seconds": 2655.553,
+            "coverage_pct": 68.012,
+            "peak_s": 7973.0
+          },
+          "hr": {
+            "mean": 160.737,
+            "min": 128,
+            "max": 173,
+            "seconds": 2655.553,
+            "coverage_pct": 68.012,
+            "peak_s": 6619.0
+          },
+          "speed": {
+            "mean": 8.088,
+            "min": 5.705,
+            "max": 10.141,
+            "seconds": 2655.553,
+            "coverage_pct": 68.012,
+            "peak_s": 8475.0
+          },
+          "gct": {
+            "mean": 264.655,
+            "min": 225.0,
+            "max": 318.0,
+            "seconds": 2655.553,
+            "coverage_pct": 68.012,
+            "peak_s": 8776.0
+          },
+          "stride": {
+            "mean": 0.794,
+            "min": 0.61,
+            "max": 1.02,
+            "seconds": 2655.553,
+            "coverage_pct": 68.012,
+            "peak_s": 8518.0
+          },
+          "power": {
+            "mean": 269.629,
+            "min": 145.0,
+            "max": 314.0,
+            "seconds": 2655.553,
+            "coverage_pct": 68.012,
+            "peak_s": 8497.0
+          }
+        },
+        "150": {
+          "cadence": {
+            "mean": 172.415,
+            "min": 155.0,
+            "max": 183.0,
+            "seconds": 2655.553,
+            "coverage_pct": 68.012,
+            "peak_s": 7973.0
+          },
+          "hr": {
+            "mean": 160.737,
+            "min": 128,
+            "max": 173,
+            "seconds": 2655.553,
+            "coverage_pct": 68.012,
+            "peak_s": 6619.0
+          },
+          "speed": {
+            "mean": 8.088,
+            "min": 5.705,
+            "max": 10.141,
+            "seconds": 2655.553,
+            "coverage_pct": 68.012,
+            "peak_s": 8475.0
+          },
+          "gct": {
+            "mean": 264.655,
+            "min": 225.0,
+            "max": 318.0,
+            "seconds": 2655.553,
+            "coverage_pct": 68.012,
+            "peak_s": 8776.0
+          },
+          "stride": {
+            "mean": 0.794,
+            "min": 0.61,
+            "max": 1.02,
+            "seconds": 2655.553,
+            "coverage_pct": 68.012,
+            "peak_s": 8518.0
+          },
+          "power": {
+            "mean": 269.629,
+            "min": 145.0,
+            "max": 314.0,
+            "seconds": 2655.553,
+            "coverage_pct": 68.012,
+            "peak_s": 8497.0
+          }
+        },
+        "160": {
+          "cadence": {
+            "mean": 172.446,
+            "min": 160.0,
+            "max": 183.0,
+            "seconds": 2650.553,
+            "coverage_pct": 67.884,
+            "peak_s": 7973.0
+          },
+          "hr": {
+            "mean": 160.724,
+            "min": 128,
+            "max": 173,
+            "seconds": 2650.553,
+            "coverage_pct": 67.884,
+            "peak_s": 6619.0
+          },
+          "speed": {
+            "mean": 8.091,
+            "min": 5.705,
+            "max": 10.141,
+            "seconds": 2650.553,
+            "coverage_pct": 67.884,
+            "peak_s": 8475.0
+          },
+          "gct": {
+            "mean": 264.607,
+            "min": 225.0,
+            "max": 318.0,
+            "seconds": 2650.553,
+            "coverage_pct": 67.884,
+            "peak_s": 8776.0
+          },
+          "stride": {
+            "mean": 0.794,
+            "min": 0.61,
+            "max": 1.02,
+            "seconds": 2650.553,
+            "coverage_pct": 67.884,
+            "peak_s": 8518.0
+          },
+          "power": {
+            "mean": 269.679,
+            "min": 145.0,
+            "max": 314.0,
+            "seconds": 2650.553,
+            "coverage_pct": 67.884,
+            "peak_s": 8497.0
+          }
+        }
+      }
+    }
+  ],
+  "method": "Time-weighted validated 1 Hz samples; probable running = cadence >=150 spm and speed >0 km/h. Excluded intervals may include walking, stopping, transition or slow running. Not a measured walking percentage. Sensitivity thresholds 140/150/160. Shoe boundary assumes user-reported change exactly at 10 km; fractional overlap weighting."
+}
