@@ -10630,22 +10630,6 @@
           "value": 17.0,
           "unit": "brpm"
         },
-        "spo2_odi": {
-          "value": 0.13,
-          "unit": "events/h"
-        },
-        "spo2_odi_events": {
-          "value": 1.0,
-          "unit": "count"
-        },
-        "spo2_night_score": {
-          "value": 100.0,
-          "unit": "score"
-        },
-        "spo2_measured_minutes": {
-          "value": 430.0,
-          "unit": "min"
-        },
         "pai_daily": {
           "value": 0.19354248046875,
           "unit": "pai"
@@ -10737,6 +10721,26 @@
         "physical_charge": {
           "value": 89.08267211914062,
           "unit": "score"
+        },
+        "spo2_odi": {
+          "value": 0.13,
+          "unit": "events/h",
+          "retained_from_previous_sync": true
+        },
+        "spo2_odi_events": {
+          "value": 1.0,
+          "unit": "count",
+          "retained_from_previous_sync": true
+        },
+        "spo2_night_score": {
+          "value": 100.0,
+          "unit": "score",
+          "retained_from_previous_sync": true
+        },
+        "spo2_measured_minutes": {
+          "value": 430.0,
+          "unit": "min",
+          "retained_from_previous_sync": true
         }
       }
     },
@@ -10865,22 +10869,6 @@
           "value": 18.0,
           "unit": "brpm"
         },
-        "spo2_odi": {
-          "value": 0.15,
-          "unit": "events/h"
-        },
-        "spo2_odi_events": {
-          "value": 1.0,
-          "unit": "count"
-        },
-        "spo2_night_score": {
-          "value": 100.0,
-          "unit": "score"
-        },
-        "spo2_measured_minutes": {
-          "value": 400.0,
-          "unit": "min"
-        },
         "pai_daily": {
           "value": 61.955726623535156,
           "unit": "pai"
@@ -10932,6 +10920,22 @@
         "pai_high_zone_lower_hr": {
           "value": 154.0,
           "unit": "bpm"
+        },
+        "spo2_odi": {
+          "value": 0.15,
+          "unit": "events/h"
+        },
+        "spo2_odi_events": {
+          "value": 1.0,
+          "unit": "count"
+        },
+        "spo2_night_score": {
+          "value": 100.0,
+          "unit": "score"
+        },
+        "spo2_measured_minutes": {
+          "value": 400.0,
+          "unit": "min"
         },
         "active_minutes": {
           "value": 0.0,
@@ -11104,22 +11108,6 @@
           "value": 20.0,
           "unit": "brpm"
         },
-        "spo2_odi": {
-          "value": 0.0,
-          "unit": "events/h"
-        },
-        "spo2_odi_events": {
-          "value": 0.0,
-          "unit": "count"
-        },
-        "spo2_night_score": {
-          "value": 100.0,
-          "unit": "score"
-        },
-        "spo2_measured_minutes": {
-          "value": 200.0,
-          "unit": "min"
-        },
         "pai_daily": {
           "value": 24.513877868652344,
           "unit": "pai"
@@ -11171,6 +11159,22 @@
         "pai_high_zone_lower_hr": {
           "value": 154.0,
           "unit": "bpm"
+        },
+        "spo2_odi": {
+          "value": 0.0,
+          "unit": "events/h"
+        },
+        "spo2_odi_events": {
+          "value": 0.0,
+          "unit": "count"
+        },
+        "spo2_night_score": {
+          "value": 100.0,
+          "unit": "score"
+        },
+        "spo2_measured_minutes": {
+          "value": 200.0,
+          "unit": "min"
         },
         "active_minutes": {
           "value": 159.0,
@@ -11598,22 +11602,6 @@
           "value": 17.0,
           "unit": "brpm"
         },
-        "spo2_odi": {
-          "value": 0.0,
-          "unit": "events/h"
-        },
-        "spo2_odi_events": {
-          "value": 0.0,
-          "unit": "count"
-        },
-        "spo2_night_score": {
-          "value": 100.0,
-          "unit": "score"
-        },
-        "spo2_measured_minutes": {
-          "value": 367.0,
-          "unit": "min"
-        },
         "pai_daily": {
           "value": 0.0059661865234375,
           "unit": "pai"
@@ -11665,6 +11653,22 @@
         "pai_high_zone_lower_hr": {
           "value": 154.0,
           "unit": "bpm"
+        },
+        "spo2_odi": {
+          "value": 0.0,
+          "unit": "events/h"
+        },
+        "spo2_odi_events": {
+          "value": 0.0,
+          "unit": "count"
+        },
+        "spo2_night_score": {
+          "value": 100.0,
+          "unit": "score"
+        },
+        "spo2_measured_minutes": {
+          "value": 367.0,
+          "unit": "min"
         },
         "active_minutes": {
           "value": 138.0,
@@ -11833,22 +11837,6 @@
           "value": 20.0,
           "unit": "brpm"
         },
-        "spo2_odi": {
-          "value": 0.13,
-          "unit": "events/h"
-        },
-        "spo2_odi_events": {
-          "value": 1.0,
-          "unit": "count"
-        },
-        "spo2_night_score": {
-          "value": 100.0,
-          "unit": "score"
-        },
-        "spo2_measured_minutes": {
-          "value": 441.0,
-          "unit": "min"
-        },
         "pai_daily": {
           "value": 0.0229644775390625,
           "unit": "pai"
@@ -11900,6 +11888,22 @@
         "pai_high_zone_lower_hr": {
           "value": 154.0,
           "unit": "bpm"
+        },
+        "spo2_odi": {
+          "value": 0.13,
+          "unit": "events/h"
+        },
+        "spo2_odi_events": {
+          "value": 1.0,
+          "unit": "count"
+        },
+        "spo2_night_score": {
+          "value": 100.0,
+          "unit": "score"
+        },
+        "spo2_measured_minutes": {
+          "value": 441.0,
+          "unit": "min"
         },
         "active_minutes": {
           "value": 0.0,
@@ -12303,22 +12307,6 @@
           "value": 17.0,
           "unit": "brpm"
         },
-        "spo2_odi": {
-          "value": 0.54,
-          "unit": "events/h"
-        },
-        "spo2_odi_events": {
-          "value": 4.0,
-          "unit": "count"
-        },
-        "spo2_night_score": {
-          "value": 99.0,
-          "unit": "score"
-        },
-        "spo2_measured_minutes": {
-          "value": 440.0,
-          "unit": "min"
-        },
         "pai_daily": {
           "value": 0.2512664794921875,
           "unit": "pai"
@@ -12370,6 +12358,22 @@
         "pai_high_zone_lower_hr": {
           "value": 154.0,
           "unit": "bpm"
+        },
+        "spo2_odi": {
+          "value": 0.54,
+          "unit": "events/h"
+        },
+        "spo2_odi_events": {
+          "value": 4.0,
+          "unit": "count"
+        },
+        "spo2_night_score": {
+          "value": 99.0,
+          "unit": "score"
+        },
+        "spo2_measured_minutes": {
+          "value": 440.0,
+          "unit": "min"
         },
         "active_minutes": {
           "value": 0.0,
@@ -12538,22 +12542,6 @@
           "value": 16.0,
           "unit": "brpm"
         },
-        "spo2_odi": {
-          "value": 0.14,
-          "unit": "events/h"
-        },
-        "spo2_odi_events": {
-          "value": 1.0,
-          "unit": "count"
-        },
-        "spo2_night_score": {
-          "value": 100.0,
-          "unit": "score"
-        },
-        "spo2_measured_minutes": {
-          "value": 422.0,
-          "unit": "min"
-        },
         "pai_daily": {
           "value": 36.222450256347656,
           "unit": "pai"
@@ -12605,6 +12593,22 @@
         "pai_high_zone_lower_hr": {
           "value": 154.0,
           "unit": "bpm"
+        },
+        "spo2_odi": {
+          "value": 0.14,
+          "unit": "events/h"
+        },
+        "spo2_odi_events": {
+          "value": 1.0,
+          "unit": "count"
+        },
+        "spo2_night_score": {
+          "value": 100.0,
+          "unit": "score"
+        },
+        "spo2_measured_minutes": {
+          "value": 422.0,
+          "unit": "min"
         },
         "active_minutes": {
           "value": 2.0,
@@ -13020,22 +13024,6 @@
           "value": 17.0,
           "unit": "brpm"
         },
-        "spo2_odi": {
-          "value": 0.3,
-          "unit": "events/h"
-        },
-        "spo2_odi_events": {
-          "value": 2.0,
-          "unit": "count"
-        },
-        "spo2_night_score": {
-          "value": 99.0,
-          "unit": "score"
-        },
-        "spo2_measured_minutes": {
-          "value": 388.0,
-          "unit": "min"
-        },
         "pai_daily": {
           "value": 46.2755012512207,
           "unit": "pai"
@@ -13087,6 +13075,22 @@
         "pai_high_zone_lower_hr": {
           "value": 154.0,
           "unit": "bpm"
+        },
+        "spo2_odi": {
+          "value": 0.3,
+          "unit": "events/h"
+        },
+        "spo2_odi_events": {
+          "value": 2.0,
+          "unit": "count"
+        },
+        "spo2_night_score": {
+          "value": 99.0,
+          "unit": "score"
+        },
+        "spo2_measured_minutes": {
+          "value": 388.0,
+          "unit": "min"
         },
         "active_minutes": {
           "value": 62.0,
@@ -13259,22 +13263,6 @@
           "value": 19.0,
           "unit": "brpm"
         },
-        "spo2_odi": {
-          "value": 0.0,
-          "unit": "events/h"
-        },
-        "spo2_odi_events": {
-          "value": 0.0,
-          "unit": "count"
-        },
-        "spo2_night_score": {
-          "value": 100.0,
-          "unit": "score"
-        },
-        "spo2_measured_minutes": {
-          "value": 385.0,
-          "unit": "min"
-        },
         "pai_daily": {
           "value": 0.094329833984375,
           "unit": "pai"
@@ -13326,6 +13314,22 @@
         "pai_high_zone_lower_hr": {
           "value": 154.0,
           "unit": "bpm"
+        },
+        "spo2_odi": {
+          "value": 0.0,
+          "unit": "events/h"
+        },
+        "spo2_odi_events": {
+          "value": 0.0,
+          "unit": "count"
+        },
+        "spo2_night_score": {
+          "value": 100.0,
+          "unit": "score"
+        },
+        "spo2_measured_minutes": {
+          "value": 385.0,
+          "unit": "min"
         },
         "active_minutes": {
           "value": 152.0,
@@ -13689,22 +13693,6 @@
           "value": 16.0,
           "unit": "brpm"
         },
-        "spo2_odi": {
-          "value": 0.16,
-          "unit": "events/h"
-        },
-        "spo2_odi_events": {
-          "value": 1.0,
-          "unit": "count"
-        },
-        "spo2_night_score": {
-          "value": 100.0,
-          "unit": "score"
-        },
-        "spo2_measured_minutes": {
-          "value": 365.0,
-          "unit": "min"
-        },
         "pai_daily": {
           "value": 19.40252685546875,
           "unit": "pai"
@@ -13756,6 +13744,22 @@
         "pai_high_zone_lower_hr": {
           "value": 154.0,
           "unit": "bpm"
+        },
+        "spo2_odi": {
+          "value": 0.16,
+          "unit": "events/h"
+        },
+        "spo2_odi_events": {
+          "value": 1.0,
+          "unit": "count"
+        },
+        "spo2_night_score": {
+          "value": 100.0,
+          "unit": "score"
+        },
+        "spo2_measured_minutes": {
+          "value": 365.0,
+          "unit": "min"
         },
         "active_minutes": {
           "value": 46.0,
@@ -13936,22 +13940,6 @@
           "value": 19.0,
           "unit": "brpm"
         },
-        "spo2_odi": {
-          "value": 0.0,
-          "unit": "events/h"
-        },
-        "spo2_odi_events": {
-          "value": 0.0,
-          "unit": "count"
-        },
-        "spo2_night_score": {
-          "value": 100.0,
-          "unit": "score"
-        },
-        "spo2_measured_minutes": {
-          "value": 401.0,
-          "unit": "min"
-        },
         "pai_daily": {
           "value": 0.0781097412109375,
           "unit": "pai"
@@ -14003,6 +13991,22 @@
         "pai_high_zone_lower_hr": {
           "value": 154.0,
           "unit": "bpm"
+        },
+        "spo2_odi": {
+          "value": 0.0,
+          "unit": "events/h"
+        },
+        "spo2_odi_events": {
+          "value": 0.0,
+          "unit": "count"
+        },
+        "spo2_night_score": {
+          "value": 100.0,
+          "unit": "score"
+        },
+        "spo2_measured_minutes": {
+          "value": 401.0,
+          "unit": "min"
         },
         "active_minutes": {
           "value": 62.0,
@@ -14362,22 +14366,6 @@
           "value": 17.0,
           "unit": "brpm"
         },
-        "spo2_odi": {
-          "value": 0.12,
-          "unit": "events/h"
-        },
-        "spo2_odi_events": {
-          "value": 1.0,
-          "unit": "count"
-        },
-        "spo2_night_score": {
-          "value": 100.0,
-          "unit": "score"
-        },
-        "spo2_measured_minutes": {
-          "value": 500.0,
-          "unit": "min"
-        },
         "pai_daily": {
           "value": 0.05408477783203125,
           "unit": "pai"
@@ -14429,6 +14417,22 @@
         "pai_high_zone_lower_hr": {
           "value": 154.0,
           "unit": "bpm"
+        },
+        "spo2_odi": {
+          "value": 0.12,
+          "unit": "events/h"
+        },
+        "spo2_odi_events": {
+          "value": 1.0,
+          "unit": "count"
+        },
+        "spo2_night_score": {
+          "value": 100.0,
+          "unit": "score"
+        },
+        "spo2_measured_minutes": {
+          "value": 500.0,
+          "unit": "min"
         },
         "active_minutes": {
           "value": 4.0,
@@ -14597,22 +14601,6 @@
           "value": 17.0,
           "unit": "brpm"
         },
-        "spo2_odi": {
-          "value": 0.2,
-          "unit": "events/h"
-        },
-        "spo2_odi_events": {
-          "value": 1.0,
-          "unit": "count"
-        },
-        "spo2_night_score": {
-          "value": 100.0,
-          "unit": "score"
-        },
-        "spo2_measured_minutes": {
-          "value": 297.0,
-          "unit": "min"
-        },
         "pai_daily": {
           "value": 75.0,
           "unit": "pai"
@@ -14664,6 +14652,22 @@
         "pai_high_zone_lower_hr": {
           "value": 154.0,
           "unit": "bpm"
+        },
+        "spo2_odi": {
+          "value": 0.2,
+          "unit": "events/h"
+        },
+        "spo2_odi_events": {
+          "value": 1.0,
+          "unit": "count"
+        },
+        "spo2_night_score": {
+          "value": 100.0,
+          "unit": "score"
+        },
+        "spo2_measured_minutes": {
+          "value": 297.0,
+          "unit": "min"
         },
         "active_minutes": {
           "value": 0.0,
@@ -15019,22 +15023,6 @@
           "value": 9.0,
           "unit": "%"
         },
-        "spo2_odi": {
-          "value": 0.0,
-          "unit": "events/h"
-        },
-        "spo2_odi_events": {
-          "value": 0.0,
-          "unit": "count"
-        },
-        "spo2_night_score": {
-          "value": 100.0,
-          "unit": "score"
-        },
-        "spo2_measured_minutes": {
-          "value": 403.0,
-          "unit": "min"
-        },
         "pai_daily": {
           "value": 0.31436920166015625,
           "unit": "pai"
@@ -15086,6 +15074,22 @@
         "pai_high_zone_lower_hr": {
           "value": 154.0,
           "unit": "bpm"
+        },
+        "spo2_odi": {
+          "value": 0.0,
+          "unit": "events/h"
+        },
+        "spo2_odi_events": {
+          "value": 0.0,
+          "unit": "count"
+        },
+        "spo2_night_score": {
+          "value": 100.0,
+          "unit": "score"
+        },
+        "spo2_measured_minutes": {
+          "value": 403.0,
+          "unit": "min"
         },
         "active_minutes": {
           "value": 0.0,
@@ -15254,22 +15258,6 @@
           "value": 20.0,
           "unit": "brpm"
         },
-        "spo2_odi": {
-          "value": 0.0,
-          "unit": "events/h"
-        },
-        "spo2_odi_events": {
-          "value": 0.0,
-          "unit": "count"
-        },
-        "spo2_night_score": {
-          "value": 100.0,
-          "unit": "score"
-        },
-        "spo2_measured_minutes": {
-          "value": 303.0,
-          "unit": "min"
-        },
         "pai_daily": {
           "value": 0.368316650390625,
           "unit": "pai"
@@ -15321,6 +15309,22 @@
         "pai_high_zone_lower_hr": {
           "value": 154.0,
           "unit": "bpm"
+        },
+        "spo2_odi": {
+          "value": 0.0,
+          "unit": "events/h"
+        },
+        "spo2_odi_events": {
+          "value": 0.0,
+          "unit": "count"
+        },
+        "spo2_night_score": {
+          "value": 100.0,
+          "unit": "score"
+        },
+        "spo2_measured_minutes": {
+          "value": 303.0,
+          "unit": "min"
         },
         "active_minutes": {
           "value": 0.0,
@@ -15724,22 +15728,6 @@
           "value": 18.0,
           "unit": "brpm"
         },
-        "spo2_odi": {
-          "value": 0.14,
-          "unit": "events/h"
-        },
-        "spo2_odi_events": {
-          "value": 1.0,
-          "unit": "count"
-        },
-        "spo2_night_score": {
-          "value": 100.0,
-          "unit": "score"
-        },
-        "spo2_measured_minutes": {
-          "value": 423.0,
-          "unit": "min"
-        },
         "pai_daily": {
           "value": 30.993324279785156,
           "unit": "pai"
@@ -15791,6 +15779,22 @@
         "pai_high_zone_lower_hr": {
           "value": 154.0,
           "unit": "bpm"
+        },
+        "spo2_odi": {
+          "value": 0.14,
+          "unit": "events/h"
+        },
+        "spo2_odi_events": {
+          "value": 1.0,
+          "unit": "count"
+        },
+        "spo2_night_score": {
+          "value": 100.0,
+          "unit": "score"
+        },
+        "spo2_measured_minutes": {
+          "value": 423.0,
+          "unit": "min"
         },
         "active_minutes": {
           "value": 0.0,
@@ -15963,22 +15967,6 @@
           "value": 18.0,
           "unit": "brpm"
         },
-        "spo2_odi": {
-          "value": 0.0,
-          "unit": "events/h"
-        },
-        "spo2_odi_events": {
-          "value": 0.0,
-          "unit": "count"
-        },
-        "spo2_night_score": {
-          "value": 100.0,
-          "unit": "score"
-        },
-        "spo2_measured_minutes": {
-          "value": 397.0,
-          "unit": "min"
-        },
         "pai_daily": {
           "value": 0.46797943115234375,
           "unit": "pai"
@@ -16030,6 +16018,22 @@
         "pai_high_zone_lower_hr": {
           "value": 154.0,
           "unit": "bpm"
+        },
+        "spo2_odi": {
+          "value": 0.0,
+          "unit": "events/h"
+        },
+        "spo2_odi_events": {
+          "value": 0.0,
+          "unit": "count"
+        },
+        "spo2_night_score": {
+          "value": 100.0,
+          "unit": "score"
+        },
+        "spo2_measured_minutes": {
+          "value": 397.0,
+          "unit": "min"
         },
         "active_minutes": {
           "value": 57.0,
@@ -16282,7 +16286,7 @@
           "unit": "score"
         },
         "ahi_baseline": {
-          "value": 0.22175438702106476,
+          "value": 0.22070176899433136,
           "unit": "events/h"
         },
         "ahi_readiness": {
@@ -16294,7 +16298,7 @@
           "unit": "ms"
         },
         "hrv_readiness": {
-          "value": 72.0,
+          "value": 67.0,
           "unit": "score"
         },
         "mental_readiness": {
@@ -16318,11 +16322,11 @@
           "unit": "score"
         },
         "skin_temp_readiness": {
-          "value": 89.0,
+          "value": 98.0,
           "unit": "score"
         },
         "sleep_hrv": {
-          "value": 45.0,
+          "value": 38.0,
           "unit": "ms"
         },
         "sleep_rhr": {
@@ -16393,22 +16397,6 @@
           "value": 5.0,
           "unit": "%"
         },
-        "spo2_odi": {
-          "value": 0.0,
-          "unit": "events/h"
-        },
-        "spo2_odi_events": {
-          "value": 0.0,
-          "unit": "count"
-        },
-        "spo2_night_score": {
-          "value": 100.0,
-          "unit": "score"
-        },
-        "spo2_measured_minutes": {
-          "value": 378.0,
-          "unit": "min"
-        },
         "pai_daily": {
           "value": 6.2340087890625,
           "unit": "pai"
@@ -16460,6 +16448,22 @@
         "pai_high_zone_lower_hr": {
           "value": 154.0,
           "unit": "bpm"
+        },
+        "spo2_odi": {
+          "value": 0.0,
+          "unit": "events/h"
+        },
+        "spo2_odi_events": {
+          "value": 0.0,
+          "unit": "count"
+        },
+        "spo2_night_score": {
+          "value": 100.0,
+          "unit": "score"
+        },
+        "spo2_measured_minutes": {
+          "value": 378.0,
+          "unit": "min"
         },
         "active_minutes": {
           "value": 171.0,
@@ -16515,7 +16519,7 @@
       "date": "2026-10-05",
       "source": "zepp",
       "stress": {
-        "score": 28.0
+        "score": 48.0
       },
       "rhr": {
         "current": 62.0
@@ -16549,7 +16553,7 @@
           "unit": "m"
         },
         "stress": {
-          "value": 28.0,
+          "value": 48.0,
           "unit": "score"
         },
         "stress_min": {
@@ -16557,23 +16561,23 @@
           "unit": "score"
         },
         "stress_max": {
-          "value": 76.0,
+          "value": 82.0,
           "unit": "score"
         },
         "stress_relaxed_pct": {
-          "value": 81.0,
+          "value": 33.0,
           "unit": "%"
         },
         "stress_normal_pct": {
-          "value": 11.0,
+          "value": 29.0,
           "unit": "%"
         },
         "stress_medium_pct": {
-          "value": 8.0,
+          "value": 35.0,
           "unit": "%"
         },
         "stress_high_pct": {
-          "value": 0.0,
+          "value": 3.0,
           "unit": "%"
         },
         "respiratory_rate": {
@@ -16588,32 +16592,16 @@
           "value": 20.0,
           "unit": "brpm"
         },
-        "spo2_odi": {
-          "value": 0.17,
-          "unit": "events/h"
-        },
-        "spo2_odi_events": {
-          "value": 1.0,
-          "unit": "count"
-        },
-        "spo2_night_score": {
-          "value": 100.0,
-          "unit": "score"
-        },
-        "spo2_measured_minutes": {
-          "value": 351.0,
-          "unit": "min"
-        },
         "pai_daily": {
-          "value": 0.01529693603515625,
+          "value": 0.1269073486328125,
           "unit": "pai"
         },
         "pai_low_zone": {
-          "value": 0.01338958740234375,
+          "value": 0.05393218994140625,
           "unit": "pai"
         },
         "pai_medium_zone": {
-          "value": 0.0019073486328125,
+          "value": 0.07297515869140625,
           "unit": "pai"
         },
         "pai_high_zone": {
@@ -16629,15 +16617,15 @@
           "unit": "bpm"
         },
         "pai_total": {
-          "value": 123.18196868896484,
+          "value": 123.2935791015625,
           "unit": "pai"
         },
         "pai_low_zone_minutes": {
-          "value": 1.0,
+          "value": 8.0,
           "unit": "min"
         },
         "pai_medium_zone_minutes": {
-          "value": 0.0,
+          "value": 1.0,
           "unit": "min"
         },
         "pai_high_zone_minutes": {
@@ -16655,6 +16643,74 @@
         "pai_high_zone_lower_hr": {
           "value": 154.0,
           "unit": "bpm"
+        },
+        "afib_readiness": {
+          "value": 255.0,
+          "unit": "score"
+        },
+        "ahi_baseline": {
+          "value": 0.21175439655780792,
+          "unit": "events/h"
+        },
+        "ahi_readiness": {
+          "value": 100.0,
+          "unit": "score"
+        },
+        "hrv_baseline": {
+          "value": 53.0,
+          "unit": "ms"
+        },
+        "hrv_readiness": {
+          "value": 66.0,
+          "unit": "score"
+        },
+        "mental_readiness": {
+          "value": 255.0,
+          "unit": "score"
+        },
+        "physical_readiness": {
+          "value": 255.0,
+          "unit": "score"
+        },
+        "readiness": {
+          "value": 79.0,
+          "unit": "score"
+        },
+        "rhr_baseline": {
+          "value": 59.0,
+          "unit": "bpm"
+        },
+        "rhr_readiness": {
+          "value": 71.0,
+          "unit": "score"
+        },
+        "skin_temp_readiness": {
+          "value": 92.0,
+          "unit": "score"
+        },
+        "sleep_hrv": {
+          "value": 36.0,
+          "unit": "ms"
+        },
+        "sleep_rhr": {
+          "value": 63.0,
+          "unit": "bpm"
+        },
+        "spo2_odi": {
+          "value": 0.17,
+          "unit": "events/h"
+        },
+        "spo2_odi_events": {
+          "value": 1.0,
+          "unit": "count"
+        },
+        "spo2_night_score": {
+          "value": 100.0,
+          "unit": "score"
+        },
+        "spo2_measured_minutes": {
+          "value": 351.0,
+          "unit": "min"
         },
         "active_minutes": {
           "value": 29.0,
@@ -16685,15 +16741,15 @@
           "unit": "steps"
         },
         "hybrid_charge": {
-          "value": 69.0,
+          "value": 64.0,
           "unit": "score"
         },
         "mental_charge": {
-          "value": 71.4285888671875,
+          "value": 62.86078643798828,
           "unit": "score"
         },
         "physical_charge": {
-          "value": 65.96446228027344,
+          "value": 65.62979888916016,
           "unit": "score"
         }
       }
@@ -16702,13 +16758,13 @@
       "date": "2026-10-06",
       "source": "zepp",
       "stress": {
-        "score": null
+        "score": 46.0
       },
       "rhr": {
         "current": 63.0
       },
       "steps": {
-        "count": 16.0
+        "count": 3151.0
       },
       "metrics": {
         "training_load": {
@@ -16720,16 +16776,176 @@
           "unit": "bpm"
         },
         "steps": {
-          "value": 16.0,
+          "value": 3151.0,
           "unit": "steps"
         },
         "active_calories": {
-          "value": 21.0,
+          "value": 133.0,
           "unit": "kcal"
         },
         "distance": {
-          "value": 384.0,
+          "value": 2030.0,
           "unit": "m"
+        },
+        "afib_readiness": {
+          "value": 255.0,
+          "unit": "score"
+        },
+        "ahi_baseline": {
+          "value": 0.21103449165821075,
+          "unit": "events/h"
+        },
+        "ahi_readiness": {
+          "value": 100.0,
+          "unit": "score"
+        },
+        "hrv_baseline": {
+          "value": 53.0,
+          "unit": "ms"
+        },
+        "hrv_readiness": {
+          "value": 77.0,
+          "unit": "score"
+        },
+        "mental_readiness": {
+          "value": 255.0,
+          "unit": "score"
+        },
+        "physical_readiness": {
+          "value": 255.0,
+          "unit": "score"
+        },
+        "readiness": {
+          "value": 88.0,
+          "unit": "score"
+        },
+        "rhr_baseline": {
+          "value": 59.0,
+          "unit": "bpm"
+        },
+        "rhr_readiness": {
+          "value": 88.0,
+          "unit": "score"
+        },
+        "skin_temp_readiness": {
+          "value": 96.0,
+          "unit": "score"
+        },
+        "sleep_hrv": {
+          "value": 50.0,
+          "unit": "ms"
+        },
+        "sleep_rhr": {
+          "value": 58.0,
+          "unit": "bpm"
+        },
+        "stress": {
+          "value": 46.0,
+          "unit": "score"
+        },
+        "stress_min": {
+          "value": 9.0,
+          "unit": "score"
+        },
+        "stress_max": {
+          "value": 84.0,
+          "unit": "score"
+        },
+        "stress_relaxed_pct": {
+          "value": 33.0,
+          "unit": "%"
+        },
+        "stress_normal_pct": {
+          "value": 30.0,
+          "unit": "%"
+        },
+        "stress_medium_pct": {
+          "value": 35.0,
+          "unit": "%"
+        },
+        "stress_high_pct": {
+          "value": 2.0,
+          "unit": "%"
+        },
+        "respiratory_rate": {
+          "value": 14.2,
+          "unit": "brpm"
+        },
+        "respiratory_rate_min": {
+          "value": 11.0,
+          "unit": "brpm"
+        },
+        "respiratory_rate_max": {
+          "value": 21.0,
+          "unit": "brpm"
+        },
+        "spo2_odi": {
+          "value": 0.0,
+          "unit": "events/h"
+        },
+        "spo2_odi_events": {
+          "value": 0.0,
+          "unit": "count"
+        },
+        "spo2_night_score": {
+          "value": 100.0,
+          "unit": "score"
+        },
+        "spo2_measured_minutes": {
+          "value": 350.0,
+          "unit": "min"
+        },
+        "pai_daily": {
+          "value": 0.01813507080078125,
+          "unit": "pai"
+        },
+        "pai_low_zone": {
+          "value": 0.01761627197265625,
+          "unit": "pai"
+        },
+        "pai_medium_zone": {
+          "value": 0.000518798828125,
+          "unit": "pai"
+        },
+        "pai_high_zone": {
+          "value": 0.0,
+          "unit": "pai"
+        },
+        "device_max_hr": {
+          "value": 193.0,
+          "unit": "bpm"
+        },
+        "device_resting_hr": {
+          "value": 62.0,
+          "unit": "bpm"
+        },
+        "pai_total": {
+          "value": 122.9016342163086,
+          "unit": "pai"
+        },
+        "pai_low_zone_minutes": {
+          "value": 2.0,
+          "unit": "min"
+        },
+        "pai_medium_zone_minutes": {
+          "value": 0.0,
+          "unit": "min"
+        },
+        "pai_high_zone_minutes": {
+          "value": 0.0,
+          "unit": "min"
+        },
+        "pai_low_zone_lower_hr": {
+          "value": 101.0,
+          "unit": "bpm"
+        },
+        "pai_medium_zone_lower_hr": {
+          "value": 116.0,
+          "unit": "bpm"
+        },
+        "pai_high_zone_lower_hr": {
+          "value": 154.0,
+          "unit": "bpm"
         },
         "active_minutes": {
           "value": 0.0,
@@ -16744,7 +16960,7 @@
           "unit": "kcal"
         },
         "calories": {
-          "value": 3.0,
+          "value": 133.0,
           "unit": "kcal"
         },
         "cycling_distance": {
@@ -16758,6 +16974,575 @@
         "step_goal": {
           "value": 8000.0,
           "unit": "steps"
+        },
+        "hybrid_charge": {
+          "value": 67.0,
+          "unit": "score"
+        },
+        "mental_charge": {
+          "value": 54.676849365234375,
+          "unit": "score"
+        },
+        "physical_charge": {
+          "value": 80.30009460449219,
+          "unit": "score"
+        }
+      }
+    },
+    {
+      "date": "2026-10-07",
+      "source": "zepp",
+      "stress": {
+        "score": 49.0
+      },
+      "rhr": {
+        "current": 58.0
+      },
+      "steps": {
+        "count": 2818.0
+      },
+      "metrics": {
+        "afib_readiness": {
+          "value": 255.0,
+          "unit": "score"
+        },
+        "ahi_baseline": {
+          "value": 0.2006896585226059,
+          "unit": "events/h"
+        },
+        "ahi_readiness": {
+          "value": 100.0,
+          "unit": "score"
+        },
+        "hrv_baseline": {
+          "value": 53.0,
+          "unit": "ms"
+        },
+        "hrv_readiness": {
+          "value": 72.0,
+          "unit": "score"
+        },
+        "mental_readiness": {
+          "value": 255.0,
+          "unit": "score"
+        },
+        "physical_readiness": {
+          "value": 255.0,
+          "unit": "score"
+        },
+        "readiness": {
+          "value": 75.0,
+          "unit": "score"
+        },
+        "rhr_baseline": {
+          "value": 59.0,
+          "unit": "bpm"
+        },
+        "rhr_readiness": {
+          "value": 66.0,
+          "unit": "score"
+        },
+        "skin_temp_readiness": {
+          "value": 76.0,
+          "unit": "score"
+        },
+        "sleep_hrv": {
+          "value": 44.0,
+          "unit": "ms"
+        },
+        "sleep_rhr": {
+          "value": 65.0,
+          "unit": "bpm"
+        },
+        "training_load": {
+          "value": 257.0,
+          "unit": "load"
+        },
+        "resting_hr": {
+          "value": 58.0,
+          "unit": "bpm"
+        },
+        "steps": {
+          "value": 2818.0,
+          "unit": "steps"
+        },
+        "active_calories": {
+          "value": 127.0,
+          "unit": "kcal"
+        },
+        "distance": {
+          "value": 1857.0,
+          "unit": "m"
+        },
+        "stress": {
+          "value": 49.0,
+          "unit": "score"
+        },
+        "stress_min": {
+          "value": 12.0,
+          "unit": "score"
+        },
+        "stress_max": {
+          "value": 82.0,
+          "unit": "score"
+        },
+        "stress_relaxed_pct": {
+          "value": 32.0,
+          "unit": "%"
+        },
+        "stress_normal_pct": {
+          "value": 24.0,
+          "unit": "%"
+        },
+        "stress_medium_pct": {
+          "value": 41.0,
+          "unit": "%"
+        },
+        "stress_high_pct": {
+          "value": 3.0,
+          "unit": "%"
+        },
+        "respiratory_rate": {
+          "value": 14.7,
+          "unit": "brpm"
+        },
+        "respiratory_rate_min": {
+          "value": 12.0,
+          "unit": "brpm"
+        },
+        "respiratory_rate_max": {
+          "value": 19.0,
+          "unit": "brpm"
+        },
+        "spo2_odi": {
+          "value": 0.0,
+          "unit": "events/h"
+        },
+        "spo2_odi_events": {
+          "value": 0.0,
+          "unit": "count"
+        },
+        "spo2_night_score": {
+          "value": 100.0,
+          "unit": "score"
+        },
+        "spo2_measured_minutes": {
+          "value": 201.0,
+          "unit": "min"
+        },
+        "pai_daily": {
+          "value": 0.135772705078125,
+          "unit": "pai"
+        },
+        "pai_low_zone": {
+          "value": 0.0766754150390625,
+          "unit": "pai"
+        },
+        "pai_medium_zone": {
+          "value": 0.0590972900390625,
+          "unit": "pai"
+        },
+        "pai_high_zone": {
+          "value": 0.0,
+          "unit": "pai"
+        },
+        "device_max_hr": {
+          "value": 193.0,
+          "unit": "bpm"
+        },
+        "device_resting_hr": {
+          "value": 61.0,
+          "unit": "bpm"
+        },
+        "pai_total": {
+          "value": 122.77845764160156,
+          "unit": "pai"
+        },
+        "pai_low_zone_minutes": {
+          "value": 9.0,
+          "unit": "min"
+        },
+        "pai_medium_zone_minutes": {
+          "value": 1.0,
+          "unit": "min"
+        },
+        "pai_high_zone_minutes": {
+          "value": 0.0,
+          "unit": "min"
+        },
+        "pai_low_zone_lower_hr": {
+          "value": 101.0,
+          "unit": "bpm"
+        },
+        "pai_medium_zone_lower_hr": {
+          "value": 116.0,
+          "unit": "bpm"
+        },
+        "pai_high_zone_lower_hr": {
+          "value": 154.0,
+          "unit": "bpm"
+        },
+        "active_minutes": {
+          "value": 0.0,
+          "unit": "min"
+        },
+        "active_minutes_goal": {
+          "value": 30.0,
+          "unit": "min"
+        },
+        "calorie_goal": {
+          "value": 300.0,
+          "unit": "kcal"
+        },
+        "calories": {
+          "value": 127.0,
+          "unit": "kcal"
+        },
+        "cycling_distance": {
+          "value": 0.0,
+          "unit": "m"
+        },
+        "running_distance": {
+          "value": 0.0,
+          "unit": "m"
+        },
+        "step_goal": {
+          "value": 8000.0,
+          "unit": "steps"
+        },
+        "hybrid_charge": {
+          "value": 57.0,
+          "unit": "score"
+        },
+        "mental_charge": {
+          "value": 33.775577545166016,
+          "unit": "score"
+        },
+        "physical_charge": {
+          "value": 80.09129333496094,
+          "unit": "score"
+        }
+      }
+    },
+    {
+      "date": "2026-10-08",
+      "source": "zepp",
+      "stress": {
+        "score": 44.0
+      },
+      "rhr": {
+        "current": 65.0
+      },
+      "steps": {
+        "count": 2944.0
+      },
+      "metrics": {
+        "afib_readiness": {
+          "value": 255.0,
+          "unit": "score"
+        },
+        "ahi_baseline": {
+          "value": 0.1934482753276825,
+          "unit": "events/h"
+        },
+        "ahi_readiness": {
+          "value": 100.0,
+          "unit": "score"
+        },
+        "hrv_baseline": {
+          "value": 53.0,
+          "unit": "ms"
+        },
+        "hrv_readiness": {
+          "value": 79.0,
+          "unit": "score"
+        },
+        "mental_readiness": {
+          "value": 255.0,
+          "unit": "score"
+        },
+        "physical_readiness": {
+          "value": 255.0,
+          "unit": "score"
+        },
+        "readiness": {
+          "value": 89.0,
+          "unit": "score"
+        },
+        "rhr_baseline": {
+          "value": 59.0,
+          "unit": "bpm"
+        },
+        "rhr_readiness": {
+          "value": 89.0,
+          "unit": "score"
+        },
+        "skin_temp_readiness": {
+          "value": 95.0,
+          "unit": "score"
+        },
+        "sleep_hrv": {
+          "value": 52.0,
+          "unit": "ms"
+        },
+        "sleep_rhr": {
+          "value": 58.0,
+          "unit": "bpm"
+        },
+        "training_load": {
+          "value": 257.0,
+          "unit": "load"
+        },
+        "resting_hr": {
+          "value": 65.0,
+          "unit": "bpm"
+        },
+        "steps": {
+          "value": 2944.0,
+          "unit": "steps"
+        },
+        "active_calories": {
+          "value": 133.0,
+          "unit": "kcal"
+        },
+        "distance": {
+          "value": 1921.0,
+          "unit": "m"
+        },
+        "stress": {
+          "value": 44.0,
+          "unit": "score"
+        },
+        "stress_min": {
+          "value": 9.0,
+          "unit": "score"
+        },
+        "stress_max": {
+          "value": 84.0,
+          "unit": "score"
+        },
+        "stress_relaxed_pct": {
+          "value": 38.0,
+          "unit": "%"
+        },
+        "stress_normal_pct": {
+          "value": 29.0,
+          "unit": "%"
+        },
+        "stress_medium_pct": {
+          "value": 30.0,
+          "unit": "%"
+        },
+        "stress_high_pct": {
+          "value": 3.0,
+          "unit": "%"
+        },
+        "respiratory_rate": {
+          "value": 13.8,
+          "unit": "brpm"
+        },
+        "respiratory_rate_min": {
+          "value": 11.0,
+          "unit": "brpm"
+        },
+        "respiratory_rate_max": {
+          "value": 17.0,
+          "unit": "brpm"
+        },
+        "spo2_odi": {
+          "value": 0.27,
+          "unit": "events/h"
+        },
+        "spo2_odi_events": {
+          "value": 2.0,
+          "unit": "count"
+        },
+        "spo2_night_score": {
+          "value": 99.0,
+          "unit": "score"
+        },
+        "spo2_measured_minutes": {
+          "value": 440.0,
+          "unit": "min"
+        },
+        "pai_daily": {
+          "value": 58.476287841796875,
+          "unit": "pai"
+        },
+        "pai_low_zone": {
+          "value": 1.0,
+          "unit": "pai"
+        },
+        "pai_medium_zone": {
+          "value": 8.348442077636719,
+          "unit": "pai"
+        },
+        "pai_high_zone": {
+          "value": 49.9366455078125,
+          "unit": "pai"
+        },
+        "device_max_hr": {
+          "value": 193.0,
+          "unit": "bpm"
+        },
+        "device_resting_hr": {
+          "value": 62.0,
+          "unit": "bpm"
+        },
+        "pai_total": {
+          "value": 142.02197265625,
+          "unit": "pai"
+        },
+        "pai_low_zone_minutes": {
+          "value": 13.0,
+          "unit": "min"
+        },
+        "pai_medium_zone_minutes": {
+          "value": 47.0,
+          "unit": "min"
+        },
+        "pai_high_zone_minutes": {
+          "value": 41.0,
+          "unit": "min"
+        },
+        "pai_low_zone_lower_hr": {
+          "value": 101.0,
+          "unit": "bpm"
+        },
+        "pai_medium_zone_lower_hr": {
+          "value": 116.0,
+          "unit": "bpm"
+        },
+        "pai_high_zone_lower_hr": {
+          "value": 154.0,
+          "unit": "bpm"
+        },
+        "active_minutes": {
+          "value": 0.0,
+          "unit": "min"
+        },
+        "active_minutes_goal": {
+          "value": 30.0,
+          "unit": "min"
+        },
+        "calorie_goal": {
+          "value": 300.0,
+          "unit": "kcal"
+        },
+        "calories": {
+          "value": 133.0,
+          "unit": "kcal"
+        },
+        "cycling_distance": {
+          "value": 0.0,
+          "unit": "m"
+        },
+        "running_distance": {
+          "value": 0.0,
+          "unit": "m"
+        },
+        "step_goal": {
+          "value": 8000.0,
+          "unit": "steps"
+        },
+        "hybrid_charge": {
+          "value": 70.0,
+          "unit": "score"
+        },
+        "mental_charge": {
+          "value": 50.21490478515625,
+          "unit": "score"
+        },
+        "physical_charge": {
+          "value": 90.57256317138672,
+          "unit": "score"
+        }
+      }
+    },
+    {
+      "date": "2026-10-09",
+      "source": "zepp",
+      "stress": {
+        "score": null
+      },
+      "rhr": {
+        "current": 58.0
+      },
+      "steps": {
+        "count": 14992.0
+      },
+      "metrics": {
+        "training_load": {
+          "value": 315.0,
+          "unit": "load"
+        },
+        "vo2max": {
+          "value": 45.0,
+          "unit": "ml/kg/min"
+        },
+        "resting_hr": {
+          "value": 58.0,
+          "unit": "bpm"
+        },
+        "steps": {
+          "value": 14992.0,
+          "unit": "steps"
+        },
+        "active_calories": {
+          "value": 1058.0,
+          "unit": "kcal"
+        },
+        "distance": {
+          "value": 13334.0,
+          "unit": "m"
+        },
+        "active_minutes": {
+          "value": 91.0,
+          "unit": "min"
+        },
+        "active_minutes_goal": {
+          "value": 30.0,
+          "unit": "min"
+        },
+        "calorie_goal": {
+          "value": 300.0,
+          "unit": "kcal"
+        },
+        "calories": {
+          "value": 1063.0,
+          "unit": "kcal"
+        },
+        "cycling_distance": {
+          "value": 0.0,
+          "unit": "m"
+        },
+        "running_distance": {
+          "value": 11287.9560546875,
+          "unit": "m"
+        },
+        "step_goal": {
+          "value": 8000.0,
+          "unit": "steps"
+        },
+        "hybrid_charge": {
+          "value": 39.0,
+          "unit": "score"
+        },
+        "mental_charge": {
+          "value": 20.594181060791016,
+          "unit": "score"
+        },
+        "physical_charge": {
+          "value": 58.396766662597656,
+          "unit": "score"
+        },
+        "lactate_threshold_hr": {
+          "value": 170.0,
+          "unit": "bpm"
+        },
+        "lactate_threshold_pace": {
+          "value": 401.0,
+          "unit": "s/km"
         }
       }
     }
