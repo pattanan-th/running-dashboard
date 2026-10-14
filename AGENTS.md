@@ -32,9 +32,15 @@ events carry GEO/LOCATION) and strips the Runna app deep links. A failed fetch
 keeps the previous runna_plan.json. The Plan tab leads with this card; use the
 plan's targets when judging a run against what was prescribed.
 
+Shoes: run `python zepp_shoes.py` after sync_zepp.py. Zepp tags each workout
+with a gearId (only inside the compressed raw workout payloads; names are not
+synced). shoes.json maps shoes to gear_ids; km = base_km + Zepp runs after
+base_date, with manual_splits for mid-run shoe swaps the user reports. Unknown
+gearIds stay in `unassigned` — ask the user which shoe they are, never guess.
+
 Generated files: activities.json, sleep.json, wellness.json, stats.json,
 zepp_sync.json, zepp_analysis.json, latest_analysis.md, coach_analysis.html,
-runna_plan.json, dashboard.html. Add changed source files explicitly when implementing fixes.
+runna_plan.json, shoes.json, dashboard.html. Add changed source files explicitly when implementing fixes.
 Do not stage all files indiscriminately. No HAR, tokens, database, device IDs,
 raw coordinates, or raw payloads in the published analysis.
 
