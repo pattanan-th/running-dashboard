@@ -18375,7 +18375,7 @@
       "date": "2026-10-13",
       "source": "zepp",
       "stress": {
-        "score": 55.0
+        "score": 38.0
       },
       "rhr": {
         "current": 62.0
@@ -18389,7 +18389,7 @@
           "unit": "score"
         },
         "ahi_baseline": {
-          "value": 0.1789655089378357,
+          "value": 0.1767241209745407,
           "unit": "events/h"
         },
         "ahi_readiness": {
@@ -18401,7 +18401,7 @@
           "unit": "ms"
         },
         "hrv_readiness": {
-          "value": 81.0,
+          "value": 89.0,
           "unit": "score"
         },
         "mental_readiness": {
@@ -18425,11 +18425,11 @@
           "unit": "score"
         },
         "skin_temp_readiness": {
-          "value": 98.0,
+          "value": 86.0,
           "unit": "score"
         },
         "sleep_hrv": {
-          "value": 53.0,
+          "value": 62.0,
           "unit": "ms"
         },
         "sleep_rhr": {
@@ -18461,35 +18461,35 @@
           "unit": "m"
         },
         "stress": {
-          "value": 55.0,
+          "value": 38.0,
           "unit": "score"
         },
         "stress_min": {
-          "value": 45.0,
+          "value": 11.0,
           "unit": "score"
         },
         "stress_max": {
-          "value": 69.0,
+          "value": 81.0,
           "unit": "score"
         },
         "stress_relaxed_pct": {
-          "value": 0.0,
+          "value": 54.0,
           "unit": "%"
         },
         "stress_normal_pct": {
-          "value": 75.0,
+          "value": 30.0,
           "unit": "%"
         },
         "stress_medium_pct": {
-          "value": 25.0,
+          "value": 14.0,
           "unit": "%"
         },
         "stress_high_pct": {
-          "value": 0.0,
+          "value": 2.0,
           "unit": "%"
         },
         "respiratory_rate": {
-          "value": 14.3,
+          "value": 14.8,
           "unit": "brpm"
         },
         "respiratory_rate_min": {
@@ -18497,8 +18497,24 @@
           "unit": "brpm"
         },
         "respiratory_rate_max": {
-          "value": 17.0,
+          "value": 18.0,
           "unit": "brpm"
+        },
+        "spo2_odi": {
+          "value": 0.19,
+          "unit": "events/h"
+        },
+        "spo2_odi_events": {
+          "value": 1.0,
+          "unit": "count"
+        },
+        "spo2_night_score": {
+          "value": 100.0,
+          "unit": "score"
+        },
+        "spo2_measured_minutes": {
+          "value": 301.0,
+          "unit": "min"
         },
         "pai_daily": {
           "value": 0.0,
@@ -18581,15 +18597,15 @@
           "unit": "steps"
         },
         "hybrid_charge": {
-          "value": 35.0,
+          "value": 61.0,
           "unit": "score"
         },
         "mental_charge": {
-          "value": 27.569971084594727,
+          "value": 62.81009292602539,
           "unit": "score"
         },
         "physical_charge": {
-          "value": 42.8238525390625,
+          "value": 58.23040008544922,
           "unit": "score"
         },
         "lactate_threshold_hr": {
@@ -18609,26 +18625,30 @@
         "score": null
       },
       "rhr": {
-        "current": null
+        "current": 62.0
       },
       "steps": {
-        "count": 13.0
+        "count": 1114.0
       },
       "metrics": {
         "training_load": {
           "value": 371.0,
           "unit": "load"
         },
+        "resting_hr": {
+          "value": 62.0,
+          "unit": "bpm"
+        },
         "steps": {
-          "value": 13.0,
+          "value": 1114.0,
           "unit": "steps"
         },
         "active_calories": {
-          "value": 3.0,
+          "value": 45.0,
           "unit": "kcal"
         },
         "distance": {
-          "value": 8.0,
+          "value": 721.0,
           "unit": "m"
         },
         "active_minutes": {
@@ -18644,7 +18664,7 @@
           "unit": "kcal"
         },
         "calories": {
-          "value": 3.0,
+          "value": 45.0,
           "unit": "kcal"
         },
         "cycling_distance": {
@@ -18658,6 +18678,18 @@
         "step_goal": {
           "value": 8000.0,
           "unit": "steps"
+        },
+        "hybrid_charge": {
+          "value": 52.0,
+          "unit": "score"
+        },
+        "mental_charge": {
+          "value": 45.54106140136719,
+          "unit": "score"
+        },
+        "physical_charge": {
+          "value": 57.75042343139648,
+          "unit": "score"
         }
       }
     }
