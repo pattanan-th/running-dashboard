@@ -25,9 +25,16 @@ When the user requests sync:
    missing/stale-data caveats and concrete training implications. Do not merely
    repeat averages when graph data is available. Keep running terms in English.
 
+Runna plan: run `python runna_plan.py` before building (update_and_deploy.bat
+does). It reads the private feed URL from `.env` RUNNA_ICS_URL — never print,
+commit or publish that URL. It keeps only UPCOMING_PLAN_WORKOUT events (completed
+events carry GEO/LOCATION) and strips the Runna app deep links. A failed fetch
+keeps the previous runna_plan.json. The Plan tab leads with this card; use the
+plan's targets when judging a run against what was prescribed.
+
 Generated files: activities.json, sleep.json, wellness.json, stats.json,
 zepp_sync.json, zepp_analysis.json, latest_analysis.md, coach_analysis.html,
-dashboard.html. Add changed source files explicitly when implementing fixes.
+runna_plan.json, dashboard.html. Add changed source files explicitly when implementing fixes.
 Do not stage all files indiscriminately. No HAR, tokens, database, device IDs,
 raw coordinates, or raw payloads in the published analysis.
 

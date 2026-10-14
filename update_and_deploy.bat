@@ -23,6 +23,9 @@ if errorlevel 1 (
     exit /b 1
 )
 
+REM Runna plan: never fatal - on failure it keeps the previous runna_plan.json
+python runna_plan.py
+
 echo.
 echo [2/4] Building dashboard...
 python build_dashboard.py
@@ -34,7 +37,7 @@ if errorlevel 1 (
 
 echo.
 echo [3/4] Checking for changes...
-git add activities.json sleep.json wellness.json stats.json garmin_stats_archive.json garmin_time_efforts.json zepp_sync.json zepp_analysis.json latest_analysis.md coach_analysis.html dashboard.html
+git add activities.json sleep.json wellness.json stats.json garmin_stats_archive.json garmin_time_efforts.json zepp_sync.json zepp_analysis.json latest_analysis.md coach_analysis.html runna_plan.json dashboard.html
 if errorlevel 1 exit /b 1
 git diff --cached --quiet
 if errorlevel 1 (

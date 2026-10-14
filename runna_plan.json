@@ -1,0 +1,129 @@
+{
+  "meta": {
+    "source": "Runna calendar feed",
+    "fetched": "2026-10-14 09:22"
+  },
+  "workouts": [
+    {
+      "date": "2026-10-16",
+      "week": 17,
+      "kind": "tempo",
+      "title": "Rolling 300s",
+      "category": "Tempo",
+      "distance": "11km",
+      "duration": "1h0m - 1h20m",
+      "est_min": 75,
+      "details": "3km warm up at a conversational pace (no faster than 6:45/km)\n\nRepeat the following 10x:\n----------\n300m at 5:45/km\n300m at 6:30/km\n----------\n\n90s walking rest\n\n2km cool down at a conversational pace (or slower!)"
+    },
+    {
+      "date": "2026-10-17",
+      "week": 17,
+      "kind": "easy",
+      "title": "10km Easy Run",
+      "category": "Easy Run",
+      "distance": "10km",
+      "duration": "1h0m - 1h10m",
+      "est_min": 70,
+      "details": "10km easy run at a conversational pace (no faster than 6:45/km). This is a limit, not a target - run at whatever pace feels truly easy!"
+    },
+    {
+      "date": "2026-10-18",
+      "week": 17,
+      "kind": "long",
+      "title": "17km Long Run",
+      "category": "Long Run",
+      "distance": "17km",
+      "duration": "2h10m - 2h20m",
+      "est_min": 135,
+      "details": "17km at a conversational pace"
+    },
+    {
+      "date": "2026-10-23",
+      "week": 18,
+      "kind": "intervals",
+      "title": "Drop Set",
+      "category": "Intervals",
+      "distance": "9km",
+      "duration": "1h0m - 1h20m",
+      "est_min": 75,
+      "details": "2km warm up at a conversational pace (no faster than 6:40/km), 90s walking rest\n\n2 reps of:\n• 1km at 5:40/km, 90s walking rest\n\n2 reps of:\n• 800m at 5:35/km, 90s walking rest\n\n2 reps of:\n• 600m at 5:20/km, 90s walking rest\n\n2 reps of:\n• 400m at 5:15/km, 90s walking rest\n\n2 reps of:\n• 200m at 5:05/km, 90s walking rest\n\n1km cool down at a conversational pace (or slower!)"
+    },
+    {
+      "date": "2026-10-24",
+      "week": 18,
+      "kind": "easy",
+      "title": "10km Easy Run",
+      "category": "Easy Run",
+      "distance": "10km",
+      "duration": "1h0m - 1h10m",
+      "est_min": 70,
+      "details": "10km easy run at a conversational pace (no faster than 6:40/km). This is a limit, not a target - run at whatever pace feels truly easy!"
+    },
+    {
+      "date": "2026-10-25",
+      "week": 18,
+      "kind": "long",
+      "title": "14km Hotspot Long Run",
+      "category": "Long Run",
+      "distance": "14km",
+      "duration": "1h40m - 1h50m",
+      "est_min": 110,
+      "details": "7km at a conversational pace\n1km at 6:35/km\n6km at a conversational pace"
+    },
+    {
+      "date": "2026-10-30",
+      "week": 19,
+      "kind": "tempo",
+      "title": "Rolling 400s",
+      "category": "Tempo",
+      "distance": "7.5km",
+      "duration": "45m - 50m",
+      "est_min": 50,
+      "details": "2km warm up at a conversational pace (no faster than 6:40/km)\n\nRepeat the following 5x:\n----------\n400m at 5:40/km\n400m at 6:20/km\n----------\n\n90s walking rest\n\n1.5km cool down at a conversational pace (or slower!)"
+    },
+    {
+      "date": "2026-10-31",
+      "week": 19,
+      "kind": "easy",
+      "title": "9km Easy Run",
+      "category": "Easy Run",
+      "distance": "9km",
+      "duration": "1h0m - 1h10m",
+      "est_min": 65,
+      "details": "9km easy run at a conversational pace (no faster than 6:40/km). This is a limit, not a target - run at whatever pace feels truly easy!"
+    },
+    {
+      "date": "2026-11-01",
+      "week": 19,
+      "kind": "long",
+      "title": "11km Long Run",
+      "category": "Long Run",
+      "distance": "11km",
+      "duration": "1h20m - 1h30m",
+      "est_min": 85,
+      "details": "11km at a conversational pace"
+    },
+    {
+      "date": "2026-11-06",
+      "week": 20,
+      "kind": "intervals",
+      "title": "Race Pace Practice K's",
+      "category": "Taper Intervals",
+      "distance": "7.5km",
+      "duration": "55m - 1h0m",
+      "est_min": 60,
+      "details": "2km warm up at a conversational pace (no faster than 6:55/km), keeping things easy for the majority. Within the warm up do 4 x 100m fast 'strides' aiming for around 5:30/km. 60s walking rest\n\n4 reps of:\n• 1km at 6:45/km, this is your target Half Marathon pace, 90s walking rest\n\n1.5km cool down at a conversational pace (or slower!)"
+    },
+    {
+      "date": "2026-11-08",
+      "week": 20,
+      "kind": "race",
+      "title": "Korat Marathon",
+      "category": "Race",
+      "distance": "21.1km",
+      "duration": "2h18m - 2h28m",
+      "est_min": 150,
+      "details": "Half Marathon race at 6:35-7:00/km"
+    }
+  ]
+}
