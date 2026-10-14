@@ -265,10 +265,21 @@ def coach_card(sleep, wellness, runs):
     <p>🎯 วันนี้: ตรวจความรู้สึกจริงร่วมกับข้อมูลคืนล่าสุด แผนในแท็บ Plan เป็นแผนเดิมที่ยังไม่ได้ทบทวนหลังเปลี่ยนนาฬิกา</p>
     <p>👉 ต่อไป: sync นาฬิกากับ Zepp บน iPhone ก่อนอัปเดต dashboard หากข้อมูลขาดให้ตรวจวันที่ล่าสุดของแต่ละ metric</p></div>'''
 
+def default_data_dir():
+    """ZeppBridge installed from inside an MSIX app (it was installed from the Codex
+    app) lands in that package's virtualised AppData, invisible at the normal path.
+    Prefer an explicit env var, then the normal path, then any package's copy."""
+    if os.environ.get('ZEPPBRIDGE_DATA_DIR'):
+        return Path(os.environ['ZEPPBRIDGE_DATA_DIR'])
+    local=Path.home()/'AppData/Local'
+    candidates=[local/'ZeppBridge/data',*local.glob('Packages/*/LocalCache/Local/ZeppBridge/data')]
+    found=[c for c in candidates if (c/'zepp.db').exists()]
+    return max(found,key=lambda c:(c/'zepp.db').stat().st_mtime) if found else candidates[0]
+
 def main():
     ap=argparse.ArgumentParser()
     ap.add_argument('--local-only',action='store_true',help='Import current local database without cloud sync')
-    ap.add_argument('--db',type=Path,default=Path(os.environ.get('ZEPPBRIDGE_DATA_DIR',Path.home()/'AppData/Local/ZeppBridge/data'))/'zepp.db')
+    ap.add_argument('--db',type=Path,default=default_data_dir()/'zepp.db')
     args=ap.parse_args()
     if not args.db.exists():
         raise SystemExit('ZeppBridge database not found; connect and sync first')

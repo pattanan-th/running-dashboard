@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-10-11",
+    "generated": "2026-10-14",
     "source": "Garmin archive + Zepp",
     "split_rankings_source": "Garmin archive + Zepp recorded distance",
     "zones_source": "Garmin archive",
@@ -1295,6 +1295,15 @@
       "gain": 19.35,
       "source": "zepp",
       "id": "zepp:1791712820"
+    },
+    {
+      "d": "2026-10-13",
+      "km": 11.132,
+      "min": 90.27,
+      "cal": 1000,
+      "gain": 2.83,
+      "source": "zepp",
+      "id": "zepp:1791889917"
     }
   ],
   "rankings": {
@@ -1999,6 +2008,16 @@
         "name": "Si Racha - W2 Tue Tempo - P",
         "pace": "7:21",
         "source": "garmin"
+      },
+      {
+        "time": "7:21",
+        "seconds": 441.051643192488,
+        "pace": "7:21",
+        "date": "2026-10-13",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1791889917",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "7:22",
@@ -3143,6 +3162,16 @@
         "source": "garmin"
       },
       {
+        "time": "12:05",
+        "seconds": 725.1534883720933,
+        "pace": "7:31",
+        "date": "2026-10-13",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1791889917",
+        "method": "recorded_distance_elapsed_interpolated"
+      },
+      {
         "time": "12:06",
         "date": "2025-07-24",
         "name": "Si Racha Running",
@@ -4043,6 +4072,16 @@
         "source": "garmin"
       },
       {
+        "time": "39:21",
+        "seconds": 2360.9516908212563,
+        "pace": "7:52",
+        "date": "2026-10-13",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1791889917",
+        "method": "recorded_distance_elapsed_interpolated"
+      },
+      {
         "time": "39:24",
         "seconds": 2364.1000000000004,
         "pace": "7:53",
@@ -4565,6 +4604,16 @@
         "method": "recorded_distance_elapsed_interpolated"
       },
       {
+        "time": "1:20:05",
+        "seconds": 4804.632352941176,
+        "pace": "8:00",
+        "date": "2026-10-13",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1791889917",
+        "method": "recorded_distance_elapsed_interpolated"
+      },
+      {
         "time": "1:20:13",
         "date": "2026-03-21",
         "name": "Si Racha - W2 Sat Easy Run",
@@ -4850,6 +4899,13 @@
         "pace": "7:38",
         "date": "2026-03-07",
         "name": "Si Racha - W6 Sat Long Run"
+      },
+      {
+        "time": "11.1 km",
+        "pace": "8:07",
+        "date": "2026-10-13",
+        "name": "Run",
+        "source": "zepp"
       },
       {
         "time": "10.9 km",
@@ -5800,11 +5856,11 @@
     ]
   },
   "lifetime": {
-    "runs": 173,
-    "km": 1228.05,
-    "hours": 191.01,
-    "calories": 97612.0,
-    "elevation_m": 25061.24,
+    "runs": 174,
+    "km": 1239.18,
+    "hours": 192.51,
+    "calories": 98612.0,
+    "elevation_m": 25064.07,
     "since": "2023-05-04"
   },
   "zones_sec": [
@@ -5831,9 +5887,9 @@
       "hours": 40.34
     },
     "2026": {
-      "runs": 107,
-      "km": 898.33,
-      "hours": 133.7
+      "runs": 108,
+      "km": 909.46,
+      "hours": 135.21
     }
   },
   "by_month": {
@@ -5858,7 +5914,7 @@
     "2026-07": 69.58,
     "2026-08": 96.01,
     "2026-09": 120.59,
-    "2026-10": 59.34
+    "2026-10": 70.47
   },
   "best": {
     "fastest_1km": "4:53",
@@ -6669,6 +6725,14 @@
         "name": "Si Racha Running",
         "source": "garmin",
         "id": "garmin:19833225677"
+      },
+      {
+        "distance_m": 702.8999999999996,
+        "pace": "7:07",
+        "date": "2026-10-13",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1791889917"
       },
       {
         "distance_m": 701.0101318359375,
@@ -7985,6 +8049,14 @@
         "id": "garmin:20065550088"
       },
       {
+        "distance_m": 1346.6599999999999,
+        "pace": "7:26",
+        "date": "2026-10-13",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1791889917"
+      },
+      {
         "distance_m": 1346.60498046875,
         "pace": "7:26",
         "date": "2026-06-06",
@@ -9203,6 +9275,14 @@
         "id": "garmin:19894303723"
       },
       {
+        "distance_m": 2604.9500000000007,
+        "pace": "7:41",
+        "date": "2026-10-13",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1791889917"
+      },
+      {
         "distance_m": 2598.7400000000002,
         "pace": "7:42",
         "date": "2026-09-05",
@@ -10373,6 +10453,14 @@
         "id": "garmin:20773584938"
       },
       {
+        "distance_m": 3832.7699999999995,
+        "pace": "7:50",
+        "date": "2026-10-13",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1791889917"
+      },
+      {
         "distance_m": 3817.205399946733,
         "pace": "7:52",
         "date": "2026-05-22",
@@ -11071,6 +11159,14 @@
         "id": "garmin:22826416629"
       },
       {
+        "distance_m": 7605.810000000001,
+        "pace": "7:53",
+        "date": "2026-10-13",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1791889917"
+      },
+      {
         "distance_m": 7575.250244140625,
         "pace": "7:55",
         "date": "2026-03-21",
@@ -11431,6 +11527,14 @@
         "name": "Si Racha - W2 Sat Easy Run",
         "source": "garmin",
         "id": "garmin:22243563946"
+      },
+      {
+        "distance_m": 11104.44,
+        "pace": "8:06",
+        "date": "2026-10-13",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1791889917"
       },
       {
         "distance_m": 11024.40673828125,
@@ -11947,6 +12051,16 @@
         "date": "2026-05-17",
         "name": "Run",
         "source": "garmin"
+      },
+      {
+        "duration_seconds": 5416,
+        "time": "1:30:16",
+        "distance_m": 11132.0,
+        "pace": "8:07",
+        "date": "2026-10-13",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1791889917"
       },
       {
         "duration_seconds": 5256.0,
