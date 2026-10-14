@@ -28,7 +28,7 @@
       "id": 2,
       "name": "Saucony Kinvara 14",
       "nick": "Kinvara",
-      "km": 444,
+      "km": 450,
       "max_km": 644,
       "first_use": "2025-03-22",
       "role": "Tempo/Speed",
@@ -36,17 +36,19 @@
       "note": "เกษียณแล้ว (444 กม.)",
       "base_km": 444,
       "base_date": "2026-06-27",
-      "gear_ids": [],
+      "gear_ids": [
+        "E75E7ADE-56FE-4DCA-B954-28E9D3C15D5A"
+      ],
       "retired": true,
-      "zepp_km": 0.0,
-      "zepp_runs": 0,
-      "last_used": null
+      "zepp_km": 6.3,
+      "zepp_runs": 1,
+      "last_used": "2026-10-02"
     },
     {
       "id": 3,
       "name": "ASICS Dynablast 5",
       "nick": "Dynablast",
-      "km": 60,
+      "km": 72,
       "max_km": 800,
       "first_use": "2026-04-20",
       "role": "Easy/Recovery",
@@ -54,16 +56,18 @@
       "note": "daily easy runs",
       "base_km": 60,
       "base_date": "2026-06-27",
-      "gear_ids": [],
-      "zepp_km": 0.0,
-      "zepp_runs": 0,
-      "last_used": null
+      "gear_ids": [
+        "6632AE08-0CFF-4043-A3E0-DD50A5E33F15"
+      ],
+      "zepp_km": 12.5,
+      "zepp_runs": 2,
+      "last_used": "2026-10-05"
     },
     {
       "id": 4,
       "name": "ASICS GEL-Venture 10",
       "nick": "GV10",
-      "km": 36,
+      "km": 70,
       "max_km": 700,
       "first_use": "2026-05-01",
       "role": "Trail",
@@ -71,10 +75,12 @@
       "note": "trail/off-road",
       "base_km": 36,
       "base_date": "2026-06-27",
-      "gear_ids": [],
-      "zepp_km": 0.0,
-      "zepp_runs": 0,
-      "last_used": null
+      "gear_ids": [
+        "847B25E0-C699-4150-A09A-ED2C7895B5AA"
+      ],
+      "zepp_km": 34.1,
+      "zepp_runs": 3,
+      "last_used": "2026-09-27"
     },
     {
       "id": 5,
@@ -112,33 +118,5 @@
       ]
     }
   ],
-  "unassigned": [
-    {
-      "gear_id": "847B25E0-C699-4150-A09A-ED2C7895B5AA",
-      "runs": 3,
-      "km": 34.1,
-      "dates": [
-        "2026-09-13",
-        "2026-09-19",
-        "2026-09-27"
-      ]
-    },
-    {
-      "gear_id": "6632AE08-0CFF-4043-A3E0-DD50A5E33F15",
-      "runs": 2,
-      "km": 12.5,
-      "dates": [
-        "2026-08-07",
-        "2026-10-05"
-      ]
-    },
-    {
-      "gear_id": "E75E7ADE-56FE-4DCA-B954-28E9D3C15D5A",
-      "runs": 1,
-      "km": 6.3,
-      "dates": [
-        "2026-10-02"
-      ]
-    }
-  ]
+  "unassigned": []
 }
