@@ -33,13 +33,12 @@
       "first_use": "2025-03-22",
       "role": "Tempo/Speed",
       "color": "#e3b341",
-      "note": "เกษียณแล้ว (444 กม.)",
+      "note": "ยังใช้อยู่ · 70% ของอายุใช้งาน ใกล้ถึงช่วงควรเปลี่ยน",
       "base_km": 444,
       "base_date": "2026-06-27",
       "gear_ids": [
         "E75E7ADE-56FE-4DCA-B954-28E9D3C15D5A"
       ],
-      "retired": true,
       "zepp_km": 6.3,
       "zepp_runs": 1,
       "last_used": "2026-10-02"
