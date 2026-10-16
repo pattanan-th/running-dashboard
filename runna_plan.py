@@ -62,8 +62,22 @@ def parse(ics):
             'est_min': round(int(ev['X-WORKOUT-ESTIMATED-DURATION']) / 60) if ev.get('X-WORKOUT-ESTIMATED-DURATION', '').isdigit() else None,
             'details': body.strip(),
         })
+    apply_overrides(events)
     events.sort(key=lambda e: e['date'])
     return events
+
+
+def apply_overrides(events):
+    """Re-date workouts the user moved on their own schedule (plan_overrides.json).
+    An override only fires while the feed still carries the `from` date, so once the
+    move is also made in the Runna app it becomes a harmless no-op, never a double shift."""
+    path = HERE / 'plan_overrides.json'
+    if not path.exists():
+        return
+    for o in json.loads(path.read_text(encoding='utf-8')).get('moves', []):
+        for e in events:
+            if e['week'] == o['week'] and e['kind'] == o['kind'] and e['date'] == o['from']:
+                e['date'], e['moved_from'] = o['to'], o['from']
 
 
 def main():

@@ -1,0 +1,4 @@
+{
+  "note": "Workouts the user re-dated from the Runna feed. Applied by runna_plan.py only while the feed still has the 'from' date. Empty: the user already moved W17 inside the Runna app.",
+  "moves": []
+}
