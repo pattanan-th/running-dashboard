@@ -2,7 +2,7 @@
   "meta": {
     "version": 2,
     "note": "Shoe rotation tracker. km = base_km (Garmin gear, as of base_date) + Zepp runs logged with the shoe's gear_ids (zepp_shoes.py, every sync).",
-    "last_updated": "2026-10-16"
+    "last_updated": "2026-10-19"
   },
   "shoes": [
     {
@@ -117,5 +117,14 @@
       ]
     }
   ],
-  "unassigned": []
+  "unassigned": [
+    {
+      "gear_id": null,
+      "runs": 1,
+      "km": 13.8,
+      "dates": [
+        "2026-10-18"
+      ]
+    }
+  ]
 }
