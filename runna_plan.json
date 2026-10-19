@@ -1,31 +1,9 @@
 {
   "meta": {
     "source": "Runna calendar feed",
-    "fetched": "2026-10-19 11:08"
+    "fetched": "2026-10-19 17:09"
   },
   "workouts": [
-    {
-      "date": "2026-10-19",
-      "week": 17,
-      "kind": "easy",
-      "title": "10km Easy Run",
-      "category": "Easy Run",
-      "distance": "10km",
-      "duration": "1h0m - 1h10m",
-      "est_min": 70,
-      "details": "10km easy run at a conversational pace (no faster than 6:45/km). This is a limit, not a target - run at whatever pace feels truly easy!"
-    },
-    {
-      "date": "2026-10-20",
-      "week": 17,
-      "kind": "tempo",
-      "title": "Rolling 300s",
-      "category": "Tempo",
-      "distance": "11km",
-      "duration": "1h0m - 1h20m",
-      "est_min": 75,
-      "details": "3km warm up at a conversational pace (no faster than 6:45/km)\n\nRepeat the following 10x:\n----------\n300m at 5:45/km\n300m at 6:30/km\n----------\n\n90s walking rest\n\n2km cool down at a conversational pace (or slower!)"
-    },
     {
       "date": "2026-10-23",
       "week": 18,
