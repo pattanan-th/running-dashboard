@@ -9,7 +9,7 @@
       "id": 1,
       "name": "ASICS Novablast 5",
       "nick": "Novablast",
-      "km": 332,
+      "km": 342,
       "max_km": 650,
       "first_use": "2026-03-14",
       "role": "Long Run + Easy",
@@ -20,9 +20,9 @@
       "gear_ids": [
         "3EDFA9D7-BE4A-4C47-8D5F-824F9176DFBE"
       ],
-      "zepp_km": 131.1,
-      "zepp_runs": 14,
-      "last_used": "2026-10-13"
+      "zepp_km": 140.9,
+      "zepp_runs": 15,
+      "last_used": "2026-10-18"
     },
     {
       "id": 2,
@@ -85,7 +85,7 @@
       "id": 5,
       "name": "Adidas Adizero Boston 13",
       "nick": "Boston",
-      "km": 118,
+      "km": 122,
       "max_km": 700,
       "first_use": "2026-07-31",
       "role": "Long + Tempo",
@@ -96,9 +96,9 @@
       "gear_ids": [
         "EBED6B5B-4A9E-463C-8661-DC22F0B2E312"
       ],
-      "zepp_km": 118.3,
-      "zepp_runs": 12,
-      "last_used": "2026-10-11"
+      "zepp_km": 122.3,
+      "zepp_runs": 13,
+      "last_used": "2026-10-18"
     }
   ],
   "manual_splits": [
@@ -115,16 +115,21 @@
           "km": "rest"
         }
       ]
-    }
-  ],
-  "unassigned": [
+    },
     {
-      "gear_id": null,
-      "runs": 1,
-      "km": 13.8,
-      "dates": [
-        "2026-10-18"
+      "workout": "zepp:1792317209",
+      "note": "Long 18 ต.ค.: ~4 กม.แรก Boston แล้วหยุดเปลี่ยนเป็น Novablast (ผู้ใช้แจ้ง)",
+      "parts": [
+        {
+          "shoe": 5,
+          "km": 4.0
+        },
+        {
+          "shoe": 1,
+          "km": "rest"
+        }
       ]
     }
-  ]
+  ],
+  "unassigned": []
 }
