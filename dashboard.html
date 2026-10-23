@@ -889,6 +889,17 @@ renderTypes();renderOptions();show();})();</script><div class="card">
     <div class="alert-box" style="margin-top:8px;font-size:12px">💡 ตัวชี้ "base ดีขึ้น" ที่แม่นสุด = <strong>HR drift ลดลง + pace เร็วขึ้นที่ HR เท่าเดิม</strong></div>
   </div>
 
+  <div class="card" id="pace-lab-card">
+    <h2>🧮 Pace Lab · VDOT Calculator</h2>
+    <div style="font-size:12px;color:var(--text-muted);margin-bottom:8px">ใส่ผลแข่ง/เทสล่าสุด → ได้ pace ซ้อมแต่ละโซน (สูตร Daniels &amp; Gilbert) · ค่าเริ่มต้น = เป้า Half 2:24:30 · ผลวิ่งร้อน/เนินจะได้ VDOT ต่ำกว่าจริง</div>
+    <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center">
+      <select id="pl-dist" style="padding:6px;border-radius:6px"><option value="1609.34">1 ไมล์</option><option value="3000">3 กม.</option><option value="5000">5 กม.</option><option value="10000">10 กม.</option><option value="21097.5" selected>ฮาล์ฟ</option><option value="42195">มาราธอน</option></select>
+      <input id="pl-h" type="number" min="0" value="2" style="width:52px;padding:6px"> :
+      <input id="pl-m" type="number" min="0" max="59" value="24" style="width:52px;padding:6px"> :
+      <input id="pl-s" type="number" min="0" max="59" value="30" style="width:52px;padding:6px">
+    </div>
+    <div id="pl-out" style="margin-top:10px"></div>
+  </div>
   <div class="card" style="opacity:.85">
     <details>
       <summary style="cursor:pointer"><h2 style="display:inline">🗄️ แผนเก่า · Sub-2 (ก.ค. 2026)</h2> <span style="font-size:11px;color:var(--text-muted)">เก็บไว้อ้างอิง · ใช้แผน Runna ด้านบนแทน</span></summary>
@@ -3588,6 +3599,38 @@ function renderStats() {
 }
 
 // ===== RUNNA PLAN (from runna_plan.json, Runna calendar feed) =====
+function renderPaceLab() {
+  const el = document.getElementById('pace-lab-card'); if (!el) return;
+  const vo2 = v => -4.60 + 0.182258*v + 0.000104*v*v;
+  const pct = t => 0.8 + 0.1894393*Math.exp(-0.012778*t) + 0.2989558*Math.exp(-0.1932605*t);
+  const velFor = x => (-0.182258 + Math.sqrt(0.182258*0.182258 + 4*0.000104*(x+4.60))) / (2*0.000104);
+  const fmt = sec => { sec = Math.round(sec); return Math.floor(sec/60) + ':' + String(sec%60).padStart(2,'0'); };
+  const fmtHMS = sec => { sec = Math.round(sec); const h = Math.floor(sec/3600), m = Math.floor(sec%3600/60), s = sec%60; return h + ':' + String(m).padStart(2,'0') + ':' + String(s).padStart(2,'0'); };
+  const pk = v => fmt(60000/v);
+  const vdotOf = (d, sec) => { const t = sec/60; return vo2(d/t) / pct(t); };
+  const raceSec = (vd, d) => { let lo = d*0.1, hi = 4*3600*d/21097.5 + 3600; for (let i=0;i<60;i++){ const mid=(lo+hi)/2; vdotOf(d,mid) > vd ? lo=mid : hi=mid; } return (lo+hi)/2; };
+  function draw() {
+    const d = +document.getElementById('pl-dist').value;
+    const sec = (+document.getElementById('pl-h').value||0)*3600 + (+document.getElementById('pl-m').value||0)*60 + (+document.getElementById('pl-s').value||0);
+    const out = document.getElementById('pl-out');
+    if (sec < 120) { out.textContent = 'ใส่เวลาให้ครบ'; return; }
+    const vd = vdotOf(d, sec);
+    const mSec = raceSec(vd, 42195), hSec = raceSec(vd, 21097.5);
+    const target = vdotOf(21097.5, 2*3600 + 24*60 + 30);
+    const row = (k, name, desc, val) => `<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--border,#3333)"><span><b>${k}</b> ${name}<br><span style="font-size:11px;color:var(--text-muted)">${desc}</span></span><span style="text-align:right;font-weight:600">${val}<span style="font-size:11px;font-weight:400"> /กม.</span></span></div>`;
+    out.innerHTML = `<div style="font-size:24px;font-weight:700">VDOT ${vd.toFixed(1)}</div>
+      ${row('E','Easy','วิ่งสบาย คุยได้ · วิ่งยาว/ฟื้นตัว', pk(velFor(0.59*vd))+'–'+pk(velFor(0.67*vd)))}
+      ${row('M','Marathon','pace มาราธอน', pk(42195/(mSec/60)))}
+      ${row('T','Threshold','tempo 20 นาที หรือ 4-5×1 กม. พัก 1 นาที', pk(velFor(0.88*vd)))}
+      ${row('I','Interval','VO₂max เช่น 5×1,000 ม. พักจ็อก', pk(velFor(0.98*vd)))}
+      <div style="margin-top:8px;font-size:12px">คาดการณ์: Half <b>${fmtHMS(hSec)}</b> (${fmt(hSec/21.0975)}/กม.) · Marathon <b>${fmtHMS(mSec)}</b></div>
+      <div class="alert-box" style="margin-top:8px;font-size:12px">🎯 เป้า Korat 2:24:30 ต้องใช้ VDOT ≈ <b>${target.toFixed(1)}</b> ${vd >= target ? '— ตัวเลขนี้ถึงเป้าแล้ว' : '— ยังห่าง ' + (target-vd).toFixed(1) + ' (ผลวิ่งร้อน/เนินจะต่ำกว่าจริง ใช้ผล Race Pace 6 พ.ย. ยืนยัน)'}</div>`;
+  }
+  ['pl-dist','pl-h','pl-m','pl-s'].forEach(id => document.getElementById(id).addEventListener('input', draw));
+  draw();
+}
+renderPaceLab();
+
 function renderRunnaPlan() {
   const el = document.getElementById('runna-plan');
   if (!el) return;
@@ -3635,6 +3678,7 @@ renderRuns();
 renderSleep();
 renderPlan();
 renderRunnaPlan();
+renderPaceLab();
 renderRace();
 renderGels();
 renderNutrition();
