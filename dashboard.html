@@ -762,6 +762,18 @@ renderTypes();renderOptions();show();})();</script><div class="card">
     <h2>❤️ HR Zone Distribution (all time)</h2>
     <p>HR zones: Garmin archive เท่านั้น ยังไม่รวม Zepp เพราะขอบเขต Zone ต่างกัน</p><div id="stats-zones"></div>
   </div>
+  <div class="card" id="pace-lab-card">
+    <h2>🧮 Pace Lab · VDOT จากผลวิ่งจริง</h2>
+    <div style="font-size:12px;color:var(--text-muted);margin-bottom:8px">ดึง Best Efforts ของคุณมาคำนวณ VDOT และ pace ซ้อมให้อัตโนมัติ (สูตร Daniels &amp; Gilbert) · เลือก effort อื่นหรือกรอกเองได้</div>
+    <div id="pl-src" style="margin-bottom:8px"></div>
+    <div id="pl-manual" style="display:none;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:8px">
+      <select id="pl-dist" style="padding:6px;border-radius:6px"><option value="1609.34">1 ไมล์</option><option value="5000">5 กม.</option><option value="10000">10 กม.</option><option value="21097.5" selected>ฮาล์ฟ</option><option value="42195">มาราธอน</option></select>
+      <input id="pl-h" type="number" min="0" value="2" style="width:52px;padding:6px"> :
+      <input id="pl-m" type="number" min="0" max="59" value="24" style="width:52px;padding:6px"> :
+      <input id="pl-s" type="number" min="0" max="59" value="30" style="width:52px;padding:6px">
+    </div>
+    <div id="pl-out"></div>
+  </div>
 </section>
 
 <!-- ============= SUB-2 PLAN PAGE ============= -->
@@ -889,17 +901,6 @@ renderTypes();renderOptions();show();})();</script><div class="card">
     <div class="alert-box" style="margin-top:8px;font-size:12px">💡 ตัวชี้ "base ดีขึ้น" ที่แม่นสุด = <strong>HR drift ลดลง + pace เร็วขึ้นที่ HR เท่าเดิม</strong></div>
   </div>
 
-  <div class="card" id="pace-lab-card">
-    <h2>🧮 Pace Lab · VDOT Calculator</h2>
-    <div style="font-size:12px;color:var(--text-muted);margin-bottom:8px">ใส่ผลแข่ง/เทสล่าสุด → ได้ pace ซ้อมแต่ละโซน (สูตร Daniels &amp; Gilbert) · ค่าเริ่มต้น = เป้า Half 2:24:30 · ผลวิ่งร้อน/เนินจะได้ VDOT ต่ำกว่าจริง</div>
-    <div style="display:flex;gap:6px;flex-wrap:wrap;align-items:center">
-      <select id="pl-dist" style="padding:6px;border-radius:6px"><option value="1609.34">1 ไมล์</option><option value="3000">3 กม.</option><option value="5000">5 กม.</option><option value="10000">10 กม.</option><option value="21097.5" selected>ฮาล์ฟ</option><option value="42195">มาราธอน</option></select>
-      <input id="pl-h" type="number" min="0" value="2" style="width:52px;padding:6px"> :
-      <input id="pl-m" type="number" min="0" max="59" value="24" style="width:52px;padding:6px"> :
-      <input id="pl-s" type="number" min="0" max="59" value="30" style="width:52px;padding:6px">
-    </div>
-    <div id="pl-out" style="margin-top:10px"></div>
-  </div>
   <div class="card" style="opacity:.85">
     <details>
       <summary style="cursor:pointer"><h2 style="display:inline">🗄️ แผนเก่า · Sub-2 (ก.ค. 2026)</h2> <span style="font-size:11px;color:var(--text-muted)">เก็บไว้อ้างอิง · ใช้แผน Runna ด้านบนแทน</span></summary>
@@ -3609,27 +3610,49 @@ function renderPaceLab() {
   const pk = v => fmt(60000/v);
   const vdotOf = (d, sec) => { const t = sec/60; return vo2(d/t) / pct(t); };
   const raceSec = (vd, d) => { let lo = d*0.1, hi = 4*3600*d/21097.5 + 3600; for (let i=0;i<60;i++){ const mid=(lo+hi)/2; vdotOf(d,mid) > vd ? lo=mid : hi=mid; } return (lo+hi)/2; };
+  const toSec = t => t.split(':').reduce((a, x) => a*60 + (+x), 0);
+  const R = (DATA.stats && DATA.stats.rankings) || {};
+  const DISTS = [['5 km', '5 กม.', 5000], ['10 km', '10 กม.', 10000], ['Half', 'Half', 21097.5]];
+  const efforts = [];
+  DISTS.forEach(([k, label, d]) => (R[k] || []).slice(0, 2).forEach(e => {
+    const sec = e.seconds || toSec(e.time);
+    if (sec > 0) efforts.push({label, d, sec, date: e.date, src: e.source, vd: vdotOf(d, sec)});
+  }));
+  efforts.sort((a, b) => b.vd - a.vd);
+  const sel = document.createElement('select'); sel.style.cssText = 'padding:6px;border-radius:6px;max-width:100%';
+  efforts.forEach((e, i) => sel.add(new Option(`${e.label} ${fmtHMS(e.sec).replace(/^0:/, '')} · ${e.date} · VDOT ${e.vd.toFixed(1)}${i === 0 ? ' (สูงสุด)' : ''}`, i)));
+  sel.add(new Option('✏️ กรอกเอง', 'manual'));
+  document.getElementById('pl-src').appendChild(sel);
+  const manual = document.getElementById('pl-manual');
   function draw() {
-    const d = +document.getElementById('pl-dist').value;
-    const sec = (+document.getElementById('pl-h').value||0)*3600 + (+document.getElementById('pl-m').value||0)*60 + (+document.getElementById('pl-s').value||0);
+    let d, sec, note = '';
+    if (sel.value === 'manual') {
+      manual.style.display = 'flex';
+      d = +document.getElementById('pl-dist').value;
+      sec = (+document.getElementById('pl-h').value||0)*3600 + (+document.getElementById('pl-m').value||0)*60 + (+document.getElementById('pl-s').value||0);
+    } else {
+      manual.style.display = 'none';
+      const e = efforts[+sel.value]; if (!e) { document.getElementById('pl-out').textContent = 'ยังไม่มี Best Effort'; return; }
+      d = e.d; sec = e.sec;
+      note = `<div style="font-size:11px;color:var(--text-muted);margin-top:4px">ที่มา (ใช้ ≥5 กม. เท่านั้น; 1 ไมล์ใน split ไม่ใช่ความพยายามสูงสุดจริง): ${e.label} ${e.date} (${e.src}) · เป็นช่วงที่เร็วที่สุดภายในวิ่ง ไม่ใช่ time trial เต็มระยะ — VDOT น่าจะต่ำกว่าศักยภาพ โดยเฉพาะวิ่งร้อน/เนิน</div>`;
+    }
     const out = document.getElementById('pl-out');
     if (sec < 120) { out.textContent = 'ใส่เวลาให้ครบ'; return; }
     const vd = vdotOf(d, sec);
     const mSec = raceSec(vd, 42195), hSec = raceSec(vd, 21097.5);
     const target = vdotOf(21097.5, 2*3600 + 24*60 + 30);
     const row = (k, name, desc, val) => `<div style="display:flex;justify-content:space-between;padding:6px 0;border-bottom:1px solid var(--border,#3333)"><span><b>${k}</b> ${name}<br><span style="font-size:11px;color:var(--text-muted)">${desc}</span></span><span style="text-align:right;font-weight:600">${val}<span style="font-size:11px;font-weight:400"> /กม.</span></span></div>`;
-    out.innerHTML = `<div style="font-size:24px;font-weight:700">VDOT ${vd.toFixed(1)}</div>
+    out.innerHTML = `<div style="font-size:24px;font-weight:700">VDOT ${vd.toFixed(1)}</div>${note}
       ${row('E','Easy','วิ่งสบาย คุยได้ · วิ่งยาว/ฟื้นตัว', pk(velFor(0.59*vd))+'–'+pk(velFor(0.67*vd)))}
       ${row('M','Marathon','pace มาราธอน', pk(42195/(mSec/60)))}
       ${row('T','Threshold','tempo 20 นาที หรือ 4-5×1 กม. พัก 1 นาที', pk(velFor(0.88*vd)))}
       ${row('I','Interval','VO₂max เช่น 5×1,000 ม. พักจ็อก', pk(velFor(0.98*vd)))}
       <div style="margin-top:8px;font-size:12px">คาดการณ์: Half <b>${fmtHMS(hSec)}</b> (${fmt(hSec/21.0975)}/กม.) · Marathon <b>${fmtHMS(mSec)}</b></div>
-      <div class="alert-box" style="margin-top:8px;font-size:12px">🎯 เป้า Korat 2:24:30 ต้องใช้ VDOT ≈ <b>${target.toFixed(1)}</b> ${vd >= target ? '— ตัวเลขนี้ถึงเป้าแล้ว' : '— ยังห่าง ' + (target-vd).toFixed(1) + ' (ผลวิ่งร้อน/เนินจะต่ำกว่าจริง ใช้ผล Race Pace 6 พ.ย. ยืนยัน)'}</div>`;
+      <div class="alert-box" style="margin-top:8px;font-size:12px">🎯 เป้า Korat 2:24:30 ต้องใช้ VDOT ≈ <b>${target.toFixed(1)}</b> ${vd >= target ? '— ถึงเป้าแล้ว' : '— ยังห่าง ' + (target-vd).toFixed(1) + ' · ใช้ผล Race Pace 6 พ.ย. ยืนยัน'}</div>`;
   }
-  ['pl-dist','pl-h','pl-m','pl-s'].forEach(id => document.getElementById(id).addEventListener('input', draw));
+  [sel, ...['pl-dist','pl-h','pl-m','pl-s'].map(id => document.getElementById(id))].forEach(x => x.addEventListener('input', draw));
   draw();
 }
-renderPaceLab();
 
 function renderRunnaPlan() {
   const el = document.getElementById('runna-plan');
