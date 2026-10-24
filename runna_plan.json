@@ -1,31 +1,9 @@
 {
   "meta": {
     "source": "Runna calendar feed",
-    "fetched": "2026-10-23 09:20"
+    "fetched": "2026-10-24 08:24"
   },
   "workouts": [
-    {
-      "date": "2026-10-23",
-      "week": 18,
-      "kind": "intervals",
-      "title": "Drop Set",
-      "category": "Intervals",
-      "distance": "9km",
-      "duration": "1h0m - 1h20m",
-      "est_min": 75,
-      "details": "2km warm up at a conversational pace (no faster than 6:40/km), 90s walking rest\n\n2 reps of:\n• 1km at 5:40/km, 90s walking rest\n\n2 reps of:\n• 800m at 5:35/km, 90s walking rest\n\n2 reps of:\n• 600m at 5:20/km, 90s walking rest\n\n2 reps of:\n• 400m at 5:15/km, 90s walking rest\n\n2 reps of:\n• 200m at 5:05/km, 90s walking rest\n\n1km cool down at a conversational pace (or slower!)"
-    },
-    {
-      "date": "2026-10-24",
-      "week": 18,
-      "kind": "easy",
-      "title": "10km Easy Run",
-      "category": "Easy Run",
-      "distance": "10km",
-      "duration": "1h0m - 1h10m",
-      "est_min": 70,
-      "details": "10km easy run at a conversational pace (no faster than 6:40/km). This is a limit, not a target - run at whatever pace feels truly easy!"
-    },
     {
       "date": "2026-10-25",
       "week": 18,
@@ -36,6 +14,17 @@
       "duration": "1h40m - 1h50m",
       "est_min": 110,
       "details": "7km at a conversational pace\n1km at 6:35/km\n6km at a conversational pace"
+    },
+    {
+      "date": "2026-10-26",
+      "week": 18,
+      "kind": "intervals",
+      "title": "Drop Set",
+      "category": "Intervals",
+      "distance": "9km",
+      "duration": "1h0m - 1h20m",
+      "est_min": 75,
+      "details": "2km warm up at a conversational pace (no faster than 6:40/km), 90s walking rest\n\n2 reps of:\n• 1km at 5:40/km, 90s walking rest\n\n2 reps of:\n• 800m at 5:35/km, 90s walking rest\n\n2 reps of:\n• 600m at 5:20/km, 90s walking rest\n\n2 reps of:\n• 400m at 5:15/km, 90s walking rest\n\n2 reps of:\n• 200m at 5:05/km, 90s walking rest\n\n1km cool down at a conversational pace (or slower!)"
     },
     {
       "date": "2026-10-30",

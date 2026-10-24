@@ -2,14 +2,14 @@
   "meta": {
     "version": 2,
     "note": "Shoe rotation tracker. km = base_km (Garmin gear, as of base_date) + Zepp runs logged with the shoe's gear_ids (zepp_shoes.py, every sync).",
-    "last_updated": "2026-10-23"
+    "last_updated": "2026-10-24"
   },
   "shoes": [
     {
       "id": 1,
       "name": "ASICS Novablast 5",
       "nick": "Novablast",
-      "km": 342,
+      "km": 352,
       "max_km": 650,
       "first_use": "2026-03-14",
       "role": "Long Run + Easy",
@@ -20,9 +20,9 @@
       "gear_ids": [
         "3EDFA9D7-BE4A-4C47-8D5F-824F9176DFBE"
       ],
-      "zepp_km": 140.9,
-      "zepp_runs": 15,
-      "last_used": "2026-10-18"
+      "zepp_km": 150.9,
+      "zepp_runs": 16,
+      "last_used": "2026-10-24"
     },
     {
       "id": 2,
