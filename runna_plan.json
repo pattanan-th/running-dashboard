@@ -1,20 +1,9 @@
 {
   "meta": {
     "source": "Runna calendar feed",
-    "fetched": "2026-10-25 13:59"
+    "fetched": "2026-10-25 21:12"
   },
   "workouts": [
-    {
-      "date": "2026-10-25",
-      "week": 18,
-      "kind": "long",
-      "title": "14km Hotspot Long Run",
-      "category": "Long Run",
-      "distance": "14km",
-      "duration": "1h40m - 1h50m",
-      "est_min": 110,
-      "details": "7km at a conversational pace\n1km at 6:35/km\n6km at a conversational pace"
-    },
     {
       "date": "2026-10-26",
       "week": 18,

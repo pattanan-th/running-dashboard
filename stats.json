@@ -1322,6 +1322,15 @@
       "gain": 1.56,
       "source": "zepp",
       "id": "zepp:1792798515"
+    },
+    {
+      "d": "2026-10-25",
+      "km": 14.057,
+      "min": 110.58,
+      "cal": 1230,
+      "gain": 1.06,
+      "source": "zepp",
+      "id": "zepp:1792928584"
     }
   ],
   "rankings": {
@@ -1561,6 +1570,16 @@
         "name": "Si Racha - On Off 200s",
         "pace": "6:19",
         "source": "garmin"
+      },
+      {
+        "time": "6:20",
+        "seconds": 379.99196787148594,
+        "pace": "6:20",
+        "date": "2026-10-25",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1792928584",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "6:21",
@@ -2873,6 +2892,16 @@
         "source": "garmin"
       },
       {
+        "time": "10:53",
+        "seconds": 653.3875598086124,
+        "pace": "6:46",
+        "date": "2026-10-25",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1792928584",
+        "method": "recorded_distance_elapsed_interpolated"
+      },
+      {
         "time": "10:55",
         "seconds": 655.424242424242,
         "pace": "6:47",
@@ -4022,6 +4051,16 @@
         "source": "garmin"
       },
       {
+        "time": "37:54",
+        "seconds": 2274.027906976744,
+        "pace": "7:35",
+        "date": "2026-10-25",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1792928584",
+        "method": "recorded_distance_elapsed_interpolated"
+      },
+      {
         "time": "37:59",
         "date": "2026-04-10",
         "name": "Nakhon Ratchasima - W5 Fri Tempo",
@@ -4682,6 +4721,16 @@
         "method": "recorded_distance_elapsed_interpolated"
       },
       {
+        "time": "1:17:28",
+        "seconds": 4648.307692307692,
+        "pace": "7:45",
+        "date": "2026-10-25",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1792928584",
+        "method": "recorded_distance_elapsed_interpolated"
+      },
+      {
         "time": "1:18:33",
         "seconds": 4712.611842105263,
         "pace": "7:51",
@@ -4940,6 +4989,13 @@
         "pace": "8:53",
         "date": "2026-06-03",
         "name": "Si Racha - W12 Wed Long Run"
+      },
+      {
+        "time": "14.1 km",
+        "pace": "7:52",
+        "date": "2026-10-25",
+        "name": "Run",
+        "source": "zepp"
       },
       {
         "time": "14.0 km",
@@ -5968,11 +6024,11 @@
     ]
   },
   "lifetime": {
-    "runs": 176,
-    "km": 1263.01,
-    "hours": 195.68,
-    "calories": 100670.0,
-    "elevation_m": 25067.86,
+    "runs": 177,
+    "km": 1277.07,
+    "hours": 197.53,
+    "calories": 101900.0,
+    "elevation_m": 25068.92,
     "since": "2023-05-04"
   },
   "zones_sec": [
@@ -5999,9 +6055,9 @@
       "hours": 40.34
     },
     "2026": {
-      "runs": 110,
-      "km": 933.29,
-      "hours": 138.38
+      "runs": 111,
+      "km": 947.35,
+      "hours": 140.22
     }
   },
   "by_month": {
@@ -6026,7 +6082,7 @@
     "2026-07": 69.58,
     "2026-08": 96.01,
     "2026-09": 120.59,
-    "2026-10": 94.3
+    "2026-10": 108.36
   },
   "best": {
     "fastest_1km": "4:53",
@@ -6309,6 +6365,14 @@
         "name": "Nakhon Ratchasima - W5 Sat Easy Run",
         "source": "garmin",
         "id": "garmin:22487281289"
+      },
+      {
+        "distance_m": 799.2799999999997,
+        "pace": "6:15",
+        "date": "2026-10-25",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1792928584"
       },
       {
         "distance_m": 793.1541573660716,
@@ -7761,6 +7825,14 @@
         "id": "garmin:12866566797"
       },
       {
+        "distance_m": 1489.0199999999995,
+        "pace": "6:43",
+        "date": "2026-10-25",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1792928584"
+      },
+      {
         "distance_m": 1486.65966796875,
         "pace": "6:44",
         "date": "2026-06-19",
@@ -9195,6 +9267,14 @@
         "id": "garmin:20763895756"
       },
       {
+        "distance_m": 2730.8499999999995,
+        "pace": "7:19",
+        "date": "2026-10-25",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1792928584"
+      },
+      {
         "distance_m": 2727.2636108398438,
         "pace": "7:20",
         "date": "2025-07-31",
@@ -10445,6 +10525,14 @@
         "id": "garmin:21781449207"
       },
       {
+        "distance_m": 3972.17,
+        "pace": "7:33",
+        "date": "2026-10-25",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1792928584"
+      },
+      {
         "distance_m": 3956.699905395508,
         "pace": "7:35",
         "date": "2026-06-27",
@@ -11295,6 +11383,14 @@
         "id": "zepp:1786236856"
       },
       {
+        "distance_m": 7896.19,
+        "pace": "7:36",
+        "date": "2026-10-25",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1792928584"
+      },
+      {
         "distance_m": 7854.667297363281,
         "pace": "7:38",
         "date": "2026-03-29",
@@ -11711,6 +11807,14 @@
         "name": "Run",
         "source": "zepp",
         "id": "zepp:1792317209"
+      },
+      {
+        "distance_m": 11550.34,
+        "pace": "7:48",
+        "date": "2026-10-25",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1792928584"
       },
       {
         "distance_m": 11545.849999999999,
@@ -12196,6 +12300,16 @@
         "date": "2026-07-05",
         "name": "Run",
         "source": "garmin"
+      },
+      {
+        "duration_seconds": 6635,
+        "time": "1:50:35",
+        "distance_m": 14057.0,
+        "pace": "7:52",
+        "date": "2026-10-25",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1792928584"
       },
       {
         "duration_seconds": 6465,

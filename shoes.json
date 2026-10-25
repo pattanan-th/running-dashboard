@@ -85,7 +85,7 @@
       "id": 5,
       "name": "Adidas Adizero Boston 13",
       "nick": "Boston",
-      "km": 122,
+      "km": 136,
       "max_km": 700,
       "first_use": "2026-07-31",
       "role": "Long + Tempo",
@@ -96,9 +96,9 @@
       "gear_ids": [
         "EBED6B5B-4A9E-463C-8661-DC22F0B2E312"
       ],
-      "zepp_km": 122.3,
-      "zepp_runs": 13,
-      "last_used": "2026-10-18"
+      "zepp_km": 136.3,
+      "zepp_runs": 14,
+      "last_used": "2026-10-25"
     }
   ],
   "manual_splits": [
