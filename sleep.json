@@ -2,8 +2,8 @@
   "meta": {
     "user": "ITon",
     "device": "Garmin archive / Amazfit T-Rex 3",
-    "date_range": "2026-03-14 to 2026-10-30",
-    "nights_collected": 222,
+    "date_range": "2026-03-14 to 2026-10-31",
+    "nights_collected": 223,
     "missing": [
       "2026-04-07"
     ],
@@ -3170,18 +3170,35 @@
     },
     {
       "d": "2026-10-30",
-      "t": "7h 14m",
-      "dp": "1h 33m",
-      "li": "3h 45m",
-      "rm": "1h 56m",
-      "aw": "7m",
+      "t": "7h 13m",
+      "dp": "1h 19m",
+      "li": "3h 56m",
+      "rm": "1h 58m",
+      "aw": "8m",
       "bd": "10:32 PM",
       "wk": "05:53 AM",
       "r": 58.0,
       "bb": null,
       "source": "zepp",
-      "score": 81,
-      "duration_minutes": 434,
+      "score": 80,
+      "duration_minutes": 433,
+      "session_count": 1,
+      "other_sleep_minutes": 0
+    },
+    {
+      "d": "2026-10-31",
+      "t": "8h 26m",
+      "dp": "1h 57m",
+      "li": "4h 23m",
+      "rm": "2h 6m",
+      "aw": "9m",
+      "bd": "11:37 PM",
+      "wk": "08:12 AM",
+      "r": 62.0,
+      "bb": null,
+      "source": "zepp",
+      "score": 80,
+      "duration_minutes": 506,
       "session_count": 1,
       "other_sleep_minutes": 0
     }
