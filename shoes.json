@@ -2,7 +2,7 @@
   "meta": {
     "version": 2,
     "note": "Shoe rotation tracker. km = base_km (Garmin gear, as of base_date) + Zepp runs logged with the shoe's gear_ids (zepp_shoes.py, every sync).",
-    "last_updated": "2026-10-31"
+    "last_updated": "2026-11-01"
   },
   "shoes": [
     {
@@ -81,7 +81,7 @@
       "id": 5,
       "name": "Adidas Adizero Boston 13",
       "nick": "Boston",
-      "km": 144,
+      "km": 155,
       "first_use": "2026-07-31",
       "role": "Long + Tempo",
       "color": "#ff7b72",
@@ -91,9 +91,9 @@
       "gear_ids": [
         "EBED6B5B-4A9E-463C-8661-DC22F0B2E312"
       ],
-      "zepp_km": 144.1,
-      "zepp_runs": 15,
-      "last_used": "2026-10-30"
+      "zepp_km": 155.1,
+      "zepp_runs": 16,
+      "last_used": "2026-11-01"
     }
   ],
   "manual_splits": [
