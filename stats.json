@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-11-07",
+    "generated": "2026-11-08",
     "source": "Garmin archive + Zepp",
     "split_rankings_source": "Garmin archive + Zepp recorded distance",
     "zones_source": "Garmin archive",
@@ -1358,6 +1358,15 @@
       "gain": 0,
       "source": "zepp",
       "id": "zepp:1793923832"
+    },
+    {
+      "d": "2026-11-08",
+      "km": 21.09,
+      "min": 143.6,
+      "cal": 1820,
+      "gain": 21.89,
+      "source": "zepp",
+      "id": "zepp:1794085435"
     }
   ],
   "rankings": {
@@ -1443,6 +1452,16 @@
         "name": "Si Racha - W1 Sun Easy Run",
         "pace": "5:32",
         "source": "garmin"
+      },
+      {
+        "time": "5:39",
+        "seconds": 338.8759124087592,
+        "pace": "5:39",
+        "date": "2026-11-08",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1794085435",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "5:41",
@@ -2599,6 +2618,16 @@
         "source": "garmin"
       },
       {
+        "time": "9:07",
+        "seconds": 547.0862068965516,
+        "pace": "5:40",
+        "date": "2026-11-08",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1794085435",
+        "method": "recorded_distance_elapsed_interpolated"
+      },
+      {
         "time": "9:17",
         "seconds": 557.2206405693946,
         "pace": "5:46",
@@ -3753,6 +3782,16 @@
     ],
     "5 km": [
       {
+        "time": "29:53",
+        "seconds": 1793.4303278688521,
+        "pace": "5:59",
+        "date": "2026-11-08",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1794085435",
+        "method": "recorded_distance_elapsed_interpolated"
+      },
+      {
         "time": "31:18",
         "seconds": 1878.27304964539,
         "pace": "6:16",
@@ -4729,6 +4768,16 @@
     ],
     "10 km": [
       {
+        "time": "1:02:56",
+        "seconds": 3775.91015625,
+        "pace": "6:18",
+        "date": "2026-11-08",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1794085435",
+        "method": "recorded_distance_elapsed_interpolated"
+      },
+      {
         "time": "1:05:11",
         "seconds": 3911.3993506493507,
         "pace": "6:31",
@@ -5053,6 +5102,13 @@
         "pace": "9:52",
         "date": "2026-05-24",
         "name": "Si Racha - W11 Sun Long Run"
+      },
+      {
+        "time": "21.1 km",
+        "pace": "6:49",
+        "date": "2026-11-08",
+        "name": "Run",
+        "source": "zepp"
       },
       {
         "time": "19.1 km",
@@ -6162,11 +6218,11 @@
     ]
   },
   "lifetime": {
-    "runs": 180,
-    "km": 1300.44,
-    "hours": 200.61,
-    "calories": 104039.0,
-    "elevation_m": 25070.02,
+    "runs": 181,
+    "km": 1321.53,
+    "hours": 203.0,
+    "calories": 105859.0,
+    "elevation_m": 25091.91,
     "since": "2023-05-04"
   },
   "zones_sec": [
@@ -6193,9 +6249,9 @@
       "hours": 40.34
     },
     "2026": {
-      "runs": 114,
-      "km": 970.72,
-      "hours": 143.3
+      "runs": 115,
+      "km": 991.81,
+      "hours": 145.69
     }
   },
   "by_month": {
@@ -6221,7 +6277,7 @@
     "2026-08": 96.01,
     "2026-09": 120.59,
     "2026-10": 116.11,
-    "2026-11": 15.62
+    "2026-11": 36.71
   },
   "best": {
     "fastest_1km": "4:53",
@@ -6368,6 +6424,14 @@
         "name": "Run",
         "source": "zepp",
         "id": "zepp:1790936126"
+      },
+      {
+        "distance_m": 884.4599999999991,
+        "pace": "5:39",
+        "date": "2026-11-08",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1794085435"
       },
       {
         "distance_m": 882.0900000000001,
@@ -7642,6 +7706,14 @@
         "name": "Si Racha - W1 Sun Easy Run",
         "source": "garmin",
         "id": "garmin:21728848970"
+      },
+      {
+        "distance_m": 1764.7300000000032,
+        "pace": "5:40",
+        "date": "2026-11-08",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1794085435"
       },
       {
         "distance_m": 1730.85986328125,
@@ -8982,6 +9054,14 @@
     ],
     "20 min": [
       {
+        "distance_m": 3422.2400000000016,
+        "pace": "5:51",
+        "date": "2026-11-08",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1794085435"
+      },
+      {
         "distance_m": 3349.650146484375,
         "pace": "5:58",
         "date": "2026-07-18",
@@ -10272,6 +10352,14 @@
     ],
     "30 min": [
       {
+        "distance_m": 5015.880000000001,
+        "pace": "5:59",
+        "date": "2026-11-08",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1794085435"
+      },
+      {
         "distance_m": 4790.929999999999,
         "pace": "6:16",
         "date": "2026-08-16",
@@ -11490,6 +11578,14 @@
     ],
     "60 min": [
       {
+        "distance_m": 9617.5,
+        "pace": "6:14",
+        "date": "2026-11-08",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1794085435"
+      },
+      {
         "distance_m": 9228.6,
         "pace": "6:30",
         "date": "2026-08-16",
@@ -12012,6 +12108,14 @@
     ],
     "90 min": [
       {
+        "distance_m": 13735.32,
+        "pace": "6:33",
+        "date": "2026-11-08",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1794085435"
+      },
+      {
         "distance_m": 12622.290405273438,
         "pace": "7:08",
         "date": "2026-06-21",
@@ -12229,6 +12333,14 @@
       }
     ],
     "120 min": [
+      {
+        "distance_m": 17990.640000000003,
+        "pace": "6:40",
+        "date": "2026-11-08",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1794085435"
+      },
       {
         "distance_m": 16738.35173688616,
         "pace": "7:10",
@@ -12449,6 +12561,16 @@
         "date": "2025-10-05",
         "name": "Run",
         "source": "garmin"
+      },
+      {
+        "duration_seconds": 8616,
+        "time": "2:23:36",
+        "distance_m": 21090.0,
+        "pace": "6:49",
+        "date": "2026-11-08",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1794085435"
       },
       {
         "duration_seconds": 8586.0,
