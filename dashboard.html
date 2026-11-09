@@ -3448,7 +3448,7 @@ function renderSummary() {
 }
 
 // ===== RACE DAY DROPDOWN =====
-let raceChart = null;
+let raceChart = null, k21Drawn = false;
 const raceFmtPace = s => Math.floor(s/60)+':'+String(Math.round(s%60)).padStart(2,'0');
 const raceFmtTime = s => { s=Math.round(s); const h=Math.floor(s/3600), m=Math.floor(s%3600/60); return (h?h+':'+String(m).padStart(2,'0'):m)+':'+String(s%60).padStart(2,'0'); };
 function renderRaceSelect() {
@@ -3465,7 +3465,7 @@ function showRace(key) {
   const isStatic = !!r.static;
   $('#race-static-korat21').style.display = isStatic ? '' : 'none';
   $('#race-dynamic').style.display = isStatic ? 'none' : '';
-  if (isStatic) return;
+  if (isStatic) { if (!k21Drawn) { k21Drawn = true; renderSummary(); } return; }
   const li = arr => (arr||[]).map(x => `<li>${x}</li>`).join('');
   const stat = (l,v,s) => `<div class="stat"><div class="stat-label">${l}</div><div class="stat-value">${v}</div><div class="stat-sub">${s||''}</div></div>`;
   const pace = r.secs && r.dist_km ? raceFmtPace(r.secs / r.dist_km) : '—';
@@ -3792,7 +3792,6 @@ function renderRunnaPlan() {
 }
 
 // Init
-renderSummary();
 renderRaceSelect();
 renderStats();
 renderStatus();
