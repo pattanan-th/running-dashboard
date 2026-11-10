@@ -52,6 +52,7 @@ if errorlevel 1 (
 
 echo.
 echo [4/4] Pushing to GitHub...
+git pull --rebase --autostash
 git push
 if errorlevel 1 (
     echo ERROR: Push failed - check internet

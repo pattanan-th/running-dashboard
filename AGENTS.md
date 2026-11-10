@@ -64,3 +64,10 @@ and retains only local time/distance pairs in ignored .garmin_effort_cache/.
 Use its --local-only option to recompute new duration choices without logging
 in. Reconcile the archive before adding Garmin activities beyond its cutoff;
 do not double-count Garmin/Zepp copies. Never publish the local cache.
+
+Sub-2 plan tab: source is sub2_plan.html + sub2_plan.js, injected by
+build_dashboard.py. Its settings live in plan_settings.json, which the user
+edits from the website (Save button commits through the GitHub API with a
+token stored only on their device). So `git pull --rebase --autostash` before
+building and pushing, and read plan_settings.json (intensity, latest result,
+weekly feedback) when judging runs against the long-term plan.

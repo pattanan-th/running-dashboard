@@ -1,0 +1,53 @@
+<!-- ============= SUB-2 LONG-TERM PLAN ============= -->
+<section class="page" id="page-sub2">
+  <div class="card" id="s2-week-card">
+    <h2>📅 สัปดาห์นี้</h2>
+    <div id="s2-week"></div>
+  </div>
+  <div class="card">
+    <h2>⚙️ ตั้งค่าแผน</h2>
+    <div class="stat-grid">
+      <label class="stat"><div class="stat-label">วันเริ่ม (จันทร์)</div><input id="s2-start" type="date" class="s2-in" onchange="s2Input()"></label>
+      <label class="stat"><div class="stat-label">วันแข่ง (ไม่บังคับ)</div><input id="s2-race" type="date" class="s2-in" onchange="s2Input()"></label>
+      <label class="stat"><div class="stat-label">จำนวนสัปดาห์ (ถ้าไม่มีวันแข่ง)</div><input id="s2-weeks" type="number" min="8" max="104" class="s2-in" onchange="s2Input()"></label>
+      <label class="stat"><div class="stat-label">Intensity</div>
+        <select id="s2-int" class="s2-in" onchange="s2Input()"><option value="easy">เบา</option><option value="normal">ปกติ</option><option value="hard">หนัก</option></select></label>
+      <label class="stat"><div class="stat-label">ผลล่าสุด: ระยะ</div>
+        <select id="s2-btype" class="s2-in" onchange="s2Input()"><option value="5k">5K</option><option value="10k">10K</option><option value="hm">Half</option></select></label>
+      <label class="stat"><div class="stat-label">ผลล่าสุด: เวลา</div><input id="s2-btime" type="text" placeholder="2:23:36 / 55:30" class="s2-in" onchange="s2Input()"></label>
+    </div>
+    <div style="display:flex;gap:8px;align-items:center;margin-top:10px;flex-wrap:wrap">
+      <button class="btn primary" onclick="s2Save()">💾 Save</button>
+      <button class="btn" onclick="s2Reload()">⟳ โหลดล่าสุด</button>
+      <span id="s2-status" style="font-size:12px;color:var(--text-muted)"></span>
+    </div>
+    <div id="s2-paces" style="font-size:12px;color:var(--text-muted);margin-top:8px"></div>
+    <details style="margin-top:10px"><summary style="cursor:pointer;font-size:13px;color:var(--text-muted)">🔑 ตั้งค่าการ Save (ครั้งเดียวต่อเครื่อง)</summary>
+      <div style="font-size:12px;margin-top:8px;line-height:1.6">
+        1. เปิด github.com → Settings → Developer settings → Personal access tokens → <strong>Fine-grained tokens</strong> → Generate new token<br>
+        2. Repository access: <strong>Only select repositories → running-dashboard</strong><br>
+        3. Permissions → Repository → <strong>Contents: Read and write</strong> (อย่างเดียวพอ) · ตั้งวันหมดอายุตามสะดวก<br>
+        4. คัดลอก token มาวางด้านล่าง → กดเก็บ · token อยู่ในเครื่องนี้เท่านั้น ไม่ขึ้นเว็บ/ไม่เข้า repo<br>
+        ทำซ้ำในมือถือและคอมเครื่องละครั้ง · มือถือหาย → Revoke token ใน GitHub ได้ทันที
+      </div>
+      <div style="display:flex;gap:6px;margin-top:8px;flex-wrap:wrap">
+        <input id="s2-token" type="password" autocomplete="off" placeholder="github_pat_…" class="s2-in" style="flex:1;min-width:180px">
+        <button class="btn" onclick="s2SetToken()">เก็บ</button>
+        <button class="btn danger" onclick="s2ClearToken()">ลบ</button>
+      </div>
+      <div id="s2-token-state" style="font-size:12px;margin-top:6px"></div>
+    </details>
+  </div>
+  <div class="card">
+    <h2>🏋️ Push / Pull / Leg</h2>
+    <div id="s2-gym"></div>
+  </div>
+  <div class="card">
+    <h2>🎯 Milestones</h2>
+    <div id="s2-miles"></div>
+  </div>
+  <div class="card">
+    <h2>🗓️ แผนทั้งหมด</h2>
+    <div id="s2-table" style="overflow-x:auto"></div>
+  </div>
+</section>
