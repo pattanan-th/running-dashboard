@@ -37,7 +37,7 @@ function s2Paces(st) {
   if (!(sec > 0)) return null;
   const at = d => sec * Math.pow(d / km, 1.06) / d;
   const hm = at(S2_DIST.hm), tenk = at(10), fivek = at(5);
-  return {hm, tenk, fivek, thr: (hm + tenk) / 2, hmT: hm * S2_DIST.hm, tenkT: tenk * 10, fivekT: fivek * 5};
+  return {hm, tenk, fivek, thr: (hm + tenk) / 2, ezLo: hm + 60, ezHi: hm + 90, hmT: hm * S2_DIST.hm, tenkT: tenk * 10, fivekT: fivek * 5};
 }
 
 function s2Weeks(st) {
@@ -97,7 +97,7 @@ function s2Sessions(w, P, st) {
   }
   if (w.test) fri = '🧪 Time trial 10K (หรือ 5K) → ใส่ผลในช่อง "ผลล่าสุด" แล้ว Save';
   const satLo = Math.max(20, satMin + 5 * L);
-  const sat = `Easy ${satLo}-${satLo + 10} นาที (HR ≤150) + 3-Minute Routine`;
+  const sat = `Easy ${satLo}-${satLo + 10} นาที (HR ≤150${P ? ` · ~${s2Fmt(P.ezLo)}-${s2Fmt(P.ezHi)}/km` : ''}) + 3-Minute Routine`;
   return {fri, sat, sun, sets, plyo, leg};
 }
 
@@ -163,7 +163,7 @@ function renderSub2Out() {
   const P = s2Paces(sub2), weeks = s2Weeks(sub2), ci = s2CurIdx(weeks);
   // paces line
   $('#s2-paces').innerHTML = P
-    ? `เพซจากผลล่าสุด: Fartlek ${s2Fmt(P.tenk)} · Threshold ${s2Fmt(P.thr)} · HM pace ${s2Fmt(P.hm)} /km · Easy ใช้ HR ≤150`
+    ? `เพซจากผลล่าสุด: Fartlek ${s2Fmt(P.tenk)} · Threshold ${s2Fmt(P.thr)} · HM pace ${s2Fmt(P.hm)} · Easy ~${s2Fmt(P.ezLo)}-${s2Fmt(P.ezHi)} /km (ยึด HR ≤150 เป็นหลัก)`
     : '<span style="color:var(--danger)">ใส่เวลาผลล่าสุดให้ถูกรูปแบบ เช่น 2:23:36 หรือ 55:30</span>';
   // this week
   let wk = '';
@@ -199,12 +199,12 @@ function renderSub2Out() {
     </tbody></table>
     <div style="font-size:12px;color:var(--text-muted);margin-top:6px">จุดเช็คกลางทาง: HM ~2:10 หรือ 10K ~58 นาที · 10K ทำได้ ≤${s2FmtH(goal10)} = พร้อม sub-2 · เทียบเท่าคำนวณด้วย Riegel (ประมาณการ)</div>`;
   // full table
-  $('#s2-table').innerHTML = `<table><thead><tr><th>#</th><th>สัปดาห์</th><th>ช่วง</th><th>ศ. Quality</th><th>อา. Long</th></tr></thead><tbody>${
+  $('#s2-table').innerHTML = `<table><thead><tr><th>#</th><th>สัปดาห์</th><th>ช่วง</th><th>ศ. Quality</th><th>ส. Easy</th><th>อา. Long</th></tr></thead><tbody>${
     weeks.map(w => { const s = s2Sessions(w, P, sub2), [pn, pc] = S2_PH[w.ph];
       return `<tr style="${w.i === ci ? 'background:rgba(88,166,255,0.15);' : ''}${w.down ? 'opacity:0.75;' : ''}">
         <td class="numeric">${w.i + 1}</td><td>${s2Th(w.ws)}</td><td><span class="badge ${pc}">${pn}</span>${w.fb ? (w.fb > 0 ? ' 😌' : ' 🥵') : ''}</td>
-        <td style="font-size:12px">${s.fri}</td><td style="font-size:12px">${s.sun}</td></tr>`; }).join('')}</tbody></table>
-    <div style="font-size:12px;color:var(--text-muted);margin-top:6px">ส. easy ทุกสัปดาห์ · ทุกสัปดาห์ที่ 4 ของช่วง = down week · ปุ่ม ง่ายไป/หนักไป ขยับระดับ ±1 ให้สัปดาห์ถัดๆ ไป</div>`;
+        <td style="font-size:12px">${s.fri}</td><td style="font-size:12px">${s.sat.replace(' + 3-Minute Routine', '')}</td><td style="font-size:12px">${s.sun}</td></tr>`; }).join('')}</tbody></table>
+    <div style="font-size:12px;color:var(--text-muted);margin-top:6px">ส. easy ต่อด้วย 3-Minute Routine ทุกสัปดาห์ · ทุกสัปดาห์ที่ 4 ของช่วง = down week · ปุ่ม ง่ายไป/หนักไป ขยับระดับ ±1 ให้สัปดาห์ถัดๆ ไป</div>`;
 }
 
 function renderSub2() {
