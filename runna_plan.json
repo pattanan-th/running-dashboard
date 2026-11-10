@@ -1,62 +1,117 @@
 {
   "meta": {
     "source": "Runna calendar feed",
-    "fetched": "2026-11-08 07:37"
+    "fetched": "2026-11-10 14:50"
   },
   "workouts": [
     {
-      "date": "2026-10-30",
-      "week": 19,
-      "kind": "tempo",
-      "title": "Tempo",
-      "category": "",
-      "distance": "",
-      "duration": "",
-      "est_min": 50,
-      "details": ""
+      "date": "2026-11-12",
+      "week": 1,
+      "kind": "easy",
+      "title": "5km Easy Run",
+      "category": "Easy Run",
+      "distance": "5km",
+      "duration": "30m - 35m",
+      "est_min": 35,
+      "details": "5km easy run at a conversational pace (no faster than 6:40/km). This is a limit, not a target - run at whatever pace feels truly easy!"
     },
     {
-      "date": "2026-10-31",
-      "week": 19,
+      "date": "2026-11-20",
+      "week": 2,
       "kind": "easy",
       "title": "Easy Run",
       "category": "",
       "distance": "",
       "duration": "",
-      "est_min": 65,
+      "est_min": 35,
       "details": ""
     },
     {
-      "date": "2026-11-01",
-      "week": 19,
+      "date": "2026-11-21",
+      "week": 2,
+      "kind": "easy",
+      "title": "Easy Run",
+      "category": "",
+      "distance": "",
+      "duration": "",
+      "est_min": 35,
+      "details": ""
+    },
+    {
+      "date": "2026-11-22",
+      "week": 2,
+      "kind": "easy",
+      "title": "Easy Run",
+      "category": "",
+      "distance": "",
+      "duration": "",
+      "est_min": 45,
+      "details": ""
+    },
+    {
+      "date": "2026-11-27",
+      "week": 3,
+      "kind": "easy",
+      "title": "Easy Run",
+      "category": "",
+      "distance": "",
+      "duration": "",
+      "est_min": 45,
+      "details": ""
+    },
+    {
+      "date": "2026-11-28",
+      "week": 3,
+      "kind": "easy",
+      "title": "Easy Run",
+      "category": "",
+      "distance": "",
+      "duration": "",
+      "est_min": 40,
+      "details": ""
+    },
+    {
+      "date": "2026-11-29",
+      "week": 3,
       "kind": "long",
       "title": "Long Run",
       "category": "",
       "distance": "",
       "duration": "",
-      "est_min": 85,
+      "est_min": 55,
       "details": ""
     },
     {
-      "date": "2026-11-06",
-      "week": 20,
-      "kind": "intervals",
-      "title": "Taper Intervals",
+      "date": "2026-12-04",
+      "week": 4,
+      "kind": "tempo",
+      "title": "Tempo",
       "category": "",
       "distance": "",
       "duration": "",
-      "est_min": 60,
+      "est_min": 35,
       "details": ""
     },
     {
-      "date": "2026-11-08",
-      "week": 20,
-      "kind": "race",
-      "title": "Race",
+      "date": "2026-12-05",
+      "week": 4,
+      "kind": "easy",
+      "title": "Easy Run",
       "category": "",
       "distance": "",
       "duration": "",
-      "est_min": 150,
+      "est_min": 45,
+      "details": ""
+    },
+    {
+      "date": "2026-12-06",
+      "week": 4,
+      "kind": "long",
+      "title": "Long Run",
+      "category": "",
+      "distance": "",
+      "duration": "",
+      "est_min": 65,
       "details": ""
     }
   ]
