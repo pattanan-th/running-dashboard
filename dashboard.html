@@ -771,18 +771,6 @@ renderTypes();renderOptions();show();})();</script><div class="card">
     <h2>❤️ HR Zone Distribution (all time)</h2>
     <p>HR zones: Garmin archive เท่านั้น ยังไม่รวม Zepp เพราะขอบเขต Zone ต่างกัน</p><div id="stats-zones"></div>
   </div>
-  <div class="card" id="pace-lab-card">
-    <h2>🧮 Pace Lab · VDOT จากผลวิ่งจริง</h2>
-    <div style="font-size:12px;color:var(--text-muted);margin-bottom:8px">ดึง Best Efforts ของคุณมาคำนวณ VDOT และ pace ซ้อมให้อัตโนมัติ (สูตร Daniels &amp; Gilbert) · เลือก effort อื่นหรือกรอกเองได้</div>
-    <div id="pl-src" style="margin-bottom:8px"></div>
-    <div id="pl-manual" style="display:none;gap:6px;flex-wrap:wrap;align-items:center;margin-bottom:8px">
-      <select id="pl-dist" style="padding:6px;border-radius:6px"><option value="1609.34">1 ไมล์</option><option value="5000">5 กม.</option><option value="10000">10 กม.</option><option value="21097.5" selected>ฮาล์ฟ</option><option value="42195">มาราธอน</option></select>
-      <input id="pl-h" type="number" min="0" value="2" style="width:52px;padding:6px"> :
-      <input id="pl-m" type="number" min="0" max="59" value="24" style="width:52px;padding:6px"> :
-      <input id="pl-s" type="number" min="0" max="59" value="30" style="width:52px;padding:6px">
-    </div>
-    <div id="pl-out"></div>
-  </div>
 </section>
 
 <!-- ============= SUB-2 PLAN PAGE ============= -->
@@ -1047,23 +1035,6 @@ renderTypes();renderOptions();show();})();</script><div class="card">
 <!-- ============= RUNS PAGE ============= -->
 <section class="page" id="page-runs"><div class="card" id="zepp-workout-analysis"><h2>วิเคราะห์การซ้อม</h2><p>สรุปจากกราฟและข้อมูลการวิ่ง · เลือกกิจกรรมย้อนหลังได้</p><div id="zepp-workout-select" class="zepp-select"></div><div id="zepp-workout-content"></div></div>
   <div class="card">
-    <h2>🏃 Long Runs Progression</h2>
-    <div class="chart-container"><canvas id="long-runs-chart"></canvas></div>
-  </div>
-  <div class="card">
-    <h2>🎯 True Running Cadence (vs Display)</h2>
-    <div class="alert-box">
-      <strong>💡 Insight:</strong> Garmin's display average includes walking breaks.
-      True running cadence (laps ≥150 spm) is consistently <strong>160-170 spm</strong>.
-    </div>
-    <div class="chart-container"><canvas id="cadence-chart"></canvas></div>
-  </div>
-  <div class="card">
-    <h2>⚡ Pace ↔ Cadence</h2>
-    <div class="alert-box">แต่ละจุด = 1 รัน (avg pace vs avg cadence). วิ่งเร็วขึ้น → cadence สูงขึ้น. 🔵 Long · 🔴 Tempo/Race · 🟢 Easy</div>
-    <div class="chart-container"><canvas id="pace-cad-chart"></canvas></div>
-  </div>
-  <div class="card">
     <h2>📋 All Runs by Week</h2>
     <div style="display:flex;gap:6px;margin-bottom:10px;flex-wrap:wrap">
       <button class="btn primary" onclick="filterRuns('all')" id="ft-all">All</button>
@@ -1072,6 +1043,28 @@ renderTypes();renderOptions();show();})();</script><div class="card">
       <button class="btn" onclick="filterRuns('easy')" id="ft-easy">🟢 Easy</button>
     </div>
     <div id="runs-list"></div><div class="card"><h2>กิจกรรมอื่นจาก Zepp</h2><div style="max-height:300px;overflow:auto"><table><thead><tr><th>วันที่</th><th>กิจกรรม</th><th>เวลา</th><th>HR เฉลี่ย</th></tr></thead><tbody><tr><td>2026-08-29</td><td>Badminton</td><td>13:58</td><td>128</td></tr><tr><td>2026-08-29</td><td>Badminton</td><td>28:17</td><td>137</td></tr><tr><td>2026-08-29</td><td>Badminton</td><td>23:44</td><td>125</td></tr><tr><td>2026-08-29</td><td>Badminton</td><td>15:23</td><td>130</td></tr><tr><td>2026-08-22</td><td>Badminton</td><td>39:43</td><td>133</td></tr><tr><td>2026-07-29</td><td>Esports</td><td>1:07:52</td><td>71</td></tr><tr><td>2026-07-29</td><td>Esports</td><td>19:00</td><td>80</td></tr><tr><td>2026-07-28</td><td>Esports</td><td>49:31</td><td>79</td></tr></tbody></table></div></div>
+  </div>
+  <div class="card">
+    <h2>🗄️ Garmin archive (มี.ค.-ก.ย. 2026)</h2>
+    <details><summary style="cursor:pointer;font-size:13px;color:var(--text-muted)">กราฟยุค Garmin: Long runs · Cadence · Pace↔Cadence (กดเปิด)</summary>
+  <div>
+    <h3>🏃 Long Runs Progression</h3>
+    <div class="chart-container"><canvas id="long-runs-chart"></canvas></div>
+  </div>
+  <div>
+    <h3>🎯 True Running Cadence (vs Display)</h3>
+    <div class="alert-box">
+      <strong>💡 Insight:</strong> Garmin's display average includes walking breaks.
+      True running cadence (laps ≥150 spm) is consistently <strong>160-170 spm</strong>.
+    </div>
+    <div class="chart-container"><canvas id="cadence-chart"></canvas></div>
+  </div>
+  <div>
+    <h3>⚡ Pace ↔ Cadence</h3>
+    <div class="alert-box">แต่ละจุด = 1 รัน (avg pace vs avg cadence). วิ่งเร็วขึ้น → cadence สูงขึ้น. 🔵 Long · 🔴 Tempo/Race · 🟢 Easy</div>
+    <div class="chart-container"><canvas id="pace-cad-chart"></canvas></div>
+  </div>
+    </details>
   </div>
 </section>
 
@@ -1084,29 +1077,17 @@ renderTypes();renderOptions();show();})();</script><div class="card">
   </div>
   <div class="card">
     <h2>❤️ RHR Trend (Last 30 nights)</h2>
-    <div class="alert-box">
-      Baseline 52 (recovered) • 55 (normal) • 56-57 (fatigued) • ≥60 alert
-    </div>
     <div class="chart-container"><canvas id="rhr-chart"></canvas></div>
-  </div>
-  <div class="card">
-    <h2>❤️ RHR Baseline — อ่านค่ายังไง</h2>
-    <table>
-      <thead><tr><th>RHR</th><th>สถานะ</th><th>ความหมาย / ทำอะไร</th></tr></thead>
+    <table style="margin-top:8px">
+      <thead><tr><th>RHR (Zepp)</th><th>สถานะ</th><th>ทำอะไร</th></tr></thead>
       <tbody>
-        <tr><td><strong>≤52</strong></td><td>🟢 recovered</td><td>ฟื้นเต็ม — ซัด/แข่ง/benchmark ได้เต็มที่</td></tr>
-        <tr><td><strong>53-55</strong></td><td>🟢 normal</td><td>ปกติ — ซ้อมได้ตามแผน</td></tr>
-        <tr><td><strong>56-57</strong></td><td>🟡 fatigued</td><td>ล้าเล็กน้อย — เอา easy พอ</td></tr>
-        <tr><td><strong>≥58</strong></td><td>🔴 alert</td><td>ล้ามาก — พัก/ดึง RHR ลงก่อน</td></tr>
+        <tr><td><strong>≤55</strong></td><td>🟢 ฟื้นดี</td><td>ซ้อมหนัก / time trial / แข่งได้เต็มที่</td></tr>
+        <tr><td><strong>56-58</strong></td><td>🟢 ปกติ</td><td>ซ้อมตามแผน</td></tr>
+        <tr><td><strong>59-61</strong></td><td>🟡 ล้า</td><td>เอา easy พอ</td></tr>
+        <tr><td><strong>≥62</strong></td><td>🔴 alert</td><td>พัก / ดึง RHR ลงก่อน (ปกติช่วง 2-3 วันหลังแข่ง)</td></tr>
       </tbody>
     </table>
-    <div class="alert-box" style="margin-top:10px;font-size:12px">
-      <strong>✅ พร้อม benchmark / งานหนัก เมื่อ:</strong> RHR ≤54-55 (ดู 2 เช้าติด) + ขาหายตึงสนิท + stress ~14-20 + นอนดี
-    </div>
-  </div>
-  <div class="card">
-    <h2>🔋 Body Battery Recovery</h2>
-    <div class="chart-container"><canvas id="bb-chart"></canvas></div>
+    <div style="font-size:12px;color:var(--text-muted);margin-top:6px">เกณฑ์จาก T-Rex 3 ก.ค.-พ.ย. 2026 (ค่ากลาง 58) · ค่ายุค Garmin (52-55) ต่ำกว่าเพราะคนละนาฬิกา ใช้เทียบกันไม่ได้ · ดู 2 เช้าติดกันก่อนตัดสิน</div>
   </div>
 </section>
 
@@ -1249,12 +1230,12 @@ renderTypes();renderOptions();show();})();</script><div class="card">
     <h2>🎯 Recommended Use</h2>
     <table>
       <tr><th>Workout</th><th>Shoe</th><th>Why</th></tr>
-      <tr><td>📏 Long Run</td><td>Novablast 5</td><td>cushion for 15-21km</td></tr>
-      <tr><td>💨 Tempo/Speed</td><td>Kinvara 14</td><td>light, responsive</td></tr>
-      <tr><td>🟢 Easy/Recovery</td><td>Dynablast 5</td><td>save the others</td></tr>
-      <tr><td>🏁 RACE</td><td>Novablast 5 ⭐</td><td>tested + cushion</td></tr>
+      <tr><td>📏 Long / 💨 Speedwork</td><td>Adidas Boston 13</td><td>เบา เร็ว ใช้ long มาแล้ว</td></tr>
+      <tr><td>🟢 Easy / Recovery</td><td>Novablast 5</td><td>นุ่ม ถนอมขา</td></tr>
+      <tr><td>⛰️ Trail</td><td>GEL-Venture 10</td><td>ดอกยางสำหรับเทรล</td></tr>
+      <tr><td>🏁 RACE</td><td>Boston 13 ⭐</td><td>ใช้แข่ง Korat Half '26 แล้ว</td></tr>
     </table>
-    <div class="alert-box" style="margin-top:8px">⚠️ Race day = use the shoe you did long runs in (Novablast). Never race in new/untested shoes.</div>
+    <div class="alert-box" style="margin-top:8px">⚠️ วันแข่งใช้คู่ที่ใช้ long run มาแล้วเท่านั้น ห้ามใช้คู่ใหม่</div>
   </div>
 </section>
 
@@ -1297,19 +1278,6 @@ renderTypes();renderOptions();show();})();</script><div class="card">
   <div class="card">
     <h2>📅 By Workout Type</h2>
     <div id="nutrition-by-day"></div>
-  </div>
-
-  <div class="card">
-    <h2>⏰ Meal Timing (training day)</h2>
-    <table>
-      <tr><th>When</th><th>Eat</th><th>Goal</th></tr>
-      <tr><td>คืนก่อนซ้อมหนัก</td><td>ข้าว/พาสต้า + protein + ผัก (carb หนัก)</td><td>top up glycogen</td></tr>
-      <tr><td>เช้าก่อนวิ่ง 2-3h</td><td>ข้าวต้ม/ขนมปัง+น้ำผึ้ง+กล้วย (75-150g carb)</td><td>fuel ready</td></tr>
-      <tr><td>30 min ก่อนวิ่ง</td><td>กล้วย 1 ลูก / 1 ซองน้ำผึ้ง</td><td>quick energy</td></tr>
-      <tr><td>ระหว่างวิ่ง >75 min</td><td>30-60g carb/hr (gel/กล้วยตาก)</td><td>maintain pace</td></tr>
-      <tr><td>หลังวิ่ง 0-30 min</td><td>carb + protein 3:1 (กล้วย+นม/chocolate milk)</td><td>⭐ recovery window</td></tr>
-      <tr><td>หลังวิ่ง 2h</td><td>มื้อใหญ่: ข้าว + protein + ผัก</td><td>full recovery</td></tr>
-    </table>
   </div>
 
   <div class="card">
@@ -1359,7 +1327,7 @@ renderTypes();renderOptions();show();})();</script><div class="card">
       เหงื่อ (ลิตร/ชม.) = น้ำหนักที่หาย (kg) + น้ำที่ดื่ม (ลิตร) · เช่น หาย 1.0 kg + ดื่ม 0.3 L = 1.3 L/ชม.<br>
       ดื่มระหว่างวิ่งให้ได้ ~50-70% ของเหงื่อ ไม่ต้องทดแทนครบ · น้ำหนักหายเกิน 2% (≈1.5 kg) = ดื่มน้อยไป</div>
     <div class="alert-box" style="margin-top:8px">
-      🧂 <strong>Sodium:</strong> อากาศร้อนเสียเหงื่อเยอะ → 400-700mg/hr ระหว่างวิ่ง · เติมเกลือในอาหาร · เกลือแร่หลังซ้อม
+      🧂 <strong>Sodium:</strong> อากาศร้อนเสียเหงื่อเยอะ → 300-600 mg/ชม. ระหว่างวิ่ง (เหงื่อเยอะ/เค็มใช้ค่าบน) · เติมเกลือในอาหาร · เกลือแร่หลังซ้อม
     </div>
   </div>
   <div class="card" id="gel-guide-card">
@@ -1408,46 +1376,23 @@ renderTypes();renderOptions();show();})();</script><div class="card">
     <div class="alert-box" style="margin-top:8px">⚠️ ใช้ยี่ห้อ/สูตรที่ซ้อมกินใน Long run มาแล้วเท่านั้น ห้ามลองของใหม่วันแข่ง</div>
   </div>
   <div class="card">
-    <h2>🎯 Choosing Guide</h2>
-    <div class="alert-box success">
-      <strong>Quick rule:</strong> 30-60g carb/hour · วิ่งเกิน ~75 นาทีค่อยต้องใช้เจล · จำนวนซองและสารอาหาร → ดู 🍯 Gel Guide ด้านบน
-    </div>
-    <h3>Carb content</h3>
+    <h2>🛒 เลือกซื้อเจล</h2>
+    <div style="font-size:12px;color:var(--text-muted);margin-bottom:6px">ปริมาณคาร์บ/โซเดียม/คาเฟอีนที่ควรมี → ดู 🍯 Gel Guide ด้านบน</div>
     <table>
-      <tr><th>Gel type</th><th>Carb</th><th>When</th></tr>
-      <tr><td>Standard gel</td><td>22-30g</td><td>HM, races</td></tr>
-      <tr><td>Mini gel</td><td>15-20g</td><td>shorter runs</td></tr>
-      <tr><td>Large/Endurance</td><td>40g+</td><td>marathon, ultra</td></tr>
+      <tr><th>แบบ</th><th>ข้อดี</th><th>ข้อเสีย</th></tr>
+      <tr><td><strong>Gel</strong></td><td>ดูดซึมเร็ว พกง่าย</td><td>ต้องดื่มน้ำตาม</td></tr>
+      <tr><td><strong>Chew</strong></td><td>รสง่าย ทยอยกิน</td><td>เคี้ยวยากตอนวิ่งหนัก</td></tr>
+      <tr><td><strong>Drink</strong></td><td>ได้น้ำ+คาร์บพร้อมกัน</td><td>ต้องพกขวด</td></tr>
     </table>
-    <h3>Caffeine — ระวัง!</h3>
-    <ul style="font-size:13px;color:var(--text);padding-left:18px;line-height:1.7">
-      <li><strong>0 mg</strong> — ปลอดภัย ใช้ได้ทุกซอง</li>
-      <li><strong>25-50 mg</strong> — boost เบาๆ ตอน km หลังๆ</li>
-      <li><strong>75-100 mg</strong> — ผลแรงเทียบ espresso 1 shot ⚠️ ระวังท้องไส้</li>
-      <li><strong>กฎ:</strong> ลองใน Long Run อย่างน้อย 2 ครั้งก่อนใช้แข่ง · ห้ามลองครั้งแรกวันแข่ง</li>
-    </ul>
-    <h3>3 form factors</h3>
+    <h3>🇹🇭 ที่เคยใช้ / เคยดู</h3>
     <table>
-      <tr><th>Type</th><th>+</th><th>-</th></tr>
-      <tr><td><strong>Gel</strong> (Maurten, GU, SiS)</td><td>fast absorb · standard</td><td>jaw fatigue · need water</td></tr>
-      <tr><td><strong>Chew</strong> (Clif Bloks, Honey Stinger)</td><td>easy taste · slow release</td><td>chewing while running hard</td></tr>
-      <tr><td><strong>Drink</strong> (Maurten Drink, sport drinks)</td><td>hydration + carb in one</td><td>need carry flask</td></tr>
+      <tr><th>ยี่ห้อ</th><th>Carb/ซอง</th><th>ใช้แบบไหน</th></tr>
+      <tr><td><strong>Active Peak</strong> ⭐</td><td>31 g</td><td>ตัวหลักวันแข่ง</td></tr>
+      <tr><td>aminoVital Shot</td><td>~28-30 g (ยังไม่ยืนยัน)</td><td>ลองใน long run · มีเกลือแร่</td></tr>
+      <tr><td>Pipo Pro</td><td>21 g</td><td>วิ่งสั้น / เติมระหว่างทาง</td></tr>
+      <tr><td>aminoVital ซอง 100 g</td><td>24 g</td><td>ก่อน/หลังวิ่ง ไม่ใช่ระหว่างแข่ง</td></tr>
     </table>
-    <h3>🇹🇭 Available in Thailand</h3>
-    <ul style="font-size:13px;color:var(--text);padding-left:18px;line-height:1.7">
-      <li><strong>Maurten Gel 100</strong> — premium, hydrogel, gentle stomach (~120฿/ซอง)</li>
-      <li><strong>SiS Go Isotonic</strong> — no water needed (~95฿)</li>
-      <li><strong>GU Energy Gel</strong> — classic, many flavors (~85฿)</li>
-      <li><strong>PowerGel</strong> — budget option (~70฿)</li>
-      <li>หาได้: Decathlon, Running Lab, Specialized stores, Shopee</li>
-    </ul>
-    <h3>⚠️ DO NOT</h3>
-    <ul style="font-size:13px;color:var(--text);padding-left:18px;line-height:1.7">
-      <li>❌ ลองยี่ห้อใหม่วัน race</li>
-      <li>❌ กิน gel โดยไม่ chase ด้วยน้ำ (Maurten ยกเว้น)</li>
-      <li>❌ กินเกิน 60g carb/hr → cramping/diarrhea</li>
-      <li>❌ Caffeine gel ตอนตอนค่ำก่อน race (กระทบนอน)</li>
-    </ul>
+    <div style="font-size:12px;color:var(--text-muted);margin-top:6px">หาซื้อ: Decathlon, Running Lab, Shopee/Lazada · ❌ อย่ากินเจลโดยไม่ดื่มน้ำตาม (ยกเว้นเจล isotonic) · ❌ เจลคาเฟอีนคืนก่อนแข่ง</div>
   </div>
 
   <div class="card">
@@ -1481,8 +1426,8 @@ renderTypes();renderOptions();show();})();</script><div class="card">
     <h3>💡 Pro tips ฉบับ Thailand</h3>
     <ul style="font-size:13px;color:var(--text);padding-left:18px;line-height:1.7">
       <li>เก็บกล้วยตากใส่ ziploc — ไม่เลอะ ไม่ละลาย</li>
-      <li>ทดสอบใน Long Run W12-W13 ก่อน เลือก option ที่ stomach รับได้</li>
-      <li>Race aid station Korat21 มี: น้ำเปล่า, เกลือแร่ — เช็คก่อนวัน race</li>
+      <li>ทดสอบใน Long Run ก่อน เลือกแบบที่ท้องรับได้</li>
+      <li>เช็คก่อนวันแข่งว่าจุดให้น้ำมีอะไรบ้าง (น้ำ / เกลือแร่ / ผลไม้)</li>
       <li>พกแบบ "2 layers" — gel หลัก + กล้วยตาก backup (เผื่อ gel หาย)</li>
       <li>⚠️ ของ DIY ระวังบูด ในอากาศร้อน — กินภายใน 2-3 ชม.</li>
     </ul>
@@ -1493,10 +1438,6 @@ renderTypes();renderOptions();show();})();</script><div class="card">
 
 <!-- ============= CHECKLIST PAGE ============= -->
 <section class="page" id="page-checklist">
-  <div class="card">
-    <h2>📅 Current Week</h2>
-    <p id="current-week-info" style="font-size:13px;color:var(--text-muted)"></p>
-  </div>
   <div class="card">
     <h2>🎒 Pack List</h2>
     <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:10px">
@@ -1599,7 +1540,8 @@ function updateCountdown() {
   const now = new Date();
   let diff = target - now;
   if (diff < 0) {
-    $('#countdown').innerHTML = `🏁 <strong>Race day passed!</strong>`;
+    const lr = (DATA.races || []).find(r => r.secs);
+    $('#countdown').innerHTML = lr ? `🏆 ล่าสุด: <strong>${lr.short}</strong> · ${Math.floor(lr.secs/3600)}:${String(Math.floor(lr.secs%3600/60)).padStart(2,'0')}:${String(Math.round(lr.secs%60)).padStart(2,'0')}` : '';
     return;
   }
   const d = Math.floor(diff / 86400000);
@@ -2043,7 +1985,7 @@ function renderSleep() {
         backgroundColor: 'rgba(231,76,60,0.1)',
         tension: 0.3,
         fill: true,
-        pointBackgroundColor: recent.map(n => n.r >= 60 ? '#e74c3c' : n.r >= 56 ? '#f39c12' : '#27ae60'),
+        pointBackgroundColor: recent.map(n => n.r >= 62 ? '#e74c3c' : n.r >= 59 ? '#f39c12' : '#27ae60'),
         pointRadius: 4
       }]
     },
@@ -2057,25 +1999,6 @@ function renderSleep() {
     }
   });
 
-  new Chart($('#bb-chart'), {
-    type: 'bar',
-    data: {
-      labels,
-      datasets: [{
-        label: 'BB Charge (+)',
-        data: recent.map(n => n.bb),
-        backgroundColor: recent.map(n => n.bb >= 50 ? '#27ae60' : n.bb >= 25 ? '#f39c12' : '#e74c3c')
-      }]
-    },
-    options: {
-      responsive: true, maintainAspectRatio: false,
-      plugins: { legend: {display: false} },
-      scales: {
-        y: {beginAtZero: true, max: 80, title: {display: true, text: '+points', font: {size: 10}}},
-        x: {ticks: {font: {size: 9}, maxRotation: 60}}
-      }
-    }
-  });
 }
 
 // ===== RACE PAGE =====
@@ -2772,7 +2695,6 @@ function renderChecklist() {
   else if (daysLeft > 7) weekInfo = `W14 Taper 2 (-40%) — ${daysLeft} days. Fun run 5K, start carb-load.`;
   else if (daysLeft > 0) weekInfo = `W15 RACE WEEK — ${daysLeft} days. Heavy carb-load, sleep, prepare!`;
   else weekInfo = `Race day passed (${-daysLeft} days ago). Recovery phase.`;
-  $('#current-week-info').textContent = weekInfo;
 
   // Pack list — grouped by category, with check state
   const c = getChecklist();
@@ -3737,7 +3659,6 @@ renderRuns();
 renderSleep();
 renderPlan();
 renderRunnaPlan();
-renderPaceLab();
 renderRace();
 renderNutrition();
 renderShoes();
