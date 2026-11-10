@@ -1,12 +1,10 @@
 {
  "start": "2026-11-20",
- "race_date": "",
- "weeks": 52,
- "intensity": "normal",
  "bench": {
   "type": "hm",
   "time": "2:23:36"
  },
- "feedback": {},
+ "weekly_km": 30,
+ "heat": "warm",
  "updated": ""
 }
