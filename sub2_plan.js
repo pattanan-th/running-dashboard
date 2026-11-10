@@ -98,32 +98,53 @@ function s2Sessions(w, P, st) {
   if (w.test) fri = '🧪 Time trial 10K (หรือ 5K) → ใส่ผลในช่อง "ผลล่าสุด" แล้ว Save';
   const satLo = Math.max(20, satMin + 5 * L);
   const sat = `Easy ${satLo}-${satLo + 10} นาที (HR ≤150${P ? ` · ~${s2Fmt(P.ezLo)}-${s2Fmt(P.ezHi)}/km` : ''}) + 3-Minute Routine`;
-  return {fri, sat, sun, sets, plyo, leg};
+  const core = s2Clamp(20 + 5 * Math.floor(w.i / 2), 20, 60);
+  return {fri, sat, sun, sets, plyo, leg, core};
 }
 
 function s2Gym(s) {
-  const n = s.sets;
-  const day = (t, rows) => `<h3>${t}</h3><table><tbody>${rows.map(([a, b]) => `<tr><td>${a}</td><td class="numeric">${b}</td></tr>`).join('')}</tbody></table>`;
-  return (s.leg ? day('🦵 จันทร์ · Leg', [
-      ['Bulgarian Split Squat (DB 7.5 + KB 6) ลงช้า 3 วิ', `${n} × 10-12 /ขา`],
-      ['Single-Leg RDL (DB 7.5)', `${n} × 10 /ขา`],
-      ['KB Goblet Squat ค้างล่าง 2 วิ', `${n} × 15-20`],
-      ['Single-Leg Calf Raise (DB 7.5)', `${n} × 12-15 /ขา`],
-      ...(s.plyo ? [['Pogo hops / Jump squat', `${n} × 10 / ${n} × 5`]] : [])])
-    : '<h3>🦵 จันทร์ · Leg</h3><div class="alert-box">สัปดาห์แข่ง งด Leg day</div>') +
+  const n = s.sets, c = s.core, cs = Math.max(2, n - 1);
+  const row = r => r.sec
+    ? `<tr><td colspan="3" style="padding-top:10px;font-size:12px;color:var(--accent)">${r.sec}</td></tr>`
+    : `<tr><td>${r[0]}${r[3] ? ` <span class="badge" title="superset">${r[3]}</span>` : ''}</td><td class="numeric">${r[1]}</td><td class="numeric">${r[2]}</td></tr>`;
+  const day = (t, rows) => `<h3>${t}</h3><table><thead><tr><th>ท่า</th><th class="numeric">Sets × Reps</th><th class="numeric">พัก</th></tr></thead><tbody>${rows.map(row).join('')}</tbody></table>`;
+  const legRows = s.leg ? [
+      ['Bulgarian Split Squat (DB 7.5 + KB 6) ลงช้า 3 วิ', `${n} × 10-12 /ขา`, '90-120 วิ'],
+      ['Single-Leg RDL (DB 7.5)', `${n} × 10 /ขา`, '60-90 วิ', 'SS'],
+      ['Single-Leg Calf Raise (DB 7.5) ลงช้า 3 วิ', `${n} × 12-15 /ขา`, '60-90 วิ', 'SS'],
+      ['KB Goblet Squat ค้างล่าง 2 วิ', `${n} × 15-20`, '90 วิ'],
+      ...(s.plyo ? [['Pogo hops / Jump squat', `${n} × 10 / ${n} × 5`, '60-90 วิ']] : []),
+      {sec: '🧱 Core'},
+      ['Single-Leg Glute Bridge', `${cs} × 10 /ข้าง`, '30-45 วิ'],
+      [`Side Plank${c < 35 ? ' (คุกเข่า)' : ''}`, `${cs} × ${c} วิ /ข้าง`, '30-45 วิ'],
+      ['Suitcase Carry (DB 7.5 ข้างเดียว)', `${cs} × 30 ก้าว /ข้าง`, '30-45 วิ']] : null;
+  return (legRows ? day('🦵 จันทร์ · Leg', legRows)
+      : '<h3>🦵 จันทร์ · Leg</h3><div class="alert-box">สัปดาห์แข่ง งด Leg day</div>') +
     day('💪 อังคาร · Push', [
-      ['Push-up (ง่ายไป → ยกเท้า)', `${n + 1} × เกือบหมดแรง`],
-      ['Single-arm DB Floor Press 7.5', `${n} × 15 /ข้าง`],
-      ['Pike Push-up', `${n} × 8-12`],
-      ['Lateral Raise DB 5', `${n} × 15-20`],
-      ['Chair Dip', `${n} × 12-15`]]) +
+      ['Push-up (ง่ายไป → ยกเท้า · ยากไป → วางมือบนโต๊ะ)', `${n + 1} × เกือบหมดแรง`, '90-120 วิ'],
+      ['Single-arm DB Floor Press 7.5', `${n} × 15 /ข้าง`, '60-90 วิ'],
+      ['Pike Push-up', `${n} × 8-12`, '90 วิ'],
+      ['Lateral Raise DB 5', `${n} × 15-20`, '45-60 วิ', 'SS'],
+      ['Chair Dip', `${n} × 12-15`, '45-60 วิ', 'SS'],
+      {sec: '🧱 Core'},
+      ['Dead Bug (หลังล่างแนบพื้น)', `${cs} × 8 /ข้าง`, '30-45 วิ'],
+      [`Plank${c < 35 ? ' (เข่าลงได้)' : ''}`, `${cs} × ${c} วิ`, '30-45 วิ'],
+      ['Bird Dog ค้าง 2 วิ', `${cs} × 8 /ข้าง`, '30-45 วิ']]) +
     day('🧗 พุธ · Pull', [
-      ['Negative pull-up ลงช้า 3-5 วิ', `${n} × 3-5`],
-      ['Chair-assisted pull-up', `${n} × 6-8`],
-      ['Single-arm DB Row 7.5', `${n} × 15 /ข้าง`],
-      ['Reverse Fly DB 5', `${n} × 15-20`],
-      ['DB Curl 7.5 · Dead hang', `${n} × 12-15 · 2 × นานสุด`]]) +
-    '<div style="font-size:12px;color:var(--text-muted);margin-top:6px">ทำครบสบาย → เพิ่ม reps หรือลงช้าลง · ดึง pull-up ได้แล้ว → เปลี่ยน Negative เป็น pull-up จริง</div>';
+      ['Negative pull-up ลงช้า 3-5 วิ', `${n} × 3-5`, '2 นาที'],
+      ['Chair-assisted pull-up', `${n} × 6-8`, '90-120 วิ'],
+      ['Single-arm DB Row 7.5 ค้างบน 1 วิ', `${n} × 15 /ข้าง`, '60-90 วิ'],
+      ['Reverse Fly DB 5', `${n} × 15-20`, '45-60 วิ', 'SS'],
+      ['DB Curl 7.5', `${n} × 12-15`, '45-60 วิ', 'SS'],
+      ['Dead hang', '2 × นานสุด', '60 วิ'],
+      {sec: '🧱 Core'},
+      ['Hanging Knee Raise (ห้อยไม่ไหว → Lying Leg Raise)', `${cs} × 6-10`, '30-45 วิ'],
+      ['KB Halo (KB 6)', `${cs} × 5 รอบ /ทิศ`, '30-45 วิ'],
+      ['Superman ค้าง 2 วิ', `${cs} × 10`, '30-45 วิ']]) +
+    `<div style="font-size:12px;color:var(--text-muted);margin-top:6px;line-height:1.6">
+      <span class="badge">SS</span> = superset ทำ 2 ท่านี้ต่อกันแล้วค่อยพัก (ประหยัดเวลา) · ท่าข้างเดียว: ซ้ายเสร็จเปลี่ยนขวาทันที พักหลังครบสองข้าง<br>
+      ทำครบสบาย → เพิ่ม reps หรือลงช้าลง · เซ็ตถัดไป reps ตก &gt;2-3 = พักน้อยไป เพิ่ม 30 วิ · Plank/Side Plank เพิ่มเวลาอัตโนมัติทุก 2 สัปดาห์ (ตอนนี้ ${c} วิ)<br>
+      ดึง pull-up ได้แล้ว → เปลี่ยน Negative เป็น pull-up จริง · วิธีหายใจและคำศัพท์ → การ์ด 📘 ด้านล่าง</div>`;
 }
 
 function s2CurIdx(weeks) {
