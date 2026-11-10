@@ -3911,7 +3911,7 @@ function s2Gym(s) {
   const n = s.sets, c = s.core, cs = Math.max(2, n - 1);
   const row = r => r.sec
     ? `<tr><td colspan="3" style="padding-top:10px;font-size:12px;color:var(--accent)">${r.sec}</td></tr>`
-    : `<tr><td>${r[0]}${r[3] ? ` <span class="badge" title="superset">${r[3]}</span>` : ''}</td><td class="numeric">${r[1]}</td><td class="numeric">${r[2]}</td></tr>`;
+    : `<tr><td>${r[0]}${r[3] ? ` <span class="badge" title="superset">${r[3]}</span>` : ''}</td><td class="numeric">${r[1]}</td><td class="numeric" style="white-space:nowrap">${r[2]}</td></tr>`;
   const day = (t, rows) => `<h3>${t}</h3><table><thead><tr><th>ท่า</th><th class="numeric">Sets × Reps</th><th class="numeric">พัก</th></tr></thead><tbody>${rows.map(row).join('')}</tbody></table>`;
   const legRows = s.leg ? [
       ['Bulgarian Split Squat (DB 7.5 + KB 6) ลงช้า 3 วิ', `${n} × 10-12 /ขา`, '90-120 วิ'],
