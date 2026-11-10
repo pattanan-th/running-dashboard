@@ -25,12 +25,10 @@ When the user requests sync:
    missing/stale-data caveats and concrete training implications. Do not merely
    repeat averages when graph data is available. Keep running terms in English.
 
-Runna plan: run `python runna_plan.py` before building (update_and_deploy.bat
-does). It reads the private feed URL from `.env` RUNNA_ICS_URL — never print,
-commit or publish that URL. It keeps only UPCOMING_PLAN_WORKOUT events (completed
-events carry GEO/LOCATION) and strips the Runna app deep links. A failed fetch
-keeps the previous runna_plan.json. Its card sits in the old page-plan2 section, which no longer has a tab button (the "🎯 Plan" tab is now the Sub-2 plan); use the
-plan's targets when judging a run against what was prescribed.
+Runna: DISCONTINUED (2026-11-10, user deleted the app). Do not run
+runna_plan.py or publish runna_plan.json; the Runna card in the hidden
+page-plan2 section just shows "no plan". The script and `.env` RUNNA_ICS_URL
+are left in place untouched — never print or commit that URL.
 
 Shoes: run `python zepp_shoes.py` after sync_zepp.py. Zepp tags each workout
 with a gearId (only inside the compressed raw workout payloads; names are not
@@ -40,7 +38,7 @@ gearIds stay in `unassigned` — ask the user which shoe they are, never guess.
 
 Generated files: activities.json, sleep.json, wellness.json, stats.json,
 zepp_sync.json, zepp_analysis.json, latest_analysis.md, coach_analysis.html,
-runna_plan.json, shoes.json, dashboard.html. Add changed source files explicitly when implementing fixes.
+shoes.json, dashboard.html. Add changed source files explicitly when implementing fixes.
 Do not stage all files indiscriminately. No HAR, tokens, database, device IDs,
 raw coordinates, or raw payloads in the published analysis.
 
