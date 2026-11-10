@@ -29,7 +29,7 @@ Runna plan: run `python runna_plan.py` before building (update_and_deploy.bat
 does). It reads the private feed URL from `.env` RUNNA_ICS_URL — never print,
 commit or publish that URL. It keeps only UPCOMING_PLAN_WORKOUT events (completed
 events carry GEO/LOCATION) and strips the Runna app deep links. A failed fetch
-keeps the previous runna_plan.json. The Plan tab leads with this card; use the
+keeps the previous runna_plan.json. Its card sits in the old page-plan2 section, which no longer has a tab button (the "🎯 Plan" tab is now the Sub-2 plan); use the
 plan's targets when judging a run against what was prescribed.
 
 Shoes: run `python zepp_shoes.py` after sync_zepp.py. Zepp tags each workout
@@ -65,7 +65,7 @@ Use its --local-only option to recompute new duration choices without logging
 in. Reconcile the archive before adding Garmin activities beyond its cutoff;
 do not double-count Garmin/Zepp copies. Never publish the local cache.
 
-Sub-2 plan tab: source is sub2_plan.html + sub2_plan.js, injected by
+Sub-2 plan tab (labelled "🎯 Plan"): source is sub2_plan.html + sub2_plan.js, injected by
 build_dashboard.py. Its settings live in plan_settings.json, which the user
 edits from the website (Save button commits through the GitHub API with a
 token stored only on their device). So `git pull --rebase --autostash` before
