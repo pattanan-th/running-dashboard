@@ -1046,7 +1046,7 @@ renderTypes();renderOptions();show();})();</script><div class="card">
   </div>
   <div class="card">
     <h2>🗄️ Garmin archive (มี.ค.-ก.ย. 2026)</h2>
-    <details><summary style="cursor:pointer;font-size:13px;color:var(--text-muted)">กราฟยุค Garmin: Long runs · Cadence · Pace↔Cadence (กดเปิด)</summary>
+    <details ontoggle="if(this.open)this.querySelectorAll('canvas').forEach(c=>{const ch=Chart.getChart(c);if(ch)ch.resize();})"><summary style="cursor:pointer;font-size:13px;color:var(--text-muted)">กราฟยุค Garmin: Long runs · Cadence · Pace↔Cadence (กดเปิด)</summary>
   <div>
     <h3>🏃 Long Runs Progression</h3>
     <div class="chart-container"><canvas id="long-runs-chart"></canvas></div>
