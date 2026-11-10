@@ -191,7 +191,6 @@ main { padding: 12px; }
   grid-template-columns: repeat(2, 1fr);
   gap: 8px;
 }
-.gc-in { width:100%;margin-top:4px;padding:8px;background:var(--card-bg-alt);color:var(--text-bright);border:1px solid var(--border);border-radius:6px;font-size:16px;font-family:var(--mono);text-align:center;box-sizing:border-box }
 .stat-grid.three { grid-template-columns: repeat(3, 1fr); }
 .stat {
   background: var(--card-bg-alt);
@@ -1315,31 +1314,55 @@ renderTypes();renderOptions();show();})();</script><div class="card">
       🧂 <strong>Sodium:</strong> อากาศร้อนเสียเหงื่อเยอะ → 400-700mg/hr ระหว่างวิ่ง · เติมเกลือในอาหาร · เกลือแร่หลังซ้อม
     </div>
   </div>
-  <div class="card" id="gel-calc-card">
-    <h2>🧮 Gel Calculator</h2>
-    <div id="gc-dist-btns" style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px">
-      <button class="btn" data-k="5k" onclick="gelPick('5k')">5K</button>
-      <button class="btn" data-k="10k" onclick="gelPick('10k')">10K</button>
-      <button class="btn" data-k="hm" onclick="gelPick('hm')">Half</button>
-      <button class="btn" data-k="fm" onclick="gelPick('fm')">Full</button>
-    </div>
-    <div id="gc-basis" style="font-size:12px;color:var(--text-muted);margin-bottom:8px"></div>
-    <div id="gc-out"></div>
-    <details style="margin-top:10px"><summary style="cursor:pointer;font-size:13px;color:var(--text-muted)">⚙️ ปรับเอง</summary>
-    <div class="stat-grid" style="margin-top:8px">
-      <label class="stat"><div class="stat-label">ระยะ (km)</div><input id="gc-dist" type="number" step="0.1" min="1" oninput="renderGelCalc()" class="gc-in"></label>
-      <label class="stat"><div class="stat-label">เวลาที่คาด (h:mm)</div><input id="gc-time" type="text" inputmode="numeric" oninput="renderGelCalc()" class="gc-in"></label>
-      <label class="stat"><div class="stat-label">เป้าคาร์บ (g/ชม.)</div><input id="gc-rate" type="number" step="5" min="0" max="90" oninput="renderGelCalc()" class="gc-in"></label>
-      <label class="stat"><div class="stat-label">คาร์บต่อซอง (g)</div><input id="gc-gel" type="number" step="1" min="5" oninput="renderGelCalc()" class="gc-in"></label>
-      <label class="stat"><div class="stat-label">จากเครื่องดื่ม (g/ชม.)</div><input id="gc-drink" type="number" step="5" min="0" oninput="renderGelCalc()" class="gc-in"></label>
-    </div>
-    <div style="font-size:11px;color:var(--text-muted);margin-top:6px">เครื่องดื่ม: Gatorade จิบที่จุดให้น้ำ ~10-15 g/ชม. · น้ำเปล่าอย่างเดียว = 0 · กดปุ่มระยะอีกครั้ง = กลับค่าอัตโนมัติ</div>
-    </details>
+  <div class="card" id="gel-guide-card">
+    <h2>🍯 Gel Guide</h2>
+    <div style="font-size:12px;color:var(--text-muted);margin-bottom:8px">ตารางอ้างอิงทั่วไป ใช้ได้กับทุกคน ไม่ได้คำนวณจากข้อมูลในเว็บ · คิดจากเจลซองละ ~25 g carb</div>
+    <h3 style="font-size:14px;margin:6px 0">1) ต้องใช้คาร์บเท่าไหร่ (ตามเวลาที่วิ่ง)</h3>
+    <table>
+      <thead><tr><th>เวลาวิ่ง</th><th class="numeric">Carb/ชม.</th><th>หมายเหตุ</th></tr></thead>
+      <tbody>
+        <tr><td>&lt; 45 นาที</td><td class="numeric">0</td><td>น้ำเปล่าพอ</td></tr>
+        <tr><td>45-75 นาที</td><td class="numeric">0-30 g</td><td>อมบ้วน / จิบเกลือแร่</td></tr>
+        <tr><td>1-2 ชม.</td><td class="numeric">30-60 g</td><td>เจลทั่วไปได้</td></tr>
+        <tr><td>2-3 ชม.</td><td class="numeric">60 g</td><td>เริ่มสำคัญมาก</td></tr>
+        <tr><td>&gt; 2.5-3 ชม.</td><td class="numeric">60-90 g</td><td>เกิน 60 g ต้องเป็นสูตร glucose+fructose และซ้อมกินมาก่อน</td></tr>
+      </tbody>
+    </table>
+    <h3 style="font-size:14px;margin:14px 0 6px">2) ต้องพกกี่ซอง</h3>
+    <table>
+      <thead><tr><th>ระยะ</th><th>เวลาจบ</th><th class="numeric">เจล</th><th>กินตอนไหน</th></tr></thead>
+      <tbody>
+        <tr><td>5K</td><td>ทุกเวลา</td><td class="numeric">0</td><td>—</td></tr>
+        <tr><td>10K</td><td>&lt; 1:15</td><td class="numeric">0</td><td>—</td></tr>
+        <tr><td>10K</td><td>1:15-1:30</td><td class="numeric">0-1</td><td>~km 5</td></tr>
+        <tr><td>Half</td><td>1:30-2:00</td><td class="numeric">2</td><td>~40 นาที แล้วทุก 30-40 นาที</td></tr>
+        <tr><td>Half</td><td>2:00-2:30</td><td class="numeric">3</td><td>〃</td></tr>
+        <tr><td>Half</td><td>2:30-3:00</td><td class="numeric">3-4</td><td>〃</td></tr>
+        <tr><td>Full</td><td>3:30-4:00</td><td class="numeric">6-7</td><td>~30 นาที แล้วทุก 25-30 นาที</td></tr>
+        <tr><td>Full</td><td>4:00-4:30</td><td class="numeric">7-8</td><td>〃</td></tr>
+        <tr><td>Full</td><td>4:30-5:00</td><td class="numeric">8-9</td><td>〃</td></tr>
+        <tr><td>Full</td><td>5:00-6:00</td><td class="numeric">9-11</td><td>〃</td></tr>
+      </tbody>
+    </table>
+    <div style="font-size:12px;color:var(--text-muted);margin-top:6px">ดื่ม sports drink ที่ aid ได้ ลดเจลได้ 1-2 ซอง (Full) · พกสำรอง +1 ซองเสมอ · ซองสุดท้าย ≥15 นาทีก่อนจบ</div>
+    <h3 style="font-size:14px;margin:14px 0 6px">3) เจล 1 ซองควรมีอะไร</h3>
+    <table>
+      <thead><tr><th>สารอาหาร</th><th>ต่อซอง</th><th>ทำไม</th></tr></thead>
+      <tbody>
+        <tr><td>Carb</td><td>20-30 g (~80-120 kcal)</td><td>พลังงานหลัก</td></tr>
+        <tr><td>ชนิดน้ำตาล</td><td>Maltodextrin/glucose + fructose (~2:1 หรือ 1:0.8)</td><td>ดูดซึมได้เกิน 60 g/ชม. ท้องไม่อืด</td></tr>
+        <tr><td>Sodium</td><td>50-200 mg</td><td>เจลอย่างเดียวไม่พอ อากาศร้อนต้องการ 300-600 mg/ชม. → เสริมเกลือแร่/salt cap</td></tr>
+        <tr><td>Caffeine</td><td>0 หรือ 25-100 mg</td><td>ใช้ช่วงครึ่งหลัง 1-2 ซอง · รวมไม่เกิน ~3 mg/kg · ต้องลองตอนซ้อมก่อน</td></tr>
+        <tr><td>น้ำที่ดื่มตาม</td><td>150-250 ml</td><td>ช่วยดูดซึม (ยกเว้นเจล isotonic ที่ใส่น้ำมาแล้ว)</td></tr>
+        <tr><td>ไขมัน / โปรตีน / ใยอาหาร</td><td>~0</td><td>ย่อยช้า เสี่ยงท้องไส้ระหว่างวิ่ง</td></tr>
+      </tbody>
+    </table>
+    <div class="alert-box" style="margin-top:8px">⚠️ ใช้ยี่ห้อ/สูตรที่ซ้อมกินใน Long run มาแล้วเท่านั้น ห้ามลองของใหม่วันแข่ง</div>
   </div>
   <div class="card">
     <h2>🎯 Choosing Guide</h2>
     <div class="alert-box success">
-      <strong>Quick rule:</strong> 30-60g carb/hour · วิ่งเกิน ~75 นาทีค่อยต้องใช้เจล · จำนวนซองและ km ที่กิน → ใช้ 🧮 Gel Calculator ด้านบน
+      <strong>Quick rule:</strong> 30-60g carb/hour · วิ่งเกิน ~75 นาทีค่อยต้องใช้เจล · จำนวนซองและสารอาหาร → ดู 🍯 Gel Guide ด้านบน
     </div>
     <h3>Carb content</h3>
     <table>
@@ -2626,7 +2649,7 @@ function renderNutritionGuides() {
     {type:'💨 Tempo / Threshold', color:'var(--warning)', pre:`2-3h ก่อน: ข้าว/ขนมปัง + กล้วย (${g(1)}-${g(1.3)}g carb)`, during:'ถ้า >60 min: 1 gel หรือกล้วยตาก', post:`⭐ carb+protein 3:1 ภายใน 30 min · มื้อใหญ่ใน 2h`, note:'glycogen-heavy — ต้อง fuel ดี'},
     {type:'⚡ Interval / Speed', color:'var(--danger)', pre:`2-3h ก่อน: carb ปานกลาง ${g(0.8)}-${g(1)}g · ไม่อิ่มเกิน`, during:'น้ำ + sip เกลือแร่', post:`⭐ recovery สำคัญมาก: carb ${g(0.8)}g + protein ${g(0.3)}g ทันที`, note:'high intensity — recovery window critical'},
     {type:'📏 Long Run', color:'var(--primary)', pre:`2-3h ก่อน: carb หนัก ${g(1.3)}-${g(2)}g (ข้าวต้ม+น้ำผึ้ง+กล้วย)`, during:'30-60g carb/hr (gel km 7,14 / กล้วยตาก) + เกลือแร่', post:'⭐ carb+protein + เกลือแร่ + น้ำเยอะ (เสียเหงื่อมาก)', note:'longest fuel demand — practice race fueling here'},
-    {type:'🏁 Race', color:'var(--danger)', pre:`carb-load 3 วัน · เช้า ${g(1.3)}g carb 3h ก่อน · ½ gel T-30min`, during:'เจลตาม 🧮 Gel Calculator + น้ำทุก aid + เกลือแร่', post:'rehydrate + carb+protein + มื้อใหญ่', note:'execute what you practiced — no new food'},
+    {type:'🏁 Race', color:'var(--danger)', pre:`carb-load 3 วัน · เช้า ${g(1.3)}g carb 3h ก่อน · ½ gel T-30min`, during:'เจลตาม 🍯 Gel Guide + น้ำทุก aid + เกลือแร่', post:'rehydrate + carb+protein + มื้อใหญ่', note:'execute what you practiced — no new food'},
     {type:'😴 Rest Day', color:'var(--text-muted)', pre:'—', during:'—', post:'มื้อปกติ · protein สูงหน่อยช่วย repair · ลด carb ลงนิด', note:'recovery + muscle repair focus'},
   ];
 
@@ -2658,71 +2681,6 @@ function renderNutritionGuides() {
       </ul>
     </div>
   `).join('');
-}
-
-// ===== GEL CALCULATOR =====
-const GELCALC_KEY = 'gel_calc_pick_v2';
-const GEL_DISTS = {'5k':5, '10k':10, hm:21.1, fm:42.2};
-// Best road-race equivalent (Riegel, exponent 1.06); trail races excluded.
-function gelPredict(km) {
-  let best = null;
-  for (const r of (DATA.races || [])) {
-    if (r.trail || !(r.dist_km > 0) || !(r.secs > 0)) continue;
-    const m = r.secs / 60 * Math.pow(km / r.dist_km, 1.06);
-    if (!best || m < best.min) best = {min: m, race: r};
-  }
-  return best;
-}
-function gelPick(k) {
-  if (!GEL_DISTS[k]) k = 'hm';
-  try { localStorage.setItem(GELCALC_KEY, k); } catch(e) {}
-  const km = GEL_DISTS[k], p = gelPredict(km);
-  const mins = p ? p.min : km * 7;
-  const rm = Math.round(mins), hm = Math.floor(rm / 60) + ':' + String(rm % 60).padStart(2, '0');
-  $('#gc-dist').value = km; $('#gc-time').value = hm;
-  $('#gc-rate').value = km >= 30 ? 60 : 45; $('#gc-gel').value = 25; $('#gc-drink').value = 15;
-  document.querySelectorAll('#gc-dist-btns .btn').forEach(b => b.classList.toggle('primary', b.dataset.k === k));
-  const fmtT = s => { s = Math.round(s); const h = Math.floor(s/3600), m = Math.floor(s%3600/60), x = s%60; return (h ? h + ':' + String(m).padStart(2,'0') : m) + ':' + String(x).padStart(2,'0'); };
-  $('#gc-basis').innerHTML = p
-    ? `เวลาคาด <strong>${hm}</strong> คำนวณจาก ${p.race.short} ${fmtT(p.race.secs)} (Riegel)` +
-      (km > 25 ? ' · ⚠️ ยังไม่เคยวิ่ง Full ตัวเลขนี้น่าจะเร็วเกินจริง เผื่อช้ากว่านี้ 20-40 นาที' : '')
-    : 'ยังไม่มีผลแข่งให้คำนวณ ใช้ 7:00/กม.';
-  renderGelCalc();
-}
-function parseHM(str) {
-  const p = String(str || '').split(':').map(Number);
-  if (p.some(isNaN) || !p.length) return 0;
-  if (p.length === 1) return p[0];
-  if (p.length === 2) return p[0]*60 + p[1];
-  return p[0]*60 + p[1] + p[2]/60;
-}
-function renderGelCalc() {
-  if (!$('#gc-out')) return;
-  if ($('#gc-dist').value === '') { let k = 'hm'; try { k = localStorage.getItem(GELCALC_KEY) || 'hm'; } catch(e) {} return gelPick(k); }
-  const s = {dist:+$('#gc-dist').value, time:$('#gc-time').value, rate:+$('#gc-rate').value, gel:+$('#gc-gel').value, drink:+$('#gc-drink').value};
-  const D = parseHM(s.time);
-  if (!(s.dist > 0) || !(D > 0) || !(s.gel > 0)) { $('#gc-out').innerHTML = '<div class="alert-box">กรอกระยะ เวลา (เช่น 2:20) และคาร์บต่อซอง</div>'; return; }
-  const pace = D / s.dist;
-  const ps = Math.round(pace * 60), paceTxt = Math.floor(ps / 60) + ':' + String(ps % 60).padStart(2,'0');
-  const fromGel = Math.max(0, (s.rate - s.drink) * D / 60);
-  let n = D <= 60 ? 0 : Math.max(D > 75 ? 1 : 0, Math.round(fromGel / s.gel));
-  if (D <= 75) n = Math.min(n, 1);
-  const start = Math.min(40, D * 0.3), end = D - 15;
-  const times = n === 1 ? [Math.max(start, D / 2)] : Array.from({length:n}, (_, i) => start + i * (end - start) / (n - 1));
-  const fmtMin = m => { m = Math.round(m); return Math.floor(m/60) + ':' + String(m % 60).padStart(2,'0'); };
-  const warn = s.rate > 60 ? '<div class="alert-box" style="margin-top:8px">⚠️ เกิน 60 g/ชม. ต้องซ้อมกินใน Long run ก่อน เสี่ยงท้องไส้</div>' : '';
-  const rows = times.map((m, i) => `<tr><td>#${i+1}</td><td class="numeric">${fmtMin(m)}</td><td class="numeric">km ~${Math.round(m / pace)}</td><td class="numeric">${(i+1) * s.gel} g</td></tr>`).join('');
-  $('#gc-out').innerHTML = `
-    <div class="stat-grid">
-      <div class="stat"><div class="stat-label">Pace</div><div class="stat-value">${paceTxt}</div><div class="stat-sub">/km</div></div>
-      <div class="stat"><div class="stat-label">พกเจล</div><div class="stat-value">${n}</div><div class="stat-sub">ซอง · ${n * s.gel} g</div></div>
-      <div class="stat"><div class="stat-label">คาร์บรวม</div><div class="stat-value">${Math.round(n * s.gel + s.drink * D / 60)}</div><div class="stat-sub">g (เป้า ${Math.round(s.rate * D / 60)})</div></div>
-      <div class="stat"><div class="stat-label">ต่อชั่วโมง</div><div class="stat-value">${Math.round((n * s.gel + s.drink * D / 60) / (D / 60))}</div><div class="stat-sub">g/ชม.</div></div>
-    </div>
-    ${n ? `<table style="margin-top:10px"><thead><tr><th>ซอง</th><th class="numeric">เวลา</th><th class="numeric">ที่</th><th class="numeric">สะสม</th></tr></thead><tbody>${rows}</tbody></table>
-    <div style="font-size:12px;color:var(--text-muted);margin-top:6px">กินก่อนถึงจุดให้น้ำเล็กน้อย แล้วดื่มน้ำตาม · ซองสุดท้ายไม่เกิน ~15 นาทีก่อนจบ · ก่อนปล่อยตัว ½ ซองได้ (ไม่นับในตาราง)</div>`
-      : `<div class="alert-box" style="margin-top:10px">${D <= 60 ? 'ไม่เกิน 60 นาที ไม่ต้องใช้เจล น้ำเปล่า/เกลือแร่พอ' : 'เครื่องดื่มให้คาร์บพอแล้ว ไม่ต้องใช้เจล'}</div>`}
-    ${warn}`;
 }
 
 // ===== CHECKLIST PAGE =====
@@ -3733,7 +3691,6 @@ renderPlan();
 renderRunnaPlan();
 renderPaceLab();
 renderRace();
-renderGelCalc();
 renderNutrition();
 renderShoes();
 renderChecklist();
