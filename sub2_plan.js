@@ -3,7 +3,7 @@
 // The Save button writes that file through the GitHub contents API with a
 // fine-grained token kept only in this device's localStorage.
 const SUB2_REPO = 'pattanan-th/running-dashboard', SUB2_FILE = 'plan_settings.json', SUB2_TOKEN_KEY = 'sub2_gh_token';
-const SUB2_DEF = {start: '2026-11-23', race_date: '', weeks: 52, intensity: 'normal',
+const SUB2_DEF = {start: '2026-11-20', race_date: '', weeks: 52, intensity: 'normal',
                   bench: {type: 'hm', time: '2:23:36'}, feedback: {}, updated: ''};
 const S2_DIST = {'5k': 5, '10k': 10, hm: 21.0975};
 const S2_GOAL_HM = 2 * 3600;
@@ -194,25 +194,24 @@ function renderSub2Out() {
     : '<span style="color:var(--danger)">ใส่เวลาผลล่าสุดให้ถูกรูปแบบ เช่น 2:23:36 หรือ 55:30</span>';
   // this week
   let wk = '';
-  if (ci < 0) {
-    wk = `<div class="alert-box success"><strong>Recovery</strong> ก่อนเริ่มแผน ${s2Th(weeks[0].ws)}<br>easy run สั้นๆ ตามสบาย + 3-Minute Routine · เวทเบา 2 sets ลองท่า ไม่ทำ plyo</div>`;
-  } else if (ci >= weeks.length) {
+  if (ci >= weeks.length) {
     wk = `<div class="alert-box success">แผนจบแล้ว 🎉 ตั้งวันเริ่มรอบใหม่ด้านล่าง</div>`;
   } else {
-    const w = weeks[ci], s = s2Sessions(w, P, sub2), [pn, pc] = S2_PH[w.ph];
+    const pre = ci < 0, w = weeks[Math.max(0, ci)], s = s2Sessions(w, P, sub2), [pn, pc] = S2_PH[w.ph];
     const fbBtn = (v, t) => `<button class="btn${w.fb === v ? ' primary' : ''}" onclick="s2Feedback('${w.key}',${v})">${t}</button>`;
-    wk = `<div style="margin-bottom:8px"><span class="badge ${pc}">${pn}</span> สัปดาห์ ${w.i + 1}/${w.N} · ${s2Th(w.ws)} - ${s2Th(s2Add(w.ws, 6))}${w.down ? ' · <span class="badge">down week</span>' : ''}${w.L ? ` · ระดับ ${w.L > 0 ? '+' : ''}${w.L}` : ''}</div>
-      <table><tbody>
-        <tr><td>จ.</td><td>${s.leg ? '🦵 Leg' : 'พัก'}</td></tr>
-        <tr><td>อ.</td><td>💪 Push</td></tr>
-        <tr><td>พ.</td><td>🧗 Pull</td></tr>
-        <tr><td>พฤ.</td><td>พัก</td></tr>
-        <tr><td>ศ.</td><td><strong>${s.fri}</strong><div class="cue">warm-up 10-15 นาที · cool-down 10 นาที · 🫁 ช่วงเร็วหายใจ 2:2 (พูดได้ 2-3 คำ)</div></td></tr>
-        <tr><td>ส.</td><td>${s.sat}<div class="cue">🫁 หายใจ 3:3 · พูดเป็นประโยคได้ · เกร็ง → หายใจออกยาว 2-3 ครั้ง ปล่อยไหล่ คลายมือ</div></td></tr>
-        <tr><td>อา.</td><td><strong>${s.sun}</strong><div class="cue">🫁 easy 3:3 · ช่วง pace 2:2 · จุกเสียด → ชะลอ หายใจออกแรงยาว กดจุดที่เจ็บ</div></td></tr>
+    const byDay = {
+      1: ['จ.', s.leg ? '🦵 Leg' : 'พัก'], 2: ['อ.', '💪 Push'], 3: ['พ.', '🧗 Pull'], 4: ['พฤ.', 'พัก'],
+      5: ['ศ.', `<strong>${s.fri}</strong><div class="cue">warm-up 10-15 นาที · cool-down 10 นาที · 🫁 ช่วงเร็วหายใจ 2:2 (พูดได้ 2-3 คำ)</div>`],
+      6: ['ส.', `${s.sat}<div class="cue">🫁 หายใจ 3:3 · พูดเป็นประโยคได้ · เกร็ง → หายใจออกยาว 2-3 ครั้ง ปล่อยไหล่ คลายมือ</div>`],
+      0: ['อา.', `<strong>${s.sun}</strong><div class="cue">🫁 easy 3:3 · ช่วง pace 2:2 · จุกเสียด → ชะลอ หายใจออกแรงยาว กดจุดที่เจ็บ</div>`]};
+    const rows = Array.from({length: 7}, (_, k) => { const d = s2Add(w.ws, k), [n, t] = byDay[d.getDay()];
+      return `<tr><td style="white-space:nowrap">${n} ${d.getDate()}</td><td>${t}</td></tr>`; }).join('');
+    wk = `${pre ? `<div class="alert-box success" style="margin-top:0">แผนเริ่ม ${s2Th(w.ws)} · ด้านล่างคือสัปดาห์แรก</div>` : ''}
+      <div style="margin-bottom:8px"><span class="badge ${pc}">${pn}</span> สัปดาห์ ${w.i + 1}/${w.N} · ${s2Th(w.ws)} - ${s2Th(s2Add(w.ws, 6))}${w.down ? ' · <span class="badge">down week</span>' : ''}${w.L ? ` · ระดับ ${w.L > 0 ? '+' : ''}${w.L}` : ''}</div>
+      <table><tbody>${rows}
       </tbody></table>
-      <div style="margin-top:10px;font-size:12px;color:var(--text-muted)">จบสัปดาห์แล้วรู้สึกยังไง (ปรับสัปดาห์ถัดไป)</div>
-      <div style="display:flex;gap:6px;margin-top:4px;flex-wrap:wrap">${fbBtn(1, '😌 ง่ายไป')}${fbBtn(0, '👍 พอดี')}${fbBtn(-1, '🥵 หนักไป')}</div>`;
+      ${pre ? '' : `<div style="margin-top:10px;font-size:12px;color:var(--text-muted)">จบสัปดาห์แล้วรู้สึกยังไง (ปรับสัปดาห์ถัดไป)</div>
+      <div style="display:flex;gap:6px;margin-top:4px;flex-wrap:wrap">${fbBtn(1, '😌 ง่ายไป')}${fbBtn(0, '👍 พอดี')}${fbBtn(-1, '🥵 หนักไป')}</div>`}`;
   }
   $('#s2-week').innerHTML = wk;
   const gw = weeks[s2Clamp(ci, 0, weeks.length - 1)];
