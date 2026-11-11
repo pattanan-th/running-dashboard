@@ -24981,11 +24981,11 @@
           "unit": "steps"
         },
         "active_calories": {
-          "value": 79.0,
+          "value": 127.0,
           "unit": "kcal"
         },
         "distance": {
-          "value": 1195.0,
+          "value": 1829.0,
           "unit": "m"
         },
         "active_minutes": {
@@ -25027,6 +25027,37 @@
         "physical_charge": {
           "value": 65.93154907226562,
           "unit": "score"
+        }
+      }
+    },
+    {
+      "date": "2026-11-11",
+      "source": "zepp",
+      "stress": {
+        "score": null
+      },
+      "rhr": {
+        "current": 58.0
+      },
+      "steps": {
+        "count": 698.0
+      },
+      "metrics": {
+        "resting_hr": {
+          "value": 58.0,
+          "unit": "bpm"
+        },
+        "steps": {
+          "value": 698.0,
+          "unit": "steps"
+        },
+        "active_calories": {
+          "value": 26.0,
+          "unit": "kcal"
+        },
+        "distance": {
+          "value": 468.0,
+          "unit": "m"
         }
       }
     }
