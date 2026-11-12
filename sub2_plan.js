@@ -3,7 +3,7 @@
 // The Save button writes that file through the GitHub contents API with a
 // fine-grained token kept only in this device's localStorage.
 const SUB2_REPO = 'pattanan-th/running-dashboard', SUB2_FILE = 'plan_settings.json', SUB2_TOKEN_KEY = 'sub2_gh_token';
-const SUB2_DEF = {start: '2026-11-20', bench: {type: 'hm', time: '2:23:36'}, weekly_km: 30, heat: 'warm', updated: ''};
+const SUB2_DEF = {start: '2026-11-20', bench: {type: 'hm', time: '2:23:17'}, weekly_km: 30, heat: 'warm', updated: ''};
 const S2_DIST = {'5k': 5000, '10k': 10000, hm: 21097.5, fm: 42195};
 const S2_HEAT = {cool: [1, 'เย็น ≤25°C'], warm: [1.03, 'อุ่น 26-29°C (+3%)'], hot: [1.06, 'ร้อน 30°C+ (+6%)']};
 let sub2 = null, sub2Sha = null, sub2Dirty = false;
