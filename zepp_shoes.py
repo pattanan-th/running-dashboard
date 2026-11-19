@@ -45,7 +45,7 @@ def main():
         return
     gear = gear_by_workout(db)
     acts = json.loads((HERE / 'activities.json').read_text(encoding='utf-8'))
-    runs = [x for v in acts.values() if isinstance(v, list) for x in v
+    runs = [x for k, v in acts.items() if k != 'other_activities' and isinstance(v, list) for x in v
             if isinstance(x, dict) and str(x.get('id', '')).startswith('zepp:') and x.get('dist')]
     shoes_path = HERE / 'shoes.json'
     data = json.loads(shoes_path.read_text(encoding='utf-8'))

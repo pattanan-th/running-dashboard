@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-11-13",
+    "generated": "2026-11-19",
     "source": "Garmin archive + Zepp",
     "split_rankings_source": "Garmin archive + Zepp recorded distance",
     "zones_source": "Garmin archive",
@@ -1367,6 +1367,15 @@
       "gain": 21.89,
       "source": "zepp",
       "id": "zepp:1794085435"
+    },
+    {
+      "d": "2026-11-15",
+      "km": 5.462,
+      "min": 100.23,
+      "cal": 753,
+      "gain": 192.58,
+      "source": "zepp",
+      "id": "zepp:1794700844"
     }
   ],
   "rankings": {
@@ -2510,6 +2519,16 @@
         "name": "Si Racha Trail Running",
         "pace": "12:17",
         "source": "garmin"
+      },
+      {
+        "time": "12:48",
+        "seconds": 767.6428571428569,
+        "pace": "12:48",
+        "date": "2026-11-15",
+        "name": "Trail Run",
+        "source": "zepp",
+        "id": "zepp:1794700844",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "12:51",
@@ -3728,6 +3747,16 @@
         "source": "garmin"
       },
       {
+        "time": "22:12",
+        "seconds": 1331.8119658119658,
+        "pace": "13:48",
+        "date": "2026-11-15",
+        "name": "Trail Run",
+        "source": "zepp",
+        "id": "zepp:1794700844",
+        "method": "recorded_distance_elapsed_interpolated"
+      },
+      {
         "time": "22:24",
         "date": "2025-03-05",
         "name": "Treadmill Running",
@@ -4750,6 +4779,16 @@
         "name": "Si Racha Trail Running",
         "pace": "17:23",
         "source": "garmin"
+      },
+      {
+        "time": "1:33:39",
+        "seconds": 5619.21359223301,
+        "pace": "18:44",
+        "date": "2026-11-15",
+        "name": "Trail Run",
+        "source": "zepp",
+        "id": "zepp:1794700844",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "1:40:33",
@@ -5840,6 +5879,13 @@
         "name": "Si Racha - W4 Fri Easy Run"
       },
       {
+        "time": "5.5 km",
+        "pace": "18:21",
+        "date": "2026-11-15",
+        "name": "Trail Run",
+        "source": "zepp"
+      },
+      {
         "time": "5.4 km",
         "pace": "6:51",
         "date": "2026-06-14",
@@ -6218,11 +6264,11 @@
     ]
   },
   "lifetime": {
-    "runs": 181,
-    "km": 1321.53,
-    "hours": 203.0,
-    "calories": 105859.0,
-    "elevation_m": 25091.91,
+    "runs": 182,
+    "km": 1326.99,
+    "hours": 204.67,
+    "calories": 106612.0,
+    "elevation_m": 25284.49,
     "since": "2023-05-04"
   },
   "zones_sec": [
@@ -6249,9 +6295,9 @@
       "hours": 40.34
     },
     "2026": {
-      "runs": 115,
-      "km": 991.81,
-      "hours": 145.69
+      "runs": 116,
+      "km": 997.27,
+      "hours": 147.36
     }
   },
   "by_month": {
@@ -6277,7 +6323,7 @@
     "2026-08": 96.01,
     "2026-09": 120.59,
     "2026-10": 116.11,
-    "2026-11": 36.71
+    "2026-11": 42.17
   },
   "best": {
     "fastest_1km": "4:53",
@@ -7616,6 +7662,14 @@
         "name": "Nakhon Ratchasima Running",
         "source": "garmin",
         "id": "garmin:11127828703"
+      },
+      {
+        "distance_m": 440.3399999999997,
+        "pace": "11:21",
+        "date": "2026-11-15",
+        "name": "Trail Run",
+        "source": "zepp",
+        "id": "zepp:1794700844"
       },
       {
         "distance_m": 437.3733469645182,
@@ -9004,6 +9058,14 @@
         "id": "garmin:11093215574"
       },
       {
+        "distance_m": 809.8200000000002,
+        "pace": "12:21",
+        "date": "2026-11-15",
+        "name": "Trail Run",
+        "source": "zepp",
+        "id": "zepp:1794700844"
+      },
+      {
         "distance_m": 779.8299713134766,
         "pace": "12:49",
         "date": "2025-07-29",
@@ -10310,6 +10372,14 @@
         "id": "garmin:19883054842"
       },
       {
+        "distance_m": 1457.7199999999998,
+        "pace": "13:43",
+        "date": "2026-11-15",
+        "name": "Trail Run",
+        "source": "zepp",
+        "id": "zepp:1794700844"
+      },
+      {
         "distance_m": 1411.2919189453125,
         "pace": "14:10",
         "date": "2024-04-05",
@@ -11552,6 +11622,14 @@
         "id": "garmin:14744503551"
       },
       {
+        "distance_m": 2021.3199999999997,
+        "pace": "14:51",
+        "date": "2026-11-15",
+        "name": "Trail Run",
+        "source": "zepp",
+        "id": "zepp:1794700844"
+      },
+      {
         "distance_m": 1884.4599609375,
         "pace": "15:55",
         "date": "2025-11-22",
@@ -12104,6 +12182,14 @@
         "name": "Si Racha Trail Running",
         "source": "garmin",
         "id": "garmin:21056211320"
+      },
+      {
+        "distance_m": 3324.19,
+        "pace": "18:03",
+        "date": "2026-11-15",
+        "name": "Trail Run",
+        "source": "zepp",
+        "id": "zepp:1794700844"
       }
     ],
     "90 min": [
@@ -12330,6 +12416,14 @@
         "name": "Trail Run",
         "source": "zepp",
         "id": "zepp:1789778233"
+      },
+      {
+        "distance_m": 4792.610000000001,
+        "pace": "18:47",
+        "date": "2026-11-15",
+        "name": "Trail Run",
+        "source": "zepp",
+        "id": "zepp:1794700844"
       }
     ],
     "120 min": [
@@ -12703,6 +12797,16 @@
         "name": "Run",
         "source": "zepp",
         "id": "zepp:1788050928"
+      },
+      {
+        "duration_seconds": 6014,
+        "time": "1:40:14",
+        "distance_m": 5462.0,
+        "pace": "18:21",
+        "date": "2026-11-15",
+        "name": "Trail Run",
+        "source": "zepp",
+        "id": "zepp:1794700844"
       },
       {
         "duration_seconds": 5976.0,

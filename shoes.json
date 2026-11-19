@@ -2,7 +2,7 @@
   "meta": {
     "version": 2,
     "note": "Shoe rotation tracker. km = base_km (Garmin gear, as of base_date) + Zepp runs logged with the shoe's gear_ids (zepp_shoes.py, every sync).",
-    "last_updated": "2026-11-12"
+    "last_updated": "2026-11-19"
   },
   "shoes": [
     {
@@ -63,7 +63,7 @@
       "id": 4,
       "name": "ASICS GEL-Venture 10",
       "nick": "GV10",
-      "km": 70,
+      "km": 76,
       "first_use": "2026-05-01",
       "role": "Trail",
       "color": "#bc8cff",
@@ -73,9 +73,9 @@
       "gear_ids": [
         "847B25E0-C699-4150-A09A-ED2C7895B5AA"
       ],
-      "zepp_km": 34.1,
-      "zepp_runs": 3,
-      "last_used": "2026-09-27"
+      "zepp_km": 39.6,
+      "zepp_runs": 4,
+      "last_used": "2026-11-15"
     },
     {
       "id": 5,
