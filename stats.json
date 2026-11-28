@@ -1,6 +1,6 @@
 {
   "meta": {
-    "generated": "2026-11-26",
+    "generated": "2026-11-28",
     "source": "Garmin archive + Zepp",
     "split_rankings_source": "Garmin archive + Zepp recorded distance",
     "zones_source": "Garmin archive",
@@ -1376,6 +1376,15 @@
       "gain": 192.58,
       "source": "zepp",
       "id": "zepp:1794700844"
+    },
+    {
+      "d": "2026-11-28",
+      "km": 5.03,
+      "min": 57.33,
+      "cal": 469,
+      "gain": 2.9,
+      "source": "zepp",
+      "id": "zepp:1795860383"
     }
   ],
   "rankings": {
@@ -2442,6 +2451,16 @@
         "name": "Run",
         "source": "zepp",
         "id": "zepp:1788050928",
+        "method": "recorded_distance_elapsed_interpolated"
+      },
+      {
+        "time": "8:51",
+        "seconds": 531.0921052631579,
+        "pace": "8:51",
+        "date": "2026-11-28",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1795860383",
         "method": "recorded_distance_elapsed_interpolated"
       },
       {
@@ -3705,6 +3724,16 @@
         "source": "garmin"
       },
       {
+        "time": "17:07",
+        "seconds": 1026.9176470588236,
+        "pace": "10:38",
+        "date": "2026-11-28",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1795860383",
+        "method": "recorded_distance_elapsed_interpolated"
+      },
+      {
         "time": "18:53",
         "date": "2025-10-05",
         "name": "Si Racha Trail Running",
@@ -4731,6 +4760,16 @@
         "name": "Si Racha Running",
         "pace": "11:10",
         "source": "garmin"
+      },
+      {
+        "time": "56:53",
+        "seconds": 3412.5797101449275,
+        "pace": "11:23",
+        "date": "2026-11-28",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1795860383",
+        "method": "recorded_distance_elapsed_interpolated"
       },
       {
         "time": "59:22",
@@ -5976,6 +6015,13 @@
         "name": "Si Racha Running"
       },
       {
+        "time": "5.0 km",
+        "pace": "11:24",
+        "date": "2026-11-28",
+        "name": "Run",
+        "source": "zepp"
+      },
+      {
         "time": "4.9 km",
         "pace": "9:40",
         "date": "2025-07-17",
@@ -6264,11 +6310,11 @@
     ]
   },
   "lifetime": {
-    "runs": 182,
-    "km": 1326.99,
-    "hours": 204.67,
-    "calories": 106612.0,
-    "elevation_m": 25284.49,
+    "runs": 183,
+    "km": 1332.03,
+    "hours": 205.62,
+    "calories": 107081.0,
+    "elevation_m": 25287.39,
     "since": "2023-05-04"
   },
   "zones_sec": [
@@ -6295,9 +6341,9 @@
       "hours": 40.34
     },
     "2026": {
-      "runs": 116,
-      "km": 997.27,
-      "hours": 147.36
+      "runs": 117,
+      "km": 1002.3,
+      "hours": 148.32
     }
   },
   "by_month": {
@@ -6323,7 +6369,7 @@
     "2026-08": 96.01,
     "2026-09": 120.59,
     "2026-10": 116.11,
-    "2026-11": 42.17
+    "2026-11": 47.2
   },
   "best": {
     "fastest_1km": "4:53",
@@ -7470,6 +7516,14 @@
         "name": "Run",
         "source": "zepp",
         "id": "zepp:1791195103"
+      },
+      {
+        "distance_m": 631.71,
+        "pace": "7:55",
+        "date": "2026-11-28",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1795860383"
       },
       {
         "distance_m": 627.8433284759521,
@@ -8946,6 +9000,14 @@
         "id": "garmin:23482051434"
       },
       {
+        "distance_m": 1099.0899999999997,
+        "pace": "9:06",
+        "date": "2026-11-28",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1795860383"
+      },
+      {
         "distance_m": 1089.03,
         "pace": "9:11",
         "date": "2026-08-16",
@@ -10300,6 +10362,14 @@
         "id": "garmin:21860771605"
       },
       {
+        "distance_m": 1860.9499999999998,
+        "pace": "10:45",
+        "date": "2026-11-28",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1795860383"
+      },
+      {
         "distance_m": 1860.4520507812504,
         "pace": "10:45",
         "date": "2026-02-28",
@@ -11564,6 +11634,14 @@
         "name": "Pluak Daeng Running",
         "source": "garmin",
         "id": "garmin:15354420117"
+      },
+      {
+        "distance_m": 2678.1699999999996,
+        "pace": "11:12",
+        "date": "2026-11-28",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1795860383"
       },
       {
         "distance_m": 2636.34,
@@ -13345,6 +13423,16 @@
         "name": "Run",
         "source": "zepp",
         "id": "zepp:1790158711"
+      },
+      {
+        "duration_seconds": 3440,
+        "time": "57:20",
+        "distance_m": 5030.0,
+        "pace": "11:24",
+        "date": "2026-11-28",
+        "name": "Run",
+        "source": "zepp",
+        "id": "zepp:1795860383"
       },
       {
         "duration_seconds": 3438.0,
